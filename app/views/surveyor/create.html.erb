@@ -1,0 +1,476 @@
+<div style="margin-top: 2em;"><% if @response.errors.any? %>
+<div id ="error_top" class="field_with_errors"
+     style="width:400px;margin-left:auto;margin-right:auto;margin-top:2em;margin-bottom:2em;">
+  There are some missing or incorrect answers below. <b>Look for entries
+  with this background color</b>. Please fix them and submit again. Thanks!
+</div>
+<% end %> 
+
+<div style="margin-left: auto; margin-right: auto;width:600;">
+
+<div class="instructions">There are <b>two pages</b> of questions (47 total),
+ some having multiple parts. This is <b>page 1</b> and there are 41 questions.  The next page has only 6 brief questions.</div>
+ <%= form_for @response, :url => { :action => 'update', :id  =>@response.id} do |f| %>
+
+ <ol>
+<li>
+<div class="question"> What is your age (in years)? </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:age]) %></div>
+<div class="answer"><%= f.text_field :age, style: "margin-left: 1em;" %></div>
+</li>
+
+<li>
+<div class="question"> What sex were you assigned at birth, on your
+			 original birth certificate? </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:birth_sex]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @mf, :locals=> {:f => f, :name => :birth_sex}) %>
+</div>
+
+</li>
+
+<li>
+<div class="question"> What is your current gender identity? </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:gender]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @gender, :locals=> {:f => f, :name => :gender}) %>
+ </div>
+</li>
+
+<li>
+<div class="question"> Are you of Hispanic or Latino origin? </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:latino]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @yesno, :locals=> {:f => f, :name => :latino}) %>
+</div>
+</li>
+
+<li>
+<div class="question"> Please select 1 or more categories to describe
+  your race. </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:ethnicity]) %></div>
+<div class="answer">
+<%= render( :partial => 'checkboxes', :object => @ethnicity, :locals=> {:f => f}) %>
+</div>
+</li>
+
+<li>
+<div class="question"> What is your current marital status? </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:marital_status]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @marital_status, :locals=> {:f => f, :name => :marital_status}) %>
+</div>
+</li>
+
+<li>
+<div class="question"> How many children have you EVER had, including those who are not now living? Please include any adopted, foster or stepchildren who EVER lived with you. </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:num_children]) %></div>
+<div class="answer"><%= f.text_field :num_children, style: "margin-left: 1em;" %></div>
+</li>
+
+<li>
+<div class="question">  Which of these statements describe your present situation? (Check
+   all that apply)  </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:employment]) %></div>
+<div class="answer">
+<%= render( :partial => 'checkboxes', :object => @employment, :locals=> {:f => f}) %>
+</div>
+</li>
+
+
+<li>
+<div class="question">  What is the highest grade or year of school that you completed? </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:highest_grade_level_completed]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @schooling,:locals=> {:f => f, :name => :highest_grade_level_completed}) %>
+</div
+</li>
+
+<li>
+<div class="question"> Please report income from all jobs BEFORE taxes and other deductions and net income after business expenses. 
+      Include any tips, bonuses, overtime pay and commissions, as well as any income from pensions, dividends, 
+      interest, Social Security, alimony, child support, financial aid, support from persons living elsewhere, 
+      worker’s compensation or any public assistance or welfare payments and any other money income received by  
+      you from ANY OTHER source. <br /> <br /> 
+      Can you tell me which category best represents your TOTAL PERSONAL income in the last 12 months?  </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:income]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @income,:locals=> {:f => f, :name => :income}) %>
+</div
+</li>
+
+
+<li>
+<div class="question">During the last 12 months, where did you USUALLY
+  go to obtain health care? </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:health_care_provider]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @healthcare, :locals=> {:f => f, :name => :health_care_provider}) %>
+</div
+</li>
+
+<li>
+<div class="question">At ANY time during the last 12 months were YOU covered by a private health insurance plan obtained through a current or former employer or union? </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:have_health_plan]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @yesno, :locals=> {:f => f, :name => :have_health_plan}) %>
+</div
+</li>
+
+<li>
+<div class="question">In general, would you say your health is excellent, very good, good, fair or poor?</div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:general_health]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @quality, :locals=> {:f => f, :name => :general_health}) %>
+</div
+</li>
+
+<li>
+<div class="question">In general, how satisfied are you with your life? </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:how_satisfied]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @satisfaction, :locals=> {:f => f, :name => :how_satisfied}) %>
+</div
+</li>
+
+<li>
+<div class="question">Now thinking about your mental health, which includes stress, depression, and problems 
+with emotions, for how many days during the past 30 days was your mental health not 
+good?  
+</div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:no_days]) %></div>
+<div class="answer"><%= f.text_field :no_days, style: "margin-left:
+						       1em;" %></div>
+
+</li>
+
+
+<li>
+<div class="question">And now, please tell me your height and weight as these are important factors for this survey.</div>
+<div class="answer">
+<ol type="a">
+<li><div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:height_feet]) %></div>
+<%= f.label :height_feet, "Height (feet)" %>  <%= f.text_field :height_feet, style: "margin-left: 1em;" %></li>
+<li><div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:height_inches]) %></div><%= f.label :height_inches, "Height (inches)" %>  <%= f.text_field :height_inches, style: "margin-left: 1em;" %></li>
+<li><div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:weight]) %></div><%= f.label :weight, "Weight (pounds)" %>  <%= f.text_field :weight, style: "margin-left: 1em;" %></li>
+</ol>
+</div
+</li>
+
+<li><div class="question">The next questions are about drinking
+    alcohol. This includes coolers; beer; wine; champagne; liquor such
+    as whiskey, rum, gin, vodka, bourbon, tequila, scotch, brandy, cognac,
+      cordials, or liqueurs; and also any other type of
+      alcohol.<br /> During the last 12 months, have you had at least
+    1 drink of any kind of alcohol, not counting small tastes or
+    sips?</div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:one_drink]) %></div>
+<div class="answer">
+<%= render( :partial => 'ynradiobutton', :locals=>{:f => f, :name =>:one_drink, :dependency => "qs_alcohol"})%>
+
+<ol type="a"  id ="qs_alcohol" <% if @response.one_drink != "Yes"%>style="display: none;"<% end %>>
+
+<li>
+<div class="question">During the last 12 months, did you have a total of at least 12 drinks of any kind of alcohol? </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:twelve_drinks]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @yesno, :locals=> {:f => f, :name => :twelve_drinks}) %>
+</div
+</li>
+
+<li>
+<div class="question">During the last 12 months, about how often did you drink any kind of alcoholic beverage?</div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:drink_frequency_yearl]) %></div><div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @yearly, :locals=> {:f => f, :name => :drink_frequency_yearly}) %>
+</div>
+</li>
+
+<li>
+<div class="question">How many drinks did you USUALLY have on days when you drank during the last 12 months?</div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:drink_frequency_daily]) %></div><div class="answer"><%= f.text_field :drink_frequency_daily, style: "margin-left: 1em;" %></div>
+</li>
+
+<li>
+<div class="question">During the last 12 months, about how often did you drink FOUR OR MORE drinks in a single day?</div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:binge_drink_yearly]) %></div><div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @yearly,:locals=> {:f => f, :name => :binge_drink_yearly}) %>
+<ul id = "qs_binge_drinking" <% if @response.binge_drink_yearly == "Never in the last year" || @response.binge_drink_yearly == "" %>style="display: none;"<% end %>><li>
+<div class="question"> During the last 12 months, about how often did you drink FOUR OR MORE drinks in a period of TWO HOURS OR LESS?</div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:binge_drink_quickly_yearly]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @yearly,:locals=> {:f => f, :name =>:binge_drink_quickly_yearly},  :spacer_template => "spacer") %>
+</div>
+</li>
+</ul>
+</div>
+</li>
+
+</ol>
+</div>
+</li>
+
+
+<li><div class="question">Did you smoke a cigarette in the last year?</div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:smoked_last_year]) %></div>
+<div class="answer">
+<%= render( :partial => 'ynradiobutton', :locals=> {:f => f, :name =>:smoked_last_year, :dependency => "qs_cigarettes"})%>
+
+<ul id = "qs_cigarettes" <% if @response.smoked_last_year != "Yes" %>style="display: none;"<% end %>>
+
+<li>
+<div class="question">About how often did you USUALLY smoke a cigarette in the last 12 months?</div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:smoked_yearly]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @yearly_smoke, :locals=> {:f => f, :name =>:smoked_yearly} ) %>
+</div>
+</li>
+</ul>
+
+</div>
+</li>
+
+<li>
+<div class="question">  Now I’d like to ask you about your experiences
+  with medicines and other kinds of drugs that you may have used ON
+  YOUR OWN – that is, either: 
+   <br />
+    <br/>
+      <ul>
+      <li>WITHOUT a doctor’s prescription;</li>
+      <li>In GREATER amounts, MORE OFTEN, or LONGER than prescribed; or</li>
+      <li>For a reason other than a doctor said you should use them.</li>
+      </ul> 
+<br />
+      People use these medicines and drugs ON THEIR OWN to feel more alert, to relax or quiet their nerves, to feel better, to enjoy themselves, 
+      or to get high or just to see how they would work
+      <br />
+<br />
+      During the last 12 months, did you use any of these medicines or drugs ON YOUR OWN? Please do not include any over-the-counter medicines or herbal medicines. (Check all that apply)</div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:drugs]) %></div>
+<div class="answer">
+<%= render( :partial => 'checkboxes', :object => @drugs, :locals=> {:f => f}) %>
+</div>
+</li>
+
+<li>
+<div class="question">Have you tried to hurt or kill yourself, or threatened to do so? </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:ever_self_harm]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @yesno, :locals=> {:f => f, :name => :ever_self_harm}) %>
+</div>
+</li>
+
+<li>
+<div class="question">In your ENTIRE life, did you EVER have a very serious or life-threatening illness? </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:ever_seriously_ill]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @yesno, :locals=> {:f => f, :name => :ever_seriously_ill}) %>
+</div>
+</li>
+
+<li>
+<div class="question">In your ENTIRE life, were you EVER sexually assaulted, molested or raped or did you EVER experience unwanted sexual activity?</div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:violence_victim_ever]) %></div>
+<div class="answer"><%= render( :partial =>  'ynradiobutton', :locals=>{:f => f, :name => :violence_victim_ever, :dependency => "qs_violence"}) %></div>
+
+
+<li>
+<div class="question">In your ENTIRE life BEFORE you were 18 years old, were you seriously neglected by either of your parents or any other people who raised you? </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:violence_ever_neglected]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @yesno, :locals=> {:f => f, :name => :violence_ever_neglected}) %>
+</div>
+</li>
+
+<li>
+<div class="question">In your ENTIRE life BEFORE you were 18 years old, were you physically attacked or badly beaten up or injured by either of your parents or any other people who raised you? </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:violence_victim_parents]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @yesno, :locals=> {:f => f, :name => :violence_victim_parents}) %>
+</div>
+</li>
+
+<li>
+<div class="question">In your ENTIRE life, were you EVER physically attacked or badly beaten up or injured by your spouse or romantic partner? </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:violence_ever_spouse]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @yesno, :locals=> {:f => f, :name => :violence_ever_spouse}) %>
+</div>
+</li>
+
+
+<li>
+<div class="question">In your ENTIRE life, were you EVER physically attacked or badly beaten up or injured by anyone else? </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:violence_ever_other]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @yesno, :locals=> {:f => f, :name => :violence_ever_other}) %>
+</div>
+</li>
+
+<li>
+<div class="question">In your ENTIRE life, were you EVER mugged, held up or threatened with a weapon? </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:violence_ever_mugged]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @yesno, :locals=> {:f => f, :name => :violence_ever_mugged}) %>
+</div>
+</li>
+
+
+
+
+
+<br />
+<div class="question"> The next few questions are about how your parents or caregivers
+      treated you while you were growing up, that is, BEFORE you were
+      18 years old. By parents or caregivers, I mean your mother, father,
+      stepmother, stepfather, adoptive mother or father, foster parent
+      or other adult living in your home. 
+</div>
+<br />
+<li>
+<div class="question">BEFORE you were 18 years old How often did a parent or other adult living in your home swear at you, insult you or say hurtful things? </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:care_swear]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @frequency, :locals=> {:f => f, :name => :care_swear}) %>
+</div>
+</li>
+
+<li>
+<div class="question">BEFORE you were 18 years old How often did a parent or other adult living in your home act in ANY other way that made you afraid that you would be physically hurt or injured? </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:care_fear]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @frequency, :locals=> {:f => f, :name => :care_fear}) %>
+</div>
+</li>
+
+<li>
+<div class="question">How often did your father, stepfather, foster or adoptive father or mother’s boyfriend push, grab, slap or throw something at your mother, stepmother, father’s girlfriend, or your foster or adoptive mother?</div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:care_harm]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @frequency, :locals=> {:f => f, :name => :care_harm}) %>
+</div>
+</li>
+
+
+<div class="question">And now some questions about your health and sexual practices.</div>
+      
+<li><div class="question"> People are different in their sexual attraction to other people. Which category best describes your feelings?</div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:sex_feelings]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @sex_feelings, :locals=> {:f => f, :name => :sex_feelings}) %>
+</div>
+</li>
+
+<li>
+<div class="question">In your entire life, have you had sex with only males, only females, both males and females, or have you never had sex?</div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:sex_who]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @sex_who, :locals=> {:f => f, :name => :sex_who}) %>
+</div>
+</li>
+
+<li>
+<div class="question">Which of the categories best describes you?</div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:sex_category]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @sex_category, :locals=> {:f => f, :name => :sex_category}) %>
+</div>
+</li>
+
+
+
+<div class="question">Now I’d like to know about how often you have experienced discrimination, been prevented from doing something, or been hassled or made to feel 
+      inferior in any of the following situations because you were assumed to be gay, lesbian or bisexual. </div>
+      <br />
+<li>
+<div class="question"> During the last 12 months, about how often did you experience discrimination in your ability to obtain health care or health insurance coverage 
+        because you were assumed to be gay, lesbian or bisexual?</div>
+<div class="answer">
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:discrimination_insurance]) %></div>
+<%= render( :partial => 'radiobuttons', :object => @frequency, :locals=> {:f => f, :name => :discrimination_insurance}) %>
+</div>
+</li>
+
+<li>
+<div class="question">During the last 12 months, how often did you experience discrimination in how you were treated when you got care because you were assumed to be gay, lesbian or bisexual?</div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:discrimination_how_treated]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @frequency, :locals=> {:f => f, :name => :discrimination_how_treated}) %>
+</div>
+</li>
+
+<li>
+<div class="question">During the last 12 months, how often did you experience discrimination in public, like on the street, in stores or in restaurants, because you were assumed to be gay, lesbian or bisexual?</div>
+<div class="answer">
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:discrimination_public]) %></div>
+<%= render( :partial => 'radiobuttons', :object => @frequency, :locals=> {:f => f, :name => :discrimination_public}) %>
+</div>
+</li>
+
+<li>
+<div class="question">During the last 12 months, about how often did you experience discrimination because you were assumed to be gay, lesbian or bisexual in ANY other situation, like obtaining a job or on the job, getting admitted to a school or training program, in the courts or by the police</div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:discrimination_job]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @frequency, :locals=> {:f => f, :name => :discrimination_job}) %>
+</div>
+</li>
+
+<li>
+<div class="question">During the last 12 months, about how often were you made fun of, picked on, pushed, shoved, hit, or threatened with harm because you were assumed to be gay, lesbian or bisexual?</div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:discrimination_bullied]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @frequency, :locals=> {:f => f, :name => :discrimination_bullied}) %>
+</div>
+</li>
+
+
+<div class="question"> And now a few questions about your health.</div>
+     
+  <li>
+<div class="question">
+      Did you test positive for HIV, the virus that causes AIDS? </div>
+<div class="answer">
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:ever_aids]) %></div>
+<%= render( :partial => 'radiobuttons', :object => @yesno, :locals=> {:f => f, :name => :ever_aids}) %>
+</div>
+</li>
+
+<li>
+<div class="question">In your ENTIRE life did you EVER attempt suicide?</div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:ever_suicidal]) %></div>
+<div class="answer">
+<%= render( :partial => 'ynradiobutton', :locals=> {:f => f, :name=>:ever_suicidal, :dependency => "qs_suicide"}) %>
+
+<ul id = "qs_suicide" <% if @response.ever_suicidal != "Yes"%>style="display: none;"<% end %>>
+<li>
+<div class="question">Which of the following best describes your
+  experience? (Please check all that apply)</div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:suicidal]) %></div>
+<div class="answer">
+<%= render( :partial => 'checkboxes', :object => @suicidal, :locals=> {:f => f}) %>
+</div>
+</li>
+</ul>
+</div>
+</li>
+
+
+<li>
+<div class = "question">Which social networks do you use?</div>
+<div class = "answer">
+<table style="margin-left: 1em;">
+<tr>
+<tr><td></td><%= render( :partial => 'header', :collection => @frequency, :locals=> {:f => f}) %></tr>
+<%= render( :partial => 'radiotable', :collection => @sns, :locals=> {:f => f, :cols=>@frequency}) %>
+</tr>
+</table>
+</div>
+</li>
+
+
+</ol>
+<%= f.submit %>
+<% end %>
+
+</div>
+</div>

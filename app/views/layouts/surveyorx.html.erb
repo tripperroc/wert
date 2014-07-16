@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gay Men's Health Survey</title>
+  <%= 
+    #stylesheet_link_tag    "application", :media => "all"
+  %>
+  <%= stylesheet_link_tag    "facebook", :media => "all" %>
+
+  <style>
+    .field_with_errors {
+       border:2px solid;
+       background-color: #f9b0fa;
+       border-color: #f9b0fa;
+       color: #000000;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    table, td, th {
+      border: none;
+    }
+    .question {
+        margin-top: 1.5em;
+        font-size: 1em;
+        color: #000000;
+    }
+    .answer {
+        margin-top: .5em;
+        color: #666666;
+    }
+  </style>
+  <%= javascript_include_tag "application" %>
+  <script>
+     $(document).ready(function() {
+        $("input[name='response\\[binge_drink_yearly\\]']").change(function() {
+          console.log($("input[name='response\\[binge_drink_yearly\\]']:checked").val());
+          if ($("input[name='response\\[binge_drink_yearly\\]']:checked").val() == 'Never in the last year') {
+              $("#qs_binge_drinking").hide();
+          }
+          else {
+              $("#qs_binge_drinking").show();
+          }
+        });
+     });
+  </script>
+  <%= csrf_meta_tags %>
+
+  <%= yield :head %>
+</head>
+<body>
+
+  <%= render "shared/load_facebook_sdk" %>
+
+  <%= yield %>
+
+</body>
+</html>

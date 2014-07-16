@@ -1,0 +1,37 @@
+<div style="margin-top: 2em;">
+
+  
+  <b>Please read</b> the following information and <b>indicate below</b> whether
+    or not you agree to participate. 
+
+
+  <div style="margin-top: 2em;">
+  <%= render "info_letter_content" %>
+</div>
+
+  <div style="width: 100%;">
+    <span style="float: right;">
+      <%= link_to "Download a Copy of this Letter", root_url + "info_letter.pdf" %>
+    </span>
+</div>
+ <p>
+
+<%= form_tag({action: "screening"}, id: "consent") do %>
+<div> Do you agree to these terms and conditions?.</div>
+<%= radio_button_tag(:consent, "Yes", false, :onclick => "$('#consent').submit()") %>
+<%= label_tag(:consent, "Yes") %>
+<%= radio_button_tag(:consent, "No") %>
+<%= label_tag(:consent, "No") %>
+  <% end %>
+
+</p>
+ 
+
+  
+
+
+
+  
+ 
+
+

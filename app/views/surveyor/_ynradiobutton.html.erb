@@ -1,0 +1,6 @@
+<ul style="list-style-type: none;">
+<li><%= f.radio_button name, "Yes", :onclick => "$('#" + dependency + "').show();" %>
+<%= f.label name, "Yes" %></li>
+<li><%= f.radio_button name, "No", :onclick => "$('#" + dependency + "').hide();" %>
+<%= f.label name, "No" %></li>
+</ul>

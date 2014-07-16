@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ActiveLayerIndex</key>
+	<integer>0</integer>
+	<key>ApplicationVersion</key>
+	<array>
+		<string>com.omnigroup.OmniGraffle</string>
+		<string>139.17.0.185490</string>
+	</array>
+	<key>AutoAdjust</key>
+	<false/>
+	<key>BackgroundGraphic</key>
+	<dict>
+		<key>Bounds</key>
+		<string>{{0, 0}, {1024, 1024}}</string>
+		<key>Class</key>
+		<string>SolidGraphic</string>
+		<key>ID</key>
+		<integer>2</integer>
+		<key>Style</key>
+		<dict>
+			<key>shadow</key>
+			<dict>
+				<key>Draws</key>
+				<string>NO</string>
+			</dict>
+			<key>stroke</key>
+			<dict>
+				<key>Draws</key>
+				<string>NO</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>BaseZoom</key>
+	<integer>0</integer>
+	<key>CanvasOrigin</key>
+	<string>{0, 0}</string>
+	<key>CanvasSize</key>
+	<string>{1024, 1024}</string>
+	<key>ColumnAlign</key>
+	<integer>1</integer>
+	<key>ColumnSpacing</key>
+	<real>36</real>
+	<key>CreationDate</key>
+	<string>2014-03-11 18:27:19 +0000</string>
+	<key>Creator</key>
+	<string>Christopher Homan</string>
+	<key>DisplayScale</key>
+	<string>1 pt = 1 px</string>
+	<key>GraphDocumentVersion</key>
+	<integer>8</integer>
+	<key>GraphicsList</key>
+	<array>
+		<dict>
+			<key>Bounds</key>
+			<string>{{278.00000000000244, 28.8277587890625}, {494.79367101525179, 966.34449301902487}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>14</integer>
+			<key>Shape</key>
+			<string>Bezier</string>
+			<key>ShapeData</key>
+			<dict>
+				<key>UnitPoints</key>
+				<array>
+					<string>{-0.36293743644008702, -0.48355280723653216}</string>
+					<string>{-0.38604584862862423, -0.45623203537905399}</string>
+					<string>{-0.36293743644008702, -0.32556640344491505}</string>
+					<string>{-0.36293743644008702, -0.32556640344491505}</string>
+					<string>{-0.36293743644008702, -0.32556640344491505}</string>
+					<string>{-0.4135817174237334, -0.30108169308160171}</string>
+					<string>{-0.42204526132965448, -0.28606980249701297}</string>
+					<string>{-0.43050882640855104, -0.27105791501168375}</string>
+					<string>{-0.40234265303313399, 0.14839280792995213}</string>
+					<string>{-0.40234265303313399, 0.14839280792995213}</string>
+					<string>{-0.40234265303313399, 0.14839280792995213}</string>
+					<string>{-0.48810672538207456, 0.24707066367492025}</string>
+					<string>{-0.49770763572550136, 0.28347546100306165}</string>
+					<string>{-0.50730851530115506, 0.3198802614612356}</string>
+					<string>{-0.48607559190872396, 0.34707834650561686}</string>
+					<string>{-0.44667718196488082, 0.36440300078453658}</string>
+					<string>{-0.40727876475474678, 0.38172763884311034}</string>
+					<string>{-0.34966704862686038, 0.39880693571617576}</string>
+					<string>{-0.20819393750891368, 0.41094950098616834}</string>
+					<string>{-0.066720757089125171, 0.42309219671345644}</string>
+					<string>{0.094329233177873784, 0.47594372759075154}</string>
+					<string>{0.094329233177873784, 0.47594372759075154}</string>
+					<string>{0.094329233177873784, 0.47594372759075154}</string>
+					<string>{0.19880444211585147, 0.53208414606510168}</string>
+					<string>{0.41553313337760378, 0.47283924464324378}</string>
+					<string>{0.63226184853421286, 0.41359437739950355}</string>
+					<string>{0.36789602098904228, 0.29729641924118244}</string>
+					<string>{0.33064926670683281, 0.28657026779251216}</string>
+					<string>{0.29340249781484062, 0.27584411245466611}</string>
+					<string>{0.14471322899886685, 0.21245497485931775}</string>
+					<string>{0.1042922889181086, 0.18412233052461979}</string>
+					<string>{0.063871400027254666, 0.15578967822797241}</string>
+					<string>{0.15886043507534398, -0.25925764964004688}</string>
+					<string>{0.14269213336440467, -0.28354278135590366}</string>
+					<string>{0.126523777808071, -0.30782791189588804}</string>
+					<string>{0.10257857298192041, -0.30662007199236541}</string>
+					<string>{0.096208111139939989, -0.32294321756905892}</string>
+					<string>{0.089837691562940414, -0.33926635987744591}</string>
+					<string>{0.13087316092896728, -0.47430342140320664}</string>
+					<string>{0.10429228891810727, -0.48644598613804069}</string>
+					<string>{0.07771142489568228, -0.49858855140803349}</string>
+					<string>{-0.33982905280372855, -0.51087358907057701}</string>
+				</array>
+			</dict>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.0285247</string>
+						<key>g</key>
+						<string>0.0376195</string>
+						<key>r</key>
+						<string>1</string>
+					</dict>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>1</string>
+						<key>g</key>
+						<string>1</string>
+						<key>r</key>
+						<string>1</string>
+					</dict>
+					<key>Width</key>
+					<real>12</real>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{248.06099018826069, -75.157873226153981}, {494.79367101525168, 966.34449301902487}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>13</integer>
+			<key>Rotation</key>
+			<real>273</real>
+			<key>Shape</key>
+			<string>Bezier</string>
+			<key>ShapeData</key>
+			<dict>
+				<key>UnitPoints</key>
+				<array>
+					<string>{-0.36293743644008725, -0.48355280723653216}</string>
+					<string>{-0.3860458486286249, -0.45623203537905399}</string>
+					<string>{-0.36293743644008725, -0.32556640344491505}</string>
+					<string>{-0.36293743644008725, -0.32556640344491505}</string>
+					<string>{-0.36293743644008725, -0.32556640344491505}</string>
+					<string>{-0.41358171742373362, -0.30108169308160171}</string>
+					<string>{-0.4220452613296547, -0.28606980249701297}</string>
+					<string>{-0.43050882640855126, -0.27105791501168375}</string>
+					<string>{-0.40234265303313421, 0.14839280792995213}</string>
+					<string>{-0.40234265303313421, 0.14839280792995213}</string>
+					<string>{-0.40234265303313421, 0.14839280792995213}</string>
+					<string>{-0.48810672538207478, 0.24707066367492025}</string>
+					<string>{-0.49770763572550158, 0.28347546100306165}</string>
+					<string>{-0.50730851530115528, 0.3198802614612356}</string>
+					<string>{-0.48607559190872418, 0.34707834650561686}</string>
+					<string>{-0.44667718196488104, 0.36440300078453658}</string>
+					<string>{-0.407278764754747, 0.38172763884311034}</string>
+					<string>{-0.34966704862686082, 0.39880693571617576}</string>
+					<string>{-0.20819393750891391, 0.41094950098616834}</string>
+					<string>{-0.066720757089125282, 0.42309219671345644}</string>
+					<string>{0.094329233177872451, 0.47594372759075165}</string>
+					<string>{0.094329233177872451, 0.47594372759075165}</string>
+					<string>{0.094329233177872451, 0.47594372759075165}</string>
+					<string>{0.19880444211585169, 0.53208414606510168}</string>
+					<string>{0.415533133377604, 0.47283924464324378}</string>
+					<string>{0.63226184853421308, 0.41359437739950355}</string>
+					<string>{0.36789602098904206, 0.29729641924118244}</string>
+					<string>{0.33064926670683259, 0.28657026779251216}</string>
+					<string>{0.29340249781484085, 0.27584411245466611}</string>
+					<string>{0.14471322899886663, 0.21245497485931775}</string>
+					<string>{0.10429228891810771, 0.18412233052461979}</string>
+					<string>{0.063871400027254221, 0.15578967822797241}</string>
+					<string>{0.14067103507446954, -0.26347394578139571}</string>
+					<string>{0.12450273336353024, -0.2877590774972526}</string>
+					<string>{0.10833437780719701, -0.31204420803723698}</string>
+					<string>{0.1025785729819193, -0.30662007199236541}</string>
+					<string>{0.096208111139939767, -0.32294321756905892}</string>
+					<string>{0.089837691562940192, -0.33926635987744591}</string>
+					<string>{0.13087316092896661, -0.47430342140320664}</string>
+					<string>{0.10429228891810705, -0.48644598613804069}</string>
+					<string>{0.077711424895681835, -0.49858855140803349}</string>
+					<string>{-0.33982905280372877, -0.51087358907057701}</string>
+				</array>
+			</dict>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.0285247</string>
+						<key>g</key>
+						<string>0.0376195</string>
+						<key>r</key>
+						<string>1</string>
+					</dict>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>1</string>
+						<key>g</key>
+						<string>1</string>
+						<key>r</key>
+						<string>1</string>
+					</dict>
+					<key>Width</key>
+					<real>12</real>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+	<key>GridInfo</key>
+	<dict/>
+	<key>GuidesLocked</key>
+	<string>NO</string>
+	<key>GuidesVisible</key>
+	<string>YES</string>
+	<key>HPages</key>
+	<integer>2</integer>
+	<key>ImageCounter</key>
+	<integer>1</integer>
+	<key>KeepToScale</key>
+	<false/>
+	<key>Layers</key>
+	<array>
+		<dict>
+			<key>Lock</key>
+			<string>NO</string>
+			<key>Name</key>
+			<string>Layer 1</string>
+			<key>Print</key>
+			<string>YES</string>
+			<key>View</key>
+			<string>YES</string>
+		</dict>
+	</array>
+	<key>LayoutInfo</key>
+	<dict>
+		<key>Animate</key>
+		<string>NO</string>
+		<key>circoMinDist</key>
+		<real>18</real>
+		<key>circoSeparation</key>
+		<real>0.0</real>
+		<key>layoutEngine</key>
+		<string>dot</string>
+		<key>neatoSeparation</key>
+		<real>0.0</real>
+		<key>twopiSeparation</key>
+		<real>0.0</real>
+	</dict>
+	<key>LinksVisible</key>
+	<string>NO</string>
+	<key>MagnetsVisible</key>
+	<string>NO</string>
+	<key>MasterSheets</key>
+	<array/>
+	<key>ModificationDate</key>
+	<string>2014-03-11 19:48:09 +0000</string>
+	<key>Modifier</key>
+	<string>Christopher Homan</string>
+	<key>NotesVisible</key>
+	<string>NO</string>
+	<key>Orientation</key>
+	<integer>2</integer>
+	<key>OriginVisible</key>
+	<string>NO</string>
+	<key>PageBreaks</key>
+	<string>YES</string>
+	<key>PrintInfo</key>
+	<dict>
+		<key>NSBottomMargin</key>
+		<array>
+			<string>float</string>
+			<string>41</string>
+		</array>
+		<key>NSHorizonalPagination</key>
+		<array>
+			<string>coded</string>
+			<string>BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU051bWJlcgCEhAdOU1ZhbHVlAISECE5TT2JqZWN0AIWEASqEhAFxlwCG</string>
+		</array>
+		<key>NSLeftMargin</key>
+		<array>
+			<string>float</string>
+			<string>18</string>
+		</array>
+		<key>NSPaperSize</key>
+		<array>
+			<string>size</string>
+			<string>{612, 792}</string>
+		</array>
+		<key>NSPrintReverseOrientation</key>
+		<array>
+			<string>int</string>
+			<string>0</string>
+		</array>
+		<key>NSRightMargin</key>
+		<array>
+			<string>float</string>
+			<string>18</string>
+		</array>
+		<key>NSTopMargin</key>
+		<array>
+			<string>float</string>
+			<string>18</string>
+		</array>
+	</dict>
+	<key>PrintOnePage</key>
+	<false/>
+	<key>ReadOnly</key>
+	<string>NO</string>
+	<key>RowAlign</key>
+	<integer>1</integer>
+	<key>RowSpacing</key>
+	<real>36</real>
+	<key>SheetTitle</key>
+	<string>Canvas 1</string>
+	<key>SmartAlignmentGuidesActive</key>
+	<string>YES</string>
+	<key>SmartDistanceGuidesActive</key>
+	<string>YES</string>
+	<key>UniqueID</key>
+	<integer>1</integer>
+	<key>UseEntirePage</key>
+	<false/>
+	<key>VPages</key>
+	<integer>2</integer>
+	<key>WindowInfo</key>
+	<dict>
+		<key>CurrentSheet</key>
+		<integer>0</integer>
+		<key>ExpandedCanvases</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Canvas 1</string>
+			</dict>
+		</array>
+		<key>Frame</key>
+		<string>{{-11, 49}, {710, 729}}</string>
+		<key>ListView</key>
+		<true/>
+		<key>OutlineWidth</key>
+		<integer>142</integer>
+		<key>RightSidebar</key>
+		<false/>
+		<key>ShowRuler</key>
+		<true/>
+		<key>Sidebar</key>
+		<true/>
+		<key>SidebarWidth</key>
+		<integer>120</integer>
+		<key>VisibleRegion</key>
+		<string>{{-64, -62}, {1150, 1148}}</string>
+		<key>Zoom</key>
+		<real>0.5</real>
+		<key>ZoomValues</key>
+		<array>
+			<array>
+				<string>Canvas 1</string>
+				<real>0.5</real>
+				<real>1</real>
+			</array>
+		</array>
+	</dict>
+</dict>
+</plist>

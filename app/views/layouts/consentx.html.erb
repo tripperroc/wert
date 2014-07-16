@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ReDSSoCS</title>
+  <%= stylesheet_link_tag    "facebook", :media => "all" %>
+  <style>
+    .field_with_errors {
+       border:2px solid;
+       background-color: pink;
+       border-color: pink;
+    }
+    div.thin_grey_line {
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      border-bottom-color: rgb(233,233,233);
+      width: 100%;
+    }
+    b {
+      color: #333333;
+    }
+  </style>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  
+  <%= yield :head %>
+</head>
+<body>
+
+<%= render "shared/load_facebook_sdk" %>
+
+<%= yield %>
+
+</body>
+</html>

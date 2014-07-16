@@ -1,0 +1,175 @@
+
+<style>
+.content {
+visibility:hidden;
+position: absolute;
+top:100px;
+width:575px;
+}
+
+a:link { color:blue; }
+
+a:visited { color:blue; }
+
+a:hover { color:blue; }
+
+a:active { color:blue; }
+
+</style>
+
+<div style="height:600px;">
+<div class="content" id="recruit" style="margin-left: auto;
+					 margin-right: auto; color:
+					 #666666;visibility: visible;">
+
+<div id="links" style="text-align:right;"> 
+<a id="toquestions" href="#">Questions?</a> 
+</div>
+
+<p>
+ <b>Thank you!</b> You have <b>earned
+ $5</b> in Amazon.com credit. We will send you an email with
+ instructions on how to use it.
+</p>
+<p><b>We still need your help!</b> We will <b>pay you up to
+ $5</b> more for <b>each</b> of up to 3 Facebook friends you recruit
+ to take the survey. They must be 18 years of age or older, male, and
+ identify as
+<% if @facebook_response.orientation == "Gay" or @facebook_response.orientation == "Bisexual" %>
+<%= "gay or bisexual." %>
+<% else %>
+<%= "heterosexual or straight." %>
+<% end %>
+</p>
+
+
+<p>
+Please send by email (copy and paste) or <a href="#" id="fb-invite">Facebook
+    message</a> this text:
+
+ 
+<div id="info_letter_content" class="instructions" style="width: 500px; margin-top: 1em;margin-left:auto;margin-right:auto;text-align:left; padding:15px; border:1px; border-style: dashed; background-color:#eee;color:#000;border-color:#333;font-family:'Times New Roman',Georgia,Serif;color:#000000;font-size:11pt">
+<p>
+  I thought you might be interested in this survey that will help to
+ better understand the health concerns of adult 
+<% if @facebook_response.orientation == "Gay" or @facebook_response.orientation == "Bisexual" %>
+<%= "gay or bisexual" %>
+<% else %>
+<%= "heterosexual or straight" %>
+<% end %>
+ men. Whoever completes the survey gets $5 in Amazon.com credit, and
+ can also invite up to three other 
+<% if @facebook_response.orientation == "Gay" or @facebook_response.orientation == "Bisexual" %>
+<%= "gay or bisexual" %>
+<% else %>
+<%= "heterosexual or straight" %>
+<% end %>
+ friends and get an additional $5 for each of the three friends who take the survey. To take the survey, please go to:
+</p>
+<p>
+<a href ="<%= @invitation_url %>"><span style="font-size: 10pt;font-weight:normal;"><%=@invitation_url %></span></a>
+</p>
+<p>
+Thank you!
+
+</div>
+
+
+<div id="questions" class="content">
+<div id="links" style="text-align:right;"> 
+<a id="torecruit" href="#">Back</a> 
+</div>
+
+<p>
+You can find additional information about the survey by going to: 
+</p>
+<p>
+<a  href="http://www.lgbtdata.com/respondent-driven-sampling-in-social-computing-systems-project-redssocs.html">http://www.lgbtdata.com/respondent-driven-sampling-in-social-computing-systems-project-redssocs.html</a>
+</p>
+<p>
+Or you may call Dr. Vincent Silenzio at 585.275.6069. If you 
+      have questions, concerns or complaints about your rights as a research 
+      subject you may contact, anonymously if you wish, a Human Subjects 
+      Protection Specialist at the University of Rochester Research Subjects 
+      Review Board, Box 315, 601 Elmwood Avenue, Rochester, NY 14642-8315, 
+      Telephone 011(585) 276-0005. For long-distance you may call toll-free: 
+      011(877) 449-4441. You may also call these numbers if you cannot reach 
+      the research staff or wish to talk to someone else.
+    </p>
+</p>
+
+</div>
+<div id="remove" class="content">
+In order to conduct this survey, we needed to add an app to your
+Facebook account called <b>ReDSSoCS</b>. We no longer need you to
+have this app, so please feel free to remove it. Facebook has instructions for
+removing apps <a href="https://www.facebook.com/help/204306713029340">here</a>.
+</div>
+</div>
+</div>
+
+<script>
+
+
+          //Get a reference to the link on the page
+          // with an id of "mylink"
+          var a = document.getElementById("fb-invite");
+          var b;
+          //Set code to run when the link is clicked
+          // by assigning a function to "onclick"
+          a.onclick = function() {
+/*
+            // Your code here...
+            FB.ui({
+                   //method: 'send',     
+                   // link: "<%= url_for :controller => 'recruit', :action => 'invitation',  :only_path => false %>" 
+                   //link: "<%=@invitation_url %>" 
+                   method: 'apprequests',     
+                   message: 'Take a health survey for gay men'
+	    }, function (response) {
+                 $("#facebook_response").text(response);
+                 response.to.forEach(function(entry) {
+	              console.log(entry);
+                      $.post("<%= url_for action: :loginvitation %>",
+            {"facebook_account_number":  entry, "recruitee_coupon": "<%= @recruitee_coupon %>"});
+                 });
+             });*/
+             FB.ui({
+                   method: 'send',     
+                   link: "<%= @invitation_url %>" 
+                   //method: 'apprequests',     
+                   //message: 'Take a health survey for gay men'
+	    });
+            //If you don't want the link to actually 
+            // redirect the browser to another page,
+            // "google.com" in our example here, then
+            // return false at the end of this block.
+            // Note that this also prevents event bubbling,
+            // which is probably what we want here, but won't 
+            // always be the case.
+            return false;
+         };
+
+
+
+               last = document.getElementById('recruit');
+               last.style.visibility='visible';
+               changeDisplayState = function (id) {
+                    var e = document.getElementById(id);
+                    last.style.visibility='hidden';
+                    e.style.visibility='visible';
+                    last = e;
+               };
+
+               clicker = function (name) {
+                   return function () {
+                    changeDisplayState(name);
+                    return false;
+                   };
+               };
+	       var es = document.getElementById('links').children;
+	       for(var i = 0; i < es.length; i++) {
+                   var name = es[i].id.substr(2,es[i].id.length-2);
+	            es[i].onclick = clicker(name);
+               }
+</script>

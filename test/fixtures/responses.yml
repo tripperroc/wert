@@ -1,0 +1,105 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  recruitee_coupon: 814
+  recruiter_coupon: nil
+  email_address: "cmh@cs.rit.edu"
+  age: 18
+  birth_sex: "Male"
+  gender: "Transegender, female-to-male"
+  latino: "Yes"
+  namerican: true
+  asian: true
+  aamerican: true
+  pacific: true
+  eamerican: true
+ 
+  marital_status: "Living with someone as if married"
+  num_children: 0
+  work_more_than_35: false
+  work_less_than_35: false
+  work_yes_ill: false
+  work_yes_vacation: false
+  work_yes_absent: false
+  unemployed_looking: false
+  unemployed_not_looking: false
+  retired: false
+  school_fulltime: false
+  school_break: false
+  homemaker: false
+  work_else: false
+
+  highest_grade_level_completed: "Some college (no degree)"
+  income: "$80,000 to $89,999"
+  health_care_provider: MyString
+  have_health_plan: false
+  general_health: "Doctor assigned by HMO/health care plan"
+  height_feet: 5
+  height_inches: 11
+  weight: 180
+  one_drink: "No"
+  twelve_drinks: "No"
+  drink_frequency_yearly: "2 times a week"
+  drink_frequency_daily: 4
+  binge_drink_yearly: "7 to 11 times in the last year"
+  binge_drink_quickly_yearly: "1 or 2 times in the last year"
+  smoked_last_year: "1 to 2 days a week"
+  smoked_yearly: "Once a month or less"
+
+  sedatives_last_year: false
+  tranquilizers_last_year: false
+  painkillers_last_year: false
+  stimulants_last_year: false
+  marijuana_last_year: false
+  hallucinogens_last_year: false
+  inhalents_last_year: false
+  heroin_last_year: false
+  drugs_other_last_year: false
+
+  ever_self_harm: "No"
+  ever_seriously_ill: "No"
+  violence_victim_ever: "No"
+  violence_victim_parents: "No"
+  violence_ever_neglected: "No"
+  violence_ever_spouse: "No"
+  violence_ever_other: "No"
+  violence_ever_mugged: "No"
+  care_swear: "No"
+  care_fear: "No"
+  care_harm: "No"
+  sex_feelings: "Mostly attracted to males"
+  sex_who: "Only males"
+  sex_category: "Gay or lesbian"
+  discrimination_insurance: "Sometimes"
+  discrimination_how_treated: "Sometimes"
+  discrimination_public: "Sometimes"
+  discrimination_job: "Sometimes"
+  discrimination_bullied: "Sometimes"
+  ever_aids: "No"
+  ever_suicidal: "No"
+  suicidal_thought: "No"
+  suicidal_plan: "No"
+  suicidal_note_hidden: "No"
+  suicidal_note_open: "No"
+  suicidal_method: "No"
+  suicidal_attempt: "No"
+  suicidal_medical: "No"
+  suicidal_not_serious: "No"
+  frequency_facebook: "Sometimes"
+  frequency_twitter: "Sometimes"
+  frequency_google_plus: "Sometimes"
+  frequency_myspace: "Sometimes"
+  frequency_linkedin: "Sometimes"
+  frequency_other: "Sometimes"
+  frequency_tumblr: "Sometimes"
+  frequency_trevorspace: "Sometimes"
+  frequency_grindr: "Sometimes"
+  frequency_scruff: "Sometimes"
+  frequency_jackd: "Sometimes"
+  frequency_hornet: "Sometimes"
+  frequency_yelp: "Sometimes"
+  frequency_foursquare: "Sometimes"
+  frequency_flickr: "Sometimes"
+  frequency_youtube: "Sometimes"
+  frequency_pinterest: "Sometimes"
+  frequency_instagram: "Sometimes"

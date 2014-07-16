@@ -1,0 +1,6 @@
+#!/bin/bash
+RAILS_ENV=development bin/delayed_job stop
+rm db/schema.rb
+rake db:reset
+rake db:migrate
+RAILS_ENV=development bin/delayed_job start

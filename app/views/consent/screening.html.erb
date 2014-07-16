@@ -1,0 +1,90 @@
+<div style="margin-top: 2em;">
+
+<div class = "instructions" style="margin-bottom: 2em;">
+Please answer the following screening questions to determine whether
+you are eligible.
+</div>
+<div class = "instructions" style="margin-bottom: 2em;display:none;">
+For <b>10 minutes</b> of your time you can <b>earn $5</b> in
+Amazon.com credit and <b>make an important contribution to gay and
+    bisexual men's health</b>. 
+You may also <b>earn up to $15</b> for recruiting friends to take this
+survey.
+
+<br />
+
+</div>
+  <p style="display: none;"> Your recruit code is: <%= @recruitee_coupon %> </p>
+
+<%= form_for @facebook_response, :url => { :controller => 'consent', :action => 'update' }, :html=>{:id=>"eligible"}  do |f| %>
+<p></p>
+<div style="margin-right:auto;width: 500px;padding:1em; height: 200px; border:1px; border-style: dashed; background-color:#eee;text-color:#000;border-color:#333;font-color:#000">
+    <div id = "age" style="margin-left: 0em;">
+     <%= label_tag 'eighteen_or_older', 'Are you 18 years of age or
+     older?' %>
+     <br />
+      <%= f.radio_button :eighteen_or_older, true, :onclick => "$('#age').hide();$('#gender').show(500);" %> Yes
+      <br />
+      <%= f.radio_button :eighteen_or_older, false, :onclick => "$('#age').hide(); $('#ineligible').show(500);" %> No
+      <span style="margin-left: 2em;"></span>
+
+     </div>
+  <div id = "ineligible" style="display: none;margin-left: 0em; ">
+      Sorry. You are ineligible to take this survey.
+</div>
+    <div id="gender" style="display: none; margin-left: 0em;">
+        <%= label_tag 'gender', 'What is your current gender identity?' %>
+        <br />
+        <%= f.radio_button :gender, "Male", :onclick => "$('#gender').hide();$('#sexuality').show(500);" %>
+       <%= label_tag 'gender_male', 'Male' %>
+        <br />
+        <%= f.radio_button :gender, "Female", :onclick => "$('#gender').hide();$('#ineligible').show(500);"%>
+        <%= label_tag 'gender_female', 'Female' %>
+        <br />
+        <%= f.radio_button :gender, "Male-to-Female", :onclick => "$('#gender').hide();$('#ineligible').show(500);"%>
+        <%= label_tag 'gender_mtf', ' Transgender, male-to-female' %>
+        <br />
+        <%= f.radio_button :gender, "Female-to-Male", :onclick => "$('#gender').hide();$('#sexuality').show(500);"%>
+        <%= label_tag 'gender_ftm', ' Transgender, female-to-male' %>
+        <br />
+        <%= f.radio_button :gender, "Other", :onclick => "$('#gender').hide();$('#ineligible').show(500);"%>
+        <%= label_tag 'gender_other', 'Other' %>
+</div>
+    <div id="sexuality" style="display: none; margin-left: 0em;">
+        Which of the categories best describes you?
+        <br />
+       <%= f.radio_button :orientation, "Heterosexual", :onclick => "$('#sexuality').hide();$('#facebook').show(500);" %>
+       <%= label_tag 'heterosexual', 'Heterosexual (straight)' %>
+        <br />
+        <%= f.radio_button :orientation, "Gay", :onclick =>"$('#sexuality').hide();$('#facebook').show(500);"%>
+        <%= label_tag 'gay', 'Gay' %>
+        <br />
+        <%= f.radio_button :orientation, "Bisexual", :onclick => "$('#sexuality').hide();$('#facebook').show(500);"%>
+        <%= label_tag 'bisexual', 'Bisexual' %>
+        <br />
+       <%= f.radio_button :orientation, "Not-sure", :onclick => "$('#sexuality').hide();$('#ineligible').show(500);" %>
+        <%= label_tag 'Other', "Not sure" %>
+      </p>
+    </div>
+        <div id = "facebook" style="display: none; margin-left: 0em;">
+    Do you have a Facebook account? If so, you are eligible to take
+    the survey! Click on the button to get started. 
+  <p>
+       <fb:login-button 
+        show-faces="false"
+        scope="user_relationships,user_relationship_details,friends_relationships,friends_relationship_details"
+        onlogin="$('#eligible').submit()">
+        I agree to participate
+      </fb:login-button>
+<div style="margin-top: 2em">We use a Facebook app in order to make
+  sure we do not get duplicate surveys from you, and to make sure you
+  receive your payment information at the end of the survey. You can
+  delete the Facebook app (called ReDSSoCS) at any time after the survey is done and you've received your payment.</div>
+</p>
+
+     </div>
+
+</div>
+  <% end %>
+  
+</div>
