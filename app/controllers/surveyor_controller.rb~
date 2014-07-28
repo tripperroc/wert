@@ -169,11 +169,11 @@ class SurveyorController < ApplicationController
     [ :heroin_last_year, "Heroin "],
     [:drugs_other_last_year, "Any OTHER medicines, or drugs, or substances, for example, methadone, Elavil, steroids, Thorazine or Haldol?"]]
     
-@aggreement = [ "Completely disagree",
-       "Disagree",
-       "Neither agree nor disagree",
-       "Agree",
-       "Completely Agree"]
+@aggreement = [ "Never",
+       "Almost never",
+       "Sometimes",
+       "Fairly often",
+       "Very often"]
 
  
     @frequency = [ "Never",
