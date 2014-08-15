@@ -1,5 +1,0 @@
-<h1>Pageone#index</h1>
-<p>Find me in app/views/pageone/index.html.erb</p>
-
-<%= form_for @pageone, :url => { :action => 'update'} do |f| %>
-<%= f.submit %>

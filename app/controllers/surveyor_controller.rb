@@ -70,6 +70,22 @@ class SurveyorController < ApplicationController
    @employed = ["Yes, I am self-employed", "Yes, employed by others", "No"]
    @happy = ["Very Happy", "Rather Happy", "Not very happy", "Not at all happy"]
    
+@live_with = [[:live_with1, "1) Mother and/or father"], 
+              [:live_with2, "2) Siblings"], 
+              [:live_with3, "3) Grandparents"], 
+              [:live_with4, "4) Other relatives"], 
+              [:live_with5, "5) Own children"], 
+              [:live_with6, "6) Husband or wife"], 
+              [:live_with7, "7) Significant other"], 
+              [:live_with8, "8) Friend/friends"], 
+              [:live_with9, "9) I live by myself"]]
+
+@family=[[:family1, " Mother and/or father "],
+	[:family2, " Wife or husband"],
+	[:family3, " In-law's family"],
+	[:family4, " Siblings "],
+	[:family5, " Children "],
+	[:family6, "Other family members like cousins, aunts, uncles etc. "]]
 
    @martial = ["Never married & never lived with someone in a matial-like relationship",
               "Currently married & living together", 
@@ -330,6 +346,14 @@ I receive approval from my family for my future plans "],
 @how_often=[" Rarely or none of the time 
 (less than 1 day)"," Some or a little of the time (1-2 days)","Occasionally or a moderate amount of time 
 (3-4 days) "," Most or all of the time (5-7 days)"]
+
+@communal_option=[[:com1, "Family Members"],
+	[:com2, "Spouse/Partner"],
+	[:com3, "Friends"],
+	[:com4, "Other"]]
+
+@communal_check=["Have you spoken to these people about this 
+problem? ","Did they listen to you about your problem? ", "Did they perceive your problem/stress as if it is their own (even if they may not have anything to do with the problem itself)? ", " Did they try to solve your problem/stress for you (resorting mainly to their own resources  and/or mobilizing your resources themselves)? ", " Did they share the responsibility of resolving this problem with you? "," Did they care about your problem? " ," Did they think that it is mainly your responsibility to solve your own problem? "]
 
 @depression=[[:depression_row1," I was bothered by things that usually don’t bother me."],
 [:depression_row2,"  I did not feel like eating; my appetite was poor."],

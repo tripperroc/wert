@@ -256,6 +256,32 @@ class CreateResponses < ActiveRecord::Migration
       t.string :demographics_o
 
 
+      t.string :groupa1
+      t.string :groupa2
+      t.string :groupb1
+      t.string :groupb2
+      t.boolean :live_with1
+      t.boolean :live_with2
+      t.boolean :live_with3
+      t.boolean :live_with4
+      t.boolean :live_with5
+      t.boolean :live_with6
+      t.boolean :live_with7
+      t.boolean :live_with8
+      t.boolean :live_with9
+      t.boolean :com1      
+      t.boolean :com2
+      t.boolean :com3
+      t.boolean :com4
+      t.boolean :family1
+      t.boolean :family2
+      t.boolean :family3
+      t.boolean :family4
+      t.boolean :family5
+      t.boolean :family6
+      
+
+
 
 
 

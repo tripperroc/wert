@@ -197,7 +197,19 @@
 </li>
 
 <li>
-<div class="question">Consider those groups in which you talk to a fellow group member at least once every 2 weeks.  Please provide the following information for each such group:  the name or type of group and the total number of members in that group that you talk to at least once every 2 weeks. <B> Remaining </B> </div>
+<div class="question">Consider those groups in which you talk to a fellow group member at least once every 2 weeks.  Please provide the following information for each such group:  the name or type of group and the total number of members in that group that you talk to at least once every 2 weeks.  </div>
+ 
+<div class="answer">Group Name &nbsp <%= f.text_field :groupa1, style: "margin-left: 1em;" %>
+&nbsp
+<%= f.text_field :groupa2, style: "margin-left: 1em;" %>
+</div>
+
+<div class="answer">Number of member </br> with whom you</br> interact with at least once </br>every other week &nbsp 
+<%= f.text_field :groupb1, style: "margin-left: 1em;" %>
+&nbsp
+<%= f.text_field :groupb2, style: "margin-left: 1em;" %>
+</div>
+
 
 </li>
 
@@ -338,15 +350,37 @@ When I was faced with this problem…</div>
 
 <li>
 <div class = "question">COMMUNAL COPING APPLIED TO A STRESSOR </br>
-Please think of the same event that you faced within the last year, that has caused you the most distress and difficulty. Think of the people that you have consulted with when you were dealing with this problem, and what they have done. You can select more than one option. <b> remaining </b>
+Please think of the same event that you faced within the last year, that has caused you the most distress and difficulty. Think of the people that you have consulted with when you were dealing with this problem, and what they have done. You can select more than one option.
+</div>
+<div class = "answer">
+<table style="margin-left: 1em;">
+<tr>
+<tr><td></td><%= render( :partial => 'header', :collection => @communal_check, :locals=> {:f => f}) %></tr>
+<%= render( :partial => 'checktable', :collection => @communal_option, :locals=> {:f => f, :cols=>@communal_check}) %>
+</tr>
+</table>
 </div>
 </li>
+
+
 
 <li>
 <div class="question"> How differently did you cope with this problem in terms of what you have done and with whom you have consulted with, compared to have you GENERALLY cope with problems? </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:cope_problems]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @cope_problems, :locals=> {:f => f, :name => :cope_problems}) %>
+</div>
+</li>
+
+
+<li>
+<ul>
+
+<li>
+<div class="question"> Who do you call 'family' in your life? Even if you do not have anyone you call 'family' at the moment, you might have had someone or a few family members in the past. Please check all that applies, and please respond the following questions accordingly. </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:family]) %></div>
+<div class="answer">
+<%= render( :partial => 'checkboxes', :object => @family, :locals=> {:f => f}) %>
 </div>
 </li>
 
@@ -362,6 +396,10 @@ Please indicate to what degree you agree or disagree with the following statemen
 </table>
 </div>
 </li>
+
+</ul>
+</li>
+
 
 <li>
 <div class = "question">Individualism-Collectivism Scale (Triandis’) </br>
@@ -596,9 +634,12 @@ Did you experience these kinds of events more than once? </div>
 </div>
 </li>
 
-
 <li>
-<b> remaining check box </b>
+<div class="question"> With whom do you live with? (You can choose more than one.) </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:live_with]) %></div>
+<div class="answer">
+<%= render( :partial => 'checkboxes', :object => @live_with, :locals=> {:f => f}) %>
+</div>
 </li>
 
 <li>
@@ -663,11 +704,6 @@ Did you experience these kinds of events more than once? </div>
 
 </ul>
 </li>
-
-
-
-
-
 
 
 </ol>

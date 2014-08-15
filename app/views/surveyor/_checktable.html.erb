@@ -1,0 +1,2 @@
+<% if  @response.errors[checktable[0]].length > 0 %><tr><td></td><td colspan=5><div class="errors"><%= render(:partial => 'errors', :object => @response.errors[checktable[0]]) %></div></td></tr><% end %>
+<tr><td><%= checktable[1] %></td><%= render( :partial => 'checkrow', :collection => cols, :locals=> {:f => f, :name=>checktable[0]}) %></tr>
