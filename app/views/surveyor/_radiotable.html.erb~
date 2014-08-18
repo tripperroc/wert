@@ -1,0 +1,2 @@
+<% if  @response.errors[radiotable[0]].length > 0 %><tr><td></td><td colspan=5><div class="errors"><%= render(:partial => 'errors', :object => @response.errors[radiotable[0]]) %></div></td></tr><% end %>
+<tr><ol><td><%= radiotable[1] %></td><%= render( :partial => 'radiorow', :collection => cols, :locals=> {:f => f, :name=>radiotable[0]}) %></ol></tr>

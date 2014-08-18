@@ -1,0 +1,2 @@
+<td><li><%= f.radio_button name, radiorow %></li></td>
+
