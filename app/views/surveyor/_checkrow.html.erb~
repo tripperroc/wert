@@ -1,2 +1,0 @@
-<td><%= f.check_box name%></td>
-

@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/svenfuchs/i18n.git
-  revision: 0ebd3ac82a7daf6a3610dcbcd4ff94c20f2070b8
+  revision: 4612e6ebf357fba5f90f879ff8b753f8cf8415ff
   specs:
-    i18n (0.6.11)
+    i18n (0.7.0.beta1)
 
 GEM
   remote: https://rubygems.org/
@@ -129,9 +129,9 @@ GEM
       sass (~> 3.2.0)
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0)
-    sdoc (0.4.0)
-      json (~> 1.8)
-      rdoc (~> 4.0, < 5.0)
+    sdoc (0.4.1)
+      json (~> 1.7, >= 1.7.7)
+      rdoc (~> 4.0)
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -150,8 +150,8 @@ GEM
       polyglot (>= 0.3.1)
     turbolinks (2.2.2)
       coffee-rails
-    tzinfo (0.3.40)
-    uglifier (2.5.1)
+    tzinfo (0.3.41)
+    uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
 

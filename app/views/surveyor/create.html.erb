@@ -66,12 +66,13 @@
 <div class="question"> Are either of your parents living? </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:parents]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @parents, :locals=> {:f => f, :name => :parents}) %>
+<%= render( :partial => 'radiobuttons', :object => @parents, :locals=> {:f => f, :name => :parents, :dependency => "parents_touch"}) %>
  </div>
 </li>
 
 <li>
-<div class="question"> Do you see or or get in touch with  (including phone, messengers or text messages) either of your parents at least once every 2 weeks? </div>
+<div class="question" id ="parents_touch" <% if @response.parents == "neither"%>style="display: none;"<% end %>>
+ Do you see or or get in touch with  (including phone, messengers or text messages) either of your parents at least once every 2 weeks? </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:parents_touch]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @parents, :locals=> {:f => f, :name => :parents_touch}) %>
@@ -361,7 +362,7 @@ Please think of the same event that you faced within the last year, that has cau
 <%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :father_a, :dependency => "father"}) %>
 </div>
 
-<ol type="i" id ="father" <% if @response.one_drink != "Yes"%>style="display: none;"<% end %>>
+<ol type="i" id ="father" <% if @response.father_a != "Yes"%>style="display: none;"<% end %>>
 <li>
 <div class="question">Did he listen to you about your problem? </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:father_b]) %></div>

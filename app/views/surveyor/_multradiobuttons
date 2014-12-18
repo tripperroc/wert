@@ -1,0 +1,10 @@
+<ul style="list-style-type: none;">
+<li><%= f.radio_button name, "Only mother", :onclick => "$('#" + dependency + "').show();" %>
+<%= f.label name, "Yes" %></li>
+<li><%= f.radio_button name, "Only father", :onclick => "$('#" + dependency + "').show();" %>
+<%= f.label name, "No" %></li>
+<li><%= f.radio_button name, "both", :onclick => "$('#" + dependency + "').show();" %>
+<%= f.label name, "No" %></li>
+<li><%= f.radio_button name, "neither", :onclick => "$('#" + dependency + "').hide();" %>
+<%= f.label name, "No" %></li>
+</ul>

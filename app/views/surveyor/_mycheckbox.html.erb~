@@ -1,1 +1,0 @@
-<%= render( :partial => 'checkbox', :collection => checkboxes, :locals=> {:f => f}) %>
