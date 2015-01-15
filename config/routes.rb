@@ -62,12 +62,33 @@ GMHS::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  match 'consent', :to => 'consent#index', :as => 'consent_index', via: [:get, :post]
+  match 'consent/index(/:locale)', :to => 'consent#index', :as => 'consent_index', via: [:get, :post]
+
+  #get 'consent/info_letter(/:locale)', :to => 'consent#info_letter'
+
+  #match 'consent', :to => 'consent#index', :as => 'consent_index', via: [:get, :post]
+  get 'welcome(/:locale)', :to => 'welcome#index'
+  post 'welcome(/:locale)', :to => 'welcome#index'
+
+  # get 'consent/info_letter(/:locale)', :to => 'consent#info_letter'
+  # post 'consent/info_letter(/:locale)', :to => 'consent#info_letter' 
+
+  # scope "(consent/:locale)", locale: /en|ko|tr/ do
+  #   resources :info_letter, :index
+  # end
+
+
+  #get 'consent(/:locale)', :to => 'consent#index'
+  #post 'consent(/:locale)', :to => 'consent#index'
 
   get ':controller(/:action(/:id))'
   post ':controller(/:action(/:id))'
   patch ':controller(/:action(/:id))'
 
   #match ':controller(/:action(/:id))', via [:get, :post, :patch]
+
+  scope "/:locale" do
+    resources :welcome, :consent
+  end
   
 end

@@ -2,11 +2,28 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+  before_action :set_locale
+ 
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
+  end
+
+  # def translations
+  #   @hello_controller = t(:hello_yml) 
+  # end
+
+  # def index
+  #   @hello_controller = t(:hello_yml)
+  # end
+
   helper_method :authenticated_with_fb_graph?, :facebook_access_token, :facebook_account_number, :facebook_user, :fb_graph_user,
     :current_survey, :current_survey_name
 
   include Facebooker2::Rails::Controller
 
+# def default_url_options(option = {})
+#   { locale: I18n.locale }.merge options
+# end  
 
 private
 
@@ -127,6 +144,8 @@ private
     u.total_male_friends
   end
 
-
+  def default_url_options(options = {})
+    { locale: I18n.locale }.merge options
+  end
 
 end

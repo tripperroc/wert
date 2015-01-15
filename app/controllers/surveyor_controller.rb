@@ -61,6 +61,8 @@ class SurveyorController < ApplicationController
    end
 
   def answers
+   #@age = [:age]
+
     @mf = ["Male", "Female"]
    @yn = ["Yes", "No"]
    @times=[" All of the time","Most of the time ","Some of the time ","A little of the time "," None of the time"]

@@ -23,5 +23,5 @@
 #  hello: "Hello world"
 #  blank: "Yo, its blank"
 
-en:
-  hello_yml: "English"
+ko:
+  hello_yml: "Korean"

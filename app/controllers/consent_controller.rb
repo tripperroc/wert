@@ -1,18 +1,22 @@
-class ConsentController < ApplicationController
+class ConsentController < LanguageController
 
-  def info_letter
-# Don't thnk this currently does anything.
-#    if request.post?
-#      if @rsc =  RedssocsSurveyConsent.create(user_params)
-#        if !@rsc.eligible?
-#          redirect_to :action => 'not_eligible'
-#        end 
-#      else
-#         redirect_to :action => 'not_eligible'
-#      end
-#      @facebook_response = FacebookResponse.new
-#    end
-  end
+#   def info_letter
+# # Don't thnk this currently does anything.
+# #    if request.post?
+# #      if @rsc =  RedssocsSurveyConsent.create(user_params)
+# #        if !@rsc.eligible?
+# #          redirect_to :action => 'not_eligible'
+# #        end 
+# #      else
+# #         redirect_to :action => 'not_eligible'
+# #      end
+# #      @facebook_response = FacebookResponse.new
+# #    end
+#   end
+
+  # def info_letter
+  #   @hello_controller = t(:hello_yml)
+  # end
 
   def screening
     @facebook_response = FacebookResponse.new
@@ -115,5 +119,9 @@ class ConsentController < ApplicationController
   def user_params
     params.require(:redssocs_survey_consent).permit(:eighteen_or_older, :gender, :orientation)
   end
+
+  # def index
+  #   @hello_controller = t(:hello_yml)
+  # end
 
 end
