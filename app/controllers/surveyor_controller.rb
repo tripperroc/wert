@@ -113,13 +113,13 @@ class SurveyorController < ApplicationController
        "Agree",
        "Strongly Agree"]
 
-@happiness = [ "Less Happy",
-       " ",
-       " ",
-       " ",
-       " ",
-       " ",
-       "Very Happy"]
+@happiness = [ "1 - Less Happy",
+       "2",
+       "3",
+       "4",
+       "5",
+       "6",
+       "7 - Very Happy"]
 
 @rating=[" 1","2 ","3 ","4 ","5 ","6 ","7 "]
 
