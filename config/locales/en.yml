@@ -91,14 +91,55 @@ en:
 #4i
   other_relatives: "How many other relatives (other than your spouse, parents & children) do you feel close to?"
 #4j
-#numbers off?
-#4k
   other_relatives_touch: "How many of these relatives do you see or get in touch with  (including phone, messengers or text messages) at least once every 2 weeks?"
-#4l
+#4k
   close_friends: "How many close friends do you have?  (meaning people that you feel at ease with, can talk to about private matters, and can call on for help)"
-#4m
+#4l
   close_friends_touch: "How many of these friends do you see or get in touch with  (including phone, messengers or text messages) at least once every 2 weeks"
-#4n
+#4m
   religious: "Do you belong to a church, temple, or other religious group?"
   yn1: "Yes"
   yn2: "No"
+#4n
+  religious_members: "How many members of your church or religious group do you talk to or get in touch with  (including phone, messengers or text messages) at least once every 2 weeks? (This includes at group meetings and services.)"
+#4o  
+  classes: "Do you attend any classes (school, university, technical training, or adult education) on a regular basis?"
+#4p 
+  talk_students_teachers: "How many fellow students or teachers do you talk to or get in touch with  (including phone, messengers or text messages) at least once every 2 weeks? (This includes at class meetings.)"
+#4q  
+  employedq: "Are you currently employed either full or part-time?"
+  employed1: "No"
+  employed2: "I am self-employed"
+  employed3: "Yes employed by others"
+  employed4: "Retired "
+#4r  
+  talk_work: "How many people at work (other than those you supervise) do you talk to or get in touch with  (including phone, messengers or text messages) at least once every 2 weeks?"
+#4s
+  visit_neighbors: "How many of your neighbors do you visit or or get in touch with  (including phone, messengers or text messages) at least once every 2 weeks?"
+#4t  
+  volunteer: "Are you currently involved in regular volunteer work?"
+#4u  
+  num_volunteer: "How many people involved in this volunteer work do you talk to or get in touch with  (including phone, messengers or text messages) about volunteering-related issues at least once every 2 weeks?"
+#4v  
+  social_group: "Do you belong to any groups in which you talk to one or more members of the group about group-related issues at least once every 2 weeks?  Examples include social clubs, recreational groups, trade unions, commercial groups, professional organizations, groups concerned with children like the PTA or Boy Scouts,  groups concerned with community service, etc"
+#4w
+  group_name: "Consider those groups in which you talk to a fellow group member at least once every 2 weeks.  Please provide the following information for each such group:  the name or type of group and the total number of members in that group that you talk to at least once every 2 weeks."
+  group_member: "Number of member </br> with whom you</br> interact with at least once </br>every other week"
+#5
+  happyq: "Taking all things together, would you say you are"
+  happy1: "Very Happy"
+  happy2: "Rather Happy"
+  happy3: "Not very happy"
+  happy4: "Not at all happy"
+#6  
+  instructions1: "Below are five statements that you may agree or disagree with. Using the 1 - 5 scale below, indicate your agreement with each item by placing the appropriate number on the line preceding that item. Please be open and honest in your responding."
+  life_satisfaction_ideal: "In most ways my life is close to my ideal"
+  life_satisfaction_conditions: "The conditions of my life are excellent"
+  life_satisfaction_satisfied: "I am satisfied with my life."
+  life_satisfaction_things: "So far I have gotten the important things I want in life"
+  life_satisfaction_change: "If I could live my life over, I would change almost nothing"
+  aggreement_strong1: "Strongly disagree"
+  aggreement_strong2: "Disagree"
+  aggreement_strong3: "Neither agree nor disagree"
+  aggreement_strong4: "Agree"
+  aggreement_strong5: "Strongly Agree"

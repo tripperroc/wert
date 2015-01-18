@@ -91,14 +91,55 @@ tr:
 #4i
   other_relatives: "Eşiniz, ebeveynleriniz ya da çocuklarınız dışında kendinizi kaç akrabanıza yakın hissediyorsunuz? "
 #4j
-#numbers off?
-#4k
   other_relatives_touch: "Bu akrabaların kaçıyla telefon, mesaj ve benzeri yollarla en az 2 haftada bir görüşüyorsunuz?"
-#4l
+#4k
   close_friends: "Kaç tane yakın arkadaşınız var? (Yakın arkadaştan kasıt yanında rahat hissettiğiniz, özel konulardan bahsedebildiğiniz ve gerektiğinde yardım isteyebildiğiniz kişilerdir)"
-#4m
+#4l
   close_friends_touch: "Bu arkadaşlarınızdan kaçıyla telefon, mesaj ve benzeri yollarla en az 2 haftada bir görüşüyorsunuz?"
-#4n
+#4m
   religious: "İnancınızdan ötürü ibadet için düzenli olarak görüştüğünüz kişiler var mı?"
   yn1: "Evet"
   yn2: "Hayır"
+#4n
+  religious_members: "Bu kişiler arasından kaçıyla en az ayda bir telefon, mesaj ve benzeri yollarla görüşüyorsunuz? (Grupça buluşmalarınız dahil)"
+#4o  
+  classes: "Düzenli olarak bir kursa ya da okula gidiyor musunuz? (okul, üniversite, eğitim programı vb)? "
+#4p 
+  talk_students_teachers: "Kaç sınıf arkadaşınız ya da öğretmeninizle telefon, mesaj ve benzeri yollarla en az 2 haftada bir görüşüyorsunuz? (ders günleri dahil)"
+#4q  
+  employedq: "Bir yerde tam ya da yarı zamanlı çalışıyor musunuz?"
+  employed1: "Hayır"
+  employed2: "Evet, kendi işimde"
+  employed3: "Evet, başkasının işinde"
+  employed4: "Emekli"
+#4r  
+  talk_work: "Denetlediğiniz, yönettiğiniz veya sorumlu olduğunuz kişiler dışında iş yerinizden kaç kişiyle telefon, mesaj ve benzeri yollarla en az 2 haftada bir görüşüyorsunuz?"
+#4s  
+  visit_neighbors: "Komşularınızdan kaçını en az 2 haftada bir ziyaret ediyor veya telefon, mesaj ve benzeri yollarla görüşüyorsunuz?"
+#4t  
+  volunteer: "Kâr amacı gütmeyen, gönüllü bir çalışmaya dâhil misiniz?"
+#4u  
+  num_volunteer: "Bu çalışmaya dâhil olan kişilerin kaçıyla telefon, mesaj ve benzeri yollarla en az 2 haftada bir gönüllülükle ilgili konular hakkında konuşuyorsunuz?"
+#4v  
+  social_group: "Gönüllü çalışma yaptığınız grup dışında, diğer grup üyeleriyle en az 2 haftada bir grupla ilgili konular hakkında konuştuğunuz bir gruba üye misiniz? Bu grup sosyal kulüp, spor kulübü, işçi sendikası, kooperatif, ticaret birliği, profesyonel organizasyon, sosyal servis hizmeti, TOÇEV gibi çocuklarla çalışan bir yardım kampanyası ya da benzeri bir organizasyon olabilir"
+#4w
+  group_name: "En az 2 haftada bir diğer grup üyeleriyle konuştuğunuz bu grubu/grupları düşünün. Lütfen bu grubun/grupların isimlerini ya da türlerini ve en az 2 haftada bir konuştuğunuz grup üyelerinin sayılarını yazın."
+  group_member: "En az 2 haftada bir görüştüğünüz üye sayısı"
+#5
+  happyq: "Herşeyi göz önünde bulundurursanız, ne kadar mutlusunuz"
+  happy1: "Çok mutlu"
+  happy2: "Mutlu"
+  happy3: "Çok mutlu değil"
+  happy4: "Hiç mutlu değil"
+#6
+  instructions1: "Aşağıdaki ifadelere ne kadar katılıp katılmadığınızı sizin kendinize dair genel düşüncelerinizi ve hislerinizi anlamak için soracağız. 1 hiç katılmıyorum, 3 ne katılıyorum ne katılmıyorum ve 5 tamamen katılıyorum anlamına gelecek şekilde 1 ile 5 arasında bir puan verebilirsiniz"
+  life_satisfaction_ideal: "Pek çok açıdan ideallerime yakın bir yaşamım var"
+  life_satisfaction_conditions: "Yaşam koşullarım mükemmeldir"
+  life_satisfaction_satisfied: "Yaşamım beni tatmin ediyor"
+  life_satisfaction_things: "Şimdiye kadar, yaşamda istediğim önemli şeyleri elde ettim."
+  life_satisfaction_change: "Hayatımı bir daha yaşama şansım olsaydı, hemen hemen hiçbir şeyi değiştirmezdim."
+  aggreement_strong1: "Hiç katılmıyorum"
+  aggreement_strong2: "Katılmıyorum"
+  aggreement_strong3: "Ne katılıyorum ne katılmıyorum"
+  aggreement_strong4: "Katılıyorum"
+  aggreement_strong5: "Tamamen katılıyorum"

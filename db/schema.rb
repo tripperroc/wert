@@ -115,6 +115,7 @@ ActiveRecord::Schema.define(version: 20131228025916) do
     t.string   "bigFive_tense"
     t.string   "bigFive_active"
     t.string   "martial"
+    t.integer  "num_siblings"
     t.string   "num_children"
     t.string   "num_children_intouch"
     t.string   "parents"

@@ -42,7 +42,9 @@
 </div>
 </li>
 
+<li>
 <p><%= @cohen_instruction %></p>
+<ol type="a">
 
 <li>
 <div class="question"> <%= @martialq %> </div>
@@ -50,6 +52,12 @@
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @martial, :locals=> {:f => f, :name => :martial}) %>
  </div>
+</li>
+
+<li>
+<div class="question"> <%= @num_siblings %> </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:num_siblings]) %></div>
+<div class="answer"><%= f.text_field :num_siblings, style: "margin-left: 1em;" %></div>
 </li>
 
 <li>
@@ -133,14 +141,13 @@
 </li>
 
 <li>
-<div class="question"> How many members of your church or religious group do you talk to or get in touch with  (including phone, messengers or text messages) at least once every 2 weeks? (This includes at group meetings and services.)
-</div>
+<div class="question"> <%= @religious_members %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:religious_members]) %></div>
 <div class="answer"><%= f.text_field :religious_members, style: "margin-left: 1em;" %></div>
 </li>
 
 <li>
-<div class="question"> Do you attend any classes (school, university, technical training, or adult education) on a regular basis?   </div>
+<div class="question"> <%= @classes %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:classes]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :classes}) %>
@@ -149,13 +156,13 @@
 
 
 <li>
-<div class="question"> How many fellow students or teachers do you talk to or get in touch with  (including phone, messengers or text messages) at least once every 2 weeks? (This includes at class meetings.) </div>
+<div class="question"> <%= @talk_students_teachers %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:talk_students_teachers]) %></div>
 <div class="answer"><%= f.text_field :talk_students_teachers, style: "margin-left: 1em;" %></div>
 </li>
 
 <li>
-<div class="question"> Are you currently employed either full or part-time?   </div>
+<div class="question"> <%= @employedq %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:employed]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @employed, :locals=> {:f => f, :name => :employed}) %>
@@ -163,19 +170,19 @@
 </li>
 
 <li>
-<div class="question"> How many people at work (other than those you supervise) do you talk to or get in touch with  (including phone, messengers or text messages) at least once every 2 weeks?</div>
+<div class="question"> <%= @talk_work %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:talk_work]) %></div>
 <div class="answer"><%= f.text_field :talk_work, style: "margin-left: 1em;" %></div>
 </li>
 
 <li>
-<div class="question"> How many of your neighbors do you visit or or get in touch with  (including phone, messengers or text messages) at least once every 2 weeks?</div>
+<div class="question"> <%= @visit_neighbors %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:visit_neighbors]) %></div>
 <div class="answer"><%= f.text_field :visit_neighbors, style: "margin-left: 1em;" %></div>
 </li>
 
 <li>
-<div class="question"> Are you currently involved in regular volunteer work?   </div>
+<div class="question"> <%= @volunteer %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:volunteer]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :volunteer}) %>
@@ -183,13 +190,13 @@
 </li>
 
 <li>
-<div class="question"> How many people involved in this volunteer work do you talk to or get in touch with  (including phone, messengers or text messages) about volunteering-related issues at least once every 2 weeks? </div>
+<div class="question"> <%= @num_volunteer %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:num_volunteer]) %></div>
 <div class="answer"><%= f.text_field :num_volunteer, style: "margin-left: 1em;" %></div>
 </li>
 
 <li>
-<div class="question"> Do you belong to any groups in which you talk to one or more members of the group about group-related issues at least once every 2 weeks?  Examples include social clubs, recreational groups, trade unions, commercial groups, professional organizations, groups concerned with children like the PTA or Boy Scouts,  groups concerned with community service, etc  </div>
+<div class="question"> <%= @social_group %>  </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:social_group]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :social_group}) %>
@@ -197,24 +204,26 @@
 </li>
 
 <li>
-<div class="question">Consider those groups in which you talk to a fellow group member at least once every 2 weeks.  Please provide the following information for each such group:  the name or type of group and the total number of members in that group that you talk to at least once every 2 weeks.  </div>
+<div class="question"> <%= @group_name %> </div>
  
 <div class="answer">Group Name &nbsp <%= f.text_field :groupa1, style: "margin-left: 1em;" %>
 &nbsp
 <%= f.text_field :groupa2, style: "margin-left: 1em;" %>
 </div>
 
-<div class="answer">Number of member </br> with whom you</br> interact with at least once </br>every other week &nbsp 
+<div class="answer"> <%= @group_member %> &nbsp 
 <%= f.text_field :groupb1, style: "margin-left: 1em;" %>
 &nbsp
 <%= f.text_field :groupb2, style: "margin-left: 1em;" %>
 </div>
 
+</li>
 
+</ol>
 </li>
 
 <li>
-<div class="question">Taking all things together, would you say you are </div>
+<div class="question"> <%= @happyq %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:happy]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @happy, :locals=> {:f => f, :name => :happy}) %>
@@ -223,7 +232,7 @@
 
 
 <li>
-<div class = "question">Below are five statements that you may agree or disagree with. Using the 1 - 5 scale below, indicate your agreement with each item by placing the appropriate number on the line preceding that item. Please be open and honest in your responding.</div>
+<div class = "question"> <%= @instructions1 %> </div>
 <div class = "answer">
 <table style="margin-left: 1em;">
 <tr>
