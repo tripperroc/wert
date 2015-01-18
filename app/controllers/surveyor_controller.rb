@@ -32,8 +32,27 @@ class SurveyorController < ApplicationController
       logger.debug "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
       logger.debug "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 
-      answers
+      @sex = t(:sex)
+      @age = t(:age)
+      @bigFive_instruction = t(:bigFive_instruction)
+      @cohen_instruction = t(:cohen_instruction)
+      @martialq = t(:martialq)
+      # @num_siblings = t(:num_siblings)
+      # def num_sibling
+      # end
+      @num_children = t(:num_children)
+      @num_children_intouch = t(:num_children_intouch)
+      @parentsq = t(:parentsq)
+      @parents_touch = t(:parents_touch)
+      @parents_partnerq = t(:parents_partnerq)
+      @parents_partner_touch = t(:parents_partner_touch)
+      @other_relatives = t(:other_relatives)
+      @other_relatives_touch = t(:other_relatives_touch)
+      @close_friends = t(:close_friends)
+      @close_friends_touch = t(:close_friends_touch)
+      @religious = t(:religious)
 
+      answers
 
   #    redirect_to :controller => "estimate", :action => "index"
   end
@@ -62,9 +81,16 @@ class SurveyorController < ApplicationController
 
   def answers
    #@age = [:age]
+    @mf1 = t(:mf1)
+    @mf2 = t(:mf2)
+    #@mf = ["Male", "Female"]
+    @mf = [@mf1, @mf2]
+   
+   @yn1 = t(:yn1)
+   @yn2 = t(:yn2) 
+   #@yn = ["Yes", "No"]
+   @yn = [@yn1, @yn2]
 
-    @mf = ["Male", "Female"]
-   @yn = ["Yes", "No"]
    @times=[" All of the time","Most of the time ","Some of the time ","A little of the time "," None of the time"]
 
 @childhood=[" In childhood (age between 0-17) "," In adulthood (after age 18) "," Both in childhood and adulthood"]
@@ -89,17 +115,38 @@ class SurveyorController < ApplicationController
 	[:family5, " Children "],
 	[:family6, "Other family members like cousins, aunts, uncles etc. "]]
 
-   @martial = ["Never married & never lived with someone in a matial-like relationship",
-              "Currently married & living together", 
-             "Separated",
-              "Divorced",
-              "Divorced and Remarried",
-              "Widowed",
-              "I am single but in a relationship (not living together)",
-              "I am single, but in a relationship (living together)"]
+  @marital1 = t(:marital1)
+  @marital2 = t(:marital2)
+  @marital3 = t(:marital3) 
+  @marital4 = t(:marital4) 
+  @marital5 = t(:marital5) 
+  @marital6 = t(:marital6) 
+  @marital7 = t(:marital7) 
+  @marital8 = t(:marital8) 
+   # @martial = ["Never married & never lived with someone in a matial-like relationship",
+   #            "Currently married & living together", 
+   #           "Separated",
+   #            "Divorced",
+   #            "Divorced and Remarried",
+   #            "Widowed",
+   #            "I am single but in a relationship (not living together)",
+   #            "I am single, but in a relationship (living together)"]
+  @martial = [@marital1, @marital2, @marital3, @marital4, @marital5, @marital6, @marital7, @marital8]
 
-@parents = ["Only mother", "Only father", "both", "neither"]
-@parents_partner = ["Only mother", "Only father", "both", "neither" , "I am not married"]
+@parents1 = t(:parents1)
+@parents2 = t(:parents2)
+@parents3 = t(:parents3)
+@parents4 = t(:parents4)
+# @parents = ["Only mother", "Only father", "both", "neither"]
+@parents = [@parents1, @parents2, @parents3, @parents4]
+
+@parents_partner1 = t(:parents_partner1)
+@parents_partner2 = t(:parents_partner2)
+@parents_partner3 = t(:parents_partner3)
+@parents_partner4 = t(:parents_partner4)
+@parents_partner5 = t(:parents_partner5)
+#@parents_partner = ["Only mother", "Only father", "both", "neither" , "I am not married"]
+@parents_partner = [@parents_partner1, @parents_partner2, @parents_partner3, @parents_partner4, @parents_partner5]
 
 @life_satisfaction = [[:life_satisfaction_ideal, "In most ways my life is close to my ideal"],
      [:life_satisfaction_conditions, "The conditions of my life are excellent"],
@@ -137,22 +184,52 @@ class SurveyorController < ApplicationController
 
 @happiness_rating =[[:happiness_rating, "Compared with most of my peers, I consider myself"]]
 
-@aggreement = [ "Completely disagree",
-       "Disagree",
-       "Neither agree nor disagree",
-       "Agree",
-       "Completely Agree"]
+@aggreement1 = t(:aggreement1)
+@aggreement2 = t(:aggreement2)
+@aggreement3 = t(:aggreement3)
+@aggreement4 = t(:aggreement4)
+@aggreement5 = t(:aggreement5)
 
-@bigFive = [[:bigFive_introverted, "I am an introverted person"],
-     [:bigFive_trust, "Generally, I easily trust people"],
-       [:bigFive_lazy, "I have a tendency to be lazy"],
-       [:bigFive_cope, "I am easy going, i can cope well with stress"],
-       [:bigFive_art, "I have little interest in art"],
-       [:bigFive_extraverted, "I am an extraverted and social person"],
-      [:bigFive_flaws, "I have a tendency finding flaws in other people"],
-       [:bigFive_tasks, "I complete tasks meticulously and completely"],
-       [:bigFive_tense, "I am easy to tense up and worry"],
-      [:bigFive_active, "I have an active and vivid imagination"]]
+# @aggreement = [ "Completely disagree",
+#        "Disagree",
+#        "Neither agree nor disagree",
+#        "Agree",
+#        "Completely Agree"]
+@aggreement = [@aggreement1, @aggreement2, @aggreement3, @aggreement4, @aggreement5]
+
+@bigFive_introverted = t(:bigFive_introverted)
+@bigFive_trust = t(:bigFive_trust)
+@bigFive_lazy = t(:bigFive_lazy)
+@bigFive_cope = t(:bigFive_cope)
+@bigFive_art = t(:bigFive_art)
+@bigFive_extraverted = t(:bigFive_extraverted)
+@bigFive_flaws = t(:bigFive_flaws)
+@bigFive_tasks = t(:bigFive_tasks)
+@bigFive_tense = t(:bigFive_tense)
+@bigFive_active = t(:bigFive_active)
+
+# @bigFive = [[:bigFive_introverted, "I am an introverted person"],
+#      [:bigFive_trust, "Generally, I easily trust people"],
+#        [:bigFive_lazy, "I have a tendency to be lazy"],
+#        [:bigFive_cope, "I am easy going, i can cope well with stress"],
+#        [:bigFive_art, "I have little interest in art"],
+#        [:bigFive_extraverted, "I am an extraverted and social person"],
+#       [:bigFive_flaws, "I have a tendency finding flaws in other people"],
+#        [:bigFive_tasks, "I complete tasks meticulously and completely"],
+#        [:bigFive_tense, "I am easy to tense up and worry"],
+#       [:bigFive_active, "I have an active and vivid imagination"]]
+#@bigFive = [@bigFive_introverted, @bigFive_trust, @bigFive_lazy, @bigFive_cope, @bigFive_art, @bigFive_extraverted, @bigFive_flaws, @bigFive_tasks, @bigFive_tense, @bigFive_active] 
+@bigFive = [[:bigFive_introverted, @bigFive_introverted],
+     [:bigFive_trust, @bigFive_trust],
+       [:bigFive_lazy, @bigFive_lazy],
+       [:bigFive_cope, @bigFive_cope],
+       [:bigFive_art, @bigFive_art],
+       [:bigFive_extraverted, @bigFive_extraverted],
+      [:bigFive_flaws, @bigFive_flaws],
+       [:bigFive_tasks, @bigFive_tasks],
+       [:bigFive_tense, @bigFive_tense],
+      [:bigFive_active, @bigFive_active]]
+
 
 @communal1 =[[:communal1_item1, "When I share a problem with people who are in my immediate circle (my family, friends, loved ones) they think of this problem as our problem, not only my problem. "],
 	        [:communal1_item2, "When I am faced with a problem, people who are in my immediate circle (my family, friends and loved ones) solve this problem for me (resorting mainly to their own resources  or mobilizing my resources themselves) "],

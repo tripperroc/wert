@@ -15,7 +15,7 @@
  <ol>
 
 <li>
-<div class="question"> Sex  </div>
+<div class="question"> <%= @sex %>  </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:birth_sex]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @mf, :locals=> {:f => f, :name => :birth_sex}) %>
@@ -24,14 +24,14 @@
 </li>
 
 <li>
-<div class="question"> Age </div>
+<div class="question"> <%= @age %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:age]) %></div>
 <div class="answer"><%= f.text_field :age, style: "margin-left: 1em;" %></div>
 </li>
 
 
 <li>
-<div class = "question"> </div>
+<div class = "question"> <%= @bigFive_instruction %> </div>
 <div class = "answer">
 <table style="margin-left: 1em;">
 <tr>
@@ -42,8 +42,10 @@
 </div>
 </li>
 
+<p><%= @cohen_instruction %></p>
+
 <li>
-<div class="question"> Which of the following best describes your marital status? </div>
+<div class="question"> <%= @martialq %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:martial]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @martial, :locals=> {:f => f, :name => :martial}) %>
@@ -51,19 +53,19 @@
 </li>
 
 <li>
-<div class="question"> How many children do you have? </div>
+<div class="question"> <%= @num_children %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:num_children]) %></div>
 <div class="answer"><%= f.text_field :num_children, style: "margin-left: 1em;" %></div>
 </li>
 
 <li>
-<div class="question"> How many of your children do you see or get in touch with  (including phone, messengers or text messages) at least once every 2 weeks?  </div>
+<div class="question"> <%= @num_children_intouch %>  </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:num_children_intouch]) %></div>
 <div class="answer"><%= f.text_field :num_children_intouch, style: "margin-left: 1em;" %></div>
 </li>
 
 <li>
-<div class="question"> Are either of your parents living? </div>
+<div class="question"> <%= @parentsq %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:parents]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @parents, :locals=> {:f => f, :name => :parents, :dependency => "parents_touch"}) %>
@@ -72,7 +74,7 @@
 
 <li>
 <div class="question" id ="parents_touch" <% if @response.parents == "neither"%>style="display: none;"<% end %>>
- Do you see or or get in touch with  (including phone, messengers or text messages) either of your parents at least once every 2 weeks? </div>
+<%= @parents_touch %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:parents_touch]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @parents, :locals=> {:f => f, :name => :parents_touch}) %>
@@ -80,7 +82,7 @@
 </li>
 
 <li>
-<div class="question"> Are either of your in-laws (or partner's parents) living?  </div>
+<div class="question"> <%= @parents_partnerq %>  </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:parents_partner]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @parents_partner, :locals=> {:f => f, :name => :parents_partner}) %>
@@ -89,7 +91,7 @@
 
 
 <li>
-<div class="question"> Do you see or get in touch with  (including phone, messengers or text messages) either of your partner's parents at least once every 2 weeks? </div>
+<div class="question"> <%= @parents_partner_touch %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:parents_partner_touch]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @parents, :locals=> {:f => f, :name => :parents_partner_touch}) %>
@@ -97,36 +99,33 @@
 </li>
 
 <li>
-<div class="question"> How many other relatives (other than your spouse, parents & children) do you feel close to?  </div>
+<div class="question"> <%= @other_relatives %>  </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:other_relatives]) %></div>
 <div class="answer"><%= f.text_field :other_relatives, style: "margin-left: 1em;" %></div>
 </li>
 
 <li>
-<div class="question"> How many of these relatives do you see or get in touch with  (including phone, messengers or text messages) at least once every 2 weeks?
- </div>
+<div class="question"> <%= @other_relatives_touch %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:other_relatives_touch]) %></div>
 <div class="answer"><%= f.text_field :other_relatives_touch, style: "margin-left: 1em;" %></div>
 </li>
 
 
 <li>
-<div class="question"> How many close friends do you have?  (meaning people that you feel at ease with, can talk to about private matters, and can call on for help)
-</div>
+<div class="question"> <%= @close_friends %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:close_friends]) %></div>
 <div class="answer"><%= f.text_field :close_friends, style: "margin-left: 1em;" %></div>
 </li>
 
 
 <li>
-<div class="question"> How many of these friends do you see or get in touch with  (including phone, messengers or text messages) at least once every 2 weeks
-</div>
+<div class="question"> <%= @close_friends_touch %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:close_friends_touch]) %></div>
 <div class="answer"><%= f.text_field :close_friends_touch, style: "margin-left: 1em;" %></div>
 </li>
 
 <li>
-<div class="question"> Do you belong to a church, temple, or other religious group?  </div>
+<div class="question"> <%= @religious %>  </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:religious]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :religious}) %>

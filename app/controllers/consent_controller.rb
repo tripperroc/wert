@@ -14,9 +14,14 @@ class ConsentController < LanguageController
 # #    end
 #   end
 
-  # def info_letter
-  #   @hello_controller = t(:hello_yml)
-  # end
+   def index
+    @hello_controller = t(:hello_yml)
+   end
+ 
+  def info_letter
+    @hello_controller = t(:hello_yml)
+  end
+
 
   def screening
     @facebook_response = FacebookResponse.new
@@ -119,9 +124,5 @@ class ConsentController < LanguageController
   def user_params
     params.require(:redssocs_survey_consent).permit(:eighteen_or_older, :gender, :orientation)
   end
-
-  # def index
-  #   @hello_controller = t(:hello_yml)
-  # end
 
 end

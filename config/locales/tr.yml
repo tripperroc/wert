@@ -25,3 +25,80 @@
 
 tr:
   hello_yml: "Turkish"
+#Error
+
+#Instructions
+
+#1
+  sex: "Cinsiyet"
+  mf1: "Erkek"
+  mf2: "Kadın"
+#2
+  age: "Yaş"
+#3
+  bigFive_instruction: "Şimdi aşağıdaki ifadelere ne kadar katılıp katılmadığınızı işaretleyiniz. 1 hiç katılmıyorum, 3 ne katılıyorum ne katılmıyorum ve 5 tamamen katılıyorum anlamına gelecek şekilde 1 ile 5  arasında bir puan verebilirsiniz."
+  bigFive_introverted: "İçime kapanık biriyim"
+  bigFive_trust: "Genellikle insanlara kolayca güvenirim"
+  bigFive_lazy: "Tembellik yapmaya eğilimim vardır"
+  bigFive_cope: "Rahatım, stresle iyi başa çıkarım"
+  bigFive_art: "Sanata ilgim azdır"
+  bigFive_extraverted: "Dışa dönük ve sosyal biriyim"
+  bigFive_flaws: "Başkalarında kusur bulma eğilimim vardır"
+  bigFive_tasks: "İşimi titizlikle tam yaparım"
+  bigFive_tense: "Kolay gerilir ve kaygılanırım."
+  bigFive_active: "Aktif bir hayal gücüm vardır"
+  aggreement1: "Hiç katılmıyorum"
+  aggreement2: "Katılmıyorum"
+  aggreement3: "Ne katılıyorum ne katılmıyorum"
+  aggreement4: "Katılıyorum"
+  aggreement5: "Tamamen katılıyorum"
+#4 Instructions
+  cohen_instruction: "Şimdi sordugumuz sorular, düzenli olarak kaç kişi ile görüştüğünüz ya da konuştuğunuzla ilgilidir. Bu kişiler aileniz, arkadaşlarınız, akrabalarınız, komşularınız veya benzeri yakınlarınız olabilir"
+#4a
+  martialq: "Medeni durumunuz nedir?"
+  marital1: "Bekârım"
+  marital2: "Evliyim"
+  marital3: "Evliyim ama ayrı yaşıyorum"
+  marital4: "Boşandım"
+  marital5: "Tekrar evlendim"
+  marital6: "Dulum"
+  marital7: "Bekarım ama ilişkim var, ve birlikte yaşamıyorum. "
+  marital8: "Bekarım ama ilişkim var, ve sevgilimle birlikte yaşıyorum"
+#4b - STILL MISSING RIGHT NOW --------------------------------------------------
+  num_siblings: "Kaç tane kardeşiniz var?"
+#-------------------------------------------------------------------------------
+#4c
+  num_children: "Kaç çocuğunuz var?"
+#4d
+  num_children_intouch: "Çocuklarınızın kaçıyla en az 2 haftada bir görüşüyorsunuz ya da telefonla konuşuyorsunuz?"
+#4e
+  parentsq: "Ebeveynleriniz yaşıyor mu?"
+  parents1: "Sadece annem yaşıyor   "
+  parents2: "Sadece babam yaşıyor"
+  parents3: "İkisi de yaşıyor"
+  parents4: "İkisi de vefat etti"
+#4f
+  parents_touch: "Ebeveynlerinizle en az 2 haftada bir görüşüyor ya da telefonla konuşuyor musunuz?"
+#4g
+  parents_partnerq: "Eşinizin ebeveynleri yaşıyor mu?"
+  parents_partner1: "Sadece annesi yaşıyor"
+  parents_partner2: "Sadece babası yaşıyor"
+  parents_partner3: "İkisi de yaşıyor"
+  parents_partner4: "İkisi de vefat etti"
+  parents_partner5: "Evli değilim"
+#4h
+  parents_partner_touch: "Eşinizin ebeveynleriyle telefon, mesaj ve benzeri yollarla en az 2 haftada bir görüşüyor musunuz?"
+#4i
+  other_relatives: "Eşiniz, ebeveynleriniz ya da çocuklarınız dışında kendinizi kaç akrabanıza yakın hissediyorsunuz? "
+#4j
+#numbers off?
+#4k
+  other_relatives_touch: "Bu akrabaların kaçıyla telefon, mesaj ve benzeri yollarla en az 2 haftada bir görüşüyorsunuz?"
+#4l
+  close_friends: "Kaç tane yakın arkadaşınız var? (Yakın arkadaştan kasıt yanında rahat hissettiğiniz, özel konulardan bahsedebildiğiniz ve gerektiğinde yardım isteyebildiğiniz kişilerdir)"
+#4m
+  close_friends_touch: "Bu arkadaşlarınızdan kaçıyla telefon, mesaj ve benzeri yollarla en az 2 haftada bir görüşüyorsunuz?"
+#4n
+  religious: "İnancınızdan ötürü ibadet için düzenli olarak görüştüğünüz kişiler var mı?"
+  yn1: "Evet"
+  yn2: "Hayır"

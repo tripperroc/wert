@@ -25,3 +25,80 @@
 
 en:
   hello_yml: "English"
+#Error
+
+#Instructions
+
+#1
+  sex: "Sex"
+  mf1: "Male"
+  mf2: "Female"
+#2
+  age: "Age"
+#3
+  bigFive_instruction: "Please rate to what degree you agree or disagree to the following statements. You can rate these statements on a scale from 1 “I completely disagree”, 3 “I neither agree nor disagree”, to 5 “I completely agree”."
+  bigFive_introverted: "I am an introverted person"
+  bigFive_trust: "Generally, I easily trust people"
+  bigFive_lazy: "I have a tendency to be lazy"
+  bigFive_cope: "I am easy going, i can cope well with stress"
+  bigFive_art: "I have little interest in art"
+  bigFive_extraverted: "I am an extraverted and social person"
+  bigFive_flaws: "I have a tendency finding flaws in other people"
+  bigFive_tasks: "I complete tasks meticulously and completely"
+  bigFive_tense: "I am easy to tense up and worry"
+  bigFive_active: "I have an active and vivid imagination"
+  aggreement1: "Completely disagree"
+  aggreement2: "Disagree"
+  aggreement3: "Neither agree nor disagree"
+  aggreement4: "Agree"
+  aggreement5: "Completely Agree"
+#4 Instructions
+  cohen_instruction: "The following questions are about how many people you interact with on a regular basis. These people can be your immediate family members, friends, extended family member, neighbors etc."
+#4a
+  martialq: "Which of the following best describes your marital status?"
+  marital1: "Never married /single"
+  marital2: "Currently married & living together"
+  marital3: "Separated"
+  marital4: "Divorced"
+  marital5: "Divorced and Remarried"
+  marital6: "Widowed"
+  marital7: "I am single but in a relationship (not living together)"
+  marital8: "I am single, but in a relationship (living together)"
+#4b - STILL MISSING RIGHT NOW --------------------------------------------------
+  num_siblings: "How many siblings do you have?"
+#-------------------------------------------------------------------------------
+#4c
+  num_children: "How many children do you have?"
+#4d
+  num_children_intouch: "How many of your children do you see or get in touch with  (including phone, messengers or text messages) at least once every 2 weeks?"
+#4e
+  parentsq: "Are either of your parents living?"
+  parents1: "Only mother"
+  parents2: "Only father"
+  parents3: "both"
+  parents4: "neither"
+#4f
+  parents_touch: "Do you see or or get in touch with  (including phone, messengers or text messages) either of your parents at least once every 2 weeks?"
+#4g
+  parents_partnerq: "Are either of your in-laws (or partner's parents) living?"
+  parents_partner1: "Only mother"
+  parents_partner2: "Only father"
+  parents_partner3: "both"
+  parents_partner4: "neither"
+  parents_partner5: "I am not married"
+#4h
+  parents_partner_touch: "Do you see or get in touch with  (including phone, messengers or text messages) either of your partner's parents at least once every 2 weeks?"
+#4i
+  other_relatives: "How many other relatives (other than your spouse, parents & children) do you feel close to?"
+#4j
+#numbers off?
+#4k
+  other_relatives_touch: "How many of these relatives do you see or get in touch with  (including phone, messengers or text messages) at least once every 2 weeks?"
+#4l
+  close_friends: "How many close friends do you have?  (meaning people that you feel at ease with, can talk to about private matters, and can call on for help)"
+#4m
+  close_friends_touch: "How many of these friends do you see or get in touch with  (including phone, messengers or text messages) at least once every 2 weeks"
+#4n
+  religious: "Do you belong to a church, temple, or other religious group?"
+  yn1: "Yes"
+  yn2: "No"

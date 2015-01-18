@@ -25,3 +25,80 @@
 
 ko:
   hello_yml: "Korean"
+#Error
+
+#Instructions
+
+#1
+  sex: "성별"
+  mf1: "남자"
+  mf2: "여자"
+#2
+  age: "나이"
+#3
+  bigFive_instruction: "다음의 문장에 얼마나 동의하는지를 1점 '전혀 동의하지 않는다', 3점 '동의하지도 반대하지도 않는다', 5점 '완전히 동의한다'의 5점 척도에서 평정하여 주십시오."
+  bigFive_introverted: "나는 내향적인 사람이다"
+  bigFive_trust: "나는 보통 사람을 쉽게 믿는 편이다"
+  bigFive_lazy: "나는 게으른 편이다"
+  bigFive_cope: "나는 스트레스에 잘 대처할 수 있고 일을 쉽게 처리하는 편이다."
+  bigFive_art: "나는 예술에 대한 관심이 별로 없다"
+  bigFive_extraverted: "나는 다른사람들과 어울리는 것을 좋아하는 외향적인 사람이다"
+  bigFive_flaws: "나는 다른 사람의 약점을 쉽게 파악하는 편이다"
+  bigFive_tasks: "나는 신중하고 완벽하게 일을 처리한다"
+  bigFive_tense: "나는 쉽게 긴장하고 걱정하는 사람이다"
+  bigFive_active: "나는 능동적이고 생생한 상상력을 가지고 있다"
+  aggreement1: "전혀 동의하지 않는다"
+  aggreement2: "동의하지 않는다"
+  aggreement3: "보통이다"
+  aggreement4: "동의한다"
+  aggreement5: "완전히 동의한다"
+#4 Instructions
+  cohen_instruction: "다음의 질문들은 당신이 평소 연락하고 지내는 사람들에 대한 것입니다. 이들은 직계 가족, 친구, 친척, 이웃 등을 포함할 수 있습니다."
+#4a
+  martialq: "다음 중 당신의 결혼상태를 가장 잘 나타내는 것은 무엇입니까?"
+  marital1: "결혼한적 없음/미혼"
+  marital2: "현재 결혼하여 배우자와 함께 살고 있음"
+  marital3: "별거"
+  marital4: "이혼"
+  marital5: "이혼 후 재혼"
+  marital6: "사별"
+  marital7: "TRANSLATION MISSING?"
+  marital8: "TRANSLATION MISSING?"
+#4b - STILL MISSING RIGHT NOW --------------------------------------------------
+  num_siblings: "형제, 자매는 몇 명 입니까?"
+#-------------------------------------------------------------------------------
+#4c
+  num_children: "자녀는 몇 명 입니까?"
+#4d
+  num_children_intouch: "적어도 2주에 한 번 이상 만나거나 전화를 하는 자녀는 몇 명입니까? (전화, 메신저, 문자메세지 포함)"
+#4e
+  parentsq: "부모님께서는 살아계십니까?"
+  parents1: "어머니만 살아계심"
+  parents2: "아버지만 살아계심"
+  parents3: "양친 모두 살아계심"
+  parents4: "양친 모두 돌아가심"
+#4f
+  parents_touch: "부모님 중 적어도 2주에 한 번 이상 뵙거나 연락드리는 분이 계십니까? (전화, 메신저, 문자메세지 포함)"
+#4g
+  parents_partnerq: "배우자의 부모님께서는 살아계십니까?"
+  parents_partner1: "시어머님(또는 장모님)만 살아계심"
+  parents_partner2: "시아버님(또는 장인어른)만 살아계심"
+  parents_partner3: "두 분 모두 살아계심"
+  parents_partner4: "두 분 모두 돌아가심"
+  parents_partner5: "미혼"
+#4h
+  parents_partner_touch: "배우자의 부모님 중 적어도 2주에 한 번 이상 뵙거나 연락드리는 분이 계십니까? (전화, 메신저, 문자메세지 포함)"
+#4i
+  other_relatives: "배우자, 부모님, 자녀 이외에 친하게 지내는 친척이 몇 명이나 있습니까?"
+#4j
+#numbers off?
+#4k  
+  other_relatives_touch: "친하게 지내는 친척 중 적어도 2주에 한 번 이상 만나거나 연락하는 사람은 몇 명입니까? (전화, 메신저, 문자메세지 포함)"
+#4l  
+  close_friends: "친하게 지내는 친구들은 몇 명입니까? (같이 있으면 편하고, 사적인 이야기들을 나눌 수 있고, 도움을 요청할 수 있는 친구)"
+#4m  
+  close_friends_touch: "친하게 지내는 친구들 중 적어도 2주에 한 번 이상 만나거나 연락하는 사람은 몇 명입니까? (전화, 메신저, 문자메세지 포함)"
+#4n  
+  religious: "교회나 절 같은 종교 집단에 소속되어 있습니까?"
+  yn1: "예"
+  yn2: "아니오"
