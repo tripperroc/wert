@@ -5,7 +5,7 @@
 </div>
 <% end %> 
 
-<div style="margin-left: auto; margin-right: auto; width:600;">
+<div style="margin-left: -100px; margin-right: auto; width:700px;">
 
 <div class="instructions"> <%= @instructions %> </div>
  <%= form_for @response, :url => { :action => 'update', :id  =>@response.id} do |f| %>
@@ -31,7 +31,7 @@
 <li>
 <div class = "question"> <%= @bigFive_instruction %> </div>
 <div class = "answer">
-<table style="margin-left: 1em;">
+<table border="1" style="margin-left: 1em; width:600px;">
 <tr>
 <tr><td></td><%= render( :partial => 'header', :collection => @aggreement, :locals=> {:f => f}) %></tr>
 <%= render( :partial => 'radiotable', :collection => @bigFive, :locals=> {:f => f, :cols=>@aggreement}) %>
@@ -232,7 +232,7 @@
 <li>
 <div class = "question"> <%= @instructions1 %> </div>
 <div class = "answer">
-<table style="margin-left: 1em;">
+<table border="1" style="margin-left: 1em; width:600px;">
 <tr>
 <tr><td></td><%= render( :partial => 'header', :collection => @aggreement_strong, :locals=> {:f => f}) %></tr>
 <%= render( :partial => 'radiotable', :collection => @life_satisfaction, :locals=> {:f => f, :cols=>@aggreement_strong}) %>
@@ -241,9 +241,10 @@
 </div>
 </li>
 
+</br>
 <li>
 <div class = "question"> <div class = "answer">
-<table style="margin-left: 1em;">
+<table border="1" style="margin-left: 1em; width:600px;">
 <tr>
 <tr><td></td><%= render( :partial => 'header', :collection => @happiness, :locals=> {:f => f}) %></tr>
 <%= render( :partial => 'radiotable', :collection => @happiness_rating, :locals=> {:f => f, :cols=>@happiness}) %>
@@ -256,7 +257,7 @@
 <li>
 <div class = "question"> <%= @communal1q %> </div>
 <div class = "answer">
-<table style="margin-left: 1em;">
+<table border="1" style="margin-left: 1em; width:600px;">
 <tr>
 <tr><td></td><%= render( :partial => 'header', :collection => @aggreement_strong, :locals=> {:f => f}) %></tr>
 <%= render( :partial => 'radiotable', :collection => @communal1, :locals=> {:f => f, :cols=>@aggreement_strong}) %>
@@ -269,7 +270,7 @@
 <li>
 <div class = "question"> <%= @communal2q %> </div>
 <div class = "answer">
-<table style="margin-left: 1em;">
+<table border="1" style="margin-left: 1em; width:600px;">
 <tr>
 <tr><td></td><%= render( :partial => 'header', :collection => @aggreement_strong, :locals=> {:f => f}) %></tr>
 <%= render( :partial => 'radiotable', :collection => @communal2, :locals=> {:f => f, :cols=>@aggreement_strong}) %>
@@ -281,7 +282,7 @@
 <li>
 <div class = "question"> <%= @burdenq %> </div>
 <div class = "answer">
-<table style="margin-left: 1em;">
+<table border="1" style="margin-left: 1em; width:600px;">
 <tr>
 <tr><td></td><%= render( :partial => 'header', :collection => @aggreement_strong, :locals=> {:f => f}) %></tr>
 <%= render( :partial => 'radiotable', :collection => @burden, :locals=> {:f => f, :cols=>@aggreement_strong}) %>
@@ -293,7 +294,7 @@
 <li>
 <div class = "question"> <%= @belongq %> </div>
 <div class = "answer">
-<table style="margin-left: 1em;">
+<table border="1" style="margin-left: 1em; width:600px;">
 <tr>
 <tr><td></td><%= render( :partial => 'header', :collection => @aggreement_strong, :locals=> {:f => f}) %></tr>
 <%= render( :partial => 'radiotable', :collection => @belong, :locals=> {:f => f, :cols=>@aggreement_strong}) %>
@@ -305,7 +306,7 @@
 <li>
 <div class = "question"> <%= @raheq %> </div>
 <div class = "answer">
-<table style="margin-left: 1em;">
+<table border="1" style="margin-left: 1em; width:600px;">
 <tr>
 <tr><td></td><%= render( :partial => 'header', :collection => @affected, :locals=> {:f => f}) %></tr>
 <%= render( :partial => 'radiotable', :collection => @rahe, :locals=> {:f => f, :cols=>@affected}) %>
@@ -314,8 +315,9 @@
 </div>
 </li>
 
-
+</br>
 <li>
+
 <%= @instructions2 %>
 
 <ol type="a">
@@ -328,7 +330,7 @@
 <li>
 <div class = "question"> <%= @cope_cq %> </div>
 <div class = "answer">
-<table style="margin-left: 1em;">
+<table border="1" style="margin-left: 1em; width:600px;">
 <tr>
 <tr><td></td><%= render( :partial => 'header', :collection => @done, :locals=> {:f => f}) %></tr>
 <%= render( :partial => 'radiotable', :collection => @cope_c, :locals=> {:f => f, :cols=>@done}) %>
@@ -340,7 +342,7 @@
 </ol>
 </li>
 
-
+</br>
 <li>
 <%= @communal_checkq %>
 
@@ -928,7 +930,7 @@
 <li>
 <div class = "question"> <%= @self_construalq %> </div>
 <div class = "answer">
-<table style="margin-left: 1em;">
+<table border="1" style="margin-left: 1em; width:600px;">
 <tr>
 <tr><td></td><%= render( :partial => 'header', :collection => @aggreement_strong, :locals=> {:f => f}) %></tr>
 <%= render( :partial => 'radiotable', :collection => @self_construal, :locals=> {:f => f, :cols=>@aggreement_strong}) %>
@@ -944,7 +946,7 @@
 <li>
 <div class = "question"> <%= @ind_col %> </div>
 <div class = "answer">
-<table style="margin-left: 1em;">
+<table border="1" style="margin-left: 1em; width:600px;">
 <tr>
 <tr><td></td><%= render( :partial => 'header', :collection => @aggreement_strong, :locals=> {:f => f}) %></tr>
 <%= render( :partial => 'radiotable', :collection => @individualism, :locals=> {:f => f, :cols=>@aggreement_strong}) %>
@@ -956,7 +958,7 @@
 <li>
 <div class = "question"> <%= @depressionq %> </div>
 <div class = "answer">
-<table style="margin-left: 1em;">
+<table border="1" style="margin-left: 1em; width:600px;">
 <tr>
 <tr><td></td><%= render( :partial => 'header', :collection => @how_often, :locals=> {:f => f}) %></tr>
 <%= render( :partial => 'radiotable', :collection => @depression, :locals=> {:f => f, :cols=>@how_often}) %>
@@ -1055,7 +1057,7 @@
 <li>
 <div class = "question"> <%= @religious_aq %> </div>
 <div class = "answer">
-<table style="margin-left: 1em;">
+<table border="1" style="margin-left: 1em; width:600px;">
 <tr>
 <tr><td></td><%= render( :partial => 'header', :collection => @how_true, :locals=> {:f => f}) %></tr>
 <%= render( :partial => 'radiotable', :collection => @religious_a, :locals=> {:f => f, :cols=>@how_true}) %>
