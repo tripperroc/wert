@@ -62,6 +62,7 @@ tr:
   marital4: "Boşandım"
   marital5: "Tekrar evlendim"
   marital6: "Dulum"
+  #REMOVE?
   marital7: "Bekarım ama ilişkim var, ve birlikte yaşamıyorum. "
   marital8: "Bekarım ama ilişkim var, ve sevgilimle birlikte yaşıyorum"
 #4b - STILL MISSING RIGHT NOW --------------------------------------------------
@@ -143,3 +144,32 @@ tr:
   aggreement_strong3: "Ne katılıyorum ne katılmıyorum"
   aggreement_strong4: "Katılıyorum"
   aggreement_strong5: "Tamamen katılıyorum"
+#7
+  happiness_ratingq: "Akranlarımla yani bana benzer yaşta kişilerle karşılaştırdığımda, çoğuna göre kendimi şöyle değerlendiririm"
+  #REMOVE?
+  happiness1: "Daha az mutlu"
+  happiness2: "Daha çok mutlu"
+  rating1: "Daha az mutlu 1"
+  rating2: "2"
+  rating3: "3"
+  rating4: "4"
+  rating5: "5"
+  rating6: "6"
+  rating7: "Daha çok mutlu 7"
+#8
+  communal1q: "Aşağıdaki sorulara yanıt verirken bir sorunla karşılaştığınızda yakın çevrenizdeki kişilerin (aileniz, yakınlarınız, arkadaşlarınız gibi) çoğunlukla ne yaptıklarını düşünerek cevaplayınız. 1 hiç katılmıyorum, 3 ne katılıyorum ne katılmıyorum ve 5 tamamen katılıyorum anlamına gelecek şekilde 1 ile 5  arasında bir puan verebilirsiniz"
+  communal1_item1: "Bir sorunumu yakın çevremdeki kişilerle (ailemle, yakınlarımla, veya arkadaslarimla) paylaştığımda bu sırf benim problemim değil hepimizin problemiymiş gibi düşünürler"
+  communal1_item2: "Bir sorunum olduğunda, yakın çevremdeki kişiler (ailem, yakınlarım, veya arkadaşlarım) bu problemi benim yerime çözerler (kendi kaynaklarını kullanarak veya benim kaynaklarımı harekete geçirerek)"
+  communal1_item3: "Bir sorunum olduğunda, yakın çevremdeki kişiler (ailem, yakınlarım, veya arkadaşlarım) problemimi çözme sorumluluğunu benimle paylaşırlar, benimle birlikte çözerler"
+  communal1_item4: "Bir sorunumla alakalı yakın çevremdeki kişilerin (ailemin, yakınlarımın, veya arkadaşlarımın) istekleri ve ihtiyaçları karşılanmadıkça bu sorun çözülmüş sayılmaz"
+  communal1_item5: "Bir sorunum olduğunda, kimse bunu pek de umursamaz."
+  communal1_item6: "Bir sorunum olduğunda, yakın çevremdeki kişiler bunun çözümünün asıl sorumlusu olarak beni görürler."
+#9
+  communal2q: "Şimdi de yakın çevrenizdeki insanların (aileniz, yakınlarınız, sevdikleriniz gibi) sorunları olduğunda sizin neler yaptığınızı soracağız."
+  communal2_item1: "Yakın çevremdeki insanlar bana bir sorunla geldiğinde bunu kendi problemimmiş gibi düşünürüm."
+  communal2_item2: "Yakın çevremdeki insanlar bana bir sorunla geldiğinde ben bu sorunu onların yerine çözerim (onların kaynaklarını kullanarak veya kendi kaynaklarımı harekete geçirerek)"
+  communal2_item3: "Yakın çevremdeki insanlar bana bir sorunla geldiğinde, sorunlarını çözme sorumluluğunu paylaşır, birlikte çözerim"
+  communal2_item4: "Yakın çevremdeki insanlar bir sorunla baş ederken, sorunla alakalı herkesin istekleri ve ihtiyaçları karşılanmadıkça bu sorun çözülmüş sayılmaz"
+  communal2_item5: "Yakın çevremdeki insanların bir sorunu olduğunda pek de umursamam"
+  communal2_item6: "Yakın çevremdeki insanların sorunları olduğunda bu sorunların çözümünün esas sorumlusunun kendileri olduğunu düşünürüm"
+#10

@@ -62,6 +62,7 @@ en:
   marital4: "Divorced"
   marital5: "Divorced and Remarried"
   marital6: "Widowed"
+  #REMOVE?
   marital7: "I am single but in a relationship (not living together)"
   marital8: "I am single, but in a relationship (living together)"
 #4b - STILL MISSING RIGHT NOW --------------------------------------------------
@@ -143,3 +144,32 @@ en:
   aggreement_strong3: "Neither agree nor disagree"
   aggreement_strong4: "Agree"
   aggreement_strong5: "Strongly Agree"
+#7
+  happiness_ratingq: "Compared with most of my peers, I consider myself"
+  #REMOVE?
+  happiness1: "Less Happy"
+  happiness2: "Very Happy"
+  rating1: "Less happy 1"
+  rating2: "2"
+  rating3: "3"
+  rating4: "4"
+  rating5: "5"
+  rating6: "6"
+  rating7: "Very happy 7"
+#8
+  communal1q: "While answering the following questions, please think about how people you are close to (your family, friends, loved ones) generally act when you are faced with a problem. Please rate the statements below based on how much you aree and disagree with them."
+  communal1_item1: "When I share a problem with people who are in my immediate circle (my family, friends, loved ones) they think of this problem as our problem, not only my problem.,"
+  communal1_item2: "When I am faced with a problem, people who are in my immediate circle (my family, friends and loved ones) solve this problem for me (resorting mainly to their own resources  or mobilizing my resources themselves) ,"
+  communal1_item3: "When I am faced with a problem, people who are in my immediate circle (my family, friends and loved ones) share the responsibility to solve this problem with me. ,"
+  communal1_item4: "When dealing with my problem, unless the requests and needs of people who are in my immediate circle (family, friends, loved ones) are met, that problem would not be considered resolved. ,"
+  communal1_item5: "When I am dealing with a problem, no one really cares about it."
+  communal1_item6: "When I am faced with a problem, people who are in my immediate circle think that I am the responsible one in resolving this problem.  "
+#9
+  communal2q: "Now we will ask you what you would do when  people in your immediate circle  (family, friends, loved ones) were to face a problem. Please rate the statements below based on how much you aree and disagree with them."
+  communal2_item1: "When people in my immediate circle come to me with a problem I think of it as my problem"
+  communal2_item2: "When people in my immediate circle come to me with a problem I solve it for them (resorting mainly to my own resources  or mobilizing their resources myself) ,"
+  communal2_item3: "When people in my immediate circle come to me with a problem we share the responsibility and solve it together."
+  communal2_item4: "When dealing with the problem of anyone in my immediate circle, unless the requests and needs of all people concerned are met, that problem would not be considered resolved."
+  communal2_item5: "When people in my immediate circle have a problem I won’t care about it a lot."
+  communal2_item6: "When people in my immediate circle have a problem I think that it is mainly their own responsibility to solve them."
+#10

@@ -64,6 +64,8 @@ class SurveyorController < ApplicationController
       @group_member = t(:group_member)
       @happyq = t(:happyq)
       @instructions1 = t(:instructions1)
+      @communal1q = t(:communal1q)
+      @communal2q = t(:communal2q)
 
       answers
 
@@ -200,13 +202,21 @@ class SurveyorController < ApplicationController
     #        "Strongly Agree"]
     @aggreement_strong = [ @aggreement_strong1, @aggreement_strong2, @aggreement_strong3, @aggreement_strong4, @aggreement_strong5]
 
-    @happiness = [ "1 - Less Happy",
-           "2",
-           "3",
-           "4",
-           "5",
-           "6",
-           "7 - Very Happy"]
+    @rating1 = t(:rating1)
+    @rating2 = t(:rating2)
+    @rating3 = t(:rating3)
+    @rating4 = t(:rating4)
+    @rating5 = t(:rating5)
+    @rating6 = t(:rating6)
+    @rating7 = t(:rating7)
+    # @happiness = [ "1 - Less Happy",
+    #        "2",
+    #        "3",
+    #        "4",
+    #        "5",
+    #        "6",
+    #        "7 - Very Happy"]
+    @happiness = [ @rating1, @rating2, @rating3, @rating4, @rating5, @rating6, @rating7]
 
     @rating=[" 1","2 ","3 ","4 ","5 ","6 ","7 "]
 
@@ -221,8 +231,8 @@ class SurveyorController < ApplicationController
            " 8",
            " 9",
            "10 Very religious"]
-
-    @happiness_rating =[[:happiness_rating, "Compared with most of my peers, I consider myself"]]
+    @happiness_ratingq = t(:happiness_ratingq)
+    @happiness_rating =[[:happiness_rating, @happiness_ratingq]]
 
     @aggreement1 = t(:aggreement1)
     @aggreement2 = t(:aggreement2)
@@ -270,23 +280,43 @@ class SurveyorController < ApplicationController
            [:bigFive_tense, @bigFive_tense],
            [:bigFive_active, @bigFive_active]]
 
+    @communal1_item1 = t(:communal1_item1)
+    @communal1_item2 = t(:communal1_item2)
+    @communal1_item3 = t(:communal1_item3)
+    @communal1_item4 = t(:communal1_item4)
+    @communal1_item5 = t(:communal1_item5)
+    @communal1_item6 = t(:communal1_item6)
+    # @communal1 =[[:communal1_item1, "When I share a problem with people who are in my immediate circle (my family, friends, loved ones) they think of this problem as our problem, not only my problem. "],
+    # 	  [:communal1_item2, "When I am faced with a problem, people who are in my immediate circle (my family, friends and loved ones) solve this problem for me (resorting mainly to their own resources  or mobilizing my resources themselves) "],
+    # 	  [:communal1_item3, "When I am faced with a problem, people who are in my immediate circle (my family, friends and loved ones) share the responsibility to solve this problem with me."],
+    # 		[:communal1_item4, "When dealing with my problem, unless the requests and needs of people who are in my immediate circle (family, friends, loved ones) are met, that problem would not be considered resolved. "],
+    # 		[:communal1_item5,"When I am dealing with a problem, no one really cares about it. "],
+    # 		[:communal1_item6,"When I am faced with a problem, people who are in my immediate circle think that I am the responsible one in resolving this problem.  "]]
+    @communal1 =[[:communal1_item1, @communal1_item1],
+        [:communal1_item2, @communal1_item2],
+        [:communal1_item3, @communal1_item3],
+        [:communal1_item4, @communal1_item4],
+        [:communal1_item5, @communal1_item5],
+        [:communal1_item6, @communal1_item6]]
 
-    @communal1 =[[:communal1_item1, "When I share a problem with people who are in my immediate circle (my family, friends, loved ones) they think of this problem as our problem, not only my problem. "],
-    	        [:communal1_item2, "When I am faced with a problem, people who are in my immediate circle (my family, friends and loved ones) solve this problem for me (resorting mainly to their own resources  or mobilizing my resources themselves) "],
-    		[:communal1_item3, "When I am faced with a problem, people who are in my immediate circle (my family, friends and loved ones) share the responsibility to solve this problem with me."],
-    		[:communal1_item4, "When dealing with my problem, unless the requests and needs of people who are in my immediate circle (family, friends, loved ones) are met, that problem would not be considered resolved. "],
-    		[:communal1_item5,"When I am dealing with a problem, no one really cares about it. "],
-    		[:communal1_item6,"When I am faced with a problem, people who are in my immediate circle think that I am the responsible one in resolving this problem.  "]]
-
-
-    @communal2=[[:communal2_item1,"When people in my immediate circle come to me with a problem I think of it as my problem"],
-    		[:communal2_item2,"When people in my immediate circle come to me with a problem I solve it for them"],
-    		[:communal2_item3,"When people in my immediate circle come to me with a problem we share the responsibility and solve it together."],
-    		[:communal2_item4,"When dealing with the problem of anyone in my immediate circle, unless the requests and needs of all people concerned are met, that problem would not be considered resolved. "],
-    		[:communal2_item5,"When people in my immediate circle have a problem I won’t care about it a lot."],
-    		[:communal2_item6,"When people in my immediate circle have a problem I think that it is mainly their own responsibility to solve them."]
-    		]
-
+    @communal2_item1 = t(:communal2_item1)
+    @communal2_item2 = t(:communal2_item2)
+    @communal2_item3 = t(:communal2_item3)
+    @communal2_item4 = t(:communal2_item4)
+    @communal2_item5 = t(:communal2_item5)
+    @communal2_item6 = t(:communal2_item6)
+    # @communal2=[[:communal2_item1,"When people in my immediate circle come to me with a problem I think of it as my problem"],
+    # 		[:communal2_item2,"When people in my immediate circle come to me with a problem I solve it for them"],
+    # 		[:communal2_item3,"When people in my immediate circle come to me with a problem we share the responsibility and solve it together."],
+    # 		[:communal2_item4,"When dealing with the problem of anyone in my immediate circle, unless the requests and needs of all people concerned are met, that problem would not be considered resolved. "],
+    # 		[:communal2_item5,"When people in my immediate circle have a problem I won’t care about it a lot."],
+    # 		[:communal2_item6,"When people in my immediate circle have a problem I think that it is mainly their own responsibility to solve them."]]
+    @communal2=[[:communal2_item1, @communal2_item1],
+      [:communal2_item2, @communal2_item2],
+      [:communal2_item3, @communal2_item3],
+      [:communal2_item4, @communal2_item4],
+      [:communal2_item5, @communal2_item5],
+      [:communal2_item6, @communal2_item6]]
 
     @burden=[[:burden_item1,"The people in my life would be better off if I were gone."],
     	[:burden_item2,"the people in my life would be happier without me"],

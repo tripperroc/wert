@@ -6,7 +6,7 @@
 </div>
 <% end %> 
 
-<div style="margin-left: auto; margin-right: auto;width:600;">
+<div style="margin-left: auto; margin-right: auto; width:600;">
 
 <div class="instructions">There are <b>two pages</b> of questions (47 total),
  some having multiple parts. This is <b>page 1</b> and there are 41 questions.  The next page has only 6 brief questions.</div>
@@ -244,7 +244,7 @@
 </li>
 
 <li>
-<div class = "question"><div class = "answer">
+<div class = "question"> <div class = "answer">
 <table style="margin-left: 1em;">
 <tr>
 <tr><td></td><%= render( :partial => 'header', :collection => @happiness, :locals=> {:f => f}) %></tr>
@@ -256,9 +256,7 @@
 
 
 <li>
-<div class = "question">While answering the following questions, please think about how people you are close to (your family, friends, loved ones) generally act when you are faced with a problem.
-
-Please rate the statements below based on how much you aree and disagree with them.</div>
+<div class = "question"> <%= @communal1q %> </div>
 <div class = "answer">
 <table style="margin-left: 1em;">
 <tr>
@@ -271,8 +269,7 @@ Please rate the statements below based on how much you aree and disagree with th
 
 
 <li>
-<div class = "question">Now we will ask you what you would do when  people in your immediate circle  (family, friends, loved ones) were to face a problem.
-Please rate the statements below based on how much you aree and disagree with them.</div>
+<div class = "question"> <%= @communal2q %> </div>
 <div class = "answer">
 <table style="margin-left: 1em;">
 <tr>
