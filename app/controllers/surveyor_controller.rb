@@ -32,14 +32,18 @@ class SurveyorController < ApplicationController
       logger.debug "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
       logger.debug "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 
+      @error_top = t(:error_top)
+      @instructions = t(:instructions)
+
       @sex = t(:sex)
       @age = t(:age)
+      @yn1 = t(:yn1)
+      @yn2 = t(:yn2) 
+      @yn = [@yn1, @yn2]
       @bigFive_instruction = t(:bigFive_instruction)
       @cohen_instruction = t(:cohen_instruction)
       @martialq = t(:martialq)
       @num_siblings = t(:num_siblings)
-      # def num_sibling
-      # end
       @num_children = t(:num_children)
       @num_children_intouch = t(:num_children_intouch)
       @parentsq = t(:parentsq)
@@ -66,6 +70,111 @@ class SurveyorController < ApplicationController
       @instructions1 = t(:instructions1)
       @communal1q = t(:communal1q)
       @communal2q = t(:communal2q)
+      @burdenq = t(:burdenq)
+      @belongq = t(:belongq)
+      @raheq = t(:raheq)
+      @instructions2 = t(:instructions2)
+      @cope_b = t(:cope_b)
+      @cope_cq = t(:cope_cq)
+      @communal_checkq = t(:communal_checkq)
+      @father_a = t(:father_a)
+      @father_b = t(:father_b)
+      @father_c = t(:father_c)
+      @father_d = t(:father_d)
+      @father_e = t(:father_e)
+      @father_f = t(:father_f)
+      @father_g = t(:father_g)
+      @mother_a = t(:mother_a)
+      @mother_b = t(:mother_b)
+      @mother_c = t(:mother_c)
+      @mother_d = t(:mother_d)
+      @mother_e = t(:mother_e)
+      @mother_f = t(:mother_f)
+      @mother_g = t(:mother_g)
+      @children_a = t(:children_a)
+      @children_b = t(:children_b)
+      @children_c = t(:children_c)
+      @children_d = t(:children_d)
+      @children_e = t(:children_e)
+      @children_f = t(:children_f)
+      @children_g = t(:children_g)
+      @sibling_a = t(:sibling_a)
+      @sibling_b = t(:sibling_b)
+      @sibling_c = t(:sibling_c)
+      @sibling_d = t(:sibling_d)
+      @sibling_e = t(:sibling_e)
+      @sibling_f = t(:sibling_f)
+      @sibling_g = t(:sibling_g)
+      @cousins_a = t(:cousins_a)
+      @cousins_b = t(:cousins_b)
+      @cousins_c = t(:cousins_c)
+      @cousins_d = t(:cousins_d)
+      @cousins_e = t(:cousins_e)
+      @cousins_f = t(:cousins_f)
+      @cousins_g = t(:cousins_g)
+      @uncle_a = t(:uncle_a)
+      @uncle_b = t(:uncle_b)
+      @uncle_c = t(:uncle_c)
+      @uncle_d = t(:uncle_d)
+      @uncle_e = t(:uncle_e)
+      @uncle_f = t(:uncle_f)
+      @uncle_g = t(:uncle_g)
+      @spouse_a = t(:spouse_a)
+      @spouse_b = t(:spouse_b)
+      @spouse_c = t(:spouse_c)
+      @spouse_d = t(:spouse_d)
+      @spouse_e = t(:spouse_e)
+      @spouse_f = t(:spouse_f)
+      @spouse_g = t(:spouse_g)
+      @friends_a = t(:friends_a)
+      @friends_b = t(:friends_b)
+      @friends_c = t(:friends_c)
+      @friends_d = t(:friends_d)
+      @friends_e = t(:friends_e)
+      @friends_f = t(:friends_f)
+      @friends_g = t(:friends_g)
+      @other_who = t(:other_who)
+      @other_a = t(:other_a)
+      @other_b = t(:other_b)
+      @other_c = t(:other_c)
+      @other_d = t(:other_d)
+      @other_e = t(:other_e)
+      @other_f = t(:other_f)
+      @other_g = t(:other_g)
+      @cope_problemsq = t(:cope_problemsq)
+      @familyq = t(:familyq)
+      @self_construalq = t(:self_construalq)
+      @ind_col = t(:ind_col)
+      @depressionq = t(:depressionq)
+      @instructions3 = t(:instructions3)
+      @suicide_aq = t(:suicide_aq)
+      @suicide_bq = t(:suicide_bq)
+      @function_a = t(:function_a)
+      @function_b = t(:function_b)
+      @function_c = t(:function_c)
+      @trauma_a = t(:trauma_a)
+      @trauma_b = t(:trauma_b)
+      @trauma_c = t(:trauma_c)
+      @religious_dominations = t(:religious_dominations)
+      @religious_aq = t(:religious_aq)
+      @religious_b = t(:religious_b)
+      @religious_c = t(:religious_c)
+      @how_religiousq = t(:how_religiousq)
+      @demographics_a = t(:demographics_a)
+      @demographics_b = t(:demographics_b)
+      @demographics_cq = t(:demographics_cq)
+      @demographics_dq = t(:demographics_dq)
+      @demographics_e = t(:demographics_e)
+      @demographics_f = t(:demographics_f)
+      @demographics_g = t(:demographics_g)
+      @live_withq = t(:live_withq)
+      @demographics_i = t(:demographics_i)
+      @demographics_j = t(:demographics_j)
+      @demographics_k = t(:demographics_k)
+      @demographics_l = t(:demographics_l)
+      @demographics_m = t(:demographics_m)
+      @demographics_n = t(:demographics_n)
+      @demographics_o = t(:demographics_o)
 
       answers
 
@@ -98,49 +207,30 @@ class SurveyorController < ApplicationController
     #@age = [:age]
     @mf1 = t(:mf1)
     @mf2 = t(:mf2)
-    #@mf = ["Male", "Female"]
     @mf = [@mf1, @mf2]
    
     @yn1 = t(:yn1)
     @yn2 = t(:yn2) 
-    #@yn = ["Yes", "No"]
     @yn = [@yn1, @yn2]
 
-    @times=[" All of the time","Most of the time ","Some of the time ","A little of the time "," None of the time"]
-
-    @childhood=[" In childhood (age between 0-17) "," In adulthood (after age 18) "," Both in childhood and adulthood"]
-    
     @employed1 = t(:employed1)
     @employed2 = t(:employed2) 
     @employed3 = t(:employed3)
     @employed4 = t(:employed4) 
-    #@employed = ["Yes, I am self-employed", "Yes, employed by others", "No"]
-    @employed = [@employed1, @employed2, @employed3, @employed4]
+    @employed = [@employed1, 
+                 @employed2, 
+                 @employed3, 
+                 @employed4]
 
     @happy1 = t(:happy1)
     @happy2 = t(:happy2)
     @happy3 = t(:happy3)
     @happy4 = t(:happy4)
-    #@happy = ["Very Happy", "Rather Happy", "Not very happy", "Not at all happy"]
-    @happy = [@happy1, @happy2, @happy3, @happy4]
+    @happy = [@happy1, 
+              @happy2, 
+              @happy3, 
+              @happy4]
    
-    @live_with = [[:live_with1, " Mother and/or father"], 
-                  [:live_with2, " Siblings"], 
-                  [:live_with3, " Grandparents"], 
-                  [:live_with4, " Other relatives"], 
-                  [:live_with5, " Own children"], 
-                  [:live_with6, " Husband or wife"], 
-                  [:live_with7, " Significant other"], 
-                  [:live_with8, " Friend/friends"], 
-                  [:live_with9, " I live by myself"]]
-
-    @family=[[:family1, " Mother and/or father "],
-    	[:family2, " Wife or husband"],
-    	[:family3, " In-law's family"],
-    	[:family4, " Siblings "],
-    	[:family5, " Children "],
-    	[:family6, "Other family members like cousins, aunts, uncles etc. "]]
-
     @marital1 = t(:marital1)
     @marital2 = t(:marital2)
     @marital3 = t(:marital3) 
@@ -149,58 +239,56 @@ class SurveyorController < ApplicationController
     @marital6 = t(:marital6) 
     @marital7 = t(:marital7) 
     @marital8 = t(:marital8) 
-     # @martial = ["Never married & never lived with someone in a matial-like relationship",
-     #            "Currently married & living together", 
-     #           "Separated",
-     #            "Divorced",
-     #            "Divorced and Remarried",
-     #            "Widowed",
-     #            "I am single but in a relationship (not living together)",
-     #            "I am single, but in a relationship (living together)"]
-    @martial = [@marital1, @marital2, @marital3, @marital4, @marital5, @marital6, @marital7, @marital8]
+    @martial = [@marital1, 
+                @marital2, 
+                @marital3, 
+                @marital4, 
+                @marital5, 
+                @marital6, 
+                @marital7, 
+                @marital8]
 
     @parents1 = t(:parents1)
     @parents2 = t(:parents2)
     @parents3 = t(:parents3)
     @parents4 = t(:parents4)
-    # @parents = ["Only mother", "Only father", "both", "neither"]
-    @parents = [@parents1, @parents2, @parents3, @parents4]
+    @parents = [@parents1, 
+                @parents2, 
+                @parents3, 
+                @parents4]
 
     @parents_partner1 = t(:parents_partner1)
     @parents_partner2 = t(:parents_partner2)
     @parents_partner3 = t(:parents_partner3)
     @parents_partner4 = t(:parents_partner4)
     @parents_partner5 = t(:parents_partner5)
-    #@parents_partner = ["Only mother", "Only father", "both", "neither" , "I am not married"]
-    @parents_partner = [@parents_partner1, @parents_partner2, @parents_partner3, @parents_partner4, @parents_partner5]
+    @parents_partner = [@parents_partner1, 
+                        @parents_partner2, 
+                        @parents_partner3, 
+                        @parents_partner4, 
+                        @parents_partner5]
 
     @life_satisfaction_ideal = t(:life_satisfaction_ideal)
     @life_satisfaction_conditions = t(:life_satisfaction_conditions)
     @life_satisfaction_satisfied = t(:life_satisfaction_satisfied)
     @life_satisfaction_things = t(:life_satisfaction_things)
     @life_satisfaction_change = t(:life_satisfaction_change)
-    # @life_satisfaction = [[:life_satisfaction_ideal, "In most ways my life is close to my ideal"],
-    #      [:life_satisfaction_conditions, "The conditions of my life are excellent"],
-    #        [:life_satisfaction_satisfied, "I am satisfied with my life."],
-    #        [:life_satisfaction_things, "So far I have gotten the important things I want in life"],
-    #        [:life_satisfaction_change, "If I could live my life over, I would change almost nothing"]]
     @life_satisfaction = [[:life_satisfaction_ideal, @life_satisfaction_ideal],
-       [:life_satisfaction_conditions, @life_satisfaction_conditions],
-       [:life_satisfaction_satisfied, @life_satisfaction_satisfied],
-       [:life_satisfaction_things, @life_satisfaction_things],
-       [:life_satisfaction_change, @life_satisfaction_change]]
+                          [:life_satisfaction_conditions, @life_satisfaction_conditions],
+                          [:life_satisfaction_satisfied, @life_satisfaction_satisfied],
+                          [:life_satisfaction_things, @life_satisfaction_things],
+                          [:life_satisfaction_change, @life_satisfaction_change]]
 
     @aggreement_strong1 = t(:aggreement_strong1)
     @aggreement_strong2 = t(:aggreement_strong2)
     @aggreement_strong3 = t(:aggreement_strong3)
     @aggreement_strong4 = t(:aggreement_strong4)
     @aggreement_strong5 = t(:aggreement_strong5)
-    # @aggreement_strong = [ "Strongly disagree",
-    #        "Disagree",
-    #        "Neither agree nor disagree",
-    #        "Agree",
-    #        "Strongly Agree"]
-    @aggreement_strong = [ @aggreement_strong1, @aggreement_strong2, @aggreement_strong3, @aggreement_strong4, @aggreement_strong5]
+    @aggreement_strong = [ @aggreement_strong1, 
+                           @aggreement_strong2, 
+                           @aggreement_strong3, 
+                           @aggreement_strong4, 
+                           @aggreement_strong5]
 
     @rating1 = t(:rating1)
     @rating2 = t(:rating2)
@@ -209,28 +297,14 @@ class SurveyorController < ApplicationController
     @rating5 = t(:rating5)
     @rating6 = t(:rating6)
     @rating7 = t(:rating7)
-    # @happiness = [ "1 - Less Happy",
-    #        "2",
-    #        "3",
-    #        "4",
-    #        "5",
-    #        "6",
-    #        "7 - Very Happy"]
-    @happiness = [ @rating1, @rating2, @rating3, @rating4, @rating5, @rating6, @rating7]
+    @happiness = [ @rating1, 
+                   @rating2, 
+                   @rating3, 
+                   @rating4, 
+                   @rating5, 
+                   @rating6, 
+                   @rating7]
 
-    @rating=[" 1","2 ","3 ","4 ","5 ","6 ","7 "]
-
-    @how_religious = [ "0 Not religious at all",
-           " 1",
-           " 2",
-           " 3",
-           " 4",
-           " 5",
-           " 6",
-           " 7",
-           " 8",
-           " 9",
-           "10 Very religious"]
     @happiness_ratingq = t(:happiness_ratingq)
     @happiness_rating =[[:happiness_rating, @happiness_ratingq]]
 
@@ -239,13 +313,11 @@ class SurveyorController < ApplicationController
     @aggreement3 = t(:aggreement3)
     @aggreement4 = t(:aggreement4)
     @aggreement5 = t(:aggreement5)
-
-    # @aggreement = [ "Completely disagree",
-    #        "Disagree",
-    #        "Neither agree nor disagree",
-    #        "Agree",
-    #        "Completely Agree"]
-    @aggreement = [@aggreement1, @aggreement2, @aggreement3, @aggreement4, @aggreement5]
+    @aggreement = [@aggreement1, 
+                   @aggreement2, 
+                   @aggreement3, 
+                   @aggreement4, 
+                   @aggreement5]
 
     @bigFive_introverted = t(:bigFive_introverted)
     @bigFive_trust = t(:bigFive_trust)
@@ -257,28 +329,16 @@ class SurveyorController < ApplicationController
     @bigFive_tasks = t(:bigFive_tasks)
     @bigFive_tense = t(:bigFive_tense)
     @bigFive_active = t(:bigFive_active)
-
-    # @bigFive = [[:bigFive_introverted, "I am an introverted person"],
-    #        [:bigFive_trust, "Generally, I easily trust people"],
-    #        [:bigFive_lazy, "I have a tendency to be lazy"],
-    #        [:bigFive_cope, "I am easy going, i can cope well with stress"],
-    #        [:bigFive_art, "I have little interest in art"],
-    #        [:bigFive_extraverted, "I am an extraverted and social person"],
-    #        [:bigFive_flaws, "I have a tendency finding flaws in other people"],
-    #        [:bigFive_tasks, "I complete tasks meticulously and completely"],
-    #        [:bigFive_tense, "I am easy to tense up and worry"],
-    #        [:bigFive_active, "I have an active and vivid imagination"]]
-    #@bigFive = [@bigFive_introverted, @bigFive_trust, @bigFive_lazy, @bigFive_cope, @bigFive_art, @bigFive_extraverted, @bigFive_flaws, @bigFive_tasks, @bigFive_tense, @bigFive_active] 
     @bigFive = [[:bigFive_introverted, @bigFive_introverted],
-           [:bigFive_trust, @bigFive_trust],
-           [:bigFive_lazy, @bigFive_lazy],
-           [:bigFive_cope, @bigFive_cope],
-           [:bigFive_art, @bigFive_art],
-           [:bigFive_extraverted, @bigFive_extraverted],
-           [:bigFive_flaws, @bigFive_flaws],
-           [:bigFive_tasks, @bigFive_tasks],
-           [:bigFive_tense, @bigFive_tense],
-           [:bigFive_active, @bigFive_active]]
+                [:bigFive_trust, @bigFive_trust],
+                [:bigFive_lazy, @bigFive_lazy],
+                [:bigFive_cope, @bigFive_cope],
+                [:bigFive_art, @bigFive_art],
+                [:bigFive_extraverted, @bigFive_extraverted],
+                [:bigFive_flaws, @bigFive_flaws],
+                [:bigFive_tasks, @bigFive_tasks],
+                [:bigFive_tense, @bigFive_tense],
+                [:bigFive_active, @bigFive_active]]
 
     @communal1_item1 = t(:communal1_item1)
     @communal1_item2 = t(:communal1_item2)
@@ -286,18 +346,12 @@ class SurveyorController < ApplicationController
     @communal1_item4 = t(:communal1_item4)
     @communal1_item5 = t(:communal1_item5)
     @communal1_item6 = t(:communal1_item6)
-    # @communal1 =[[:communal1_item1, "When I share a problem with people who are in my immediate circle (my family, friends, loved ones) they think of this problem as our problem, not only my problem. "],
-    # 	  [:communal1_item2, "When I am faced with a problem, people who are in my immediate circle (my family, friends and loved ones) solve this problem for me (resorting mainly to their own resources  or mobilizing my resources themselves) "],
-    # 	  [:communal1_item3, "When I am faced with a problem, people who are in my immediate circle (my family, friends and loved ones) share the responsibility to solve this problem with me."],
-    # 		[:communal1_item4, "When dealing with my problem, unless the requests and needs of people who are in my immediate circle (family, friends, loved ones) are met, that problem would not be considered resolved. "],
-    # 		[:communal1_item5,"When I am dealing with a problem, no one really cares about it. "],
-    # 		[:communal1_item6,"When I am faced with a problem, people who are in my immediate circle think that I am the responsible one in resolving this problem.  "]]
     @communal1 =[[:communal1_item1, @communal1_item1],
-        [:communal1_item2, @communal1_item2],
-        [:communal1_item3, @communal1_item3],
-        [:communal1_item4, @communal1_item4],
-        [:communal1_item5, @communal1_item5],
-        [:communal1_item6, @communal1_item6]]
+                 [:communal1_item2, @communal1_item2],
+                 [:communal1_item3, @communal1_item3],
+                 [:communal1_item4, @communal1_item4],
+                 [:communal1_item5, @communal1_item5],
+                 [:communal1_item6, @communal1_item6]]
 
     @communal2_item1 = t(:communal2_item1)
     @communal2_item2 = t(:communal2_item2)
@@ -305,250 +359,633 @@ class SurveyorController < ApplicationController
     @communal2_item4 = t(:communal2_item4)
     @communal2_item5 = t(:communal2_item5)
     @communal2_item6 = t(:communal2_item6)
-    # @communal2=[[:communal2_item1,"When people in my immediate circle come to me with a problem I think of it as my problem"],
-    # 		[:communal2_item2,"When people in my immediate circle come to me with a problem I solve it for them"],
-    # 		[:communal2_item3,"When people in my immediate circle come to me with a problem we share the responsibility and solve it together."],
-    # 		[:communal2_item4,"When dealing with the problem of anyone in my immediate circle, unless the requests and needs of all people concerned are met, that problem would not be considered resolved. "],
-    # 		[:communal2_item5,"When people in my immediate circle have a problem I won’t care about it a lot."],
-    # 		[:communal2_item6,"When people in my immediate circle have a problem I think that it is mainly their own responsibility to solve them."]]
     @communal2=[[:communal2_item1, @communal2_item1],
-      [:communal2_item2, @communal2_item2],
-      [:communal2_item3, @communal2_item3],
-      [:communal2_item4, @communal2_item4],
-      [:communal2_item5, @communal2_item5],
-      [:communal2_item6, @communal2_item6]]
+                [:communal2_item2, @communal2_item2],
+                [:communal2_item3, @communal2_item3],
+                [:communal2_item4, @communal2_item4],
+                [:communal2_item5, @communal2_item5],
+                [:communal2_item6, @communal2_item6]]
 
-    @burden=[[:burden_item1,"The people in my life would be better off if I were gone."],
-    	[:burden_item2,"the people in my life would be happier without me"],
-    	[:burden_item3,"I think I am a burden on society
-    "],
-    	[:burden_item4,"I think my death would be a relief to the people in my life"],
-    	[:burden_item5,"I think the people in my life wish they could be rid of me"],
-    	[:burden_item6,"I think I make things worse for the people in my life"],
-    	[:burden_item7,"Other people care about me"]]
+    @burden_item1 = t(:burden_item1)
+    @burden_item2 = t(:burden_item2)
+    @burden_item3 = t(:burden_item3)
+    @burden_item4 = t(:burden_item4)
+    @burden_item5 = t(:burden_item5)
+    @burden_item6 = t(:burden_item6)
+    @burden_item7 = t(:burden_item7)
+    @burden=[[:burden_item1, @burden_item1],
+             [:burden_item2, @burden_item2],
+             [:burden_item3, @burden_item3],
+             [:burden_item4, @burden_item4],
+             [:burden_item5, @burden_item5],
+             [:burden_item6, @burden_item6],
+             [:burden_item7, @burden_item7]]
 
-    @belong=[[:belong_item1,"I often wonder if there is any place on earth where I really fit in"],
-    	 [:belong_item2,"I am just not sure if I fit in with my friends"],
-    	 [:belong_item3,"I would describe myself as a misfit in most social situations"],
-    	 [:belong_item4,"I generally feel that people accept me"],
-    	 [:belong_item5,"I feel like a piece of a jig-saw puzzle that doesn’t fit into the puzzle."],
-    	 [:belong_item6,"I would like to make a difference to people or things around me, but I don’t feel that what I have to offer is valued "],
-    	 [:belong_item7,"I feel like an outsider in most situations"],
-    	 [:belong_item8,"I am troubled by feeling like I have no place in this world "],
-    	 [:belong_item9,"I could disappear for days and it wouldn’t matter to my family"],
-    	 [:belong_item10,"In general, I don’t feel a part of the mainstream of society "],
-    	 [:belong_item11,"I feel like I observe life rather than participate in it"],
-    	 [:belong_item12,"If I died tomorrow, very few people would come to my funeral"],
-    	 [:belong_item13,"I feel like a square peg trying to fit into a round"] 
-    	]
+    @belong_item1 = t(:belong_item1)
+    @belong_item2 = t(:belong_item2)
+    @belong_item3 = t(:belong_item3)
+    @belong_item4 = t(:belong_item4)
+    @belong_item5 = t(:belong_item5)
+    @belong_item6 = t(:belong_item6)
+    @belong_item7 = t(:belong_item7)
+    @belong_item8 = t(:belong_item8)
+    @belong_item9 = t(:belong_item9)
+    @belong_item10 = t(:belong_item10)
+    @belong_item11 = t(:belong_item11)
+    @belong_item12 = t(:belong_item12)
+    @belong_item13 = t(:belong_item13)
+    @belong=[[:belong_item1, @belong_item1],
+          	 [:belong_item2, @belong_item2],
+          	 [:belong_item3, @belong_item3],
+          	 [:belong_item4, @belong_item4],
+          	 [:belong_item5, @belong_item5],
+          	 [:belong_item6, @belong_item6],
+          	 [:belong_item7, @belong_item7],
+          	 [:belong_item8, @belong_item8],
+          	 [:belong_item9, @belong_item9],
+          	 [:belong_item10, @belong_item10],
+          	 [:belong_item11, @belong_item11],
+          	 [:belong_item12, @belong_item12],
+          	 [:belong_item13, @belong_item13]]
 
-    @affected = [ "I did not experience such an event",
-           "Not at all effected",
-           "Not affected",
-           "Neither affected nor not affected",
-           "Affected",
-           "Very much affected"]
+    @affected1 = t(:affected1)
+    @affected2 = t(:affected2)
+    @affected3 = t(:affected3)
+    @affected4 = t(:affected4)
+    @affected5 = t(:affected5)
+    @affected6 = t(:affected6)
+    @affected = [ @affected1, 
+                  @affected2, 
+                  @affected3, 
+                  @affected4, 
+                  @affected5, 
+                  @affected6]
 
-    @rahe =[[:rahe_item1," Death of spouse"],
-           [:rahe_item2," Divorce"],
-           [:rahe_item3," Marital separation from mate"],
-           [:rahe_item4," Detention in jail or other institution"],
-           [:rahe_item5," Death of a close family member"],
-           [:rahe_item6," Major personal injury or illness "],
-           [:rahe_item7," Marriage"],
-           [:rahe_item8," Being fired at work"],
-           [:rahe_item9," Marital reconciliation with mate"],
-           [:rahe_item10," Retirement from work"],
-           [:rahe_item11," Major change in the health or behavior of a family member"],
-           [:rahe_item12," Pregnancy"],
-           [:rahe_item13," Sexual difficulties"],
-           [:rahe_item14," Gaining a new family member (i.e. birth, adoption, older adult moving in etc.)"],
-           [:rahe_item15," Major business readjustment "],
-           [:rahe_item16," Major change in financial state (i.e. a lot worse or better off than usual)"],
-           [:rahe_item17," Death of a close friend"],
-           [:rahe_item18," Changing to a different line of work "],
-           [:rahe_item19," Major change in the number of arguments w/spouse (i.e. either a lot more or a lot less than usual regarding child rearing, personal habits, etc.)"],
-           [:rahe_item20," Taking on a mortgage (for home, business etc.)"],
-           [:rahe_item21," Foreclosure on a mortgage or loan"],
-           [:rahe_item22," Major change in responsibilities at work (i.e. promotion, demotion, etc.)"],
-           [:rahe_item23," Son or daughter leaving home (marriage, attending college, joined mil.)"],
-           [:rahe_item24," In-law troubles"],
-           [:rahe_item25," Outstanding personal achievement"],
-           [:rahe_item26," Spouse beginning or ceasing work outside the home"],
-           [:rahe_item27," Beginning or ceasing formal schooling"],
-           [:rahe_item28," Major change in living condition (new home,remodeling, deterioration of neighborhood or home etc.)"],
-           [:rahe_item29," Revision of personal habits (dress manners, associations, quitting smoking)"],
-           [:rahe_item30," Troubles with the boss"],
-           [:rahe_item31," Major changes in working hours or conditions"],
-           [:rahe_item32," Changes in residence"],
-           [:rahe_item33," Changing to a new school"],
-           [:rahe_item34," Major change in usual type and/or amount of recreation "],
-           [:rahe_item35," Major change in church activity (i.e. a lot more or less than usual)"],
-           [:rahe_item36," Major change in social activities (clubs, movies, visiting, etc)."],
-           [:rahe_item37," Taking on a loan (car, tv, freezer, etc)"],
-           [:rahe_item38," Major change in sleeping habits (a lot more or a lot less than usual)"],
-           [:rahe_item39," Major change in number of family get togethers"],
-           [:rahe_item40," Major change in eating habits (a lot more or less food intake, or very different meal hours or surroundings)"],
-           [:rahe_item41," Vacation "],
-           [:rahe_item42," Major holidays"],
-           [:rahe_item43," Minor violations of the law (traffic tickets, jaywalking, disturbing the peace, etc)"],
-           [:rahe_item44," Problems in school"],
-           [:rahe_item45," Not being able to find work"],
-           [:rahe_item46," Problems in the relationship"],
-           [:rahe_item47," Psychological distress"],
-           [:rahe_item48," Country-wide political and social problems"],
-           [:rahe_item49," Did you experience a serious accident, fire, natural catastrophe such as an earthquake, physical harassement (beating, shaking), maltreatment (insult), or other serious, traumatic events that affect your life?"],
-           [:rahe_item50," Suicidal attempt of a close person"],
-           [:rahe_item51," Suicide of a close person"],
-           [:rahe_item52," Being exposed to physical abuse"],
-           [:rahe_item53," Being exposed to psychological abuse  such as insult"],
-           [:rahe_item54," Being exposed to sexual abuse such as molestation, abuse, rape"],
-           [:rahe_item55," Other"]
-           ]
+    @rahe_item1 = t(:rahe_item1)
+    @rahe_item2 = t(:rahe_item2)
+    @rahe_item3 = t(:rahe_item3)
+    @rahe_item4 = t(:rahe_item4)
+    @rahe_item5 = t(:rahe_item5)
+    @rahe_item6 = t(:rahe_item6)
+    @rahe_item7 = t(:rahe_item7)
+    @rahe_item8 = t(:rahe_item8)
+    @rahe_item9 = t(:rahe_item9)
+    @rahe_item10 = t(:rahe_item10)
+    @rahe_item11 = t(:rahe_item11)
+    @rahe_item12 = t(:rahe_item12)
+    @rahe_item13 = t(:rahe_item13)
+    @rahe_item14 = t(:rahe_item14)
+    @rahe_item15 = t(:rahe_item15)
+    @rahe_item16 = t(:rahe_item16)
+    @rahe_item17 = t(:rahe_item17)
+    @rahe_item18 = t(:rahe_item18)
+    @rahe_item19 = t(:rahe_item19)
+    @rahe_item20 = t(:rahe_item20)
+    @rahe_item21 = t(:rahe_item21)
+    @rahe_item22 = t(:rahe_item22)
+    @rahe_item23 = t(:rahe_item23)
+    @rahe_item24 = t(:rahe_item24)
+    @rahe_item25 = t(:rahe_item25)
+    @rahe_item26 = t(:rahe_item26)
+    @rahe_item27 = t(:rahe_item27)
+    @rahe_item28 = t(:rahe_item28)
+    @rahe_item29 = t(:rahe_item29)
+    @rahe_item30 = t(:rahe_item30)
+    @rahe_item31 = t(:rahe_item31)
+    @rahe_item32 = t(:rahe_item32)
+    @rahe_item33 = t(:rahe_item33)
+    @rahe_item34 = t(:rahe_item34)
+    @rahe_item35 = t(:rahe_item35)
+    @rahe_item36 = t(:rahe_item36)
+    @rahe_item37 = t(:rahe_item37)
+    @rahe_item38 = t(:rahe_item38)
+    @rahe_item39 = t(:rahe_item39)
+    @rahe_item40 = t(:rahe_item40)
+    @rahe_item41 = t(:rahe_item41)
+    @rahe_item42 = t(:rahe_item42)
+    @rahe_item43 = t(:rahe_item43)
+    @rahe_item44 = t(:rahe_item44)
+    @rahe_item45 = t(:rahe_item45)
+    @rahe_item46 = t(:rahe_item46)
+    @rahe_item47 = t(:rahe_item47)
+    @rahe_item48 = t(:rahe_item48)
+    @rahe_item49 = t(:rahe_item49)
+    @rahe_item50 = t(:rahe_item50)
+    @rahe_item51 = t(:rahe_item51)
+    @rahe_item52 = t(:rahe_item52)
+    @rahe_item53 = t(:rahe_item53)
+    @rahe_item54 = t(:rahe_item54)
+    @rahe_item55 = t(:rahe_item55)
+    @rahe =[[:rahe_item1, @rahe_item1],
+            [:rahe_item2, @rahe_item2],
+            [:rahe_item3, @rahe_item3],
+            [:rahe_item4, @rahe_item4],
+            [:rahe_item5, @rahe_item5],
+            [:rahe_item6, @rahe_item6],
+            [:rahe_item7, @rahe_item7],
+            [:rahe_item8, @rahe_item8],
+            [:rahe_item9, @rahe_item9],
+            [:rahe_item10, @rahe_item10],
+            [:rahe_item11, @rahe_item11],
+            [:rahe_item12, @rahe_item12],
+            [:rahe_item13, @rahe_item13],
+            [:rahe_item14, @rahe_item14],
+            [:rahe_item15, @rahe_item15],
+            [:rahe_item16, @rahe_item16],
+            [:rahe_item17, @rahe_item17],
+            [:rahe_item18, @rahe_item18],
+            [:rahe_item19, @rahe_item19],
+            [:rahe_item20, @rahe_item20],
+            [:rahe_item21, @rahe_item21],
+            [:rahe_item22, @rahe_item22],
+            [:rahe_item23, @rahe_item23],
+            [:rahe_item24, @rahe_item24],
+            [:rahe_item25, @rahe_item25],
+            [:rahe_item26, @rahe_item26],
+            [:rahe_item27, @rahe_item27],
+            [:rahe_item28, @rahe_item28],
+            [:rahe_item29, @rahe_item29],
+            [:rahe_item30, @rahe_item30],
+            [:rahe_item31, @rahe_item31],
+            [:rahe_item32, @rahe_item32],
+            [:rahe_item33, @rahe_item33],
+            [:rahe_item34, @rahe_item34],
+            [:rahe_item35, @rahe_item35],
+            [:rahe_item36, @rahe_item36],
+            [:rahe_item37, @rahe_item37],
+            [:rahe_item38, @rahe_item38],
+            [:rahe_item39, @rahe_item39],
+            [:rahe_item40, @rahe_item40],
+            [:rahe_item41, @rahe_item41],
+            [:rahe_item42, @rahe_item42],
+            [:rahe_item43, @rahe_item43],
+            [:rahe_item44, @rahe_item44],
+            [:rahe_item45, @rahe_item45],
+            [:rahe_item46, @rahe_item46],
+            [:rahe_item47, @rahe_item47],
+            [:rahe_item48, @rahe_item48],
+            [:rahe_item49, @rahe_item49],
+            [:rahe_item50, @rahe_item50],
+            [:rahe_item51, @rahe_item51],
+            [:rahe_item52, @rahe_item52],
+            [:rahe_item53, @rahe_item53],
+            [:rahe_item54, @rahe_item54],
+            [:rahe_item55, @rahe_item55]]
 
-    @done = [ "I have never done this",
-           "I have rarely done this",
-           "I have sometimes done this",
-           "I have mostly done this",
-           "I have always done this"]
+    @done1 = t(:done1)
+    @done2 = t(:done2)
+    @done3 = t(:done3)
+    @done4 = t(:done4)
+    @done5 = t(:done5)
+    @done = [ @done1, 
+              @done2, 
+              @done3, 
+              @done4, 
+              @done5]
 
-    @cope_c=[[:cope_c_item1,"I've been turning to work or other activities to take my mind off things. "],
-    [:cope_c_item2," I've been concentrating my efforts on doing something about the situation I'm in."],
-    [:cope_c_item3," I've been saying to myself this isn't real."],
-    [:cope_c_item4,"I've been using alcohol or other drugs to make myself feel better. "],
-    [:cope_c_item5," I've been getting emotional support from others."],
-    [:cope_c_item6,"I've been giving up trying to deal with it."],
-    [:cope_c_item7,"I've been taking action to try to make the situation better."],
-    [:cope_c_item8," I've been refusing to believe that it has happened. "],
-    [:cope_c_item9,"I've been saying things to let my unpleasant feelings escape."],
-    [:cope_c_item10," I’ve been getting help and advice from other people. "],
-    [:cope_c_item11,"I've been using alcohol or other drugs to help me get through it. "],
-    [:cope_c_item12,"I've been trying to see it in a different light, to make it seem more positive. "],
-    [:cope_c_item13," I’ve been criticizing myself. "],
-    [:cope_c_item14,"I've been trying to come up with a strategy about what to do."],
-    [:cope_c_item15,"I've been getting comfort and understanding from someone. "],
-    [:cope_c_item16,"I've been giving up the attempt to cope. "],
-    [:cope_c_item17,"I've been looking for something good in what is happening. "],
-    [:cope_c_item18," I've been making jokes about it."],
-    [:cope_c_item19,"I've been doing something to think about it less, such as going to movies, watching TV, reading, daydreaming, sleeping, or shopping."],
-    [:cope_c_item20,"I've been accepting the reality of the fact that it has happened. "],
-    [:cope_c_item21," I've been expressing my negative feelings. "],
-    [:cope_c_item22,"I've been trying to find comfort in my religion or spiritual beliefs. "],
-    [:cope_c_item23," I’ve been trying to get advice or help from other people about what to do. "],
-    [:cope_c_item24,"I've been learning to live with it."],
-    [:cope_c_item25,"I've been thinking hard about what steps to take. "],
-    [:cope_c_item26," I’ve been blaming myself for things that happened. "],
-    [:cope_c_item27,"I've been praying or meditating. "],
-    [:cope_c_item28,"I've been making fun of the situation"],
-    [:cope_c_item29,"I was not alone while dealing with this problem."],
-    [:cope_c_item30,"Even if it meant that I had to make sacrifices, I tried support other people who I have been facing the problem with."],
-    [:cope_c_item31,"While deciding what to do with my problem, I took other people’s feelings into consideration. "],
-    [:cope_c_item32,"While resolving this problem, I tried to meet everyone ‘s needs who is affected or a part of this problem."],
-    [:cope_c_item33,"In order to resolve this problem, no matter how difficult it is, I tried to meet everyone’s requests"]]
+    @cope_c_item1 = t(:cope_c_item1)
+    @cope_c_item2 = t(:cope_c_item2)
+    @cope_c_item3 = t(:cope_c_item3)
+    @cope_c_item4 = t(:cope_c_item4)
+    @cope_c_item5 = t(:cope_c_item5)
+    @cope_c_item6 = t(:cope_c_item6)
+    @cope_c_item7 = t(:cope_c_item7)
+    @cope_c_item8 = t(:cope_c_item8)
+    @cope_c_item9 = t(:cope_c_item9)
+    @cope_c_item10 = t(:cope_c_item10)
+    @cope_c_item11 = t(:cope_c_item11)
+    @cope_c_item12 = t(:cope_c_item12)
+    @cope_c_item13 = t(:cope_c_item13)
+    @cope_c_item14 = t(:cope_c_item14)
+    @cope_c_item15 = t(:cope_c_item15)
+    @cope_c_item16 = t(:cope_c_item16)
+    @cope_c_item17 = t(:cope_c_item17)
+    @cope_c_item18 = t(:cope_c_item18)
+    @cope_c_item19 = t(:cope_c_item19)
+    @cope_c_item20 = t(:cope_c_item20)
+    @cope_c_item21 = t(:cope_c_item21)
+    @cope_c_item22 = t(:cope_c_item22)
+    @cope_c_item23 = t(:cope_c_item23)
+    @cope_c_item24 = t(:cope_c_item24)
+    @cope_c_item25 = t(:cope_c_item25)
+    @cope_c_item26 = t(:cope_c_item26)
+    @cope_c_item27 = t(:cope_c_item27)
+    @cope_c_item28 = t(:cope_c_item28)
+    @cope_c_item29 = t(:cope_c_item29)
+    @cope_c_item30 = t(:cope_c_item30)
+    @cope_c_item31 = t(:cope_c_item31)
+    @cope_c_item32 = t(:cope_c_item32)
+    @cope_c_item33 = t(:cope_c_item33)
+    @cope_c=[[:cope_c_item1, @cope_c_item1],
+             [:cope_c_item2, @cope_c_item2],
+             [:cope_c_item3, @cope_c_item3],
+             [:cope_c_item4, @cope_c_item4],
+             [:cope_c_item5, @cope_c_item5],
+             [:cope_c_item6, @cope_c_item6],
+             [:cope_c_item7, @cope_c_item7],
+             [:cope_c_item8, @cope_c_item8],
+             [:cope_c_item9, @cope_c_item9],
+             [:cope_c_item10, @cope_c_item10],
+             [:cope_c_item11, @cope_c_item11],
+             [:cope_c_item12, @cope_c_item12],
+             [:cope_c_item13, @cope_c_item13],
+             [:cope_c_item14, @cope_c_item14],
+             [:cope_c_item15, @cope_c_item15],
+             [:cope_c_item16, @cope_c_item16],
+             [:cope_c_item17, @cope_c_item17],
+             [:cope_c_item18, @cope_c_item18],
+             [:cope_c_item19, @cope_c_item19],
+             [:cope_c_item20, @cope_c_item20],
+             [:cope_c_item21, @cope_c_item21],
+             [:cope_c_item22, @cope_c_item22],
+             [:cope_c_item23, @cope_c_item23],
+             [:cope_c_item24, @cope_c_item24],
+             [:cope_c_item25, @cope_c_item25],
+             [:cope_c_item26, @cope_c_item26],
+             [:cope_c_item27, @cope_c_item27],
+             [:cope_c_item28, @cope_c_item28],
+             [:cope_c_item29, @cope_c_item29],
+             [:cope_c_item30, @cope_c_item30],
+             [:cope_c_item31, @cope_c_item31],
+             [:cope_c_item32, @cope_c_item32],
+             [:cope_c_item33, @cope_c_item33]]
 
+    @different1 = t(:different1)
+    @different2 = t(:different2)
+    @different3 = t(:different3)
+    @different4 = t(:different4)
+    @different5 = t(:different5)
+    @cope_problems=[ @different1, 
+                     @different2, 
+                     @different3, 
+                     @different4, 
+                     @different5]
 
-    @cope_problems=[" Very different (normally I never cope with this stress in this manner)","Somewhat different ","Neither different nor the same"," Not different", "Not at all differently (I normally cope with stress in this manner)"]
+    @family1 = t(:family1)
+    @family2 = t(:family2)
+    @family3 = t(:family3)
+    @family4 = t(:family4)
+    @family5 = t(:family5)
+    @family6 = t(:family6)
+    @family=[[:family1, @family1],
+             [:family2, @family2],
+             [:family3, @family3],
+             [:family4, @family4],
+             [:family5, @family5],
+             [:family6, @family6]]
 
+    @self_construal_item1 = t(:self_construal_item1)
+    @self_construal_item2 = t(:self_construal_item2)
+    @self_construal_item3 = t(:self_construal_item3)
+    @self_construal_item4 = t(:self_construal_item4)
+    @self_construal_item5 = t(:self_construal_item5)
+    @self_construal_item6 = t(:self_construal_item6)
+    @self_construal_item7 = t(:self_construal_item7)
+    @self_construal_item8 = t(:self_construal_item8)
+    @self_construal_item9 = t(:self_construal_item9)
+    @self_construal_item10 = t(:self_construal_item10)
+    @self_construal_item11 = t(:self_construal_item11)
+    @self_construal_item12 = t(:self_construal_item12)
+    @self_construal_item13 = t(:self_construal_item13)
+    @self_construal_item14 = t(:self_construal_item14)
+    @self_construal_item15 = t(:self_construal_item15)
+    @self_construal_item16 = t(:self_construal_item16)
+    @self_construal_item17 = t(:self_construal_item17)
+    @self_construal_item18 = t(:self_construal_item18)         
+    @self_construal=[[:self_construal_item1, @self_construal_item1],
+                     [:self_construal_item2, @self_construal_item2],
+                     [:self_construal_item3, @self_construal_item3],
+                     [:self_construal_item4, @self_construal_item4],
+                     [:self_construal_item5, @self_construal_item5],
+                     [:self_construal_item6, @self_construal_item6],
+                     [:self_construal_item7, @self_construal_item7],
+                     [:self_construal_item8, @self_construal_item8],
+                     [:self_construal_item9, @self_construal_item9],
+                     [:self_construal_item10, @self_construal_item10],
+                     [:self_construal_item11, @self_construal_item11],
+                     [:self_construal_item12, @self_construal_item12],
+                     [:self_construal_item13, @self_construal_item13],
+                     [:self_construal_item14, @self_construal_item14],
+                     [:self_construal_item15, @self_construal_item15],
+                     [:self_construal_item16, @self_construal_item16],
+                     [:self_construal_item17, @self_construal_item17],
+                     [:self_construal_item18, @self_construal_item18]]
 
-    @self_construal=[[:self_construal_item1," I feel independent of my family"],
-    [:self_construal_item2,"I usually try to agree with the wishes of my family "],
-    [:self_construal_item3,"I do not have to think the way my family does "],
-    [:self_construal_item4,"Geleceğe yönelik planlarım için ailemden izin alırım. 
-    I receive approval from my family for my future plans "],
-    [:self_construal_item5," I avoid making decisions with which my family would not agree"],
-    [:self_construal_item6,"On personal issues, I accept the decisions of my family "],
-    [:self_construal_item7," I would not be close to someone to whom my family does not agree"],
-    [:self_construal_item8," Independent of my family, I cannot make decisions easily"],
-    [:self_construal_item9,"I can easily change my decisions according to the wishes of my family  "],
-    [:self_construal_item10,"I prefer to keep a certain distance in my relationship with my family "],
-    [:self_construal_item11," During hard times, I would like to know that my family will be with me"],
-    [:self_construal_item12,"The time that I spend with my family is not important for me "],
-    [:self_construal_item13,"Feeling very close to my family is a good thing "],
-    [:self_construal_item14,"My family is my top priority "],
-    [:self_construal_item15," I don’t enjoy spending much time with my family"],
-    [:self_construal_item16,"I feel myself closely attached to my family. "],
-    [:self_construal_item17," My relationship with my family makes me feel peaceful and secure"],
-    [:self_construal_item18," I am very close to my family"]
-    ]
+    @individualism_item1 = t(:individualism_item1)
+    @individualism_item2 = t(:individualism_item2)
+    @individualism_item3 = t(:individualism_item3)
+    @individualism_item4 = t(:individualism_item4)
+    @individualism_item5 = t(:individualism_item5)
+    @individualism_item6 = t(:individualism_item6)
+    @individualism_item7 = t(:individualism_item7)
+    @individualism_item8 = t(:individualism_item8)
+    @individualism_item9 = t(:individualism_item9)
+    @individualism_item10 = t(:individualism_item10)
+    @individualism_item11 = t(:individualism_item11)
+    @individualism_item12 = t(:individualism_item12)
+    @individualism_item13 = t(:individualism_item13)
+    @individualism_item14 = t(:individualism_item14)
+    @individualism_item15 = t(:individualism_item15)
+    @individualism_item16 = t(:individualism_item16)
+    @individualism_item17 = t(:individualism_item17)
+    @individualism_item18 = t(:individualism_item18)
+    @individualism_item19 = t(:individualism_item19)
+    @individualism=[[:individualism_item1, @individualism_item1],
+                    [:individualism_item2, @individualism_item2],
+                    [:individualism_item3, @individualism_item3],
+                    [:individualism_item4, @individualism_item4],
+                    [:individualism_item5, @individualism_item5],
+                    [:individualism_item6, @individualism_item6],
+                    [:individualism_item7, @individualism_item7],
+                    [:individualism_item8, @individualism_item8],
+                    [:individualism_item9, @individualism_item9],
+                    [:individualism_item10, @individualism_item10],
+                    [:individualism_item11, @individualism_item11],
+                    [:individualism_item12, @individualism_item12],
+                    [:individualism_item13, @individualism_item13],
+                    [:individualism_item14, @individualism_item14],
+                    [:individualism_item15, @individualism_item15],
+                    [:individualism_item16, @individualism_item16],
+                    [:individualism_item17, @individualism_item17],
+                    [:individualism_item18, @individualism_item18],
+                    [:individualism_item19, @individualism_item19]]
 
-    @individualism=[[:individualism_item1,"My happiness depends on people who are around me.  "],
-    [:individualism_item2,"I usually sacrifice my self-interest for the benefit of my group "],
-    [:individualism_item3,"It is important to me to maintain harmony within my group.  "],
-    [:individualism_item4," I like sharing little things with my neighbors."],
-    [:individualism_item5," The wellbeing of my coworkers is important to me. (If they do not have coworkers, what if…)"],
-    [:individualism_item6," If a coworker gets a prize, I would feel proud (If they do not have coworkers, what if…)"],
-    [:individualism_item7," Being a unique individual is important to me."],
-    [:individualism_item8," I often do “my own thing”."],
-    [:individualism_item9," I’d rather depend on myself than on others."],
-    [:individualism_item10," My personal identity, independent from others is very important to me."],
-    [:individualism_item11,"My individual identity is very important to me. "],
-    [:individualism_item12,"I enjoy being unique and different from others. "],
-    [:individualism_item13," It is important to consult close friends and get their ideas before making a decision. "],
-    [:individualism_item14,"If a relative were in financial difficulty, I would help within my means. "],
-    [:individualism_item15," Individuals should live their lives independently."],
-    [:individualism_item16," I feel good about myself when I collaborate with others "],
-    [:individualism_item17,"I prefer to communicate explicitly and directly with others. "],
-    [:individualism_item18,"For me, pleasure is spending time with others. "],
-    [:individualism_item19," If I am successful, it is due to my own talents."]
-    ]
+    @how_often1 = t(:how_often1)
+    @how_often2 = t(:how_often2)
+    @how_often3 = t(:how_often3)
+    @how_often4 = t(:how_often4)
+    @how_often=[ @how_often1, 
+                 @how_often2, 
+                 @how_often3, 
+                 @how_often4]
 
-    @how_often=[" Rarely or none of the time 
-    (less than 1 day)"," Some or a little of the time (1-2 days)","Occasionally or a moderate amount of time 
-    (3-4 days) "," Most or all of the time (5-7 days)"]
+    @depression_item1 = t(:depression_item1)
+    @depression_item2 = t(:depression_item2)
+    @depression_item3 = t(:depression_item3)
+    @depression_item4 = t(:depression_item4)
+    @depression_item5 = t(:depression_item5)
+    @depression_item6 = t(:depression_item6)
+    @depression_item7 = t(:depression_item7)
+    @depression_item8 = t(:depression_item8)
+    @depression_item9 = t(:depression_item9)
+    @depression_item10 = t(:depression_item10)
+    @depression_item11 = t(:depression_item11)
+    @depression_item12 = t(:depression_item12)
+    @depression_item13 = t(:depression_item13)
+    @depression_item14 = t(:depression_item14)
+    @depression_item15 = t(:depression_item15)
+    @depression_item16 = t(:depression_item16)
+    @depression_item17 = t(:depression_item17)
+    @depression_item18 = t(:depression_item18)
+    @depression_item19 = t(:depression_item19)
+    @depression_item20 = t(:depression_item20)
+    @depression=[[:depression_item1, @depression_item1],
+                 [:depression_item2, @depression_item2],
+                 [:depression_item3, @depression_item3],
+                 [:depression_item4, @depression_item4],
+                 [:depression_item5, @depression_item5],
+                 [:depression_item6, @depression_item6],
+                 [:depression_item7, @depression_item7],
+                 [:depression_item8, @depression_item8],
+                 [:depression_item9, @depression_item9],
+                 [:depression_item10, @depression_item10],
+                 [:depression_item11, @depression_item11],
+                 [:depression_item12, @depression_item12],
+                 [:depression_item13, @depression_item13],
+                 [:depression_item14, @depression_item14],
+                 [:depression_item15, @depression_item15],
+                 [:depression_item16, @depression_item16],
+                 [:depression_item17, @depression_item17],
+                 [:depression_item18, @depression_item18],
+                 [:depression_item19, @depression_item19],
+                 [:depression_item20, @depression_item20]]
+
+    @suicide_a1 = t(:suicide_a1)
+    @suicide_a2 = t(:suicide_a2)
+    @suicide_a3 = t(:suicide_a3)
+    @suicide_a4 = t(:suicide_a4)
+    @suicide_a5 = t(:suicide_a5)
+    @suicide_a6 = t(:suicide_a6)
+    @suicide_a7 = t(:suicide_a7)
+    @suicide_a=[ @suicide_a1, 
+                 @suicide_a2, 
+                 @suicide_a3, 
+                 @suicide_a4, 
+                 @suicide_a5, 
+                 @suicide_a6, 
+                 @suicide_a7]
+
+    @suicide_b1 = t(:suicide_b1)
+    @suicide_b2 = t(:suicide_b2)
+    @suicide_b3 = t(:suicide_b3)
+    @suicide_b4 = t(:suicide_b4)
+    @suicide_b5 = t(:suicide_b5)
+    @suicide_b6 = t(:suicide_b6)
+    @suicide_b7 = t(:suicide_b7)
+    @suicide_b=[ @suicide_b1, 
+                 @suicide_b2, 
+                 @suicide_b3, 
+                 @suicide_b4, 
+                 @suicide_b5, 
+                 @suicide_b6, 
+                 @suicide_b7]
+
+    @times1 = t(:times1)
+    @times2 = t(:times2)
+    @times3 = t(:times3)
+    @times4 = t(:times4)
+    @times5 = t(:times5)
+    @times=[ @times1, 
+             @times2, 
+             @times3, 
+             @times4, 
+             @times5]
+
+    @childhood1 = t(:childhood1)
+    @childhood2 = t(:childhood2)
+    @childhood3 = t(:childhood3)
+    @childhood=[ @childhood1, 
+                 @childhood2, 
+                 @childhood3]
+
+    @how_true1 = t(:how_true1)
+    @how_true2 = t(:how_true2)
+    @how_true3 = t(:how_true3)
+    @how_true4 = t(:how_true4)
+    @how_true=[ @how_true1, 
+                @how_true2, 
+                @how_true3, 
+                @how_true4]
+
+    @religious_a_item1 = t(:religious_a_item1)
+    @religious_a_item2 = t(:religious_a_item2)
+    @religious_a_item3 = t(:religious_a_item3)
+    @religious_a=[[:religious_a_item1, @religious_a_item1],
+                  [:religious_a_item2, @religious_a_item2],
+                  [:religious_a_item3, @religious_a_item3]]
+
+    @rating=[" 1","2 ","3 ","4 ","5 ","6 ","7 "]
+
+    @how_religious1 = t(:how_religious1)
+    @how_religious2 = t(:how_religious2)
+    @how_religious = [ @how_religious1,
+                       " 1",
+                       " 2",
+                       " 3",
+                       " 4",
+                       " 5",
+                       " 6",
+                       " 7",
+                       " 8",
+                       " 9",
+                       @how_religious2]
+
+    @demographics_c1 = t(:demographics_c1)
+    @demographics_c2 = t(:demographics_c2)
+    @demographics_c3 = t(:demographics_c3)
+    @demographics_c=[ @demographics_c1, 
+                      @demographics_c2, 
+                      @demographics_c3]
+
+    @demographics_d1 = t(:demographics_d1)
+    @demographics_d2 = t(:demographics_d2)
+    @demographics_d3 = t(:demographics_d3)
+    @demographics_d4 = t(:demographics_d4)
+    @demographics_d5 = t(:demographics_d5)
+    @demographics_d6 = t(:demographics_d6)
+    @demographics_d=[ @demographics_d1, 
+                      @demographics_d2, 
+                      @demographics_d3, 
+                      @demographics_d4, 
+                      @demographics_d5, 
+                      @demographics_d6]
+
+    @live_with1 = t(:live_with1)
+    @live_with2 = t(:live_with2)
+    @live_with3 = t(:live_with3)
+    @live_with4 = t(:live_with4)
+    @live_with5 = t(:live_with5)
+    @live_with6 = t(:live_with6)
+    @live_with7 = t(:live_with7)
+    @live_with8 = t(:live_with8)
+    @live_with9 = t(:live_with9)    
+    @live_with = [[:live_with1, @live_with1], 
+                  [:live_with2, @live_with2], 
+                  [:live_with3, @live_with3], 
+                  [:live_with4, @live_with4], 
+                  [:live_with5, @live_with5], 
+                  [:live_with6, @live_with6], 
+                  [:live_with7, @live_with7], 
+                  [:live_with8, @live_with8], 
+                  [:live_with9, @live_with9]]
+
+    @grad1 = t(:grad1)
+    @grad2 = t(:grad2)
+    @grad3 = t(:grad3)
+    @grad4 = t(:grad4)
+    @grad5 = t(:grad5)
+    @grad6 = t(:grad6)
+    @grad =[ @grad1, 
+             @grad2, 
+             @grad3, 
+             @grad4, 
+             @grad5, 
+             @grad6]
+
+    @employment1 = t(:employment1)
+    @employment2 = t(:employment2)
+    @employment3 = t(:employment3)
+    @employment4 = t(:employment4)
+    @employment5 = t(:employment5)
+    @employment6 = t(:employment6)
+    @employment7 = t(:employment7)
+    @employment8 = t(:employment8)
+    @employment9 = t(:employment9)
+    @employment=[ @employment1, 
+                  @employment2, 
+                  @employment3, 
+                  @employment4, 
+                  @employment5, 
+                  @employment6, 
+                  @employment7, 
+                  @employment8, 
+                  @employment9]
+
+    @occupation1 = t(:occupation1)
+    @occupation2 = t(:occupation2)
+    @occupation3 = t(:occupation3)
+    @occupation4 = t(:occupation4)
+    @occupation5 = t(:occupation5)
+    @occupation6 = t(:occupation6)
+    @occupation7 = t(:occupation7)
+    @occupation8 = t(:occupation8)
+    @occupation9 = t(:occupation9)
+    @occupation10 = t(:occupation10)
+    @occupation11 = t(:occupation11)
+    @occupation12 = t(:occupation12)
+    @occupation13 = t(:occupation13)
+    @occupation=[ @occupation1,
+                  @occupation2,
+                  @occupation3,
+                  @occupation4,
+                  @occupation5,
+                  @occupation6,
+                  @occupation7,
+                  @occupation8,
+                  @occupation9,
+                  @occupation10,
+                  @occupation11,
+                  @occupation12,
+                  @occupation13]
+
+    @income_level1 = t(:income_level1)
+    @income_level2 = t(:income_level2)
+    @income_level3 = t(:income_level3)
+    @income_level4 = t(:income_level4)
+    @income_level5 = t(:income_level5)
+    @income_level=[ @income_level1, 
+                    @income_level2, 
+                    @income_level3, 
+                    @income_level4, 
+                    @income_level5]
+
+    @income_rate1 = t(:income_rate1)
+    @income_rate2 = t(:income_rate2)
+    @income_rate3 = t(:income_rate3)
+    @income_rate4 = t(:income_rate4)
+    @income_rate5 = t(:income_rate5)
+    @income_rate=[ @income_rate1, 
+                   @income_rate2, 
+                   @income_rate3, 
+                   @income_rate4, 
+                   @income_rate5]
+
+    @income1 = t(:income1)
+    @income2 = t(:income2)
+    @income3 = t(:income3)
+    @income4 = t(:income4)
+    @income5 = t(:income5)
+    @income6 = t(:income6)
+    @income7 = t(:income7)
+    @income8 = t(:income8)
+    @income9 = t(:income9)
+    @income=[ @income1, 
+              @income2, 
+              @income3, 
+              @income4, 
+              @income5, 
+              @income6, 
+              @income7, 
+              @income8, 
+              @income9]
 
     @communal_option=[[:com1, "Family Members"],
-    	[:com2, "Spouse/Partner"],
-    	[:com3, "Friends"],
-    	[:com4, "Other"]]
+      [:com2, "Spouse/Partner"],
+      [:com3, "Friends"],
+      [:com4, "Other"]]
 
     @communal_check=["Have you spoken to these people about this 
     problem? ","Did they listen to you about your problem? ", "Did they perceive your problem/stress as if it is their own (even if they may not have anything to do with the problem itself)? ", " Did they try to solve your problem/stress for you (resorting mainly to their own resources  and/or mobilizing your resources themselves)? ", " Did they share the responsibility of resolving this problem with you? "," Did they care about your problem? " ," Did they think that it is mainly your responsibility to solve your own problem? "]
-
-    @depression=[[:depression_item1," I was bothered by things that usually don’t bother me."],
-    [:depression_item2,"  I did not feel like eating; my appetite was poor."],
-    [:depression_item3," I felt that I could not shake off the blues even with help from my family or friends "],
-    [:depression_item4,"I felt I was just as good as other people.  "],
-    [:depression_item5,"I had trouble keeping my mind on what I was doing. "],
-    [:depression_item6,"I felt depressed. "],
-    [:depression_item7,"I felt that everything I did was an effort.  "],
-    [:depression_item8,"I felt hopeful about the future.  "],
-    [:depression_item9,"I thought my life had been a failure.  "],
-    [:depression_item10,"I felt fearful  "],
-    [:depression_item11," My sleep was restless. "],
-    [:depression_item12,"I was happy "],
-    [:depression_item13," I talked less than usual. "],
-    [:depression_item14," I felt lonely"],
-    [:depression_item15,"People were unfriendly.  "],
-    [:depression_item16," I enjoyed life."],
-    [:depression_item17," I had crying spells. "],
-    [:depression_item18,"I felt sad. "],
-    [:depression_item19,"I felt that people dislike me  "],
-    [:depression_item20," Things did not go well"]
-    ]
-
-    @suicide_a=[" Never "," It was just a brief passing thought "," I have briefly thought to kill myself, but I was not serious about it "," I have had a plan at least once to kill myself but did not try to do it ","  I have had a plan at least once to kill myself and really wanted to die"," I have attempted to kill myself, but did not want to die"," I have attempted to kill myself, and really hoped to die"]
-
-    @how_true=[" Definitely not true","Tends not to be true ","Unsure Tends to be true "," Definitely true of me"]
-
-    @religious_a=[[:religious_a_item1," In my life, I experience the presence of the Divine (i.e., God)"],
-    [:religious_a_item2," My religious beliefs are what really lie behind my whole approach to life"],
-    [:religious_a_item3," I try hard to carry my religion over into all other dealings in life"],
-    ]
-
-    @demographics_c=[" At the center","In a suburb "," In a town or village"]
-    @demographics_d=["Big city center "," City"," Town"," Village","Abroad (town or villege) ","Abroad (city or big city) "]
-
-
-    @grad =[" None (never gone to school or dropped out) ","Elemantary school "," Middle school","High school "," College degree"," Graduate school"]
-
-    @employment=["Full-time employee (with insurance coverage) "," Part-time employee (without insurance coverage)"," Self-employer with more than 10 employee","Self-employer with less than 9 employee ","Unemployed  ","Retired ","Housewife ","Students "," Others"]
-
-
-    @occupation=["Managers (examples: Administrative and Business Support Management Occupations) ","Professionals and Related Workers (examples: Science, education, engineering, legal and the like professionals) "," Clerks (administratin, accounting, consulting occupations and the like)","Service workers (examples: police, fire fight, security, hair dressing , medical assistance and the like) ","Sales workers (sales, store sales, door to door occupations and the like) ","Skilled agricultural, forestry and fishery workers ","Craft and related trade workers (textile, clothing, wood, furniture  and the like related trade occupations) ","Equipment workers (Textile, Clothing and Shoes, food processing and the like Related Machine Operating Occupations) "," Elementary workers (Construction and Mining, Transport, Production Related Elementary, Household Chores Occupations","Armed forces  ","Others "]
-
-    @income_level=[" Very Good"," Good "," Fair","Poor "," Very Poor"]
-    @income_rate=["  Lower income group","  Lower than middle income group","  Middle income group"," Higher than middle income group "," Upper income group "]
-    @income=[" Less than $10,000 "," $10,000 - $19,999 "," $20,000 - $29,999  ","  $30,000 - $49,999 "," $50,000 - $74,999  "," $75,000 - $99,999  "," $100,000 - $149,999 "," $150,000 - $249,999 "," $250,000 or more  "]
 
 
 end

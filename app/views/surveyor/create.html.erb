@@ -1,15 +1,13 @@
 <div style="margin-top: 2em;"><% if @response.errors.any? %>
 <div id ="error_top" class="field_with_errors"
      style="width:400px;margin-left:auto;margin-right:auto;margin-top:2em;margin-bottom:2em;">
-  There are some missing or incorrect answers below. <b>Look for entries
-  with this background color</b>. Please fix them and submit again. Thanks!
+  <%= @error_top %>
 </div>
 <% end %> 
 
 <div style="margin-left: auto; margin-right: auto; width:600;">
 
-<div class="instructions">There are <b>two pages</b> of questions (47 total),
- some having multiple parts. This is <b>page 1</b> and there are 41 questions.  The next page has only 6 brief questions.</div>
+<div class="instructions"> <%= @instructions %> </div>
  <%= form_for @response, :url => { :action => 'update', :id  =>@response.id} do |f| %>
 
  <ol>
@@ -281,7 +279,7 @@
 </li>
 
 <li>
-<div class = "question">The following questions ask you to think about yourself and other people.  Please respond to each question by using your own beliefs and experiences, NOT what you think is true in general, or what might be true for other people.</div>
+<div class = "question"> <%= @burdenq %> </div>
 <div class = "answer">
 <table style="margin-left: 1em;">
 <tr>
@@ -293,7 +291,7 @@
 </li>
 
 <li>
-<div class = "question">Here are some statements, which you may or may not agree. Please indicate to what degree you agree with the following statements.</div>
+<div class = "question"> <%= @belongq %> </div>
 <div class = "answer">
 <table style="margin-left: 1em;">
 <tr>
@@ -305,7 +303,7 @@
 </li>
 
 <li>
-<div class = "question">Everyone comes across negative and positive life events, which might be stress inducing. We are asking you to think of LAST YEAR and indicate if you have experienced any of the listed events, within the LAST YEAR. If you have experienced an event, we will ask you how much you were affected by this event, on a scale from 'Not at all affected' to 'Very much affected'.</div>
+<div class = "question"> <%= @raheq %> </div>
 <div class = "answer">
 <table style="margin-left: 1em;">
 <tr>
@@ -318,18 +316,17 @@
 
 
 <li>
-With this questionnaire we are trying to understand how you respond to stressful events. There are many ways to deal with stress. While rating the items that follow please think of the most distressing event that you have experienced during the past year. Obviously, different people deal with things in different ways, but I'm interested in how you've tried to deal with it.  Each item says something about a particular way of coping.  We want to know to what extent you've been doing what the item says.  How much or how frequently.  Don't answer on the basis of whether it seems to be working or not—just whether or not you're doing it.  Try to rate each item separately in your mind from the others.  Make your answers as true FOR YOU as you can.
+<%= @instructions2 %>
 
 <ol type="a">
 <li>
-<div class="question"> So first, please indicate, within the last year, which event has caused you the most distress and difficulty?  Please choose the most distressing event from the events you have talked about before. YOU HAVE INDICATED THE FOLLOWING AS THE MOST STRESSFUL.  PLEASE CHOOSE ONE AND RESPOND THE FOLLOWING THINKING OF HOW YOU COPED WITH THIS STRESS. </div>
+<div class="question"> <%= @cope_b %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:cope_b]) %></div>
 <div class="answer"><%= f.text_field :cope_b, style: "margin-left: 1em;" %></div>
 </li>
 
 <li>
-<div class = "question">While answering these questions, please think of how you generally acted when you were faced with the problem that you have selected above.
-When I was faced with this problem…</div>
+<div class = "question"> <%= @cope_cq %> </div>
 <div class = "answer">
 <table style="margin-left: 1em;">
 <tr>
@@ -345,23 +342,12 @@ When I was faced with this problem…</div>
 
 
 <li>
-Please think of the same event that you faced within the last year, that has caused you the most distress and difficulty. Think of the people that you have consulted with when you were dealing with this problem, and what they have done. 
+<%= @communal_checkq %>
 
-<div class = "answer">
-<table style="margin-left: 1em;">
-<tr>
-<tr><td></td><%= render( :partial => 'header', :collection => @communal_check, :locals=> {:f => f}) %></tr>
-<%= render( :partial => 'checktable', :collection => @communal_option, :locals=> {:f => f, :cols=>@communal_check}) %>
-</tr>
-</table>
-</div>
-</li>
-
-<li>
 <ol type="a">
 <li>
 
-<div class="question">Have you spoken to your Father about this problem? </div>
+<div class="question"> <%= @father_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:father_a]) %></div>
 <div class="answer">
 <%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :father_a, :dependency => "father"}) %>
@@ -369,7 +355,7 @@ Please think of the same event that you faced within the last year, that has cau
 
 <ol type="i" id ="father" <% if @response.father_a != "Yes"%>style="display: none;"<% end %>>
 <li>
-<div class="question">Did he listen to you about your problem? </div>
+<div class="question"> <%= @father_b %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:father_b]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :father_b}) %>
@@ -377,7 +363,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did he perceive your problem/stress as if it is his own (even if they may not have anything to do with the problem itself)? </div>
+<div class="question"> <%= @father_c %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:father_c]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :father_c}) %>
@@ -385,7 +371,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did he try to solve your problem/stress for you (resorting mainly to their own resources and/or mobilizing your resources themselves)? </div>
+<div class="question"> <%= @father_d %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:father_d]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :father_d}) %>
@@ -393,7 +379,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did he share the responsibility of resolving this problem with you? </div>
+<div class="question"> <%= @father_e %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:father_e]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :father_e}) %>
@@ -402,7 +388,7 @@ Please think of the same event that you faced within the last year, that has cau
 
 
 <li>
-<div class="question">Did he care about your problem? </div>
+<div class="question"> <%= @father_f %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:father_f]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :father_f}) %>
@@ -410,7 +396,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did he think that it is mainly your responsibility to solve your own problem? </div>
+<div class="question"> <%= @father_g %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:father_g]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :father_g}) %>
@@ -422,15 +408,15 @@ Please think of the same event that you faced within the last year, that has cau
 
 <li>
 
-<div class="question">Have you spoken to your Mother about this problem? </div>
+<div class="question"> <%= @mother_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:mother_a]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :mother_a}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :mother_a, :dependency => "mother"}) %>
 </div>
 
-<ol type="i">
+<ol type="i" id ="mother" <% if @response.mother_a != "Yes"%>style="display: none;"<% end %>>
 <li>
-<div class="question">Did she listen to you about your problem? </div>
+<div class="question"> <%= @mother_b %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:mother_b]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :mother_b}) %>
@@ -438,7 +424,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did she perceive your problem/stress as if it is her own (even if they may not have anything to do with the problem itself)? </div>
+<div class="question"> <%= @mother_c %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:mother_c]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :mother_c}) %>
@@ -446,7 +432,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did she try to solve your problem/stress for you (resorting mainly to their own resources and/or mobilizing your resources themselves)? </div>
+<div class="question"> <%= @mother_d %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:mother_d]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :mother_d}) %>
@@ -454,7 +440,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did she share the responsibility of resolving this problem with you? </div>
+<div class="question"> <%= @mother_e %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:mother_e]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :mother_e}) %>
@@ -463,7 +449,7 @@ Please think of the same event that you faced within the last year, that has cau
 
 
 <li>
-<div class="question">Did she care about your problem? </div>
+<div class="question"> <%= @mother_f %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:mother_f]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :mother_f}) %>
@@ -471,7 +457,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did she think that it is mainly your responsibility to solve your own problem? </div>
+<div class="question"> <%= @mother_g %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:mother_g]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :mother_g}) %>
@@ -484,15 +470,15 @@ Please think of the same event that you faced within the last year, that has cau
 
 <li>
 
-<div class="question">Have you spoken to your Children about this problem? </div>
+<div class="question"> <%= @children_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:children_a]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :children_a}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :children_a, :dependency => "children"}) %>
 </div>
 
-<ol type="i">
+<ol type="i" id ="children" <% if @response.children_a != "Yes"%>style="display: none;"<% end %>>
 <li>
-<div class="question">Did they listen to you about your problem? </div>
+<div class="question"> <%= @children_b %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:children_b]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :children_b}) %>
@@ -500,7 +486,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they perceive your problem/stress as if it is their own (even if they may not have anything to do with the problem itself)? </div>
+<div class="question"> <%= @children_c %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:children_c]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :children_c}) %>
@@ -508,7 +494,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they try to solve your problem/stress for you (resorting mainly to their own resources and/or mobilizing your resources themselves)? </div>
+<div class="question"> <%= @children_d %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:children_d]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :children_d}) %>
@@ -516,7 +502,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they share the responsibility of resolving this problem with you? </div>
+<div class="question"> <%= @children_e %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:children_e]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :children_e}) %>
@@ -525,7 +511,7 @@ Please think of the same event that you faced within the last year, that has cau
 
 
 <li>
-<div class="question">Did they care about your problem? </div>
+<div class="question"> <%= @children_f %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:children_f]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :children_f}) %>
@@ -533,7 +519,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they think that it is mainly your responsibility to solve your own problem? </div>
+<div class="question"> <%= @children_g %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:children_g]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :children_g}) %>
@@ -545,15 +531,15 @@ Please think of the same event that you faced within the last year, that has cau
 
 <li>
 
-<div class="question">Have you spoken to your Siblings about this problem? </div>
+<div class="question"> <%= @sibling_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:sibling_a]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :sibling_a}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :sibling_a, :dependency => "sibling"}) %>
 </div>
 
-<ol type="i">
+<ol type="i" id ="sibling" <% if @response.sibling_a != "Yes"%>style="display: none;"<% end %>>
 <li>
-<div class="question">Did they listen to you about your problem? </div>
+<div class="question"> <%= @sibling_b %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:sibling_b]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :sibling_b}) %>
@@ -561,7 +547,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they perceive your problem/stress as if it is their own (even if they may not have anything to do with the problem itself)? </div>
+<div class="question"> <%= @sibling_c %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:sibling_c]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :sibling_c}) %>
@@ -569,7 +555,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they try to solve your problem/stress for you (resorting mainly to their own resources and/or mobilizing your resources themselves)? </div>
+<div class="question"> <%= @sibling_d %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:sibling_d]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :sibling_d}) %>
@@ -577,7 +563,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they share the responsibility of resolving this problem with you? </div>
+<div class="question"> <%= @sibling_e %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:sibling_e]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :sibling_e}) %>
@@ -586,7 +572,7 @@ Please think of the same event that you faced within the last year, that has cau
 
 
 <li>
-<div class="question">Did they care about your problem? </div>
+<div class="question"> <%= @sibling_f %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:sibling_f]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :sibling_f}) %>
@@ -594,7 +580,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they think that it is mainly your responsibility to solve your own problem? </div>
+<div class="question"> <%= @sibling_g %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:sibling_g]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :sibling_g}) %>
@@ -607,15 +593,15 @@ Please think of the same event that you faced within the last year, that has cau
 
 
 <li>
-<div class="question">Have you spoken to your Cousins about this problem? </div>
+<div class="question"> <%= @cousins_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:cousins_a]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :cousins_a}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :cousins_a, :dependency => "cousins"}) %>
 </div>
 
-<ol type="i">
+<ol type="i" id ="cousins" <% if @response.cousins_a != "Yes"%>style="display: none;"<% end %>>
 <li>
-<div class="question">Did they listen to you about your problem? </div>
+<div class="question"> <%= @cousins_b %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:cousins_b]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :cousins_b}) %>
@@ -623,7 +609,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they perceive your problem/stress as if it is their own (even if they may not have anything to do with the problem itself)? </div>
+<div class="question"> <%= @cousins_c %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:cousins_c]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :cousins_c}) %>
@@ -631,7 +617,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they try to solve your problem/stress for you (resorting mainly to their own resources and/or mobilizing your resources themselves)? </div>
+<div class="question"> <%= @cousins_d %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:cousins_d]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :cousins_d}) %>
@@ -639,7 +625,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they share the responsibility of resolving this problem with you? </div>
+<div class="question"> <%= @cousins_e %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:cousins_e]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :cousins_e}) %>
@@ -648,7 +634,7 @@ Please think of the same event that you faced within the last year, that has cau
 
 
 <li>
-<div class="question">Did they care about your problem? </div>
+<div class="question"> <%= @cousins_f %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:cousins_f]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :cousins_f}) %>
@@ -656,7 +642,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they think that it is mainly your responsibility to solve your own problem? </div>
+<div class="question"> <%= @cousins_g %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:cousins_g]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :cousins_g}) %>
@@ -668,15 +654,15 @@ Please think of the same event that you faced within the last year, that has cau
 
 
 <li>
-<div class="question">Have you spoken to your Aunts/Uncles about this problem? </div>
+<div class="question"> <%= @uncle_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:uncle_a]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :uncle_a}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :uncle_a, :dependency => "uncle"}) %>
 </div>
 
-<ol type="i">
+<ol type="i" id ="uncle" <% if @response.uncle_a != "Yes"%>style="display: none;"<% end %>>
 <li>
-<div class="question">Did they listen to you about your problem? </div>
+<div class="question"> <%= @uncle_b %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:uncle_b]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :uncle_b}) %>
@@ -684,7 +670,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they perceive your problem/stress as if it is their own (even if they may not have anything to do with the problem itself)? </div>
+<div class="question"> <%= @uncle_c %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:uncle_c]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :uncle_c}) %>
@@ -692,7 +678,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they try to solve your problem/stress for you (resorting mainly to their own resources and/or mobilizing your resources themselves)? </div>
+<div class="question"> <%= @uncle_d %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:uncle_d]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :uncle_d}) %>
@@ -700,7 +686,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they share the responsibility of resolving this problem with you? </div>
+<div class="question"> <%= @uncle_e %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:uncle_e]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :uncle_e}) %>
@@ -709,7 +695,7 @@ Please think of the same event that you faced within the last year, that has cau
 
 
 <li>
-<div class="question">Did they care about your problem? </div>
+<div class="question"> <%= @uncle_f %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:uncle_f]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :uncle_f}) %>
@@ -717,7 +703,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they think that it is mainly your responsibility to solve your own problem? </div>
+<div class="question"> <%= @uncle_g %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:uncle_g]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :uncle_g}) %>
@@ -730,15 +716,15 @@ Please think of the same event that you faced within the last year, that has cau
 
 
 <li>
-<div class="question">Have you spoken to your Spouse/Partner about this problem? </div>
+<div class="question"> <%= @spouse_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:spouse_a]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :spouse_a}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :spouse_a, :dependency => "spouse"}) %>
 </div>
 
-<ol type="i">
+<ol type="i" id ="spouse" <% if @response.spouse_a != "Yes"%>style="display: none;"<% end %>>
 <li>
-<div class="question">Did they listen to you about your problem? </div>
+<div class="question"> <%= @spouse_b %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:spouse_b]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :spouse_b}) %>
@@ -746,7 +732,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they perceive your problem/stress as if it is their own (even if they may not have anything to do with the problem itself)? </div>
+<div class="question"> <%= @spouse_c %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:spouse_c]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :spouse_c}) %>
@@ -754,7 +740,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they try to solve your problem/stress for you (resorting mainly to their own resources and/or mobilizing your resources themselves)? </div>
+<div class="question"> <%= @spouse_d %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:spouse_d]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :spouse_d}) %>
@@ -762,7 +748,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they share the responsibility of resolving this problem with you? </div>
+<div class="question"> <%= @spouse_e %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:spouse_e]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :spouse_e}) %>
@@ -771,7 +757,7 @@ Please think of the same event that you faced within the last year, that has cau
 
 
 <li>
-<div class="question">Did they care about your problem? </div>
+<div class="question"> <%= @spouse_f %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:spouse_f]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :spouse_f}) %>
@@ -779,7 +765,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they think that it is mainly your responsibility to solve your own problem? </div>
+<div class="question"> <%= @spouse_g %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:spouse_g]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :spouse_g}) %>
@@ -791,15 +777,15 @@ Please think of the same event that you faced within the last year, that has cau
 
 
 <li>
-<div class="question">Have you spoken to your Friends about this problem? </div>
+<div class="question"> <%= @friends_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:friends_a]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :friends_a}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :friends_a, :dependency => "friends"}) %>
 </div>
 
-<ol type="i">
+<ol type="i" id ="friends" <% if @response.friends_a != "Yes"%>style="display: none;"<% end %>>
 <li>
-<div class="question">Did they listen to you about your problem? </div>
+<div class="question"> <%= @friends_b %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:friends_b]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :friends_b}) %>
@@ -807,7 +793,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they perceive your problem/stress as if it is their own (even if they may not have anything to do with the problem itself)? </div>
+<div class="question"> <%= @friends_c %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:friends_c]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :friends_c}) %>
@@ -815,7 +801,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they try to solve your problem/stress for you (resorting mainly to their own resources and/or mobilizing your resources themselves)? </div>
+<div class="question"> <%= @friends_d %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:friends_d]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :friends_d}) %>
@@ -823,7 +809,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they share the responsibility of resolving this problem with you? </div>
+<div class="question"> <%= @friends_e %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:friends_e]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :friends_e}) %>
@@ -832,7 +818,7 @@ Please think of the same event that you faced within the last year, that has cau
 
 
 <li>
-<div class="question">Did they care about your problem? </div>
+<div class="question"> <%= @friends_f %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:friends_f]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :friends_f}) %>
@@ -840,7 +826,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they think that it is mainly your responsibility to solve your own problem? </div>
+<div class="question"> <%= @friends_g %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:friends_g]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :friends_g}) %>
@@ -851,23 +837,23 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Have you spoken to Others about this problem? </div>
+<div class="question"> <%= @other_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:other_a]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :other_a}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :other_a, :dependency => "other"}) %>
 </div>
 
-<ol type="i">
+<ol type="i" id ="other" <% if @response.other_a != "Yes"%>style="display: none;"<% end %>>
 
 <li>
-<div class="question"> Please specify whom </div>
+<div class="question"> <%= @other_who %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:other_who]) %></div>
 <div class="answer"><%= f.text_field :other_who, style: "margin-left: 1em;" %></div>
 </li>
 
 
 <li>
-<div class="question">Did they listen to you about your problem? </div>
+<div class="question"> <%= @other_b %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:other_b]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :other_b}) %>
@@ -875,7 +861,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they perceive your problem/stress as if it is their own (even if they may not have anything to do with the problem itself)? </div>
+<div class="question"> <%= @other_c %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:other_c]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :other_c}) %>
@@ -883,7 +869,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they try to solve your problem/stress for you (resorting mainly to their own resources and/or mobilizing your resources themselves)? </div>
+<div class="question"> <%= @other_d %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:other_d]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :other_d}) %>
@@ -891,7 +877,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they share the responsibility of resolving this problem with you? </div>
+<div class="question"> <%= @other_e %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:other_e]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :other_e}) %>
@@ -900,7 +886,7 @@ Please think of the same event that you faced within the last year, that has cau
 
 
 <li>
-<div class="question">Did they care about your problem? </div>
+<div class="question"> <%= @other_f %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:other_f]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :other_f}) %>
@@ -908,7 +894,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class="question">Did they think that it is mainly your responsibility to solve your own problem? </div>
+<div class="question"> <%= @other_g %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:other_g]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :other_g}) %>
@@ -916,28 +902,23 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 </ol>
 
-</li>
-
-
-
-
-</ol>
-</li>
 
 <li>
-<div class="question"> How differently did you cope with this problem in terms of what you have done and with whom you have consulted with, compared to have you GENERALLY cope with problems? </div>
+<div class="question"> <%= @cope_problemsq %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:cope_problems]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @cope_problems, :locals=> {:f => f, :name => :cope_problems}) %>
 </div>
 </li>
 
+</ol>
+</li>
 
 <li>
 <ol type="a">
 
 <li>
-<div class="question"> Who do you call 'family' in your life? Even if you do not have anyone you call 'family' at the moment, you might have had someone or a few family members in the past. Please check all that applies, and please respond the following questions accordingly. </div>
+<div class="question"> <%= @familyq %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:family]) %></div>
 <div class="answer">
 <%= render( :partial => 'checkboxes', :object => @family, :locals=> {:f => f}) %>
@@ -945,7 +926,7 @@ Please think of the same event that you faced within the last year, that has cau
 </li>
 
 <li>
-<div class = "question">Please indicate to what degree you agree or disagree with the following statements, considering your own relationship with your family. You can rate these statement on a scale from 'I strongly Disagree' to 'I strongly Agree'.</div>
+<div class = "question"> <%= @self_construalq %> </div>
 <div class = "answer">
 <table style="margin-left: 1em;">
 <tr>
@@ -961,8 +942,7 @@ Please think of the same event that you faced within the last year, that has cau
 
 
 <li>
-<div class = "question">Please tell me how much you agree with the sentences below.
-You can answer the question from 'strongly disagree' to  'strongly agree'. </div>
+<div class = "question"> <%= @ind_col %> </div>
 <div class = "answer">
 <table style="margin-left: 1em;">
 <tr>
@@ -974,7 +954,7 @@ You can answer the question from 'strongly disagree' to  'strongly agree'. </div
 </li>
 
 <li>
-<div class = "question">Below is a list of the ways you might have felt or behaved. Please tell me how often you have felt this way during the past week.  (Show the cards) </div>
+<div class = "question"> <%= @depressionq %> </div>
 <div class = "answer">
 <table style="margin-left: 1em;">
 <tr>
@@ -986,13 +966,12 @@ You can answer the question from 'strongly disagree' to  'strongly agree'. </div
 </li>
 
 <li>
-<div class = "question">WE ALL GO THROUGH HARD TIMES IN OUR LIVES and sometimes we find it difficult to resolve these problems, and do not know what to do. You may also have gone through a similar period in your life-time.
-</div>
+<div class = "question"> <%= @instructions3 %> </div>
 
 <ol type ="a">
 
 <li>
-<div class="question"> Have you ever thought about or attempted to kill yourself, within your life-time? </div>
+<div class="question"> <%= @suicide_aq %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:suicide_a]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @suicide_a, :locals=> {:f => f, :name => :suicide_a}) %>
@@ -1000,10 +979,10 @@ You can answer the question from 'strongly disagree' to  'strongly agree'. </div
 </li>
 
 <li>
-<div class="question"> Have you ever thought about or attempted to kill yourself within the last year (12 months)?  </div>
+<div class="question"> <%= @suicide_bq %>  </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:suicide_b]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @suicide_a, :locals=> {:f => f, :name => :suicide_b}) %>
+<%= render( :partial => 'radiobuttons', :object => @suicide_b, :locals=> {:f => f, :name => :suicide_b}) %>
 </div>
 </li>
 
@@ -1012,11 +991,7 @@ You can answer the question from 'strongly disagree' to  'strongly agree'. </div
 
 
 <li>
-<div class="question"> 
-<ol type="a">
-
-<li>
-<div class="question">During the past 4 weeks, did you have any problems with your work or other regular daily activities as a result of any emotional problems (such as feeling depressed or anxious)?  </div>
+<div class="question"> <%= @function_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:function_a]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :function_a}) %>
@@ -1024,7 +999,7 @@ You can answer the question from 'strongly disagree' to  'strongly agree'. </div
 </li>
 
 <li>
-<div class="question">Have you accomplished less than you would like in your work or daily activities as a result of these emotional problems? </div>
+<div class="question"> <%= @function_b %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:function_b]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @times, :locals=> {:f => f, :name => :function_b}) %>
@@ -1032,7 +1007,7 @@ You can answer the question from 'strongly disagree' to  'strongly agree'. </div
 </li>
 
 <li>
-<div class="question">Have done your work or other regular daily activities less carefully than usual as a result of these emotional problems? </div>
+<div class="question"> <%= @function_c %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:function_c]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @times, :locals=> {:f => f, :name => :function_c}) %>
@@ -1040,19 +1015,8 @@ You can answer the question from 'strongly disagree' to  'strongly agree'. </div
 </li>
 
 
-</ol>
-</li>
-
-
-
-
-
 <li>
-<div class="question">
-<ol type="a">
-
-<li>
-<div class="question">Most of the people may witness or live a stressful and traumatic event in any period of their lives. A serious accident, natural disasters like fire, earthquake, domestic violence (beatingws, manhandling), sexual abuse, bereavement, sudden death of loved-one or a loved one taking one’s own life and many others can be examples for traumatic events that people experience. Have you experienced any serious and/or traumatic events in your life, such as the ones mentioned above? </div>
+<div class="question"> <%= @trauma_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:trauma_a]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :trauma_a}) %>
@@ -1060,8 +1024,7 @@ You can answer the question from 'strongly disagree' to  'strongly agree'. </div
 </li>
 
 <li>
-<div class="question">If yes;
-Did you experience these kinds of events more than once? </div>
+<div class="question"> <%= @trauma_b %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:trauma_b]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :trauma_b}) %>
@@ -1069,18 +1032,16 @@ Did you experience these kinds of events more than once? </div>
 </li>
 
 <li>
-<div class="question">When did you experience this/these events? </div>
+<div class="question"> <%= @trauma_c %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:trauma_c]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @childhood, :locals=> {:f => f, :name => :trauma_c}) %>
 </div>
 </li>
 
-</ol>
-</li>
 
 <li>
-<div class="question"> What is your religious denomination? </div>
+<div class="question"> <%= @religious_dominations %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:religios_dominations]) %></div>
 <div class="answer"><%= f.text_field :religios_dominations, style: "margin-left: 1em;" %></div>
 </li>
@@ -1092,7 +1053,7 @@ Did you experience these kinds of events more than once? </div>
 <ol type="a">
 
 <li>
-<div class = "question">Please rate how much you agree with these statements ranging from definitely not true of me to definitely true of me. </div>
+<div class = "question"> <%= @religious_aq %> </div>
 <div class = "answer">
 <table style="margin-left: 1em;">
 <tr>
@@ -1104,7 +1065,7 @@ Did you experience these kinds of events more than once? </div>
 </li>
 
 <li>
-<div class="question">How often did you pray or practiced your religion in a sanctuary (mosque/djemevi/church/synagogue)?  </div>
+<div class="question"> <%= @religious_b %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:religious_b]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @rating, :locals=> {:f => f, :name => :religious_b}) %>
@@ -1112,46 +1073,41 @@ Did you experience these kinds of events more than once? </div>
 </li>
 
 <li>
-<div class="question">How often did you pray or practiced your religion by yourself outside of a sanctuary within the last month ?  </div>
+<div class="question"> <%= @religious_c %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:religious_c]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @rating, :locals=> {:f => f, :name => :religious_c}) %>
 </div>
 </li>
 
+</ol>
+</li>
+
 <li>
-<div class="question">Regardless of how often you pray, to what extend you think you are religious? From 'not religious at all' to 'very religious', how many points would you give yourself ?  </div>
+<div class="question"> <%= @how_religiousq %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:how_religious]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @how_religious, :locals=> {:f => f, :name => :how_religious}) %>
 </div>
 </li>
 
-</ol>
-</li>
-
-
 
 <li>
-<div class="question">
-<ol type="a">
-
-<li>
-<div class="question"> How many years have you been living in your current city/town/village ? </div>
+<div class="question"> <%= @demographics_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_a]) %></div>
 <div class="answer"><%= f.text_field :demographics_a, style: "margin-left: 1em;" %>
 </div>
 </li>
 
 <li>
-<div class="question"> In which city were you born ? </div>
+<div class="question"> <%= @demographics_b %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_b]) %></div>
 <div class="answer"><%= f.text_field :demographics_b, style: "margin-left: 1em;" %>
 </div>
 </li>
 
 <li>
-<div class="question">Were you born in a city center, in a suburb or in a village ?  </div>
+<div class="question"> <%= @demographics_cq %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_c]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @demographics_c, :locals=> {:f => f, :name => :demographics_c}) %>
@@ -1159,7 +1115,7 @@ Did you experience these kinds of events more than once? </div>
 </li>
 
 <li>
-<div class="question">What kind of a settlement was the longest place that you have lived so far?  </div>
+<div class="question"> <%= @demographics_dq %>  </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_d]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @demographics_d, :locals=> {:f => f, :name => :demographics_d}) %>
@@ -1168,7 +1124,7 @@ Did you experience these kinds of events more than once? </div>
 
 
 <li>
-<div class="question">Have you ever moved from one city or town to another city, town, or country ?   </div>
+<div class="question"> <%= @demographics_e %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_e]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :demographics_e}) %>
@@ -1176,21 +1132,21 @@ Did you experience these kinds of events more than once? </div>
 </li>
 
 <li>
-<div class="question"> How many times have you moved from one city or town to another city, town or country? </div>
+<div class="question"> <%= @demographics_f %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_f]) %></div>
 <div class="answer"><%= f.text_field :demographics_f, style: "margin-left: 1em;" %>
 </div>
 </li>
 
 <li>
-<div class="question"> Including yourself, how many people reside at your current residence ? </div>
+<div class="question"> <%= @demographics_g %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_g]) %></div>
 <div class="answer"><%= f.text_field :demographics_g, style: "margin-left: 1em;" %>
 </div>
 </li>
 
 <li>
-<div class="question"> With whom do you live with? (You can choose more than one.) </div>
+<div class="question"> <%= @live_withq %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:live_with]) %></div>
 <div class="answer">
 <%= render( :partial => 'checkboxes', :object => @live_with, :locals=> {:f => f}) %>
@@ -1198,7 +1154,7 @@ Did you experience these kinds of events more than once? </div>
 </li>
 
 <li>
-<div class="question">Are you the person who contributes the most to the income of the household?  </div>
+<div class="question"> <%= @demographics_i %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_i]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :demographics_i}) %>
@@ -1207,7 +1163,7 @@ Did you experience these kinds of events more than once? </div>
 
 
 <li>
-<div class="question">Please indicate your highest level of education? </div>
+<div class="question"> <%= @demographics_j %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_j]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @grad, :locals=> {:f => f, :name => :demographics_j}) %>
@@ -1216,7 +1172,7 @@ Did you experience these kinds of events more than once? </div>
 
 
 <li>
-<div class="question">What is your current job status? </div>
+<div class="question"> <%= @demographics_k %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_k]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @employment, :locals=> {:f => f, :name => :demographics_k}) %>
@@ -1224,8 +1180,7 @@ Did you experience these kinds of events more than once? </div>
 </li>
 
 <li>
-<div class="question">What is your current occupation? (Please answer if you chose 1-4 on the above question)
-(If you are retired, please indicate the profession that you are retired from) </div>
+<div class="question"> <%= @demographics_l %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_l]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @occupation, :locals=> {:f => f, :name => :demographics_l}) %>
@@ -1233,7 +1188,7 @@ Did you experience these kinds of events more than once? </div>
 </li>
 
 <li>
-<div class="question">Compared to your immediate environment, how would you rate your own income level?</div>
+<div class="question"> <%= @demographics_m %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_m]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @income_level, :locals=> {:f => f, :name => :demographics_m}) %>
@@ -1241,7 +1196,7 @@ Did you experience these kinds of events more than once? </div>
 </li>
 
 <li>
-<div class="question">Compared to the average income level of your country, how would you rate your own income level? </div>
+<div class="question"> <%= @demographics_n %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_n]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @income_rate, :locals=> {:f => f, :name => :demographics_n}) %>
@@ -1249,15 +1204,11 @@ Did you experience these kinds of events more than once? </div>
 </li>
 
 <li>
-<div class="question">What is your net total monthly income?  </div>
+<div class="question"> <%= @demographics_o %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_o]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @income, :locals=> {:f => f, :name => :demographics_o}) %>
 </div>
-</li>
-
-
-</ol>
 </li>
 
 
