@@ -63,11 +63,11 @@ GMHS::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
  # match 'consent/index(/:locale)', :to => 'consent#index', :as => 'consent_index', via: [:get, :post]
-  match 'consent/index(/:uid(/:locale))', :to => 'consent#index', :as => 'consent_index', via: [:get, :post]
-  match 'consent/info_letter(/:uid(/:locale))', :to => 'consent#info_letter', :as => 'consent_info_letter', via: [:get, :post]
-  match 'consent/screening(/:uid(/:locale))', :to => 'consent#screening', :as => 'consent_screening', via: [:get, :post]
+  match 'consent/index(/:id(/:locale))', :to => 'consent#index', :as => 'consent_index', via: [:get, :post]
+  match 'consent/info_letter(/:id(/:locale))', :to => 'consent#info_letter', :as => 'consent_info_letter', via: [:get, :post]
+  match 'consent/screening(/:id(/:locale))', :to => 'consent#screening', :as => 'consent_screening', via: [:get, :post]
   #match 'surveyor/create(/:uid(/:locale))', :to => 'surveyor#create', :as => 'surveyor_create', via: [:get, :post]
-  match 'recruit/invitation(/:uid(/:locale))', :to => 'recruit#invitation', :as => 'recruit_invitation', via: [:get, :post]
+  match 'recruit/invitation(/:id(/:locale))', :to => 'recruit#invitation', :as => 'recruit_invitation', via: [:get, :post]
 
   #get 'consent/info_letter(/:locale)', :to => 'consent#info_letter'
 
@@ -91,9 +91,9 @@ GMHS::Application.routes.draw do
   post ':controller(/:action(/:id))'
   patch ':controller(/:action(/:id))'
 
-  #get ':controller(/:id(/:locale))'
-  #post ':controller(/:id(/:locale))'
-  #patch ':controller(/:id(/:locale))'
+  #get ':controller(/:action(/:id(/:locale)))'
+  #post ':controller(/:action(/:id(/:locale)))'
+  #patch ':controller(/:action(/:id(/:locale)))'
 
   #match ':controller(/:action(/:id))', via [:get, :post, :patch]
 
