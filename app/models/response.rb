@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 class Response < ActiveRecord::Base
+
   #belongs_to :facebook_user
   has_one :estimate
   has_one :facebook_response
@@ -25,6 +26,28 @@ class Response < ActiveRecord::Base
   validates :employed, presence: true, on: :update
   validates :volunteer, presence: true, on: :update
   validates :social_group, presence: true, on: :update
+
+  if :social_group == @yn1
+	  	validates :groupa1, presence: true, on: :update
+	  	validates :groupb1, presence: true, on: :update
+  end
+  if :social_group == $yn1
+	  	validates :groupa1, presence: true, on: :update
+	  	validates :groupb1, presence: true, on: :update
+  end
+# def social_group
+# 	@social_group = :social_group
+# end
+  if :social_group == 'Yes'
+	  	validates :groupa1, presence: true, on: :update
+	  	validates :groupb1, presence: true, on: :update
+  end
+
+   validates :groupa1, presence: true, on: :update, if: :social?
+   def social?
+     :social_group == "Yes"
+   end
+
   validates :happy, presence: true, on: :update
   validates :life_satisfaction_ideal, presence: true, on: :update
   validates :life_satisfaction_conditions, presence: true, on: :update
@@ -154,6 +177,103 @@ class Response < ActiveRecord::Base
   validates :cope_c_item32, presence: true, on: :update
   validates :cope_c_item33, presence: true, on: :update
   validates :cope_problems, presence: true, on: :update
+
+  validates :father_a, presence: true, on: :update
+  if :father_a == @yn1
+  		validates :father_b, presence: true, on: :update
+  		validates :father_c, presence: true, on: :update
+  		validates :father_d, presence: true, on: :update
+  		validates :father_e, presence: true, on: :update
+  		validates :father_f, presence: true, on: :update
+  		validates :father_g, presence: true, on: :update
+  end
+
+  validates :mother_a, presence: true, on: :update
+  if :mother_a == @yn1
+  		validates :mother_b, presence: true, on: :update
+  		validates :mother_c, presence: true, on: :update
+  		validates :mother_d, presence: true, on: :update
+  		validates :mother_e, presence: true, on: :update
+  		validates :mother_f, presence: true, on: :update
+  		validates :mother_g, presence: true, on: :update
+  end
+
+  validates :children_a, presence: true, on: :update
+  if :children_a == @yn1
+  		validates :children_b, presence: true, on: :update
+  		validates :children_c, presence: true, on: :update
+  		validates :children_d, presence: true, on: :update
+  		validates :children_e, presence: true, on: :update
+  		validates :children_f, presence: true, on: :update
+  		validates :children_g, presence: true, on: :update
+  end
+
+  validates :sibling_a, presence: true, on: :update
+  if :sibling_a == @yn1
+  		validates :sibling_b, presence: true, on: :update
+  		validates :sibling_c, presence: true, on: :update
+  		validates :sibling_d, presence: true, on: :update
+  		validates :sibling_e, presence: true, on: :update
+  		validates :sibling_f, presence: true, on: :update
+  		validates :sibling_g, presence: true, on: :update
+  end
+
+  validates :cousins_a, presence: true, on: :update
+  if :cousins_a == @yn1
+  		validates :cousins_b, presence: true, on: :update
+  		validates :cousins_c, presence: true, on: :update
+  		validates :cousins_d, presence: true, on: :update
+  		validates :cousins_e, presence: true, on: :update
+  		validates :cousins_f, presence: true, on: :update
+  		validates :cousins_g, presence: true, on: :update
+  end
+
+  validates :uncle_a, presence: true, on: :update
+  if :uncle_a == @yn1
+  		validates :uncle_b, presence: true, on: :update
+  		validates :uncle_c, presence: true, on: :update
+  		validates :uncle_d, presence: true, on: :update
+  		validates :uncle_e, presence: true, on: :update
+  		validates :uncle_f, presence: true, on: :update
+  		validates :uncle_g, presence: true, on: :update
+  end
+
+  validates :spouse_a, presence: true, on: :update
+  if :spouse_a == @yn1
+  		validates :spouse_b, presence: true, on: :update
+  		validates :spouse_c, presence: true, on: :update
+  		validates :spouse_d, presence: true, on: :update
+  		validates :spouse_e, presence: true, on: :update
+  		validates :spouse_f, presence: true, on: :update
+  		validates :spouse_g, presence: true, on: :update
+  end
+
+  validates :friends_a, presence: true, on: :update
+  if :friends_a == @yn1
+  		validates :friends_b, presence: true, on: :update
+  		validates :friends_c, presence: true, on: :update
+  		validates :friends_d, presence: true, on: :update
+  		validates :friends_e, presence: true, on: :update
+  		validates :friends_f, presence: true, on: :update
+  		validates :friends_g, presence: true, on: :update
+  end
+
+  validates :other_a, presence: true, on: :update
+    if :other_a == @yn1
+  		validates :other_b, presence: true, on: :update
+  		validates :other_who, presence: true, on: :update
+  		validates :other_c, presence: true, on: :update
+  		validates :other_d, presence: true, on: :update
+  		validates :other_e, presence: true, on: :update
+  		validates :other_f, presence: true, on: :update
+  		validates :other_g, presence: true, on: :update
+  end
+
+  # if :family2 == "0" && :family3 == "0" && :family4 == "0" && :family5 == "0" && :family6 == "0"
+  # 	validates :family1, presence: true, on: :update
+  # end
+  #validates (:family1||:family2||:family3||:family4||:family5||:family6), presence: true, on: :update
+
   validates :self_construal_item1, presence: true, on: :update
   validates :self_construal_item2, presence: true, on: :update
   validates :self_construal_item3, presence: true, on: :update
@@ -293,7 +413,11 @@ class Response < ActiveRecord::Base
   validates :talk_students_teachers, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
   validates :talk_work, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
   validates :visit_neighbors, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
-  validates :num_volunteer, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
+
+  if :volunteer == @yn1
+     	validates :num_volunteer, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
+  end
+
   validates :demographics_a, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
   validates :demographics_f, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
   validates :demographics_g, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update

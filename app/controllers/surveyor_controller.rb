@@ -40,6 +40,10 @@ class SurveyorController < ApplicationController
       @sex = t(:sex)
       @age = t(:age)
       @yn1 = t(:yn1)
+      
+      $yn1 = @yn1
+      #Rails.cache.write(@yn1)
+
       @yn2 = t(:yn2) 
       @yn = [@yn1, @yn2]
       @bigFive_instruction = t(:bigFive_instruction)
@@ -194,6 +198,9 @@ class SurveyorController < ApplicationController
       @age = t(:age)
       @yn1 = t(:yn1)
       @yn2 = t(:yn2) 
+
+      $yn1 = @yn1
+
       @yn = [@yn1, @yn2]
       @bigFive_instruction = t(:bigFive_instruction)
       @cohen_instruction = t(:cohen_instruction)

@@ -88,7 +88,7 @@ GMHS::Application.routes.draw do
   #match ':controller(/:action(/:id))', via [:get, :post, :patch]
 
   scope "/:locale" do
-    resources :welcome, :consent#, :estimate
+    resources :welcome, :consent#, :recruit
   end
   
 end
