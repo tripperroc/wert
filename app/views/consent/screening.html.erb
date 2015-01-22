@@ -14,7 +14,7 @@ survey.
 <br />
 
 </div>
-  <p style="display: none;"> Your recruit code is: <%= @recruitee_coupon %> </p>
+  <p> Your recruit code is: <%= @recruitee_coupon %> </p>
 
 <%= form_for @facebook_response, :url => { :controller => 'consent', :action => 'update' }, :html=>{:id=>"eligible"}  do |f| %>
 <p></p>

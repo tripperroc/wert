@@ -97,11 +97,12 @@ GMHS::Application.routes.draw do
 
   #match ':controller(/:action(/:id))', via [:get, :post, :patch]
 
-  # scope "/:id" do
+  #scope "/:id" do
   #   resources :welcome, :consent #, :recruit
   # end
-  scope "/:uid/:locale" do
-    resources :welcome, :consent, :surveyor
+  scope "/:id/:locale" do
+    #resources :welcome, :consent, :surveyor
+    #resources :consent, :surveyor
   end
   
 end
