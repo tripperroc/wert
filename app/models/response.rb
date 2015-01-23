@@ -27,26 +27,10 @@ class Response < ActiveRecord::Base
   validates :volunteer, presence: true, on: :update
   validates :social_group, presence: true, on: :update
 
-  if :social_group == @yn1
-	  	validates :groupa1, presence: true, on: :update
-	  	validates :groupb1, presence: true, on: :update
-  end
-  if :social_group == $yn1
-	  	validates :groupa1, presence: true, on: :update
-	  	validates :groupb1, presence: true, on: :update
-  end
-# def social_group
-# 	@social_group = :social_group
-# end
-  if :social_group == 'Yes'
-	  	validates :groupa1, presence: true, on: :update
-	  	validates :groupb1, presence: true, on: :update
-  end
 
-   validates :groupa1, presence: true, on: :update, if: :social?
-   def social?
-     :social_group == "Yes"
-   end
+  validates :groupa1, presence: true, if: "social_group == 'Yes' || social_group =='예' || social_group =='Evet'", on: :update
+  validates :groupb1, presence: true, if: "social_group == 'Yes' || social_group =='예' || social_group =='Evet'", on: :update
+
 
   validates :happy, presence: true, on: :update
   validates :life_satisfaction_ideal, presence: true, on: :update
@@ -178,101 +162,129 @@ class Response < ActiveRecord::Base
   validates :cope_c_item33, presence: true, on: :update
   validates :cope_problems, presence: true, on: :update
 
+
   validates :father_a, presence: true, on: :update
-  if :father_a == @yn1
-  		validates :father_b, presence: true, on: :update
-  		validates :father_c, presence: true, on: :update
-  		validates :father_d, presence: true, on: :update
-  		validates :father_e, presence: true, on: :update
-  		validates :father_f, presence: true, on: :update
-  		validates :father_g, presence: true, on: :update
-  end
+	validates :father_b, presence: true, if: "father_a == 'Yes' || father_a =='예' || father_a =='Evet'", on: :update
+	validates :father_c, presence: true, if: "father_a == 'Yes' || father_a =='예' || father_a =='Evet'", on: :update
+	validates :father_d, presence: true, if: "father_a == 'Yes' || father_a =='예' || father_a =='Evet'", on: :update
+	validates :father_e, presence: true, if: "father_a == 'Yes' || father_a =='예' || father_a =='Evet'", on: :update
+	validates :father_f, presence: true, if: "father_a == 'Yes' || father_a =='예' || father_a =='Evet'", on: :update
+	validates :father_g, presence: true, if: "father_a == 'Yes' || father_a =='예' || father_a =='Evet'", on: :update
+
 
   validates :mother_a, presence: true, on: :update
-  if :mother_a == @yn1
-  		validates :mother_b, presence: true, on: :update
-  		validates :mother_c, presence: true, on: :update
-  		validates :mother_d, presence: true, on: :update
-  		validates :mother_e, presence: true, on: :update
-  		validates :mother_f, presence: true, on: :update
-  		validates :mother_g, presence: true, on: :update
-  end
+	validates :mother_b, presence: true, if: "mother_a == 'Yes' || mother_a =='예' || mother_a =='Evet'", on: :update
+	validates :mother_c, presence: true, if: "mother_a == 'Yes' || mother_a =='예' || mother_a =='Evet'", on: :update
+	validates :mother_d, presence: true, if: "mother_a == 'Yes' || mother_a =='예' || mother_a =='Evet'", on: :update
+	validates :mother_e, presence: true, if: "mother_a == 'Yes' || mother_a =='예' || mother_a =='Evet'", on: :update
+	validates :mother_f, presence: true, if: "mother_a == 'Yes' || mother_a =='예' || mother_a =='Evet'", on: :update
+	validates :mother_g, presence: true, if: "mother_a == 'Yes' || mother_a =='예' || mother_a =='Evet'", on: :update
+
 
   validates :children_a, presence: true, on: :update
-  if :children_a == @yn1
-  		validates :children_b, presence: true, on: :update
-  		validates :children_c, presence: true, on: :update
-  		validates :children_d, presence: true, on: :update
-  		validates :children_e, presence: true, on: :update
-  		validates :children_f, presence: true, on: :update
-  		validates :children_g, presence: true, on: :update
-  end
+	validates :children_b, presence: true, if: "children_a == 'Yes' || children_a =='예' || children_a =='Evet'", on: :update
+	validates :children_c, presence: true, if: "children_a == 'Yes' || children_a =='예' || children_a =='Evet'", on: :update
+	validates :children_d, presence: true, if: "children_a == 'Yes' || children_a =='예' || children_a =='Evet'", on: :update
+	validates :children_e, presence: true, if: "children_a == 'Yes' || children_a =='예' || children_a =='Evet'", on: :update
+	validates :children_f, presence: true, if: "children_a == 'Yes' || children_a =='예' || children_a =='Evet'", on: :update
+	validates :children_g, presence: true, if: "children_a == 'Yes' || children_a =='예' || children_a =='Evet'", on: :update
+
 
   validates :sibling_a, presence: true, on: :update
-  if :sibling_a == @yn1
-  		validates :sibling_b, presence: true, on: :update
-  		validates :sibling_c, presence: true, on: :update
-  		validates :sibling_d, presence: true, on: :update
-  		validates :sibling_e, presence: true, on: :update
-  		validates :sibling_f, presence: true, on: :update
-  		validates :sibling_g, presence: true, on: :update
-  end
+	validates :sibling_b, presence: true, if: "sibling_a == 'Yes' || sibling_a =='예' || sibling_a =='Evet'", on: :update
+	validates :sibling_c, presence: true, if: "sibling_a == 'Yes' || sibling_a =='예' || sibling_a =='Evet'", on: :update
+	validates :sibling_d, presence: true, if: "sibling_a == 'Yes' || sibling_a =='예' || sibling_a =='Evet'", on: :update
+	validates :sibling_e, presence: true, if: "sibling_a == 'Yes' || sibling_a =='예' || sibling_a =='Evet'", on: :update
+	validates :sibling_f, presence: true, if: "sibling_a == 'Yes' || sibling_a =='예' || sibling_a =='Evet'", on: :update
+	validates :sibling_g, presence: true, if: "sibling_a == 'Yes' || sibling_a =='예' || sibling_a =='Evet'", on: :update
+
 
   validates :cousins_a, presence: true, on: :update
-  if :cousins_a == @yn1
-  		validates :cousins_b, presence: true, on: :update
-  		validates :cousins_c, presence: true, on: :update
-  		validates :cousins_d, presence: true, on: :update
-  		validates :cousins_e, presence: true, on: :update
-  		validates :cousins_f, presence: true, on: :update
-  		validates :cousins_g, presence: true, on: :update
-  end
+	validates :cousins_b, presence: true, if: "cousins_a == 'Yes' || cousins_a =='예' || cousins_a =='Evet'", on: :update
+	validates :cousins_c, presence: true, if: "cousins_a == 'Yes' || cousins_a =='예' || cousins_a =='Evet'", on: :update
+	validates :cousins_d, presence: true, if: "cousins_a == 'Yes' || cousins_a =='예' || cousins_a =='Evet'", on: :update
+	validates :cousins_e, presence: true, if: "cousins_a == 'Yes' || cousins_a =='예' || cousins_a =='Evet'", on: :update
+	validates :cousins_f, presence: true, if: "cousins_a == 'Yes' || cousins_a =='예' || cousins_a =='Evet'", on: :update
+	validates :cousins_g, presence: true, if: "cousins_a == 'Yes' || cousins_a =='예' || cousins_a =='Evet'", on: :update
+
 
   validates :uncle_a, presence: true, on: :update
-  if :uncle_a == @yn1
-  		validates :uncle_b, presence: true, on: :update
-  		validates :uncle_c, presence: true, on: :update
-  		validates :uncle_d, presence: true, on: :update
-  		validates :uncle_e, presence: true, on: :update
-  		validates :uncle_f, presence: true, on: :update
-  		validates :uncle_g, presence: true, on: :update
-  end
+	validates :uncle_b, presence: true, if: "uncle_a == 'Yes' || uncle_a =='예' || uncle_a =='Evet'", on: :update
+	validates :uncle_c, presence: true, if: "uncle_a == 'Yes' || uncle_a =='예' || uncle_a =='Evet'", on: :update
+	validates :uncle_d, presence: true, if: "uncle_a == 'Yes' || uncle_a =='예' || uncle_a =='Evet'", on: :update
+	validates :uncle_e, presence: true, if: "uncle_a == 'Yes' || uncle_a =='예' || uncle_a =='Evet'", on: :update
+	validates :uncle_f, presence: true, if: "uncle_a == 'Yes' || uncle_a =='예' || uncle_a =='Evet'", on: :update
+	validates :uncle_g, presence: true, if: "uncle_a == 'Yes' || uncle_a =='예' || uncle_a =='Evet'", on: :update
+
 
   validates :spouse_a, presence: true, on: :update
-  if :spouse_a == @yn1
-  		validates :spouse_b, presence: true, on: :update
-  		validates :spouse_c, presence: true, on: :update
-  		validates :spouse_d, presence: true, on: :update
-  		validates :spouse_e, presence: true, on: :update
-  		validates :spouse_f, presence: true, on: :update
-  		validates :spouse_g, presence: true, on: :update
-  end
+	validates :spouse_b, presence: true, if: "spouse_a == 'Yes' || spouse_a =='예' || spouse_a =='Evet'", on: :update
+	validates :spouse_c, presence: true, if: "spouse_a == 'Yes' || spouse_a =='예' || spouse_a =='Evet'", on: :update
+	validates :spouse_d, presence: true, if: "spouse_a == 'Yes' || spouse_a =='예' || spouse_a =='Evet'", on: :update
+	validates :spouse_e, presence: true, if: "spouse_a == 'Yes' || spouse_a =='예' || spouse_a =='Evet'", on: :update
+	validates :spouse_f, presence: true, if: "spouse_a == 'Yes' || spouse_a =='예' || spouse_a =='Evet'", on: :update
+	validates :spouse_g, presence: true, if: "spouse_a == 'Yes' || spouse_a =='예' || spouse_a =='Evet'", on: :update
+
 
   validates :friends_a, presence: true, on: :update
-  if :friends_a == @yn1
-  		validates :friends_b, presence: true, on: :update
-  		validates :friends_c, presence: true, on: :update
-  		validates :friends_d, presence: true, on: :update
-  		validates :friends_e, presence: true, on: :update
-  		validates :friends_f, presence: true, on: :update
-  		validates :friends_g, presence: true, on: :update
-  end
+	validates :friends_b, presence: true, if: "friends_a == 'Yes' || friends_a =='예' || friends_a =='Evet'", on: :update
+	validates :friends_c, presence: true, if: "friends_a == 'Yes' || friends_a =='예' || friends_a =='Evet'", on: :update
+	validates :friends_d, presence: true, if: "friends_a == 'Yes' || friends_a =='예' || friends_a =='Evet'", on: :update
+	validates :friends_e, presence: true, if: "friends_a == 'Yes' || friends_a =='예' || friends_a =='Evet'", on: :update
+	validates :friends_f, presence: true, if: "friends_a == 'Yes' || friends_a =='예' || friends_a =='Evet'", on: :update
+	validates :friends_g, presence: true, if: "friends_a == 'Yes' || friends_a =='예' || friends_a =='Evet'", on: :update
+
 
   validates :other_a, presence: true, on: :update
-    if :other_a == @yn1
-  		validates :other_b, presence: true, on: :update
-  		validates :other_who, presence: true, on: :update
-  		validates :other_c, presence: true, on: :update
-  		validates :other_d, presence: true, on: :update
-  		validates :other_e, presence: true, on: :update
-  		validates :other_f, presence: true, on: :update
-  		validates :other_g, presence: true, on: :update
+	validates :other_b, presence: true, if: "other_a == 'Yes' || other_a =='예' || other_a =='Evet'", on: :update
+	validates :other_who, presence: true, if: "other_a == 'Yes' || other_a =='예' || other_a =='Evet'", on: :update
+	validates :other_c, presence: true, if: "other_a == 'Yes' || other_a =='예' || other_a =='Evet'", on: :update
+	validates :other_d, presence: true, if: "other_a == 'Yes' || other_a =='예' || other_a =='Evet'", on: :update
+	validates :other_e, presence: true, if: "other_a == 'Yes' || other_a =='예' || other_a =='Evet'", on: :update
+	validates :other_f, presence: true, if: "other_a == 'Yes' || other_a =='예' || other_a =='Evet'", on: :update
+	validates :other_g, presence: true, if: "other_a == 'Yes' || other_a =='예' || other_a =='Evet'", on: :update
+
+
+validate :checkboxes, on: :update
+
+  def checkboxes
+   boxes = [[:family, [[family1,:family1],
+                  [family2, :family2],
+                  [family3, :family3],
+                  [family4, :family4],
+                  [family5, :family5],
+                  [family6, :family6]]],
+
+
+    [:live_with, [[live_with1,:live_with1],
+                  [live_with2,:live_with2],
+                  [live_with3,:live_with3],
+                  [live_with4,:live_with4],
+                  [live_with5,:live_with5],
+                  [live_with6,:live_with6],
+                  [live_with7,:live_with7],
+                  [live_with8,:live_with8],
+                  [live_with9,:live_with9]]]]
+
+    boxes.each do |name, items|
+        at_least_one_checked name, items
+    end
+
   end
 
-  # if :family2 == "0" && :family3 == "0" && :family4 == "0" && :family5 == "0" && :family6 == "0"
-  # 	validates :family1, presence: true, on: :update
-  # end
-  #validates (:family1||:family2||:family3||:family4||:family5||:family6), presence: true, on: :update
+  def at_least_one_checked (name, boxes)
+    x = false
+    boxes.each do |val, field|
+      x = (val or x)
+      logger.debug x
+    end
+    if !x
+      errors.add(name, "can't be blank.")
+      boxes.each do |val, field|
+        errors.add(field, "")
+      end
+    end
+  end
 
   validates :self_construal_item1, presence: true, on: :update
   validates :self_construal_item2, presence: true, on: :update
@@ -286,7 +298,6 @@ class Response < ActiveRecord::Base
   validates :self_construal_item10, presence: true, on: :update
   validates :self_construal_item11, presence: true, on: :update
   validates :self_construal_item12, presence: true, on: :update
-  validates :self_construal_item13, presence: true, on: :update
   validates :self_construal_item13, presence: true, on: :update
   validates :self_construal_item14, presence: true, on: :update
   validates :self_construal_item15, presence: true, on: :update
@@ -335,11 +346,11 @@ class Response < ActiveRecord::Base
   validates :suicide_a, presence: true, on: :update
   validates :suicide_b, presence: true, on: :update
   validates :function_a, presence: true, on: :update
-  validates :function_b, presence: true, on: :update
-  validates :function_c, presence: true, on: :update
+  validates :function_b, presence: true, if: "function_a == 'Yes' || function_a =='예' || function_a =='Evet'", on: :update
+  validates :function_c, presence: true, if: "function_a == 'Yes' || function_a =='예' || function_a =='Evet'", on: :update
   validates :trauma_a, presence: true, on: :update
-  validates :trauma_b, presence: true, on: :update
-  validates :trauma_c, presence: true, on: :update
+  validates :trauma_b, presence: true, if: "trauma_a == 'Yes' || trauma_a =='예' || trauma_a =='Evet'", on: :update
+  validates :trauma_c, presence: true, if: "trauma_a == 'Yes' || trauma_a =='예' || trauma_a =='Evet'", on: :update
   validates :religios_dominations, presence: true, on: :update
   validates :religious_a_item1, presence: true, on: :update
   validates :religious_a_item2, presence: true, on: :update
@@ -354,51 +365,21 @@ class Response < ActiveRecord::Base
   validates :demographics_i, presence: true, on: :update
   validates :demographics_j, presence: true, on: :update
   validates :demographics_k, presence: true, on: :update
-  validates :demographics_l, presence: true, on: :update
+  validates :demographics_l, presence: true, if: "demographics_k == 'Full-time employee (with insurance coverage)' 
+  											   || demographics_k == 'Part-time employee (without insurance coverage)' 
+  											   || demographics_k == 'Self-employer with more than 10 employees' 
+  											   || demographics_k == 'Self-employer with less than 9 employees'
+  											   || demographics_k == '정규직 고용인(4대보험 보장)'
+  											   || demographics_k == '비정규직 고용인(4대보험 보장안됨)'
+  											   || demographics_k == '자영업자(피고용인 10인 이상)'
+  											   || demographics_k == '자영업자(피고용인 9명 이하)'
+  											   || demographics_k == 'Maaş ya da ücret karşılığı tam zamanlı çalışıyorum (sigortalı)'
+  											   || demographics_k == 'Maaş ya da ücret karşılığı yarı zamanlı çalışıyorum (sigortasız)'
+  											   || demographics_k == 'Kendi hesabıma çalışıyorum (10'dan fazla çalışanım var)'
+  											   || demographics_k == 'Kendi hesabıma çalışıyorum (9'dan az çalışanım var)'", on: :update
   validates :demographics_m, presence: true, on: :update
   validates :demographics_n, presence: true, on: :update
   validates :demographics_o,presence: true, on: :update
-  
-  
-
-  # validates :age, numericality: { only_integer: true}, on: :update
-  # validates :num_siblings, numericality: { only_integer: true}, on: :update
-  # validates :num_children, numericality: { only_integer: true}, on: :update
-  # validates :num_children_intouch, numericality: { only_integer: true}, on: :update
-  # validates :other_relatives, numericality: { only_integer: true}, on: :update
-  # validates :other_relatives_touch, numericality: { only_integer: true}, on: :update
-  # validates :close_friends, numericality: { only_integer: true}, on: :update
-  # validates :close_friends_touch, numericality: { only_integer: true}, on: :update
-  # validates :religious_members, numericality: { only_integer: true}, on: :update
-  # validates :talk_students_teachers, numericality: { only_integer: true}, on: :update
-  # validates :talk_work, numericality: { only_integer: true}, on: :update
-  # validates :visit_neighbors, numericality: { only_integer: true}, on: :update
-  # validates :num_volunteer, numericality: { only_integer: true}, on: :update
-  # validates :demographics_a, numericality: { only_integer: true}, on: :update
-  # validates :demographics_f, numericality: { only_integer: true}, on: :update
-  # validates :demographics_g, numericality: { only_integer: true}, on: :update
-  
-  # validates :age, numericality: { greater_than_or_equal_to: 0 }, on: :update
-  # validates :num_siblings, numericality: { greater_than_or_equal_to: 0 }, on: :update
-  # validates :num_children, numericality: { greater_than_or_equal_to: 0 }, on: :update
-  # validates :num_children_intouch, numericality: { greater_than_or_equal_to: 0 }, on: :update
-  # validates :other_relatives, numericality: { greater_than_or_equal_to: 0 }, on: :update
-  # validates :other_relatives_touch, numericality: { greater_than_or_equal_to: 0 }, on: :update
-  # validates :close_friends, numericality: { greater_than_or_equal_to: 0 }, on: :update
-  # validates :close_friends_touch, numericality: { greater_than_or_equal_to: 0 }, on: :update
-  # validates :religious_members, numericality: { greater_than_or_equal_to: 0 }, on: :update
-  # validates :talk_students_teachers, numericality: { greater_than_or_equal_to: 0 }, on: :update
-  # validates :talk_work, numericality: { greater_than_or_equal_to: 0 }, on: :update
-  # validates :visit_neighbors, numericality: { greater_than_or_equal_to: 0 }, on: :update
-  # validates :num_volunteer, numericality: { greater_than_or_equal_to: 0 }, on: :update
-  # validates :demographics_a, numericality: { greater_than_or_equal_to: 0 }, on: :update
-  # validates :demographics_f, numericality: { greater_than_or_equal_to: 0 }, on: :update
-  # validates :demographics_g, numericality: { greater_than_or_equal_to: 0 }, on: :update
-
-
-
-
-  #presence: true, on: :update
 
 
   validates :age, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
@@ -409,26 +390,18 @@ class Response < ActiveRecord::Base
   validates :other_relatives_touch, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
   validates :close_friends, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
   validates :close_friends_touch, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
-  validates :religious_members, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
-  validates :talk_students_teachers, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
+
+  validates :religious_members, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, if: "religious == 'Yes' || religious =='예' || religious =='Evet'", on: :update
+  validates :talk_students_teachers, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, if: "classes == 'Yes' || classes =='예' || classes =='Evet'", on: :update
+  
   validates :talk_work, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
   validates :visit_neighbors, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
 
-  if :volunteer == @yn1
-     	validates :num_volunteer, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
-  end
+  validates :num_volunteer, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, if: "volunteer == 'Yes' || volunteer =='예' || volunteer =='Evet'", on: :update
 
   validates :demographics_a, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
   validates :demographics_f, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
   validates :demographics_g, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
-
-  #numericality: only_integer: true, on: :update
-  #numericality: greater_than_or_equal_to: 0, on: :update
-
-  #numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
- 
-
-
    
 
 end

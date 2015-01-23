@@ -24,7 +24,7 @@
 <li>
 <div class="question"> <%= @age %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:age]) %></div>
-<div class="answer"><%= f.text_field :age, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :age, style: "margin-left: 1em;" %></div>
 </li>
 
 
@@ -55,19 +55,19 @@
 <li>
 <div class="question"> <%= @num_siblings %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:num_siblings]) %></div>
-<div class="answer"><%= f.text_field :num_siblings, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :num_siblings, style: "margin-left: 1em;" %></div>
 </li>
 
 <li>
 <div class="question"> <%= @num_children %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:num_children]) %></div>
-<div class="answer"><%= f.text_field :num_children, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :num_children, style: "margin-left: 1em;" %></div>
 </li>
 
 <li>
 <div class="question"> <%= @num_children_intouch %>  </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:num_children_intouch]) %></div>
-<div class="answer"><%= f.text_field :num_children_intouch, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :num_children_intouch, style: "margin-left: 1em;" %></div>
 </li>
 
 <li>
@@ -107,56 +107,61 @@
 <li>
 <div class="question"> <%= @other_relatives %>  </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:other_relatives]) %></div>
-<div class="answer"><%= f.text_field :other_relatives, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :other_relatives, style: "margin-left: 1em;" %></div>
 </li>
 
 <li>
 <div class="question"> <%= @other_relatives_touch %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:other_relatives_touch]) %></div>
-<div class="answer"><%= f.text_field :other_relatives_touch, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :other_relatives_touch, style: "margin-left: 1em;" %></div>
 </li>
 
 
 <li>
 <div class="question"> <%= @close_friends %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:close_friends]) %></div>
-<div class="answer"><%= f.text_field :close_friends, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :close_friends, style: "margin-left: 1em;" %></div>
 </li>
 
 
 <li>
 <div class="question"> <%= @close_friends_touch %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:close_friends_touch]) %></div>
-<div class="answer"><%= f.text_field :close_friends_touch, style: "margin-left: 1em;" %></div>
-</li>
+<div class="answer"><%= f.number_field :close_friends_touch, style: "margin-left: 1em;" %></div>
+
 
 <li>
 <div class="question"> <%= @religious %>  </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:religious]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :religious}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :religious, :dependency => "religious"}) %>
 </div>
-</li>
 
+<ol type="i" id ="religious" <% if @response.religious != "Yes"%> style="display: none;"<% end %>>
 <li>
 <div class="question"> <%= @religious_members %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:religious_members]) %></div>
-<div class="answer"><%= f.text_field :religious_members, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :religious_members, style: "margin-left: 1em;" %></div>
+</li>
+
+</ol>
 </li>
 
 <li>
 <div class="question"> <%= @classes %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:classes]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :classes}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :classes, :dependency => "classes"}) %>
 </div>
-</li>
 
-
+<ol type="i" id ="classes" <% if @response.classes != "Yes"%> style="display: none;"<% end %>>
 <li>
 <div class="question"> <%= @talk_students_teachers %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:talk_students_teachers]) %></div>
-<div class="answer"><%= f.text_field :talk_students_teachers, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :talk_students_teachers, style: "margin-left: 1em;" %></div>
+</li>
+
+</ol>
 </li>
 
 <li>
@@ -170,51 +175,57 @@
 <li>
 <div class="question"> <%= @talk_work %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:talk_work]) %></div>
-<div class="answer"><%= f.text_field :talk_work, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :talk_work, style: "margin-left: 1em;" %></div>
 </li>
 
 <li>
 <div class="question"> <%= @visit_neighbors %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:visit_neighbors]) %></div>
-<div class="answer"><%= f.text_field :visit_neighbors, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :visit_neighbors, style: "margin-left: 1em;" %></div>
 </li>
 
 <li>
 <div class="question"> <%= @volunteer %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:volunteer]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :volunteer}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :volunteer, :dependency => "volunteer"}) %>
 </div>
-</li>
 
+<ol type="i" id ="volunteer" <% if @response.volunteer != "Yes"%> style="display: none;"<% end %>>
 <li>
 <div class="question"> <%= @num_volunteer %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:num_volunteer]) %></div>
-<div class="answer"><%= f.text_field :num_volunteer, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :num_volunteer, style: "margin-left: 1em;" %></div>
 </li>
+
+</ol>
+</li>
+
 
 <li>
 <div class="question"> <%= @social_group %>  </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:social_group]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :social_group}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :social_group, :dependency => "social_group"}) %>
 </div>
-</li>
 
+<ol type="i" id ="social_group" <% if @response.social_group != "Yes"%> style="display: none;"<% end %>>
 <li>
 <div class="question"> <%= @group_name %> </div>
  
-<div class="answer">Group Names </br> &nbsp <%= f.text_field :groupa1, style: "margin-left: 1em;" %>
+<div class="answer">Group Names: </br> &nbsp <%= f.text_field :groupa1, style: "margin-left: 1em;" %>
 &nbsp
-<%= f.text_field :groupa2, style: "margin-left: 1em;" %>
+<%= f.text_field :groupa2, style: "margin-left: 1.5em;" %>
 </div>
 
 <div class="answer"> <%= @group_member %> </br> &nbsp 
-<%= f.text_field :groupb1, style: "margin-left: 1em;" %>
+<%= f.number_field :groupb1, style: "margin-left: 1em;" %> </br>
 &nbsp
-<%= f.text_field :groupb2, style: "margin-left: 1em;" %>
+<%= f.number_field :groupb2, style: "margin-left: 1em;" %>
 </div>
 
+</li>
+</ol>
 </li>
 
 </ol>
@@ -324,7 +335,7 @@
 <li>
 <div class="question"> <%= @cope_b %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:cope_b]) %></div>
-<div class="answer"><%= f.text_field :cope_b, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.text_field :cope_b, style: "margin-left: 1em; width:550px" %></div>
 </li>
 
 <li>
@@ -996,10 +1007,10 @@
 <div class="question"> <%= @function_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:function_a]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :function_a}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :function_a, :dependency => "function_a"}) %>
 </div>
-</li>
 
+<ol type="i" id ="function_a" <% if @response.function_a != "Yes"%> style="display: none;"<% end %>>
 <li>
 <div class="question"> <%= @function_b %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:function_b]) %></div>
@@ -1016,15 +1027,18 @@
 </div>
 </li>
 
+</ol>
+</li>
+
 
 <li>
 <div class="question"> <%= @trauma_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:trauma_a]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :trauma_a}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :trauma_a, :dependency => "trauma_a"}) %>
 </div>
-</li>
 
+<ol type="i" id ="trauma_a" <% if @response.trauma_a != "Yes"%> style="display: none;"<% end %>>
 <li>
 <div class="question"> <%= @trauma_b %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:trauma_b]) %></div>
@@ -1039,6 +1053,9 @@
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @childhood, :locals=> {:f => f, :name => :trauma_c}) %>
 </div>
+</li>
+
+</ol>
 </li>
 
 
@@ -1069,17 +1086,13 @@
 <li>
 <div class="question"> <%= @religious_b %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:religious_b]) %></div>
-<div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @rating, :locals=> {:f => f, :name => :religious_b}) %>
-</div>
+<div class="answer"><%= f.text_field :religious_b, style: "margin-left: 1em; width:250px" %></div>
 </li>
 
 <li>
 <div class="question"> <%= @religious_c %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:religious_c]) %></div>
-<div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @rating, :locals=> {:f => f, :name => :religious_c}) %>
-</div>
+<div class="answer"><%= f.text_field :religious_c, style: "margin-left: 1em; width:250px" %></div>
 </li>
 
 </ol>
@@ -1097,7 +1110,7 @@
 <li>
 <div class="question"> <%= @demographics_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_a]) %></div>
-<div class="answer"><%= f.text_field :demographics_a, style: "margin-left: 1em;" %>
+<div class="answer"><%= f.number_field :demographics_a, style: "margin-left: 1em;" %>
 </div>
 </li>
 
@@ -1129,21 +1142,25 @@
 <div class="question"> <%= @demographics_e %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_e]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @yn, :locals=> {:f => f, :name => :demographics_e}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :demographics_e, :dependency => "demographics_e"}) %>
 </div>
-</li>
 
+
+<ol type="i" id ="demographics_e" <% if @response.demographics_e != "Yes"%> style="display: none;"<% end %>>
 <li>
 <div class="question"> <%= @demographics_f %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_f]) %></div>
-<div class="answer"><%= f.text_field :demographics_f, style: "margin-left: 1em;" %>
+<div class="answer"><%= f.number_field :demographics_f, style: "margin-left: 1em;" %>
 </div>
+</li>
+
+</ol>
 </li>
 
 <li>
 <div class="question"> <%= @demographics_g %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_g]) %></div>
-<div class="answer"><%= f.text_field :demographics_g, style: "margin-left: 1em;" %>
+<div class="answer"><%= f.number_field :demographics_g, style: "margin-left: 1em;" %>
 </div>
 </li>
 
