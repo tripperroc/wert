@@ -80,7 +80,10 @@ class ConsentController < LanguageController
       logger.debug "111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111"
       logger.debug "111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111"
       session[:recruiter_coupon] = @facebook_response.recruiter_coupon
-      session[:recruitee_coupon] = @facebook_response.recruitee_coupon
+
+      #session[:recruitee_coupon] = @facebook_response.recruitee_coupon
+      @facebook_response.recruitee_coupon = session[:recruitee_coupon]
+
     elsif ((session[:recruitee_coupon] != '585' && FacebookResponse.where(recruitee_coupon: session[:recruitee_coupon]).count > 2) || (session[:recruitee_coupon] == '585' && FacebookResponse.where(recruitee_coupon: session[:recruitee_coupon]).count > 9) )
       logger.debug "222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222"
       logger.debug "222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222"
@@ -100,6 +103,9 @@ class ConsentController < LanguageController
       recruiter_coupon = SecureRandom.hex(16)
       session[:recruiter_coupon] = recruiter_coupon
       @facebook_response.recruiter_coupon = recruiter_coupon
+
+      #@facebook_response.recruitee_coupon = session[:recruitee_coupon]
+
     end
     if @facebook_response.save()
       Delayed::Job.enqueue(UpdateServices.new(@facebook_response, facebook_access_token), :priority => 0)
