@@ -365,18 +365,20 @@ validate :checkboxes, on: :update
   validates :demographics_i, presence: true, on: :update
   validates :demographics_j, presence: true, on: :update
   validates :demographics_k, presence: true, on: :update
-  validates :demographics_l, presence: true, if: "demographics_k == 'Full-time employee (with insurance coverage)' 
-  											   || demographics_k == 'Part-time employee (without insurance coverage)' 
-  											   || demographics_k == 'Self-employer with more than 10 employees' 
-  											   || demographics_k == 'Self-employer with less than 9 employees'
-  											   || demographics_k == '정규직 고용인(4대보험 보장)'
-  											   || demographics_k == '비정규직 고용인(4대보험 보장안됨)'
-  											   || demographics_k == '자영업자(피고용인 10인 이상)'
-  											   || demographics_k == '자영업자(피고용인 9명 이하)'
-  											   || demographics_k == 'Maaş ya da ücret karşılığı tam zamanlı çalışıyorum (sigortalı)'
-  											   || demographics_k == 'Maaş ya da ücret karşılığı yarı zamanlı çalışıyorum (sigortasız)'
-  											   || demographics_k == 'Kendi hesabıma çalışıyorum (10'dan fazla çalışanım var)'
-  											   || demographics_k == 'Kendi hesabıma çalışıyorum (9'dan az çalışanım var)'", on: :update
+
+  validates :demographics_l, presence: true, if: "demographics_k == 'Full-time employee (with insurance coverage)'", on: :update
+  validates :demographics_l, presence: true, if: "demographics_k == 'Part-time employee (without insurance coverage)'", on: :update
+  validates :demographics_l, presence: true, if: "demographics_k == 'Self-employer with more than 10 employees'", on: :update
+  validates :demographics_l, presence: true, if: "demographics_k == 'Self-employer with less than 9 employees'", on: :update
+  validates :demographics_l, presence: true, if: "demographics_k == '정규직 고용인(4대보험 보장)'", on: :update
+  validates :demographics_l, presence: true, if: "demographics_k == '비정규직 고용인(4대보험 보장안됨)'", on: :update
+  validates :demographics_l, presence: true, if: "demographics_k == '자영업자(피고용인 10인 이상)'", on: :update
+  validates :demographics_l, presence: true, if: "demographics_k == '자영업자(피고용인 9명 이하)'", on: :update
+  validates :demographics_l, presence: true, if: "demographics_k == 'Maaş ya da ücret karşılığı tam zamanlı çalışıyorum (sigortalı)'", on: :update
+  validates :demographics_l, presence: true, if: "demographics_k == 'Maaş ya da ücret karşılığı yarı zamanlı çalışıyorum (sigortasız)'", on: :update
+  validates :demographics_l, presence: true, if: "demographics_k == 'Kendi hesabıma çalışıyorum (10 dan fazla çalışanım var)'", on: :update
+  validates :demographics_l, presence: true, if: "demographics_k == 'Kendi hesabıma çalışıyorum (9 dan az çalışanım var)'", on: :update
+
   validates :demographics_m, presence: true, on: :update
   validates :demographics_n, presence: true, on: :update
   validates :demographics_o,presence: true, on: :update
@@ -400,7 +402,7 @@ validate :checkboxes, on: :update
   validates :num_volunteer, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, if: "volunteer == 'Yes' || volunteer =='예' || volunteer =='Evet'", on: :update
 
   validates :demographics_a, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
-  validates :demographics_f, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
+  validates :demographics_f, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, if: "demographics_e == 'Yes' || demographics_e =='예' || demographics_e =='Evet'", on: :update
   validates :demographics_g, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
    
 

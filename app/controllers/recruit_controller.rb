@@ -10,7 +10,9 @@ class RecruitController < ApplicationController
     @facebook_response = FacebookResponse.find(response.facebook_response_id)
     @email = estimate.email_address
     @male_facebook_friends = session[:total_male_friends]
-    @recruitee_coupon =  session[:recruiter_coupon]
+    #@recruitee_coupon =  session[:recruiter_coupon]
+    @recruiter_coupon =  session[:recruiter_coupon]
+    @recruitee_coupon =  session[:recruitee_coupon]
     @gay_facebook_friends = estimate.facebook_gay_friends
     ResponderMailer.thank_you_email({:invitation_url => @invitation_url, :email_address => @email}).deliver
 
