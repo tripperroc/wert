@@ -62,7 +62,6 @@ en:
   marital4: "Divorced"
   marital5: "Divorced and Remarried"
   marital6: "Widowed"
-  #REMOVE?
   marital7: "I am single but in a relationship (not living together)"
   marital8: "I am single, but in a relationship (living together)"
 #4b
@@ -198,7 +197,7 @@ en:
 #12
   raheq: "Everyone comes across negative and positive life events, which might be stress inducing. We are asking you to think of LAST YEAR and indicate if you have experienced any of the listed events, within the LAST YEAR. If you have experienced an event, we will ask you how much you were affected by this event, on a scale from 'Not at all affected' to 'Very much affected'."
   affected1: " I did not experience such an event"
-  affected2: "Not at all effected"
+  affected2: "Not at all affected"
   affected3: "Not affected"
   affected4: "Neither affected nor not affected"
   affected5: "Affected"
@@ -463,7 +462,7 @@ en:
   instructions3: "WE ALL GO THROUGH HARD TIMES IN OUR LIVES and sometimes we find it difficult to resolve these problems, and do not know what to do. You may also have gone through a similar period in your life-time."
 #18a	
   suicide_aq: "Have you ever thought about or attempted to kill yourself, within your life-time?"
-  suicide_a1: " Never"
+  suicide_a1: "Never"
   suicide_a2: "It was just a brief passing thought"
   suicide_a3: "I have briefly thought to kill myself, but I was not serious about it"
   suicide_a4: "I have had a plan at least once to kill myself but did not try to do it"
@@ -472,7 +471,7 @@ en:
   suicide_a7: "I have attempted to kill myself, and really hoped to die"
 #18b	
   suicide_bq: "Have you ever thought about or attempted to kill yourself within the last year (12 months)?"
-  suicide_b1: " Never"
+  suicide_b1: "Never"
   suicide_b2: "It was just a brief passing thought"
   suicide_b3: "I have briefly thought to kill myself, but I was not serious about it"
   suicide_b4: "I have had a plan at least once to kill myself but did not try to do it"
@@ -483,7 +482,7 @@ en:
   function_a: "During the past 4 weeks, did you have any problems with your work or other regular daily activities as a result of any emotional problems (such as feeling depressed or anxious)?"
 #20	
   function_b: "Have you accomplished less than you would like in your work or daily activities as a result of these emotional problems?"
-  times1: " All of the time"
+  times1: "All of the time"
   times2: "Most of the time"
   times3: "Some of the time"
   times4: "A little of the time"
@@ -604,7 +603,7 @@ en:
   income_rate5: "Upper income group"
 #42
   demographics_o: "What is your net total monthly income?"
-  income1: " Monthly Less than $1,000"
+  income1: "Monthly Less than $1,000"
   income2: "Monthly $1,001 - $1,500"
   income3: "Monthly $1,501 - $2,500"
   income4: "Monthly $2,501 - $4,000"
@@ -613,3 +612,32 @@ en:
   income7: "Monthly $8,501 - $12,500"
   income8: "Monthly $12,501 - $21,000"
   income9: "Monthly $21,001 or more"
+#43
+  demographics_p: "Are you of Hispanic, Latino, or Spanish origin?"
+  ethnicity1: "No, not of Hispanic, Latino, or Spanish origin"
+  ethnicity2: "Yes, Mexican, Mexican American, Chicano"
+  ethnicity3: "Yes, Puerto Rican"
+  ethnicity4: "Yes, Cuban"
+  ethnicity5: "Yes, another Hispanic, Latino or Spanish origin - ie. Argentinean, Colombian, Dominican, Nicaraguan, Spaniard (please enter below)"
+  ethnicity6: "INSERT A TEXTBOX HERE?" #####################
+#44
+  demographics_r: "What is your race?"
+  race1: "White"
+  race2: "Black or African American"
+  race3: "American Indian or Alaska Native - print name of enrolled or principal tribe below"
+  race4: "INSERT A TEXTBOX HERE?" ####################
+  race5: "Asian Indian"
+  race6: "Chinese"
+  race7: "Filipino"
+  race8: "Japanese"
+  race9: "Korean"
+  race10: "Vietnamese"
+  race11: "Other Asian - ie. Hmong, Laotian, Thai, Pakistani, Cambodian etc. (please enter below)"
+  race12: "INSERT A TEXTBOX HERE?" ####################
+  race13: "Native Hawaiian"
+  race14: "Guamanian or Chamorro"
+  race15: "Samoan"
+  race16: "Other Pacific Islander - ie. Fijian, Tongan etc. (please enter below)"
+  race17: "INSERT A TEXTBOX HERE?" ####################
+  race18: "Some other race (please enter below)"
+  race19: "INSERT A TEXTBOX HERE?" ####################
