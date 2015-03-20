@@ -202,9 +202,9 @@ class SurveyorController < ApplicationController
       @num_children = t(:num_children)
       @num_children_intouch = t(:num_children_intouch)
       @parentsq = t(:parentsq)
-      @parents_touch = t(:parents_touch)
+      @parents_touchq = t(:parents_touchq)
       @parents_partnerq = t(:parents_partnerq)
-      @parents_partner_touch = t(:parents_partner_touch)
+      @parents_partner_touchq = t(:parents_partner_touchq)
       @other_relatives = t(:other_relatives)
       @other_relatives_touch = t(:other_relatives_touch)
       @close_friends = t(:close_friends)
@@ -404,6 +404,15 @@ class SurveyorController < ApplicationController
                 @parents3, 
                 @parents4]
 
+    @parents_touch1 = t(:parents_touch1)
+    @parents_touch2 = t(:parents_touch2)
+    @parents_touch3 = t(:parents_touch3)
+    @parents_touch4 = t(:parents_touch4)
+    @parents_touch = [@parents_touch1, 
+                      @parents_touch2, 
+                      @parents_touch3, 
+                      @parents_touch4]            
+
     @parents_partner1 = t(:parents_partner1)
     @parents_partner2 = t(:parents_partner2)
     @parents_partner3 = t(:parents_partner3)
@@ -414,6 +423,15 @@ class SurveyorController < ApplicationController
                         @parents_partner3, 
                         @parents_partner4, 
                         @parents_partner5]
+
+    @parents_partner_touch1 = t(:parents_partner_touch1)
+    @parents_partner_touch2 = t(:parents_partner_touch2)
+    @parents_partner_touch3 = t(:parents_partner_touch3)
+    @parents_partner_touch4 = t(:parents_partner_touch4)
+    @parents_partner_touch = [@parents_partner_touch1, 
+                              @parents_partner_touch2, 
+                              @parents_partner_touch3, 
+                              @parents_partner_touch4]                      
 
     @life_satisfaction_ideal = t(:life_satisfaction_ideal)
     @life_satisfaction_conditions = t(:life_satisfaction_conditions)
@@ -519,14 +537,12 @@ class SurveyorController < ApplicationController
     @burden_item4 = t(:burden_item4)
     @burden_item5 = t(:burden_item5)
     @burden_item6 = t(:burden_item6)
-    @burden_item7 = t(:burden_item7)
     @burden=[[:burden_item1, @burden_item1],
              [:burden_item2, @burden_item2],
              [:burden_item3, @burden_item3],
              [:burden_item4, @burden_item4],
              [:burden_item5, @burden_item5],
-             [:burden_item6, @burden_item6],
-             [:burden_item7, @burden_item7]]
+             [:burden_item6, @burden_item6]]
 
     @belong_item1 = t(:belong_item1)
     @belong_item2 = t(:belong_item2)
@@ -541,6 +557,7 @@ class SurveyorController < ApplicationController
     @belong_item11 = t(:belong_item11)
     @belong_item12 = t(:belong_item12)
     @belong_item13 = t(:belong_item13)
+    @belong_item14 = t(:belong_item14)
     @belong=[[:belong_item1, @belong_item1],
           	 [:belong_item2, @belong_item2],
           	 [:belong_item3, @belong_item3],
@@ -553,7 +570,8 @@ class SurveyorController < ApplicationController
           	 [:belong_item10, @belong_item10],
           	 [:belong_item11, @belong_item11],
           	 [:belong_item12, @belong_item12],
-          	 [:belong_item13, @belong_item13]]
+          	 [:belong_item13, @belong_item13],
+             [:belong_item14, @belong_item14]]
 
     @affected1 = t(:affected1)
     @affected2 = t(:affected2)

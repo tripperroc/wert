@@ -79,11 +79,11 @@
 </li>
 
 <li>
-<div class="question" id ="parents_touch" <% if @response.parents == "neither"%>style="display: none;"<% end %>>
-<%= @parents_touch %> </div>
+<div class="question" id ="parents_touchq" <% if @response.parents == "neither"%>style="display: none;"<% end %>>
+<%= @parents_touchq %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:parents_touch]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @parents, :locals=> {:f => f, :name => :parents_touch}) %>
+<%= render( :partial => 'radiobuttons', :object => @parents_touch, :locals=> {:f => f, :name => :parents_touch}) %>
  </div>
 </li>
 
@@ -97,10 +97,12 @@
 
 
 <li>
-<div class="question"> <%= @parents_partner_touch %> </div>
+<div class="question" id ="parents_partner_touchq" <% if @response.parents_partner == "neither"%>style="display: none;"<% end %>>
+<%= @parents_partner_touchq %> </div>
+<div class="question"> <%= @parents_partner_touchq %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:parents_partner_touch]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @parents, :locals=> {:f => f, :name => :parents_partner_touch}) %>
+<%= render( :partial => 'radiobuttons', :object => @parents_partner_touch, :locals=> {:f => f, :name => :parents_partner_touch}) %>
  </div>
 </li>
 

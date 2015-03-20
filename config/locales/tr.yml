@@ -77,7 +77,11 @@ tr:
   parents3: "İkisi de yaşıyor"
   parents4: "İkisi de vefat etti"
 #4f
-  parents_touch: "Ebeveynlerinizle en az 2 haftada bir görüşüyor ya da telefonla konuşuyor musunuz?"
+  parents_touchq: "Ebeveynlerinizle en az 2 haftada bir görüşüyor ya da telefonla konuşuyor musunuz?"
+  parents_touch1: "Sadece annem ile"
+  parents_touch2: "Sadece babam ile "
+  parents_touch3: "İkisiyle de "
+  parents_touch4: "Hiçbiri ile"
 #4g
   parents_partnerq: "Eşinizin ebeveynleri yaşıyor mu?"
   parents_partner1: "Sadece annesi yaşıyor"
@@ -86,7 +90,11 @@ tr:
   parents_partner4: "İkisi de vefat etti"
   parents_partner5: "Evli değilim"
 #4h
-  parents_partner_touch: "Eşinizin ebeveynleriyle telefon, mesaj ve benzeri yollarla en az 2 haftada bir görüşüyor musunuz?"
+  parents_partner_touchq: "Eşinizin ebeveynleriyle telefon, mesaj ve benzeri yollarla en az 2 haftada bir görüşüyor musunuz?"
+  parents_partner_touch1: "Sadece annesi ile"
+  parents_partner_touch2: "Sadece babası ile "
+  parents_partner_touch3: "İkisiyle de "
+  parents_partner_touch4: "Hiçbiri ile"
 #4i
   other_relatives: "Eşiniz, ebeveynleriniz ya da çocuklarınız dışında kendinizi kaç akrabanıza yakın hissediyorsunuz? "
 #4j
@@ -178,7 +186,6 @@ tr:
   burden_item4: "Ölümümün hayatımdaki insanları rahatlatacağını düşünürüm"
   burden_item5: "Hayatımdaki insanların benden kurtulmayı dilediklerini düşünürüm"
   burden_item6: "Hayatımdaki insanlar için işleri daha kötü hale getirdiğimi düşünürüm"
-  burden_item7: "İnsanların beni önemsediğini düşünürüm"
 #11
   belongq: "Aşağıdaki ifadelere ne kadar katıldığınızı söylemenizi isteyeceğim. Size okuyacağım ifadelere 1 hiç katılmıyorum, 3 ne katılıyorum ne katılmıyorum ve 5 tamamen katılıyorum anlamına gelecek şekilde 1 ile 5  arasında bir puan verebilirsiniz"
   belong_item1: "Kendimi gerçekten ait hissedebileceğim bir yerin olup olmadığından emin değilim"
@@ -194,6 +201,7 @@ tr:
   belong_item11: "Hayatın içinde değilmişim, hayata dışarıdan bakıyormuşum gibi hissediyorum"
   belong_item12: "Yarın ölseydim çok az kişi cenazeme katılırdı."
   belong_item13: "Aslında ait olmadığım bir yere ait olmak için çabaladığımı hissediyorum"
+  belong_item14: "İnsanların beni önemsediğini düşünürüm"
 #12
   raheq: "Herkesin başına belli zamanlarda olumlu veya olumsuz, bazen sıkıntılı bazen sevindirici olaylar gelebiliyor.  Biz sizin SON BİR SENE’yi düşünmenizi ve SON BİR SENEDE sıralayacağımız/soracağımız olaylardan her birini yaşayıp yaşamadığınızı belirtmenizi istiyoruz.  Bu olayı yaşadıysanız ne kadar etkilendiğinizi soracağız. Böyle bir olay yaşadıysanız gene 1 ile 5arasında etkilenip etkilenmediğinizi belirtiniz"
   affected1: "Böyle bir olay yaşamadım"

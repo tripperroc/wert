@@ -77,7 +77,11 @@ en:
   parents3: "both"
   parents4: "neither"
 #4f
-  parents_touch: "Do you see or or get in touch with  (including phone, messengers or text messages) either of your parents at least once every 2 weeks?"
+  parents_touchq: "Do you see or or get in touch with  (including phone, messengers or text messages) either of your parents at least once every 2 weeks?"
+  parents_touch1: "Only mother"
+  parents_touch2: "Only father"
+  parents_touch3: "both"
+  parents_touch4: "neither"
 #4g
   parents_partnerq: "Are either of your in-laws (or partner's parents) living?"
   parents_partner1: "Only mother"
@@ -86,7 +90,11 @@ en:
   parents_partner4: "neither"
   parents_partner5: "I am not married"
 #4h
-  parents_partner_touch: "Do you see or get in touch with  (including phone, messengers or text messages) either of your partner's parents at least once every 2 weeks?"
+  parents_partner_touchq: "Do you see or get in touch with  (including phone, messengers or text messages) either of your partner's parents at least once every 2 weeks?"
+  parents_partner_touch1: "Only mother"
+  parents_partner_touch2: "Only father"
+  parents_partner_touch3: "both"
+  parents_partner_touch4: "neither"
 #4i
   other_relatives: "How many other relatives (other than your spouse, parents & children) do you feel close to?"
 #4j
@@ -178,7 +186,6 @@ en:
   burden_item4: "I think my death would be a relief to the people in my life"
   burden_item5: "I think the people in my life wish they could be rid of me"
   burden_item6: "I think I make things worse for the people in my life"
-  burden_item7: "Other people care about me"
 #11
   belongq: "Here are some statements, which you may or may not agree. Please indicate to what degree you agree with the following statements."
   belong_item1: "I often wonder if there is any place on earth where I really fit in"
@@ -194,6 +201,7 @@ en:
   belong_item11: "I feel like I observe life rather than participate in it"
   belong_item12: "If I died tomorrow, very few people would come to my funeral"
   belong_item13: "I feel like a square peg trying to fit into a round "
+  belong_item14: "Other people care about me"
 #12
   raheq: "Everyone comes across negative and positive life events, which might be stress inducing. We are asking you to think of LAST YEAR and indicate if you have experienced any of the listed events, within the LAST YEAR. If you have experienced an event, we will ask you how much you were affected by this event, on a scale from 'Not at all affected' to 'Very much affected'."
   affected1: " I did not experience such an event"
