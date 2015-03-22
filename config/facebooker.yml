@@ -6,7 +6,9 @@ development:
   pretty_errors: true
   set_asset_host_to_callback_url: true
   tunnel:
-    public_host_username: cmh
+    #public_host_username: cmh
+    #public_host: caribou.rit.edu
+    public_host_username: pnm5379
     public_host: caribou.rit.edu
     public_port: 7027
     local_port: 3000
