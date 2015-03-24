@@ -385,15 +385,13 @@ class SurveyorController < ApplicationController
     @marital5 = t(:marital5) 
     @marital6 = t(:marital6) 
     @marital7 = t(:marital7) 
-    @marital8 = t(:marital8) 
     @martial = [@marital1, 
                 @marital2, 
                 @marital3, 
                 @marital4, 
                 @marital5, 
                 @marital6, 
-                @marital7, 
-                @marital8]
+                @marital7]
 
     @parents1 = t(:parents1)
     @parents2 = t(:parents2)

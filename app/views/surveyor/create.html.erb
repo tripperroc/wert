@@ -78,6 +78,11 @@
  </div>
 </li>
 
+<%= :parents %>
+<%= @parents %>
+<%= @response.parents %>
+
+<ol type="i" id ="parents" <% if @response.parents == @parents4 %>style="display: none;"<% end %>>
 <li>
 <div class="question"> <%= @parents_touchq %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:parents_touch]) %></div>
@@ -85,6 +90,7 @@
 <%= render( :partial => 'radiobuttons', :object => @parents_touch, :locals=> {:f => f, :name => :parents_touch}) %>
  </div>
 </li>
+</ol>
 
 <li>
 <div class="question"> <%= @parents_partnerq %>  </div>
@@ -94,7 +100,7 @@
  </div>
 </li>
 
-
+<ol type="i" id ="parents_partner" <% if @response.parents_partner == @parents_partner4 || @response.parents_partner == @parents_partner5 %>style="display: none;"<% end %>>
 <li>
 <div class="question"> <%= @parents_partner_touchq %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:parents_partner_touch]) %></div>
@@ -102,6 +108,7 @@
 <%= render( :partial => 'radiobuttons', :object => @parents_partner_touch, :locals=> {:f => f, :name => :parents_partner_touch}) %>
  </div>
 </li>
+</ol>
 
 <li>
 <div class="question"> <%= @other_relatives %>  </div>

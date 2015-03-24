@@ -57,13 +57,12 @@ en:
 #4a
   martialq: "Which of the following best describes your marital status?"
   marital1: "Never married /single"
-  marital2: "Currently married & living together"
-  marital3: "Separated"
-  marital4: "Divorced"
-  marital5: "Divorced and Remarried"
-  marital6: "Widowed"
-  marital7: "I am single but in a relationship (not living together)"
-  marital8: "I am single, but in a relationship (living together)"
+  marital2: "Currently married and living together"
+  marital3: "Currently married and not living together (due to child education, work-related reasons etc.)"
+  marital4: "Separated"
+  marital5: "Divorced"
+  marital6: "Divorced and Remarried"
+  marital7: "Widowed"
 #4b
   num_siblings: "How many siblings do you have?"
 #4c
@@ -258,7 +257,7 @@ en:
   rahe_item46: "Problems in the relationship"
   rahe_item47: "Psychological distress"
   rahe_item48: "Country-wide political and social problems"
-  rahe_item49: "Did you experience a serious accident, fire, natural catastrophe such as an earthquake, physical harassement (beating, shaking), maltreatment (insult), or other serious, traumatic events that affect your life?"
+  rahe_item49: "A serious accident, fire, natural catastrophe such as earthquakes etc."
   rahe_item50: "Suicidal attempt of a close person"
   rahe_item51: "Suicide of a close person"
   rahe_item52: "Being exposed to physical abuse"

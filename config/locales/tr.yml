@@ -57,13 +57,12 @@ tr:
 #4a
   martialq: "Medeni durumunuz nedir?"
   marital1: "Bekârım"
-  marital2: "Evliyim"
-  marital3: "Evliyim ama ayrı yaşıyorum"
-  marital4: "Boşandım"
-  marital5: "Tekrar evlendim"
-  marital6: "Dulum"
-  marital7: "Bekarım ama ilişkim var, ve birlikte yaşamıyorum. "
-  marital8: "Bekarım ama ilişkim var, ve sevgilimle birlikte yaşıyorum"
+  marital2: "Evliyim ve eşimle beraber yaşıyoruz"
+  marital3: "Evliyim fakat eşimle beraber yaşamıyoruz (çocuğumuzun eğitimi, işsel sebepler gibi nedenlerden ötürü)"
+  marital4: "Evliyim ama ayrı yaşıyorum"
+  marital5: "Boşandım"
+  marital6: "Tekrar evlendim"
+  marital7: "Dulum"
 #4b
   num_siblings: "Kaç tane kardeşiniz var?"
 #4c
@@ -258,7 +257,7 @@ tr:
   rahe_item46: "Flört, nişanlı, sözlü, erkek/kız arkadaş ile ilişkide zorluklar"
   rahe_item47: "Psikolojik rahatsızlık"
   rahe_item48: "Ülke çapında politik ve sosyal problemler"
-  rahe_item49: "Ciddi bir kaza, yangın, deprem gibi doğal afetler, fiziksel şiddet (dövme, tartaklama), kötü muamele (hakaret gibi) ve bunun gibi ciddi, travmatik, hayatınızı çok etkilemiş bir olay yaşadınız mı?"
+  rahe_item49: "Ciddi bir kaza, yangın, deprem gibi doğal afetler ve bunun gibi olaylar"
   rahe_item50: "Bir yakının veya yakın bir arkadaşını kendini öldürme girişimi"
   rahe_item51: "Bir yakının veya yakın bir arkadaşın kendi hayatına son vermesi"
   rahe_item52: "Herhangi bir fiziksel şiddete (tokat atılmak, tartaklanmak, dövümek gibi) maruz kaldınız mı?"

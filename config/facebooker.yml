@@ -1,6 +1,6 @@
 development:
-  app_id: 10152573195482930
-  secret: "744de0699a091678cb8d9b825dca7fb4"
+  app_id: 10152573197002930
+  secret: "3b0533a84553f78e5c8cd156e89bfec1"
   canvas_page_name: gaymenshealthsurvey
   callback_url: https://caribou.rit.edu:7027/
   pretty_errors: true
