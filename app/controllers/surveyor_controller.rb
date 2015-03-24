@@ -49,9 +49,9 @@ class SurveyorController < ApplicationController
       @num_children = t(:num_children)
       @num_children_intouch = t(:num_children_intouch)
       @parentsq = t(:parentsq)
-      @parents_touch = t(:parents_touch)
+      @parents_touchq = t(:parents_touchq)
       @parents_partnerq = t(:parents_partnerq)
-      @parents_partner_touch = t(:parents_partner_touch)
+      @parents_partner_touchq = t(:parents_partner_touchq)
       @other_relatives = t(:other_relatives)
       @other_relatives_touch = t(:other_relatives_touch)
       @close_friends = t(:close_friends)
@@ -557,7 +557,7 @@ class SurveyorController < ApplicationController
     @belong_item11 = t(:belong_item11)
     @belong_item12 = t(:belong_item12)
     @belong_item13 = t(:belong_item13)
-    @belong_item14 = t(:belong_item14)
+    #@belong_item14 = t(:belong_item14)
     @belong=[[:belong_item1, @belong_item1],
           	 [:belong_item2, @belong_item2],
           	 [:belong_item3, @belong_item3],
@@ -571,7 +571,8 @@ class SurveyorController < ApplicationController
           	 [:belong_item11, @belong_item11],
           	 [:belong_item12, @belong_item12],
           	 [:belong_item13, @belong_item13],
-             [:belong_item14, @belong_item14]]
+             #[:belong_item14, @belong_item14]
+           ]
 
     @affected1 = t(:affected1)
     @affected2 = t(:affected2)

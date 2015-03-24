@@ -78,6 +78,7 @@ class CreateResponses < ActiveRecord::Migration
       t.string :belong_item11
       t.string :belong_item12
       t.string :belong_item13
+      #t.string :belong_item14
       t.string :rahe_item1
       t.string :rahe_item2
       t.string :rahe_item3

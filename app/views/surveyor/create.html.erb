@@ -24,7 +24,7 @@
 <li>
 <div class="question"> <%= @age %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:age]) %></div>
-<div class="answer"><%= f.number_field :age, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :age, :min => 0, style: "margin-left: 1em;" %></div>
 </li>
 
 
@@ -55,32 +55,31 @@
 <li>
 <div class="question"> <%= @num_siblings %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:num_siblings]) %></div>
-<div class="answer"><%= f.number_field :num_siblings, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :num_siblings, :min => 0, style: "margin-left: 1em;" %></div>
 </li>
 
 <li>
 <div class="question"> <%= @num_children %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:num_children]) %></div>
-<div class="answer"><%= f.number_field :num_children, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :num_children, :min => 0, style: "margin-left: 1em;" %></div>
 </li>
 
 <li>
 <div class="question"> <%= @num_children_intouch %>  </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:num_children_intouch]) %></div>
-<div class="answer"><%= f.number_field :num_children_intouch, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :num_children_intouch, :min => 0, style: "margin-left: 1em;" %></div>
 </li>
 
 <li>
 <div class="question"> <%= @parentsq %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:parents]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @parents, :locals=> {:f => f, :name => :parents, :dependency => "parents_touch"}) %>
+<%= render( :partial => 'radiobuttons', :object => @parents, :locals=> {:f => f, :name => :parents}) %>
  </div>
 </li>
 
 <li>
-<div class="question" id ="parents_touchq" <% if @response.parents == "neither"%>style="display: none;"<% end %>>
-<%= @parents_touchq %> </div>
+<div class="question"> <%= @parents_touchq %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:parents_touch]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @parents_touch, :locals=> {:f => f, :name => :parents_touch}) %>
@@ -97,8 +96,6 @@
 
 
 <li>
-<div class="question" id ="parents_partner_touchq" <% if @response.parents_partner == "neither"%>style="display: none;"<% end %>>
-<%= @parents_partner_touchq %> </div>
 <div class="question"> <%= @parents_partner_touchq %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:parents_partner_touch]) %></div>
 <div class="answer">
@@ -109,27 +106,27 @@
 <li>
 <div class="question"> <%= @other_relatives %>  </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:other_relatives]) %></div>
-<div class="answer"><%= f.number_field :other_relatives, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :other_relatives, :min => 0, style: "margin-left: 1em;" %></div>
 </li>
 
 <li>
 <div class="question"> <%= @other_relatives_touch %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:other_relatives_touch]) %></div>
-<div class="answer"><%= f.number_field :other_relatives_touch, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :other_relatives_touch, :min => 0, style: "margin-left: 1em;" %></div>
 </li>
 
 
 <li>
 <div class="question"> <%= @close_friends %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:close_friends]) %></div>
-<div class="answer"><%= f.number_field :close_friends, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :close_friends, :min => 0, style: "margin-left: 1em;" %></div>
 </li>
 
 
 <li>
 <div class="question"> <%= @close_friends_touch %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:close_friends_touch]) %></div>
-<div class="answer"><%= f.number_field :close_friends_touch, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :close_friends_touch, :min => 0, style: "margin-left: 1em;" %></div>
 
 
 <li>
@@ -143,7 +140,7 @@
 <li>
 <div class="question"> <%= @religious_members %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:religious_members]) %></div>
-<div class="answer"><%= f.number_field :religious_members, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :religious_members, :min => 0, style: "margin-left: 1em;" %></div>
 </li>
 
 </ol>
@@ -160,7 +157,7 @@
 <li>
 <div class="question"> <%= @talk_students_teachers %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:talk_students_teachers]) %></div>
-<div class="answer"><%= f.number_field :talk_students_teachers, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :talk_students_teachers, :min => 0, style: "margin-left: 1em;" %></div>
 </li>
 
 </ol>
@@ -177,13 +174,13 @@
 <li>
 <div class="question"> <%= @talk_work %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:talk_work]) %></div>
-<div class="answer"><%= f.number_field :talk_work, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :talk_work, :min => 0, style: "margin-left: 1em;" %></div>
 </li>
 
 <li>
 <div class="question"> <%= @visit_neighbors %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:visit_neighbors]) %></div>
-<div class="answer"><%= f.number_field :visit_neighbors, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :visit_neighbors, :min => 0, style: "margin-left: 1em;" %></div>
 </li>
 
 <li>
@@ -197,7 +194,7 @@
 <li>
 <div class="question"> <%= @num_volunteer %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:num_volunteer]) %></div>
-<div class="answer"><%= f.number_field :num_volunteer, style: "margin-left: 1em;" %></div>
+<div class="answer"><%= f.number_field :num_volunteer, :min => 0, style: "margin-left: 1em;" %></div>
 </li>
 
 </ol>
@@ -221,9 +218,9 @@
 </div>
 
 <div class="answer"> <%= @group_member %> </br> &nbsp 
-<%= f.number_field :groupb1, style: "margin-left: 1em;" %> </br>
+<%= f.number_field :groupb1, :min => 0, style: "margin-left: 1em;" %> </br>
 &nbsp
-<%= f.number_field :groupb2, style: "margin-left: 1em;" %>
+<%= f.number_field :groupb2, :min => 0, style: "margin-left: 1em;" %>
 </div>
 
 </li>
@@ -1112,7 +1109,7 @@
 <li>
 <div class="question"> <%= @demographics_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_a]) %></div>
-<div class="answer"><%= f.number_field :demographics_a, style: "margin-left: 1em;" %>
+<div class="answer"><%= f.number_field :demographics_a, :min => 0, style: "margin-left: 1em;" %>
 </div>
 </li>
 
@@ -1152,7 +1149,7 @@
 <li>
 <div class="question"> <%= @demographics_f %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_f]) %></div>
-<div class="answer"><%= f.number_field :demographics_f, style: "margin-left: 1em;" %>
+<div class="answer"><%= f.number_field :demographics_f, :min => 0, style: "margin-left: 1em;" %>
 </div>
 </li>
 
@@ -1162,7 +1159,7 @@
 <li>
 <div class="question"> <%= @demographics_g %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_g]) %></div>
-<div class="answer"><%= f.number_field :demographics_g, style: "margin-left: 1em;" %>
+<div class="answer"><%= f.number_field :demographics_g, :min => 0, style: "margin-left: 1em;" %>
 </div>
 </li>
 

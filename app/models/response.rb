@@ -71,6 +71,7 @@ class Response < ActiveRecord::Base
   validates :belong_item11, presence: true, on: :update
   validates :belong_item12, presence: true, on: :update
   validates :belong_item13, presence: true, on: :update
+  #validates :belong_item14, presence: true, on: :update
   validates :rahe_item1, presence: true, on: :update
   validates :rahe_item2, presence: true, on: :update
   validates :rahe_item3, presence: true, on: :update
