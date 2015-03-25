@@ -324,6 +324,8 @@ ActiveRecord::Schema.define(version: 20131228025916) do
     t.string   "depression_item20"
     t.string   "suicide_a"
     t.string   "suicide_b"
+    t.string   "suicide_c"
+    t.string   "suicide_d"
     t.string   "function_a"
     t.string   "function_b"
     t.string   "function_c"

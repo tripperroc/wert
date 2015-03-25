@@ -476,6 +476,8 @@ en:
   suicide_a5: "I have had a plan at least once to kill myself and really wanted to die"
   suicide_a6: "I have attempted to kill myself, but did not want to die"
   suicide_a7: "I have attempted to kill myself, and really hoped to die"
+#18c
+  suicide_c: "If you had attempted suicide within your life-time, did this suicide attempt require medical attention?"
 #18b	
   suicide_bq: "Have you ever thought about or attempted to kill yourself within the last year (12 months)?"
   suicide_b1: "Never"
@@ -485,6 +487,8 @@ en:
   suicide_b5: "I have had a plan at least once to kill myself and really wanted to die"
   suicide_b6: "I have attempted to kill myself, but did not want to die"
   suicide_b7: "I have attempted to kill myself, and really hoped to die"
+#18d
+  suicide_d: "If you had attempted suicide within the past year, did this suicide attempt require medical attention?"
 #19
   function_a: "During the past 4 weeks, did you have any problems with your work or other regular daily activities as a result of any emotional problems (such as feeling depressed or anxious)?"
 #20	

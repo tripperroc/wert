@@ -476,6 +476,8 @@ tr:
   suicide_a5: "Hayatımı sonlandırmak için işe yarayacağını düşündüğüm bir planım vardı ve ciddi olarak ölmeyi düşündüm"
   suicide_a6: "Hayatımı sonlandırmak için girişimde bulundum ama sanırım gerçekten ölmek istemiyordum"
   suicide_a7: "Hayatımı sonlandırmak için girişimde bulundum ve sanırım gerçekten ölmeyi umdum"
+#18c
+  suicide_c: "Hayatınızı sonlandırmak için girişimde bulunduğunuzda medikal müdahele veya doktor tedavisi gerekmiş miydi?"
 #18b	
   suicide_bq: "Peki, son bir senede/12 ayda, hayatınıza son vermeyi düşündünüz mü veya hayatınıza son verme girişiminde bulundunuz mu?"
   suicide_b1: "Hayır, hayatıma son vermeyi hiç düşünmedim"
@@ -485,6 +487,8 @@ tr:
   suicide_b5: "Hayatımı sonlandırmak için işe yarayacağını düşündüğüm bir planım vardı ve ciddi olarak ölmeyi düşündüm"
   suicide_b6: "Hayatımı sonlandırmak için girişimde bulundum ama sanırım gerçekten ölmek istemiyordum"
   suicide_b7: "Hayatımı sonlandırmak için girişimde bulundum ve sanırım gerçekten ölmeyi umdum"
+#18d
+  suicide_d: "Geçen sene içerisinde hayatınızı sonlandırmak için girişimde bulunduğunuzda medikal müdahele veya doktor tedavisi gerekmiş miydi?"
 #19
   function_a: "Son bir ay (4 hafta) içinde duygusal sorunlar nedeniyle (depresyon veya sıkıntı gibi nedenlerle) yaptığınız işler veya günlük aktiviteleriniz sırasında herhangi bir problem yaşadınız mı?"
 #20	

@@ -74,13 +74,14 @@
 <div class="question"> <%= @parentsq %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:parents]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @parents, :locals=> {:f => f, :name => :parents}) %>
+<%= render( :partial => 'radiobuttons', :object => @parents, :locals=> {:f => f, :name => :parents, :dependency => "parents"}) %>
  </div>
 </li>
 
 <%= :parents %>
 <%= @parents %>
 <%= @response.parents %>
+<%= @parents4 %>
 
 <ol type="i" id ="parents" <% if @response.parents == @parents4 %>style="display: none;"<% end %>>
 <li>
@@ -96,7 +97,7 @@
 <div class="question"> <%= @parents_partnerq %>  </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:parents_partner]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @parents_partner, :locals=> {:f => f, :name => :parents_partner}) %>
+<%= render( :partial => 'radiobuttons', :object => @parents_partner, :locals=> {:f => f, :name => :parents_partner, :dependency => "parents_parter"}) %>
  </div>
 </li>
 
@@ -993,16 +994,39 @@
 <div class="question"> <%= @suicide_aq %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:suicide_a]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @suicide_a, :locals=> {:f => f, :name => :suicide_a}) %>
+<%= render( :partial => 'radiobuttons', :object => @suicide_a, :locals=> {:f => f, :name => :suicide_a, :dependency => "suicide_a"}) %>
 </div>
+
+
+<ol type="i" id ="suicide_a" <% if @response.suicide_a == "Yes"%> style="display: none;"<% end %>>
+<li>
+<div class="question"> <%= @suicide_c %> </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:suicide_c]) %></div>
+<div class="answer">
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :suicide_c, :dependency => "suicide_c"}) %>
+</div>
+</li>
+</ol>
+
 </li>
 
 <li>
 <div class="question"> <%= @suicide_bq %>  </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:suicide_b]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @suicide_b, :locals=> {:f => f, :name => :suicide_b}) %>
+<%= render( :partial => 'radiobuttons', :object => @suicide_b, :locals=> {:f => f, :name => :suicide_b, :dependency => "suicide_b"}) %>
 </div>
+
+<ol type="i" id ="suicide_b" <% if @response.suicide_b == "Yes"%> style="display: none;"<% end %>>
+<li>
+<div class="question"> <%= @suicide_d %> </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:suicide_d]) %></div>
+<div class="answer">
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :suicide_d, :dependency => "suicide_d"}) %>
+</div>
+</li>
+</ol>
+
 </li>
 
 </ol>

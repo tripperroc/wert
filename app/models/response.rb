@@ -17,10 +17,12 @@ class Response < ActiveRecord::Base
   validates :bigFive_tense, presence: true, on: :update
   validates :bigFive_active, presence: true, on: :update
   validates :martial, presence: true, on: :update
+
   validates :parents, presence: true, on: :update
-  validates :parents_touch, presence: true, on: :update
+  validates :parents_touch, if: "parents != 'neither' || parents != '양친 모두 돌아가심' || parents != 'İkisi de vefat etti'", presence: true, on: :update
   validates :parents_partner, presence: true, on: :update
-  validates :parents_partner_touch, presence: true, on: :update
+  validates :parents_partner_touch, if: "parents_partner != 'neither' || parents_partner != 'I am not married' || parents_partner != '두 분 모두 돌아가심' || parents_partner != '미혼이므로 해당사항 없음' || parents_partner != 'İkisi de vefat etti' || parents_partner != 'Evli değilim'", presence: true, on: :update
+
   validates :religious, presence: true, on: :update
   validates :classes, presence: true, on: :update
   validates :employed, presence: true, on: :update
@@ -346,6 +348,10 @@ validate :checkboxes, on: :update
   validates :depression_item20, presence: true, on: :update
   validates :suicide_a, presence: true, on: :update
   validates :suicide_b, presence: true, on: :update
+
+  validates :suicide_c, if: "suicide_a == 'I have attempted to kill myself, but did not want to die' || suicide_a == 'I have attempted to kill myself, and really hoped to die' || suicide_a == '자살을 시도해 본 적이 있다. 하지만 정말로 죽고 싶었던 것은 아니다' || suicide_a == '자살을 시도해 본 적이 있고, 그 때는 정말 죽고 싶은 마음이었다' || suicide_a == 'Hayatımı sonlandırmak için girişimde bulundum ama sanırım gerçekten ölmek istemiyordum' || suicide_a == 'Hayatımı sonlandırmak için girişimde bulundum ve sanırım gerçekten ölmeyi umdum'", presence: true, on: :update 
+  validates :suicide_d, if: "suicide_b == 'I have attempted to kill myself, but did not want to die' || suicide_b == 'I have attempted to kill myself, and really hoped to die' || suicide_b == '자살을 시도해 본 적이 있다. 하지만 정말로 죽고 싶었던 것은 아니다' || suicide_b == '자살을 시도해 본 적이 있고, 그 때는 정말 죽고 싶은 마음이었다' || suicide_b == 'Hayatımı sonlandırmak için girişimde bulundum ama sanırım gerçekten ölmek istemiyordum' || suicide_b == 'Hayatımı sonlandırmak için girişimde bulundum ve sanırım gerçekten ölmeyi umdum'", presence: true, on: :update
+
   validates :function_a, presence: true, on: :update
   validates :function_b, presence: true, if: "function_a == 'Yes' || function_a =='예' || function_a =='Evet'", on: :update
   validates :function_c, presence: true, if: "function_a == 'Yes' || function_a =='예' || function_a =='Evet'", on: :update
