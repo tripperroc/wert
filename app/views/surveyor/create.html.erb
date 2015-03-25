@@ -61,13 +61,15 @@
 <li>
 <div class="question"> <%= @num_children %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:num_children]) %></div>
-<div class="answer"><%= f.number_field :num_children, :min => 0, style: "margin-left: 1em;" %></div>
-</li>
+<div class="answer"><%= f.number_field :num_children, :min => 0, style: "margin-left: 1em;", :dependency => "num_children" %></div>
 
+<ol type="i" id ="num_children" <% if @response.num_children == 0 %>style="display: none;"<% end %>>
 <li>
 <div class="question"> <%= @num_children_intouch %>  </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:num_children_intouch]) %></div>
 <div class="answer"><%= f.number_field :num_children_intouch, :min => 0, style: "margin-left: 1em;" %></div>
+</li>
+</ol>
 </li>
 
 <li>
@@ -114,28 +116,32 @@
 <li>
 <div class="question"> <%= @other_relatives %>  </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:other_relatives]) %></div>
-<div class="answer"><%= f.number_field :other_relatives, :min => 0, style: "margin-left: 1em;" %></div>
-</li>
+<div class="answer"><%= f.number_field :other_relatives, :min => 0, style: "margin-left: 1em;", :dependency => "other_relatives" %></div>
 
+
+<ol type="i" id ="other_relatives" <% if @response.other_relatives == 0 %>style="display: none;"<% end %>>
 <li>
 <div class="question"> <%= @other_relatives_touch %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:other_relatives_touch]) %></div>
 <div class="answer"><%= f.number_field :other_relatives_touch, :min => 0, style: "margin-left: 1em;" %></div>
+</li>
+</ol>
 </li>
 
 
 <li>
 <div class="question"> <%= @close_friends %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:close_friends]) %></div>
-<div class="answer"><%= f.number_field :close_friends, :min => 0, style: "margin-left: 1em;" %></div>
-</li>
+<div class="answer"><%= f.number_field :close_friends, :min => 0, style: "margin-left: 1em;", :dependency => "close_friends" %></div>
 
-
+<ol type="i" id ="close_friends" <% if @response.other_relatives == 0 %>style="display: none;"<% end %>>
 <li>
 <div class="question"> <%= @close_friends_touch %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:close_friends_touch]) %></div>
 <div class="answer"><%= f.number_field :close_friends_touch, :min => 0, style: "margin-left: 1em;" %></div>
-
+</li>
+</ol>
+</li>
 
 <li>
 <div class="question"> <%= @religious %>  </div>

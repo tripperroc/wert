@@ -394,11 +394,11 @@ validate :checkboxes, on: :update
   validates :age, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
   validates :num_siblings, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
   validates :num_children, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
-  validates :num_children_intouch, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
+  validates :num_children_intouch, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, if: "num_children != 0", on: :update
   validates :other_relatives, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
-  validates :other_relatives_touch, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
+  validates :other_relatives_touch, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, if: "other_relatives != 0", on: :update
   validates :close_friends, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
-  validates :close_friends_touch, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
+  validates :close_friends_touch, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, if: "close_friends != 0", on: :update
 
   validates :religious_members, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, if: "religious == 'Yes' || religious =='예' || religious =='Evet'", on: :update
   validates :talk_students_teachers, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, if: "classes == 'Yes' || classes =='예' || classes =='Evet'", on: :update
