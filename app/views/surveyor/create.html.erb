@@ -1273,3 +1273,14 @@
 
 </div>
 </div>
+ <script>
+   $("#num_children").hide();
+   $("#response_num_children").bind('change', function() {
+       if ($("#response_num_children").val() == "0") {
+           $("#num_children").hide();
+       }
+       else {
+           $("#num_children").show();
+       }
+   });
+ </script>
