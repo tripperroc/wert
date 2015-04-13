@@ -40,7 +40,8 @@ class SurveyorController < ApplicationController
       @sex = t(:sex)
       @age = t(:age)
       @yn1 = t(:yn1)
-      @yn2 = t(:yn2) 
+      @yn2 = t(:yn2)
+      @yn3 = t(:yn3)  
       @yn = [@yn1, @yn2]
       @bigFive_instruction = t(:bigFive_instruction)
       @cohen_instruction = t(:cohen_instruction)
@@ -107,20 +108,20 @@ class SurveyorController < ApplicationController
       @sibling_e = t(:sibling_e)
       @sibling_f = t(:sibling_f)
       @sibling_g = t(:sibling_g)
-      @cousins_a = t(:cousins_a)
-      @cousins_b = t(:cousins_b)
-      @cousins_c = t(:cousins_c)
-      @cousins_d = t(:cousins_d)
-      @cousins_e = t(:cousins_e)
-      @cousins_f = t(:cousins_f)
-      @cousins_g = t(:cousins_g)
-      @uncle_a = t(:uncle_a)
-      @uncle_b = t(:uncle_b)
-      @uncle_c = t(:uncle_c)
-      @uncle_d = t(:uncle_d)
-      @uncle_e = t(:uncle_e)
-      @uncle_f = t(:uncle_f)
-      @uncle_g = t(:uncle_g)
+      @exfamily_a = t(:exfamily_a)
+      @exfamily_b = t(:exfamily_b)
+      @exfamily_c = t(:exfamily_c)
+      @exfamily_d = t(:exfamily_d)
+      @exfamily_e = t(:exfamily_e)
+      @exfamily_f = t(:exfamily_f)
+      @exfamily_g = t(:exfamily_g)
+      # @uncle_a = t(:uncle_a)
+      # @uncle_b = t(:uncle_b)
+      # @uncle_c = t(:uncle_c)
+      # @uncle_d = t(:uncle_d)
+      # @uncle_e = t(:uncle_e)
+      # @uncle_f = t(:uncle_f)
+      # @uncle_g = t(:uncle_g)
       @spouse_a = t(:spouse_a)
       @spouse_b = t(:spouse_b)
       @spouse_c = t(:spouse_c)
@@ -135,6 +136,43 @@ class SurveyorController < ApplicationController
       @friends_e = t(:friends_e)
       @friends_f = t(:friends_f)
       @friends_g = t(:friends_g)
+
+      @net_a = t(:net_a)
+      @net_b = t(:net_b)
+      @net_c = t(:net_c)
+      @net_d = t(:net_d)
+      @net_e = t(:net_e)
+      @net_f = t(:net_f)
+      @net_g = t(:net_g)
+      @org_a = t(:org_a)
+      @org_b = t(:org_b)
+      @org_c = t(:org_c)
+      @org_d = t(:org_d)
+      @org_e = t(:org_e)
+      @org_f = t(:org_f)
+      @org_g = t(:org_g)
+      @mesp_a = t(:mesp_a)
+      @mesp_b = t(:mesp_b)
+      @mesp_c = t(:mesp_c)
+      @mesp_d = t(:mesp_d)
+      @mesp_e = t(:mesp_e)
+      @mesp_f = t(:mesp_f)
+      @mesp_g = t(:mesp_g)
+      @relp_a = t(:relp_a)
+      @relp_b = t(:relp_b)
+      @relp_c = t(:relp_c)
+      @relp_d = t(:relp_d)
+      @relp_e = t(:relp_e)
+      @relp_f = t(:relp_f)
+      @relp_g = t(:relp_g)
+      @com_a = t(:com_a)
+      @com_b = t(:com_b)
+      @com_c = t(:com_c)
+      @com_d = t(:com_d)
+      @com_e = t(:com_e)
+      @com_f = t(:com_f)
+      @com_g = t(:com_g)
+
       @other_who = t(:other_who)
       @other_a = t(:other_a)
       @other_b = t(:other_b)
@@ -179,6 +217,8 @@ class SurveyorController < ApplicationController
       @demographics_m = t(:demographics_m)
       @demographics_n = t(:demographics_n)
       @demographics_o = t(:demographics_o)
+      @demographics_p = t(:demographics_p)
+      @demographics_r = t(:demographics_r)
 
       answers
 
@@ -195,7 +235,8 @@ class SurveyorController < ApplicationController
       @sex = t(:sex)
       @age = t(:age)
       @yn1 = t(:yn1)
-      @yn2 = t(:yn2) 
+      @yn2 = t(:yn2)
+      @yn3 = t(:yn3) 
       @yn = [@yn1, @yn2]
       @bigFive_instruction = t(:bigFive_instruction)
       @cohen_instruction = t(:cohen_instruction)
@@ -262,20 +303,57 @@ class SurveyorController < ApplicationController
       @sibling_e = t(:sibling_e)
       @sibling_f = t(:sibling_f)
       @sibling_g = t(:sibling_g)
-      @cousins_a = t(:cousins_a)
-      @cousins_b = t(:cousins_b)
-      @cousins_c = t(:cousins_c)
-      @cousins_d = t(:cousins_d)
-      @cousins_e = t(:cousins_e)
-      @cousins_f = t(:cousins_f)
-      @cousins_g = t(:cousins_g)
-      @uncle_a = t(:uncle_a)
-      @uncle_b = t(:uncle_b)
-      @uncle_c = t(:uncle_c)
-      @uncle_d = t(:uncle_d)
-      @uncle_e = t(:uncle_e)
-      @uncle_f = t(:uncle_f)
-      @uncle_g = t(:uncle_g)
+      @exfamily_a = t(:exfamily_a)
+      @exfamily_b = t(:exfamily_b)
+      @exfamily_c = t(:exfamily_c)
+      @exfamily_d = t(:exfamily_d)
+      @exfamily_e = t(:exfamily_e)
+      @exfamily_f = t(:exfamily_f)
+      @exfamily_g = t(:exfamily_g)
+      # @uncle_a = t(:uncle_a)
+      # @uncle_b = t(:uncle_b)
+      # @uncle_c = t(:uncle_c)
+      # @uncle_d = t(:uncle_d)
+      # @uncle_e = t(:uncle_e)
+      # @uncle_f = t(:uncle_f)
+      # @uncle_g = t(:uncle_g)
+
+      @net_a = t(:net_a)
+      @net_b = t(:net_b)
+      @net_c = t(:net_c)
+      @net_d = t(:net_d)
+      @net_e = t(:net_e)
+      @net_f = t(:net_f)
+      @net_g = t(:net_g)
+      @org_a = t(:org_a)
+      @org_b = t(:org_b)
+      @org_c = t(:org_c)
+      @org_d = t(:org_d)
+      @org_e = t(:org_e)
+      @org_f = t(:org_f)
+      @org_g = t(:org_g)
+      @mesp_a = t(:mesp_a)
+      @mesp_b = t(:mesp_b)
+      @mesp_c = t(:mesp_c)
+      @mesp_d = t(:mesp_d)
+      @mesp_e = t(:mesp_e)
+      @mesp_f = t(:mesp_f)
+      @mesp_g = t(:mesp_g)
+      @relp_a = t(:relp_a)
+      @relp_b = t(:relp_b)
+      @relp_c = t(:relp_c)
+      @relp_d = t(:relp_d)
+      @relp_e = t(:relp_e)
+      @relp_f = t(:relp_f)
+      @relp_g = t(:relp_g)
+      @com_a = t(:com_a)
+      @com_b = t(:com_b)
+      @com_c = t(:com_c)
+      @com_d = t(:com_d)
+      @com_e = t(:com_e)
+      @com_f = t(:com_f)
+      @com_g = t(:com_g)
+      
       @spouse_a = t(:spouse_a)
       @spouse_b = t(:spouse_b)
       @spouse_c = t(:spouse_c)
@@ -334,6 +412,8 @@ class SurveyorController < ApplicationController
       @demographics_m = t(:demographics_m)
       @demographics_n = t(:demographics_n)
       @demographics_o = t(:demographics_o)
+      @demographics_p = t(:demographics_p)
+      @demographics_r = t(:demographics_r)
 
    if @response.update(params[:response]) 
      redirect_to :controller => "estimate", :action => "create", :id => params[:id]
@@ -559,7 +639,11 @@ class SurveyorController < ApplicationController
     @belong_item11 = t(:belong_item11)
     @belong_item12 = t(:belong_item12)
     @belong_item13 = t(:belong_item13)
-    #@belong_item14 = t(:belong_item14)
+    @belong_item14 = t(:belong_item14)
+    @belong_item15 = t(:belong_item15)
+    @belong_item16 = t(:belong_item16)
+    @belong_item17 = t(:belong_item17)
+    @belong_item18 = t(:belong_item18)
     @belong=[[:belong_item1, @belong_item1],
           	 [:belong_item2, @belong_item2],
           	 [:belong_item3, @belong_item3],
@@ -573,7 +657,11 @@ class SurveyorController < ApplicationController
           	 [:belong_item11, @belong_item11],
           	 [:belong_item12, @belong_item12],
           	 [:belong_item13, @belong_item13],
-             #[:belong_item14, @belong_item14]
+             [:belong_item14, @belong_item14],
+             [:belong_item15, @belong_item15],
+             [:belong_item16, @belong_item16],
+             [:belong_item17, @belong_item17],
+             [:belong_item18, @belong_item18]
            ]
 
     @affected1 = t(:affected1)
@@ -992,6 +1080,21 @@ class SurveyorController < ApplicationController
                   [:religious_a_item2, @religious_a_item2],
                   [:religious_a_item3, @religious_a_item3]]
 
+    @religious_domination1 = t(:religious_domination1)
+    @religious_domination2 = t(:religious_domination2)
+    @religious_domination3 = t(:religious_domination3)
+    @religious_domination4 = t(:religious_domination4)
+    @religious_domination5 = t(:religious_domination5)
+    @religious_domination6 = t(:religious_domination6)
+    @religious_domination7 = t(:religious_domination7)
+    @religious_domination=[@religious_domination1,
+                           @religious_domination2,
+                           @religious_domination3,
+                           @religious_domination4,
+                           @religious_domination5,
+                           @religious_domination6,
+                           @religious_domination7]
+
     @rating=[" 1","2 ","3 ","4 ","5 ","6 ","7 "]
 
     @how_religious1 = t(:how_religious1)
@@ -1146,6 +1249,48 @@ class SurveyorController < ApplicationController
               @income7, 
               @income8, 
               @income9]
+
+    @ethnicity1 = t(:ethnicity1)
+    @ethnicity2 = t(:ethnicity2)
+    @ethnicity3 = t(:ethnicity3)
+    @ethnicity4 = t(:ethnicity4)
+    @ethnicity5 = t(:ethnicity5)
+    @ethnicity=[@ethnicity1,
+                @ethnicity2,
+                @ethnicity3,
+                @ethnicity4,
+                @ethnicity5]
+
+    @race1 = t(:race1) 
+    @race2 = t(:race2)
+    @race3 = t(:race3)
+    @race4 = t(:race4)
+    @race5 = t(:race5)
+    @race6 = t(:race6)
+    @race7 = t(:race7)
+    @race8 = t(:race8)
+    @race9 = t(:race9)
+    @race10 = t(:race10)
+    @race11 = t(:race11)
+    @race12 = t(:race12)
+    @race13 = t(:race13)
+    @race14 = t(:race14)
+    @race15 = t(:race15) 
+    @race=[@race1, 
+          @race2,
+          @race3,
+          @race4,
+          @race5,
+          @race6,
+          @race7,
+          @race8,
+          @race9,
+          @race10,
+          @race11,
+          @race12,
+          @race13,
+          @race14,
+          @race15]        
 
     @communal_option=[[:com1, "Family Members"],
       [:com2, "Spouse/Partner"],

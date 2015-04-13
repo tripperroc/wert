@@ -24,11 +24,16 @@
 #  blank: "Yo, its blank"
 
 en:
+
+  yn1: "Yes"
+  yn2: "No"
+  yn3: "Not Applicable"
+
   hello_yml: "English"
 #Error
   error_top: "There are some missing or incorrect answers below. <b>Look for entries with this background color</b>. Please fix them and submit again. Thanks!"
 #Instructions
-  instructions: "There are <b>two pages</b> of questions (47 total), some having multiple parts. This is <b>page 1</b> and there are 41 questions.  The next page has only 6 brief questions."
+  instructions: "The following questions might take about 20 minutes to complete. Please respond as thruthfully and honestly as you can."
 #1
   sex: "Sex"
   mf1: "Male"
@@ -104,8 +109,6 @@ en:
   close_friends_touch: "How many of these friends do you see or get in touch with  (including phone, messengers or text messages) at least once every 2 weeks"
 #4m
   religious: "Do you belong to a church, temple, or other religious group?"
-  yn1: "Yes"
-  yn2: "No"
 #4n
   religious_members: "How many members of your church or religious group do you talk to or get in touch with  (including phone, messengers or text messages) at least once every 2 weeks? (This includes at group meetings and services.)"
 #4o  
@@ -200,7 +203,11 @@ en:
   belong_item11: "I feel like I observe life rather than participate in it"
   belong_item12: "If I died tomorrow, very few people would come to my funeral"
   belong_item13: "I feel like a square peg trying to fit into a round "
-  belong_item14: "Other people care about me"
+  belong_item14: "I don't feel that there is any place where I really fit in this world "
+  belong_item15: "I am uncomfortable that my background and experiences are so different from those who are usually around me"
+  belong_item16: "I could not see or call my friends for days and it would'nt matter to them"
+  belong_item17: "I feel left out of things"
+  belong_item18: "I am not valued by or important to my friends"
 #12
   raheq: "Everyone comes across negative and positive life events, which might be stress inducing. We are asking you to think of LAST YEAR and indicate if you have experienced any of the listed events, within the LAST YEAR. If you have experienced an event, we will ask you how much you were affected by this event, on a scale from 'Not at all affected' to 'Very much affected'."
   affected1: " I did not experience such an event"
@@ -342,38 +349,87 @@ en:
   sibling_e: "Did they share the responsibility of resolving this problem with you?"
   sibling_f: "Did they care about your problem?"
   sibling_g: "Did they think that it is mainly your responsibility to solve your own problem?"
-#14e  
-  cousins_a: "Have you spoken to your cousins about this problem?"
-  cousins_b: "Did they listen to you about your problem?"
-  cousins_c: "Did they perceive your problem/stress as if it is his own (even if they may not have anything to do with the problem itself)?"
-  cousins_d: "Did they try to solve your problem/stress for you (resorting mainly to their own resources and/or mobilizing your resources themselves)?"
-  cousins_e: "Did they share the responsibility of resolving this problem with you?"
-  cousins_f: "Did they care about your problem?"
-  cousins_g: "Did they think that it is mainly your responsibility to solve your own problem?"
-#14f  
-  uncle_a: "Have you spoken to your Aunts/Uncles about this problem?"
-  uncle_b: "Did they listen to you about your problem?"
-  uncle_c: "Did they perceive your problem/stress as if it is his own (even if they may not have anything to do with the problem itself)?"
-  uncle_d: "Did they try to solve your problem/stress for you (resorting mainly to their own resources and/or mobilizing your resources themselves)?"
-  uncle_e: "Did they share the responsibility of resolving this problem with you?"
-  uncle_f: "Did they care about your problem?"
-  uncle_g: "Did they think that it is mainly your responsibility to solve your own problem?"
+#14e
+  exfamily_a: "Have you spoken to your family members other than your immediate family members (father, mother, siblings, children, spouse) about this problem?"
+  exfamily_b: "Did they listen to you about your problem?"
+  exfamily_c: "Did they perceive your problem/stress as if it is his own (even if they may not have anything to do with the problem itself)?"
+  exfamily_d: "Did they try to solve your problem/stress for you (resorting mainly to their own resources and/or mobilizing your resources themselves)?"
+  exfamily_e: "Did they share the responsibility of resolving this problem with you?"
+  exfamily_f: "Did they care about your problem?"
+  exfamily_g: "Did they think that it is mainly your responsibility to solve your own problem?"
+
+#   cousins_a: "Have you spoken to your cousins about this problem?"
+#   cousins_b: "Did they listen to you about your problem?"
+#   cousins_c: "Did they perceive your problem/stress as if it is his own (even if they may not have anything to do with the problem itself)?"
+#   cousins_d: "Did they try to solve your problem/stress for you (resorting mainly to their own resources and/or mobilizing your resources themselves)?"
+#   cousins_e: "Did they share the responsibility of resolving this problem with you?"
+#   cousins_f: "Did they care about your problem?"
+#   cousins_g: "Did they think that it is mainly your responsibility to solve your own problem?"
+# #14f  
+#   uncle_a: "Have you spoken to your Aunts/Uncles about this problem?"
+#   uncle_b: "Did they listen to you about your problem?"
+#   uncle_c: "Did they perceive your problem/stress as if it is his own (even if they may not have anything to do with the problem itself)?"
+#   uncle_d: "Did they try to solve your problem/stress for you (resorting mainly to their own resources and/or mobilizing your resources themselves)?"
+#   uncle_e: "Did they share the responsibility of resolving this problem with you?"
+#   uncle_f: "Did they care about your problem?"
+#   uncle_g: "Did they think that it is mainly your responsibility to solve your own problem?"
 #14g  
   spouse_a: "Have you spoken to your Spouse/Partner about this problem?"
-  spouse_b: "Did they listen to you about your problem?"
-  spouse_c: "Did they perceive your problem/stress as if it is his own (even if they may not have anything to do with the problem itself)?"
-  spouse_d: "Did they try to solve your problem/stress for you (resorting mainly to their own resources and/or mobilizing your resources themselves)?"
-  spouse_e: "Did they share the responsibility of resolving this problem with you?"
-  spouse_f: "Did they care about your problem?"
-  spouse_g: "Did they think that it is mainly your responsibility to solve your own problem?"
+  spouse_b: "Did he/she listen to you about your problem?"
+  spouse_c: "Did he/she perceive your problem/stress as if it is his own (even if they may not have anything to do with the problem itself)?"
+  spouse_d: "Did he/she try to solve your problem/stress for you (resorting mainly to their own resources and/or mobilizing your resources themselves)?"
+  spouse_e: "Did he/she share the responsibility of resolving this problem with you?"
+  spouse_f: "Did he/she care about your problem?"
+  spouse_g: "Did he/she think that it is mainly your responsibility to solve your own problem?"
 #14h  
-  friends_a: "Have you spoken to your Friends about this problem?"
+  friends_a: "Have you spoken to your Friends or Neighbors about this problem?"
   friends_b: "Did they listen to you about your problem?"
   friends_c: "Did they perceive your problem/stress as if it is his own (even if they may not have anything to do with the problem itself)?"
   friends_d: "Did they try to solve your problem/stress for you (resorting mainly to their own resources and/or mobilizing your resources themselves)?"
   friends_e: "Did they share the responsibility of resolving this problem with you?"
   friends_f: "Did they care about your problem?"
   friends_g: "Did they think that it is mainly your responsibility to solve your own problem?"
+
+  net_a: "Have you spoken to your virtual friends (if you have any) about this problem?"
+  net_b: "Did they listen to you about your problem?"
+  net_c: "Did they perceive your problem/stress as if it is his own (even if they may not have anything to do with the problem itself)?"
+  net_d: "Did they try to solve your problem/stress for you (resorting mainly to their own resources and/or mobilizing your resources themselves)?"
+  net_e: "Did they share the responsibility of resolving this problem with you?"
+  net_f: "Did they care about your problem?"
+  net_g: "Did they think that it is mainly your responsibility to solve your own problem?"
+
+  org_a: "Have you spoken to any of your friends at social or volunteer organizations such as an alumni, sports or social clubs, and volunteer agencies?  "
+  org_b: "Did they listen to you about your problem?"
+  org_c: "Did they perceive your problem/stress as if it is his own (even if they may not have anything to do with the problem itself)?"
+  org_d: "Did they try to solve your problem/stress for you (resorting mainly to their own resources and/or mobilizing your resources themselves)?"
+  org_e: "Did they share the responsibility of resolving this problem with you?"
+  org_f: "Did they care about your problem?"
+  org_g: "Did they think that it is mainly your responsibility to solve your own problem?"
+
+  mesp_a: "Have you spoken to any health or mental health specialist about this problem? "
+  mesp_b: "Did he/she listen to you about your problem?"
+  mesp_c: "Did he/she perceive your problem/stress as if it is his own (even if they may not have anything to do with the problem itself)?"
+  mesp_d: "Did he/she try to solve your problem/stress for you (resorting mainly to their own resources and/or mobilizing your resources themselves)?"
+  mesp_e: "Did he/she share the responsibility of resolving this problem with you?"
+  mesp_f: "Did he/she care about your problem?"
+  mesp_g: "Did he/she think that it is mainly your responsibility to solve your own problem?"
+
+  relp_a: "Have you spoken to any religious person or leader about this problem?"
+  relp_b: "Did he/she listen to you about your problem?"
+  relp_c: "Did he/she perceive your problem/stress as if it is his own (even if they may not have anything to do with the problem itself)?"
+  relp_d: "Did he/she try to solve your problem/stress for you (resorting mainly to their own resources and/or mobilizing your resources themselves)?"
+  relp_e: "Did he/she share the responsibility of resolving this problem with you?"
+  relp_f: "Did he/she care about your problem?"
+  relp_g: "Did he/she think that it is mainly your responsibility to solve your own problem?"
+
+  com_a: "Have you spoken to any community agencies (municipality, social work services, minister of education etc.) about your problem?"
+  com_b: "Did they listen to you about your problem?"
+  com_c: "Did they perceive your problem/stress as if it is his own (even if they may not have anything to do with the problem itself)?"
+  com_d: "Did they try to solve your problem/stress for you (resorting mainly to their own resources and/or mobilizing your resources themselves)?"
+  com_e: "Did they share the responsibility of resolving this problem with you?"
+  com_f: "Did they care about your problem?"
+  com_g: "Did they think that it is mainly your responsibility to solve your own problem?"
+
 #14i  
   other_a: "Have you spoken to others about this problem?"
   other_who: "Please specify whom"
@@ -511,6 +567,13 @@ en:
   childhood3: "Both in childhood and adulthood"
 #25
   religious_dominations: "What is your religion?"
+  religious_domination1: "Muslim"
+  religious_domination2: "Christian"
+  religious_domination3: "Buddhist"
+  religious_domination4: "Hindu"
+  religious_domination5: "Jew"
+  religious_domination6: "Other (please indicate what)"
+  religious_domination7: "No, I do not adhere to any religion."
 #26a
   religious_aq: "Please rate how much you agree with these statements ranging from definitely not true of me to definitely true of me."
   how_true1: " Definitely not true"
@@ -630,25 +693,25 @@ en:
   ethnicity3: "Yes, Puerto Rican"
   ethnicity4: "Yes, Cuban"
   ethnicity5: "Yes, another Hispanic, Latino or Spanish origin - ie. Argentinean, Colombian, Dominican, Nicaraguan, Spaniard (please enter below)"
-  ethnicity6: "INSERT A TEXTBOX HERE?" #####################
+  #INSERT A TEXTBOX HERE? for ethnicity5:
 #44
   demographics_r: "What is your race?"
   race1: "White"
   race2: "Black or African American"
   race3: "American Indian or Alaska Native - print name of enrolled or principal tribe below"
-  race4: "INSERT A TEXTBOX HERE?" ####################
-  race5: "Asian Indian"
-  race6: "Chinese"
-  race7: "Filipino"
-  race8: "Japanese"
-  race9: "Korean"
-  race10: "Vietnamese"
-  race11: "Other Asian - ie. Hmong, Laotian, Thai, Pakistani, Cambodian etc. (please enter below)"
-  race12: "INSERT A TEXTBOX HERE?" ####################
-  race13: "Native Hawaiian"
-  race14: "Guamanian or Chamorro"
-  race15: "Samoan"
-  race16: "Other Pacific Islander - ie. Fijian, Tongan etc. (please enter below)"
-  race17: "INSERT A TEXTBOX HERE?" ####################
-  race18: "Some other race (please enter below)"
-  race19: "INSERT A TEXTBOX HERE?" ####################
+  #INSERT A TEXTBOX HERE? for race3:
+  race4: "Asian Indian"
+  race5: "Chinese"
+  race6: "Filipino"
+  race7: "Japanese"
+  race8: "Korean"
+  race9: "Vietnamese"
+  race10: "Other Asian - ie. Hmong, Laotian, Thai, Pakistani, Cambodian etc. (please enter below)"
+  #INSERT A TEXTBOX HERE? for race10:
+  race11: "Native Hawaiian"
+  race12: "Guamanian or Chamorro"
+  race13: "Samoan"
+  race14: "Other Pacific Islander - ie. Fijian, Tongan etc. (please enter below)"
+  #INSERT A TEXTBOX HERE? for race14:
+  race15: "Some other race (please enter below)"
+  #INSERT A TEXTBOX HERE? for race15:

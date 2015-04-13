@@ -24,11 +24,16 @@
 #  blank: "Yo, its blank"
 
 tr:
+
+  yn1: "Evet"
+  yn2: "Hayır"
+  yn3: "TRANSLATION MISSING"
+
   hello_yml: "Turkish"
 #Error
   error_top: "TRANSLATION MISSING"
 #Instructions
-  instructions: "TRANSLATION MISSING"
+  instructions: "Cevaplayacağınız sorular 20 dakikaya yakın sürecektir. Lütfen en dürüst ve sizi en iyi yansıtacak şekilde cevap veriniz."
 #1
   sex: "Cinsiyet"
   mf1: "Erkek"
@@ -104,8 +109,7 @@ tr:
   close_friends_touch: "Bu arkadaşlarınızdan kaçıyla telefon, mesaj ve benzeri yollarla en az 2 haftada bir görüşüyorsunuz?"
 #4m
   religious: "İnancınızdan ötürü ibadet için düzenli olarak görüştüğünüz kişiler var mı?"
-  yn1: "Evet"
-  yn2: "Hayır"
+
 #4n
   religious_members: "Bu kişiler arasından kaçıyla en az ayda bir telefon, mesaj ve benzeri yollarla görüşüyorsunuz? (Grupça buluşmalarınız dahil)"
 #4o  
@@ -200,7 +204,11 @@ tr:
   belong_item11: "Hayatın içinde değilmişim, hayata dışarıdan bakıyormuşum gibi hissediyorum"
   belong_item12: "Yarın ölseydim çok az kişi cenazeme katılırdı."
   belong_item13: "Aslında ait olmadığım bir yere ait olmak için çabaladığımı hissediyorum"
-  belong_item14: "İnsanların beni önemsediğini düşünürüm"
+  belong_item14: "Bu dünyada uyum sağladığım bir yerimin olmadığını hissediyorum"
+  belong_item15: "Özgeçmişim ve deneyimlerimin çevremde olan tanıdıklarımdan çok farklı olmasından rahatsızlık duyuyorum"
+  belong_item16: "Arkadaşlarımı günlerce göremez veya onları aramazsam umurlarında olmaz"
+  belong_item17: "Kendimi dışlanmış hissediyorum"
+  belong_item18: "Arkadaşlarım tarafından değerli görülmediğimi veya önemsenmediğimi hissediyorum "
 #12
   raheq: "Herkesin başına belli zamanlarda olumlu veya olumsuz, bazen sıkıntılı bazen sevindirici olaylar gelebiliyor.  Biz sizin SON BİR SENE’yi düşünmenizi ve SON BİR SENEDE sıralayacağımız/soracağımız olaylardan her birini yaşayıp yaşamadığınızı belirtmenizi istiyoruz.  Bu olayı yaşadıysanız ne kadar etkilendiğinizi soracağız. Böyle bir olay yaşadıysanız gene 1 ile 5arasında etkilenip etkilenmediğinizi belirtiniz"
   affected1: "Böyle bir olay yaşamadım"
@@ -342,24 +350,32 @@ tr:
   sibling_e: "Bu olayı çözmenin sorumluluğunu sizinle paylaştılar mı?"
   sibling_f: "Bu sıkıntı yaratan olayı önemsediler mi?"
   sibling_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mü?"
-#14e	
-  cousins_a: "Kuzenlerinizle bu sıkıntı hakkında konuştunuz mu?"
-  cousins_b: "Sizi bu sıkıntı yaratan olay ile ilgili dinlediler mi?"
-  cousins_c: "Bu olayı kendi sıkıntıları, kendi problemleri gibi gördüler mi? (problemin onlarla ilişkisi olsa da olmasa da)"
-  cousins_d: "Bu olayı kendileri çözmeye çalıştılar mı? (Çoğunlukla kendi kaynaklarını kullanarak veya sizin kaynaklarınızı harekete geçirerek)"
-  cousins_e: "Bu olayı çözmenin sorumluluğunu sizinle paylaştılar mı?"
-  cousins_f: "Bu sıkıntı yaratan olayı önemsediler mi?"
-  cousins_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mü?"
-#14f	
-  uncle_a: "Amcalarınız/dayılarınız/halalarınız/teyzeleriniz ile bu sıkıntı hakkında konuştunuz mu?"
-  uncle_b: "Sizi bu sıkıntı yaratan olay ile ilgili dinlediler mi?"
-  uncle_c: "Bu olayı kendi sıkıntıları, kendi problemleri gibi gördüler mi? (problemin onlarla ilişkisi olsa da olmasa da)"
-  uncle_d: "Bu olayı kendileri çözmeye çalıştılar mı? (Çoğunlukla kendi kaynaklarını kullanarak veya sizin kaynaklarınızı harekete geçirerek)"
-  uncle_e: "Bu olayı çözmenin sorumluluğunu sizinle paylaştılar mı?"
-  uncle_f: "Bu sıkıntı yaratan olayı önemsediler mi?"
-  uncle_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mü?"
+#14e  
+  exfamily_a: "Akrabalarınız (anne, baba, kardeşler, çocuk, eş dışında)ile bu sıkıntınıza dair konuştunuz mu?"
+  exfamily_b: "Sizi bu sıkıntı yaratan olay ile ilgili dinlediler mi?"
+  exfamily_c: "Bu olayı kendi sıkıntıları, kendi problemleri gibi gördüler mi? (problemin onlarla ilişkisi olsa da olmasa da)"
+  exfamily_d: "Bu olayı kendileri çözmeye çalıştılar mı? (Çoğunlukla kendi kaynaklarını kullanarak veya sizin kaynaklarınızı harekete geçirerek)"
+  exfamily_e: "Bu olayı çözmenin sorumluluğunu sizinle paylaştılar mı?"
+  exfamily_f: "Bu sıkıntı yaratan olayı önemsediler mi?"
+  exfamily_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mü?"
+
+#   cousins_a: "Kuzenlerinizle bu sıkıntı hakkında konuştunuz mu?"
+#   cousins_b: "Sizi bu sıkıntı yaratan olay ile ilgili dinlediler mi?"
+#   cousins_c: "Bu olayı kendi sıkıntıları, kendi problemleri gibi gördüler mi? (problemin onlarla ilişkisi olsa da olmasa da)"
+#   cousins_d: "Bu olayı kendileri çözmeye çalıştılar mı? (Çoğunlukla kendi kaynaklarını kullanarak veya sizin kaynaklarınızı harekete geçirerek)"
+#   cousins_e: "Bu olayı çözmenin sorumluluğunu sizinle paylaştılar mı?"
+#   cousins_f: "Bu sıkıntı yaratan olayı önemsediler mi?"
+#   cousins_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mü?"
+# #14f	
+#   uncle_a: "Amcalarınız/dayılarınız/halalarınız/teyzeleriniz ile bu sıkıntı hakkında konuştunuz mu?"
+#   uncle_b: "Sizi bu sıkıntı yaratan olay ile ilgili dinlediler mi?"
+#   uncle_c: "Bu olayı kendi sıkıntıları, kendi problemleri gibi gördüler mi? (problemin onlarla ilişkisi olsa da olmasa da)"
+#   uncle_d: "Bu olayı kendileri çözmeye çalıştılar mı? (Çoğunlukla kendi kaynaklarını kullanarak veya sizin kaynaklarınızı harekete geçirerek)"
+#   uncle_e: "Bu olayı çözmenin sorumluluğunu sizinle paylaştılar mı?"
+#   uncle_f: "Bu sıkıntı yaratan olayı önemsediler mi?"
+#   uncle_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mü?"
 #14g	
-  spouse_a: "Eşinizle bu sıkıntı hakkında konuştunuz mu?"
+  spouse_a: "(Evli ise) Eşiniz (bekar ise) sevgiliniz ile bu sorununuza dair konuştunuz mu?"
   spouse_b: "Sizi bu sıkıntı yaratan olay ile ilgili dinledi mi?"
   spouse_c: "Bu olayı kendi sıkıntısı, kendi problemi gibi gördü mü? (problemin onunla ilişkisi olsa da olmasa da)"
   spouse_d: "Bu olayı kendisi çözmeye çalıştı mı? (Çoğunlukla kendi kaynaklarını kullanarak veya sizin kaynaklarınızı harekete geçirerek)"
@@ -367,13 +383,54 @@ tr:
   spouse_f: "Bu sıkıntı yaratan olayı önemsedi mi?"
   spouse_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündü mü?"
 #14h	
-  friends_a: "Arkadaşlarınızla bu sıkıntı hakkında konuştunuz mu?"
+  friends_a: "Arkadaşlarınızla veya komşularınızla bu sıkıntı hakkında konuştunuz mu?"
   friends_b: "Sizi bu sıkıntı yaratan olay ile ilgili dinlediler mi?"
   friends_c: "Bu olayı kendi sıkıntıları, kendi problemleri gibi gördüler mi? (problemin onlarla ilişkisi olsa da olmasa da)"
   friends_d: "Bu olayı kendileri çözmeye çalıştılar mı? (Çoğunlukla kendi kaynaklarını kullanarak veya sizin kaynaklarınızı harekete geçirerek)"
   friends_e: "Bu olayı çözmenin sorumluluğunu sizinle paylaştılar mı?"
   friends_f: "Bu sıkıntı yaratan olayı önemsediler mi?"
   friends_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mü?"
+
+  net_a: "İnternetten görüştüğünüz sanal arkadaşlarınız ile bu sorununuza dair konuştunuz mu?"
+  net_b: "Sizi bu sıkıntı yaratan olay ile ilgili dinlediler mi?"
+  net_c: "Bu olayı kendi sıkıntıları, kendi problemleri gibi gördüler mi? (problemin onlarla ilişkisi olsa da olmasa da)"
+  net_d: "Bu olayı kendileri çözmeye çalıştılar mı? (Çoğunlukla kendi kaynaklarını kullanarak veya sizin kaynaklarınızı harekete geçirerek)"
+  net_e: "Bu olayı çözmenin sorumluluğunu sizinle paylaştılar mı?"
+  net_f: "Bu sıkıntı yaratan olayı önemsediler mi?"
+  net_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mü?"
+
+  org_a: "Üyesi olduğunuz sivil toplum kuruluşları; dernekler, spor kulübü, siyasi parti, sivil toplum örgütleri, mezunlar derneği, futbol kulüpleri gibi gruplar ile bu sorununuza dair konuştunuz mu?"
+  org_b: "Sizi bu sıkıntı yaratan olay ile ilgili dinlediler mi?"
+  org_c: "Bu olayı kendi sıkıntıları, kendi problemleri gibi gördüler mi? (problemin onlarla ilişkisi olsa da olmasa da)"
+  org_d: "Bu olayı kendileri çözmeye çalıştılar mı? (Çoğunlukla kendi kaynaklarını kullanarak veya sizin kaynaklarınızı harekete geçirerek)"
+  org_e: "Bu olayı çözmenin sorumluluğunu sizinle paylaştılar mı?"
+  org_f: "Bu sıkıntı yaratan olayı önemsediler mi?"
+  org_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mü?"
+
+  mesp_a: "Bir uzman veya profesyonel kişi (psikolog, psikiyatrist, sosyal hizmetler görevlisi, hemşire vb.) ile bu sorununuza dair konuştunuz mu?"
+  mesp_b: "Sizi bu sıkıntı yaratan olay ile ilgili dinledi mi?"
+  mesp_c: "Bu olayı kendi sıkıntıları, kendi problemi gibi gördüler mi? (problemin onlarla ilişkisi olsa da olmasa da)"
+  mesp_d: "Bu olayı kendisi çözmeye çalıştılar mı? (Çoğunlukla kendi kaynaklarını kullanarak veya sizin kaynaklarınızı harekete geçirerek)"
+  mesp_e: "Bu olayı çözmenin sorumluluğunu sizinle paylaştı mı?"
+  mesp_f: "Bu sıkıntı yaratan olayı önemsedi mi?"
+  mesp_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündü mü?"
+
+  relp_a: "Dini veya ruhani bir kişi veya lider ile bu sorununuza dair konuştunuz mu?"
+  relp_b: "Sizi bu sıkıntı yaratan olay ile ilgili dinledi mi?"
+  relp_c: "Bu olayı kendi sıkıntıları, kendi problemi gibi gördüler mi? (problemin onlarla ilişkisi olsa da olmasa da)"
+  relp_d: "Bu olayı kendisi çözmeye çalıştılar mı? (Çoğunlukla kendi kaynaklarını kullanarak veya sizin kaynaklarınızı harekete geçirerek)"
+  relp_e: "Bu olayı çözmenin sorumluluğunu sizinle paylaştı mı?"
+  relp_f: "Bu sıkıntı yaratan olayı önemsedi mi?"
+  relp_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündü mü?"
+
+  com_a: "Halka hizmet etmekle yükümlü kamu kurumları (mesela belediye, işkur, il tarım müdürlüğü, sosyal hizmetler kurumu, il milli eğitim, polis gibi) ile bu sorununuza dair konuştunuz mu?"
+  com_b: "Sizi bu sıkıntı yaratan olay ile ilgili dinlediler mi?"
+  com_c: "Bu olayı kendi sıkıntıları, kendi problemleri gibi gördüler mi? (problemin onlarla ilişkisi olsa da olmasa da)"
+  com_d: "Bu olayı kendileri çözmeye çalıştılar mı? (Çoğunlukla kendi kaynaklarını kullanarak veya sizin kaynaklarınızı harekete geçirerek)"
+  com_e: "Bu olayı çözmenin sorumluluğunu sizinle paylaştılar mı?"
+  com_f: "Bu sıkıntı yaratan olayı önemsediler mi?"
+  com_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mü?"
+
 #14i	
   other_a: "Başkalarıyla bu sıkıntı hakkında konuştunuz mu?"
   other_who: "Evet ise, kiminle"
@@ -511,6 +568,13 @@ tr:
   childhood3: "Hem çocuklukta hem erişkinken"
 #25
   religious_dominations: "Bu ifadelerden hangisi inancinizi en iyi yansitir?"
+  religious_domination1: "Müslüman'ım"
+  religious_domination2: "Hıristiyan'ım"
+  religious_domination3: "Budist'im"
+  religious_domination4: "Hindu'yum"
+  religious_domination5: "Musevi'yim"
+  religious_domination6: "Diğer _______"
+  religious_domination7: "Hayır, hiçbir dine bağlı değilim"
 #26a
   religious_aq: "Lütfen aşağıdaki ifadelere ne derece katıldığınızı belirtin"
   how_true1: "Hiç katılmıyorum"

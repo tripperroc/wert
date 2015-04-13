@@ -73,7 +73,11 @@ class Response < ActiveRecord::Base
   validates :belong_item11, presence: true, on: :update
   validates :belong_item12, presence: true, on: :update
   validates :belong_item13, presence: true, on: :update
-  #validates :belong_item14, presence: true, on: :update
+  validates :belong_item14, presence: true, on: :update
+  validates :belong_item15, presence: true, on: :update
+  validates :belong_item16, presence: true, on: :update
+  validates :belong_item17, presence: true, on: :update
+  validates :belong_item18, presence: true, on: :update
   validates :rahe_item1, presence: true, on: :update
   validates :rahe_item2, presence: true, on: :update
   validates :rahe_item3, presence: true, on: :update
@@ -202,22 +206,21 @@ class Response < ActiveRecord::Base
 	validates :sibling_g, presence: true, if: "sibling_a == 'Yes' || sibling_a =='예' || sibling_a =='Evet'", on: :update
 
 
-  validates :cousins_a, presence: true, on: :update
-	validates :cousins_b, presence: true, if: "cousins_a == 'Yes' || cousins_a =='예' || cousins_a =='Evet'", on: :update
-	validates :cousins_c, presence: true, if: "cousins_a == 'Yes' || cousins_a =='예' || cousins_a =='Evet'", on: :update
-	validates :cousins_d, presence: true, if: "cousins_a == 'Yes' || cousins_a =='예' || cousins_a =='Evet'", on: :update
-	validates :cousins_e, presence: true, if: "cousins_a == 'Yes' || cousins_a =='예' || cousins_a =='Evet'", on: :update
-	validates :cousins_f, presence: true, if: "cousins_a == 'Yes' || cousins_a =='예' || cousins_a =='Evet'", on: :update
-	validates :cousins_g, presence: true, if: "cousins_a == 'Yes' || cousins_a =='예' || cousins_a =='Evet'", on: :update
+  validates :exfamily_a, presence: true, on: :update
+	validates :exfamily_b, presence: true, if: "exfamily_a == 'Yes' || exfamily_a =='예' || exfamily_a =='Evet'", on: :update
+	validates :exfamily_c, presence: true, if: "exfamily_a == 'Yes' || exfamily_a =='예' || exfamily_a =='Evet'", on: :update
+	validates :exfamily_d, presence: true, if: "exfamily_a == 'Yes' || exfamily_a =='예' || exfamily_a =='Evet'", on: :update
+	validates :exfamily_e, presence: true, if: "exfamily_a == 'Yes' || exfamily_a =='예' || exfamily_a =='Evet'", on: :update
+	validates :exfamily_f, presence: true, if: "exfamily_a == 'Yes' || exfamily_a =='예' || exfamily_a =='Evet'", on: :update
+	validates :exfamily_g, presence: true, if: "exfamily_a == 'Yes' || exfamily_a =='예' || exfamily_a =='Evet'", on: :update
 
-
-  validates :uncle_a, presence: true, on: :update
-	validates :uncle_b, presence: true, if: "uncle_a == 'Yes' || uncle_a =='예' || uncle_a =='Evet'", on: :update
-	validates :uncle_c, presence: true, if: "uncle_a == 'Yes' || uncle_a =='예' || uncle_a =='Evet'", on: :update
-	validates :uncle_d, presence: true, if: "uncle_a == 'Yes' || uncle_a =='예' || uncle_a =='Evet'", on: :update
-	validates :uncle_e, presence: true, if: "uncle_a == 'Yes' || uncle_a =='예' || uncle_a =='Evet'", on: :update
-	validates :uncle_f, presence: true, if: "uncle_a == 'Yes' || uncle_a =='예' || uncle_a =='Evet'", on: :update
-	validates :uncle_g, presence: true, if: "uncle_a == 'Yes' || uncle_a =='예' || uncle_a =='Evet'", on: :update
+ #  validates :uncle_a, presence: true, on: :update
+	# validates :uncle_b, presence: true, if: "uncle_a == 'Yes' || uncle_a =='예' || uncle_a =='Evet'", on: :update
+	# validates :uncle_c, presence: true, if: "uncle_a == 'Yes' || uncle_a =='예' || uncle_a =='Evet'", on: :update
+	# validates :uncle_d, presence: true, if: "uncle_a == 'Yes' || uncle_a =='예' || uncle_a =='Evet'", on: :update
+	# validates :uncle_e, presence: true, if: "uncle_a == 'Yes' || uncle_a =='예' || uncle_a =='Evet'", on: :update
+	# validates :uncle_f, presence: true, if: "uncle_a == 'Yes' || uncle_a =='예' || uncle_a =='Evet'", on: :update
+	# validates :uncle_g, presence: true, if: "uncle_a == 'Yes' || uncle_a =='예' || uncle_a =='Evet'", on: :update
 
 
   validates :spouse_a, presence: true, on: :update
@@ -237,6 +240,41 @@ class Response < ActiveRecord::Base
 	validates :friends_f, presence: true, if: "friends_a == 'Yes' || friends_a =='예' || friends_a =='Evet'", on: :update
 	validates :friends_g, presence: true, if: "friends_a == 'Yes' || friends_a =='예' || friends_a =='Evet'", on: :update
 
+  validates :net_a, presence: true, on: :update
+  validates :net_b, presence: true, if: "net_a == 'Yes' || net_a =='예' || net_a =='Evet'", on: :update
+  validates :net_c, presence: true, if: "net_a == 'Yes' || net_a =='예' || net_a =='Evet'", on: :update
+  validates :net_d, presence: true, if: "net_a == 'Yes' || net_a =='예' || net_a =='Evet'", on: :update
+  validates :net_e, presence: true, if: "net_a == 'Yes' || net_a =='예' || net_a =='Evet'", on: :update
+  validates :net_f, presence: true, if: "net_a == 'Yes' || net_a =='예' || net_a =='Evet'", on: :update
+  validates :net_g, presence: true, if: "net_a == 'Yes' || net_a =='예' || net_a =='Evet'", on: :update
+  validates :org_a, presence: true, on: :update
+  validates :org_b, presence: true, if: "org_a == 'Yes' || org_a =='예' || org_a =='Evet'", on: :update
+  validates :org_c, presence: true, if: "org_a == 'Yes' || org_a =='예' || org_a =='Evet'", on: :update
+  validates :org_d, presence: true, if: "org_a == 'Yes' || org_a =='예' || org_a =='Evet'", on: :update
+  validates :org_e, presence: true, if: "org_a == 'Yes' || org_a =='예' || org_a =='Evet'", on: :update
+  validates :org_f, presence: true, if: "org_a == 'Yes' || org_a =='예' || org_a =='Evet'", on: :update
+  validates :org_g, presence: true, if: "org_a == 'Yes' || org_a =='예' || org_a =='Evet'", on: :update
+  validates :mesp_a, presence: true, on: :update
+  validates :mesp_b, presence: true, if: "mesp_a == 'Yes' || mesp_a =='예' || mesp_a =='Evet'", on: :update
+  validates :mesp_c, presence: true, if: "mesp_a == 'Yes' || mesp_a =='예' || mesp_a =='Evet'", on: :update
+  validates :mesp_d, presence: true, if: "mesp_a == 'Yes' || mesp_a =='예' || mesp_a =='Evet'", on: :update
+  validates :mesp_e, presence: true, if: "mesp_a == 'Yes' || mesp_a =='예' || mesp_a =='Evet'", on: :update
+  validates :mesp_f, presence: true, if: "mesp_a == 'Yes' || mesp_a =='예' || mesp_a =='Evet'", on: :update
+  validates :mesp_g, presence: true, if: "mesp_a == 'Yes' || mesp_a =='예' || mesp_a =='Evet'", on: :update
+  validates :relp_a, presence: true, on: :update
+  validates :relp_b, presence: true, if: "relp_a == 'Yes' || relp_a =='예' || relp_a =='Evet'", on: :update
+  validates :relp_c, presence: true, if: "relp_a == 'Yes' || relp_a =='예' || relp_a =='Evet'", on: :update
+  validates :relp_d, presence: true, if: "relp_a == 'Yes' || relp_a =='예' || relp_a =='Evet'", on: :update
+  validates :relp_e, presence: true, if: "relp_a == 'Yes' || relp_a =='예' || relp_a =='Evet'", on: :update
+  validates :relp_f, presence: true, if: "relp_a == 'Yes' || relp_a =='예' || relp_a =='Evet'", on: :update
+  validates :relp_g, presence: true, if: "relp_a == 'Yes' || relp_a =='예' || relp_a =='Evet'", on: :update
+  validates :com_a, presence: true, on: :update
+  validates :com_b, presence: true, if: "com_a == 'Yes' || com_a =='예' || com_a =='Evet'", on: :update
+  validates :com_c, presence: true, if: "com_a == 'Yes' || com_a =='예' || com_a =='Evet'", on: :update
+  validates :com_d, presence: true, if: "com_a == 'Yes' || com_a =='예' || com_a =='Evet'", on: :update
+  validates :com_e, presence: true, if: "com_a == 'Yes' || com_a =='예' || com_a =='Evet'", on: :update
+  validates :com_f, presence: true, if: "com_a == 'Yes' || com_a =='예' || com_a =='Evet'", on: :update
+  validates :com_g, presence: true, if: "com_a == 'Yes' || com_a =='예' || com_a =='Evet'", on: :update
 
   validates :other_a, presence: true, on: :update
 	validates :other_b, presence: true, if: "other_a == 'Yes' || other_a =='예' || other_a =='Evet'", on: :update
@@ -359,6 +397,7 @@ validate :checkboxes, on: :update
   validates :trauma_b, presence: true, if: "trauma_a == 'Yes' || trauma_a =='예' || trauma_a =='Evet'", on: :update
   validates :trauma_c, presence: true, if: "trauma_a == 'Yes' || trauma_a =='예' || trauma_a =='Evet'", on: :update
   validates :religios_dominations, presence: true, on: :update
+  validates :religios_dominations_other, presence: true, if: "religios_dominations == 'Other (please indicate what)' || religios_dominations =='기타_________________' || religios_dominations =='Diğer _______'", on: :update
   validates :religious_a_item1, presence: true, on: :update
   validates :religious_a_item2, presence: true, on: :update
   validates :religious_a_item3, presence: true, on: :update
@@ -389,6 +428,9 @@ validate :checkboxes, on: :update
   validates :demographics_m, presence: true, on: :update
   validates :demographics_n, presence: true, on: :update
   validates :demographics_o,presence: true, on: :update
+  validates :demographics_p,presence: true, if: "birth_sex != 'Erkek' || birth_sex !='Kadın'", on: :update
+  validates :demographics_p_other, presence: true, if: "demographics_p == 'Yes, another Hispanic, Latino or Spanish origin - ie. Argentinean, Colombian, Dominican, Nicaraguan, Spaniard (please enter below)' || demographics_p =='예, 기타 중남미인입니다(예: 도미니칸 등)'", on: :update
+  validates :demographics_r,presence: true, if: "birth_sex != 'Erkek' || birth_sex !='Kadın'", on: :update
 
 
   validates :age, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
