@@ -427,11 +427,11 @@ validate :checkboxes, on: :update
 
   validates :demographics_m, presence: true, on: :update
   validates :demographics_n, presence: true, on: :update
-  validates :demographics_o,presence: true, on: :update
-  validates :demographics_p,presence: true, if: "birth_sex != 'Erkek' || birth_sex !='Kadın'", on: :update
+  validates :demographics_o, presence: true, on: :update
+  validates :demographics_p, presence: true, if: "birth_sex != 'Erkek' || birth_sex !='Kadın'", on: :update
   validates :demographics_p_other, presence: true, if: "demographics_p == 'Yes, another Hispanic, Latino or Spanish origin - ie. Argentinean, Colombian, Dominican, Nicaraguan, Spaniard (please enter below)' || demographics_p =='예, 기타 중남미인입니다(예: 도미니칸 등)'", on: :update
-  validates :demographics_r,presence: true, if: "birth_sex != 'Erkek' || birth_sex !='Kadın'", on: :update
-
+  validates :demographics_r, presence: true, if: "birth_sex != 'Erkek' || birth_sex !='Kadın'", on: :update
+  validates :demographics_s, presence: true, on: :update
 
   validates :age, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
   validates :num_siblings, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update

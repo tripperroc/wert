@@ -219,6 +219,7 @@ class SurveyorController < ApplicationController
       @demographics_o = t(:demographics_o)
       @demographics_p = t(:demographics_p)
       @demographics_r = t(:demographics_r)
+      @demographics_sq = t(:demographics_sq)
 
       answers
 
@@ -414,6 +415,7 @@ class SurveyorController < ApplicationController
       @demographics_o = t(:demographics_o)
       @demographics_p = t(:demographics_p)
       @demographics_r = t(:demographics_r)
+      @demographics_sq = t(:demographics_sq)
 
    if @response.update(params[:response]) 
      redirect_to :controller => "estimate", :action => "create", :id => params[:id]
@@ -1290,7 +1292,48 @@ class SurveyorController < ApplicationController
           @race12,
           @race13,
           @race14,
-          @race15]        
+          @race15]    
+
+    @demographics_s1 = t(:demographics_s1)  
+    @demographics_s2 = t(:demographics_s2) 
+    @demographics_s3 = t(:demographics_s3) 
+    @demographics_s4 = t(:demographics_s4) 
+    @demographics_s5 = t(:demographics_s5) 
+    @demographics_s6 = t(:demographics_s6) 
+    @demographics_s7 = t(:demographics_s7) 
+    @demographics_s8 = t(:demographics_s8) 
+    @demographics_s9 = t(:demographics_s9) 
+    @demographics_s10 = t(:demographics_s10) 
+    @demographics_s11 = t(:demographics_s11) 
+    @demographics_s12 = t(:demographics_s12) 
+    @demographics_s13 = t(:demographics_s13) 
+    @demographics_s14 = t(:demographics_s14) 
+    @demographics_s15 = t(:demographics_s15) 
+    @demographics_s16 = t(:demographics_s16) 
+    @demographics_s17 = t(:demographics_s17) 
+    @demographics_s18 = t(:demographics_s18) 
+    @demographics_s19 = t(:demographics_s19) 
+    @demographics_s20 = t(:demographics_s20) 
+    @demographics_s=[@demographics_s1,
+                     @demographics_s2,
+                     @demographics_s3,
+                     @demographics_s4,
+                     @demographics_s5,
+                     @demographics_s6,
+                     @demographics_s7,
+                     @demographics_s8,
+                     @demographics_s9,
+                     @demographics_s10,
+                     @demographics_s11,
+                     @demographics_s12,
+                     @demographics_s13,
+                     @demographics_s14,
+                     @demographics_s15,
+                     @demographics_s16,
+                     @demographics_s17,
+                     @demographics_s18,
+                     @demographics_s19,
+                     @demographics_s20]        
 
     @communal_option=[[:com1, "Family Members"],
       [:com2, "Spouse/Partner"],

@@ -1539,6 +1539,14 @@
 </div>
 </li>
 
+<li id ="demographics_s">
+<div class="question"> <%= @demographics_sq %> </div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_s]) %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @demographics_s, :locals=> {:f => f, :name => :demographics_s}) %>
+</div>
+</li>
+
 </ol>
 <%= f.submit %>
 <% end %>
