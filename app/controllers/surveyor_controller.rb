@@ -1313,7 +1313,6 @@ class SurveyorController < ApplicationController
     @demographics_s17 = t(:demographics_s17) 
     @demographics_s18 = t(:demographics_s18) 
     @demographics_s19 = t(:demographics_s19) 
-    @demographics_s20 = t(:demographics_s20) 
     @demographics_s=[@demographics_s1,
                      @demographics_s2,
                      @demographics_s3,
@@ -1332,8 +1331,7 @@ class SurveyorController < ApplicationController
                      @demographics_s16,
                      @demographics_s17,
                      @demographics_s18,
-                     @demographics_s19,
-                     @demographics_s20]        
+                     @demographics_s19]        
 
     @communal_option=[[:com1, "Family Members"],
       [:com2, "Spouse/Partner"],

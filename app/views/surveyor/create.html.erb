@@ -1537,6 +1537,33 @@
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @race, :locals=> {:f => f, :name => :demographics_r}) %>
 </div>
+
+<ol type="a">
+<li id ="demographics_r_other1">
+<div class="question"><%= @race3 %></div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_r_other]) %></div>
+<div class="answer"><%= f.text_field :demographics_r_other, style: "margin-left: 1em; width:250px" %></div>
+</li>
+
+<li id ="demographics_r_other2">
+<div class="question"><%= @race10 %></div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_r_other]) %></div>
+<div class="answer"><%= f.text_field :demographics_r_other, style: "margin-left: 1em; width:250px" %></div>
+</li>
+
+<li id ="demographics_r_other3">
+<div class="question"><%= @race14 %></div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_r_other]) %></div>
+<div class="answer"><%= f.text_field :demographics_r_other, style: "margin-left: 1em; width:250px" %></div>
+</li>
+
+<li id ="demographics_r_other4">
+<div class="question"><%= @race15 %></div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:demographics_r_other]) %></div>
+<div class="answer"><%= f.text_field :demographics_r_other, style: "margin-left: 1em; width:250px" %></div>
+</li>
+
+</ol>
 </li>
 
 <li id ="demographics_s">
@@ -1545,6 +1572,7 @@
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @demographics_s, :locals=> {:f => f, :name => :demographics_s}) %>
 </div>
+
 </li>
 
 </ol>
@@ -1671,10 +1699,59 @@
    });
  </script>
 
+ <script>
+   $("#demographics_r_other1").hide();
+   $("#demographics_r_other2").hide();
+   $("#demographics_r_other3").hide();
+   $("#demographics_r_other4").hide();
+
+   $("input[name='response[demographics_r]']").bind('change', function() {
+   	   if ($("input[name='response[demographics_r]']:checked").val() == "American Indian or Alaska Native - print name of enrolled or principal tribe below" || $("input[name='response[demographics_r]']:checked").val() == "아메리칸 인디언 또는 알래스카 원주민") {
+           $("#demographics_r_other1").show();
+           $("#demographics_r_other2").hide();
+  		   $("#demographics_r_other3").hide();
+   		   $("#demographics_r_other4").hide();
+       } 
+       else {
+	   	   if ($("input[name='response[demographics_r]']:checked").val() == "Other Asian - ie. Hmong, Laotian, Thai, Pakistani, Cambodian etc. (please enter below)" || $("input[name='response[demographics_r]']:checked").val() == "기타 아시아계열 (예: 타이, 파키스탄 등)") {
+	           $("#demographics_r_other2").show();
+	           $("#demographics_r_other1").hide();
+	  		   $("#demographics_r_other3").hide();
+	   		   $("#demographics_r_other4").hide();
+	       } 
+	       else {
+		   	   if ($("input[name='response[demographics_r]']:checked").val() == "Other Pacific Islander - ie. Fijian, Tongan etc. (please enter below)" || $("input[name='response[demographics_r]']:checked").val() == "기타 남태평양 사람들 (예: 피지인 등)") {
+		           $("#demographics_r_other3").show();
+		           $("#demographics_r_other2").hide();
+		  		   $("#demographics_r_other1").hide();
+		   		   $("#demographics_r_other4").hide();
+		       } 
+		       else {
+			   	   if ($("input[name='response[demographics_r]']:checked").val() == "Some other race (please enter below)" || $("input[name='response[demographics_r]']:checked").val() == "기타(구체적으로 기입하세요:)") {
+			           $("#demographics_r_other4").show();
+			           $("#demographics_r_other2").hide();
+			  		   $("#demographics_r_other3").hide();
+			   		   $("#demographics_r_other1").hide();
+			       } 
+			       else {
+			           $("#demographics_r_other4").hide();
+			           $("#demographics_r_other2").hide();
+			  		   $("#demographics_r_other3").hide();
+			   		   $("#demographics_r_other1").hide();
+			       }
+		       }
+	       }
+       }
+   });
+ </script>
+
+
+
 
 <script>
    $("#demographics_p").hide();
    $("#demographics_r").hide();
+   $("#demographics_s").hide();
 
    $("input[name='response[birth_sex]']").bind('change', function() {
    	   if ($("input[name='response[birth_sex]']:checked").val() == "Erkek" || $("input[name='response[birth_sex]']:checked").val() == "Kadın") 
@@ -1682,10 +1759,12 @@
            $("#demographics_p").hide();
            $("#demographics_p_other").hide();
            $("#demographics_r").hide();
+           $("#demographics_s").show();
        } 
        else {
            $("#demographics_p").show();
            $("#demographics_r").show();
+           $("#demographics_s").hide();
        }
    });
  </script>

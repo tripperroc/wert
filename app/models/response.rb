@@ -431,7 +431,8 @@ validate :checkboxes, on: :update
   validates :demographics_p, presence: true, if: "birth_sex != 'Erkek' || birth_sex !='Kadın'", on: :update
   validates :demographics_p_other, presence: true, if: "demographics_p == 'Yes, another Hispanic, Latino or Spanish origin - ie. Argentinean, Colombian, Dominican, Nicaraguan, Spaniard (please enter below)' || demographics_p =='예, 기타 중남미인입니다(예: 도미니칸 등)'", on: :update
   validates :demographics_r, presence: true, if: "birth_sex != 'Erkek' || birth_sex !='Kadın'", on: :update
-  validates :demographics_s, presence: true, on: :update
+  validates :demographics_r_other, presence: true, if: "demographics_r == 'American Indian or Alaska Native - print name of enrolled or principal tribe below' || demographics_r =='Other Asian - ie. Hmong, Laotian, Thai, Pakistani, Cambodian etc. (please enter below)' || demographics_r == 'Other Pacific Islander - ie. Fijian, Tongan etc. (please enter below)' || demographics_r =='Some other race (please enter below)' || demographics_r == '아메리칸 인디언 또는 알래스카 원주민' || demographics_r =='기타 아시아계열 (예: 타이, 파키스탄 등)' || demographics_r == '기타 남태평양 사람들 (예: 피지인 등)' || demographics_r =='기타(구체적으로 기입하세요:)'", on: :update
+  validates :demographics_s, presence: true, if: "birth_sex == 'Erkek' || birth_sex =='Kadın'", on: :update
 
   validates :age, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update
   validates :num_siblings, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, on: :update

@@ -362,6 +362,7 @@ ActiveRecord::Schema.define(version: 20131228025916) do
     t.string   "demographics_p"
     t.string   "demographics_p_other"
     t.string   "demographics_r"
+    t.string   "demographics_r_other"
     t.string   "demographics_s"
     t.string   "groupa1"
     t.string   "groupa2"

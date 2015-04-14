@@ -266,6 +266,7 @@ class CreateResponses < ActiveRecord::Migration
       t.string :demographics_p
       t.string :demographics_p_other
       t.string :demographics_r
+      t.string :demographics_r_other
       t.string :demographics_s
 
       t.string :groupa1
