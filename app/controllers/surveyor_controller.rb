@@ -621,14 +621,12 @@ class SurveyorController < ApplicationController
     @burden_item4 = t(:burden_item4)
     @burden_item5 = t(:burden_item5)
     @burden_item6 = t(:burden_item6)
-    @burden_item7 = t(:burden_item7)
     @burden=[[:burden_item1, @burden_item1],
              [:burden_item2, @burden_item2],
              [:burden_item3, @burden_item3],
              [:burden_item4, @burden_item4],
              [:burden_item5, @burden_item5],
-             [:burden_item6, @burden_item6],
-             [:burden_item6, @burden_item7]]
+             [:burden_item6, @burden_item6]]
 
     @belong_item1 = t(:belong_item1)
     @belong_item2 = t(:belong_item2)

@@ -59,7 +59,6 @@ class Response < ActiveRecord::Base
   validates :burden_item4, presence: true, on: :update
   validates :burden_item5, presence: true, on: :update
   validates :burden_item6, presence: true, on: :update
-  validates :burden_item7, presence: true, on: :update
   validates :belong_item1, presence: true, on: :update
   validates :belong_item2, presence: true, on: :update
   validates :belong_item3, presence: true, on: :update
