@@ -133,7 +133,7 @@ en:
   social_group: "Do you belong to any groups in which you talk to one or more members of the group about group-related issues at least once every 2 weeks?  Examples include social clubs, recreational groups, trade unions, commercial groups, professional organizations, groups concerned with children like the PTA or Boy Scouts,  groups concerned with community service, etc"
 #4w
   group_name: "Consider those groups in which you talk to a fellow group member at least once every 2 weeks.  Please provide the following information for each such group:  the name or type of group and the total number of members in that group that you talk to at least once every 2 weeks."
-  group_member: "Number of member </br> with whom you</br> interact with at least once </br>every other week"
+  group_member: "Number of member with whom you interact at least once every other week"
 #5
   happyq: "Taking all things together, would you say you are"
   happy1: "Very Happy"

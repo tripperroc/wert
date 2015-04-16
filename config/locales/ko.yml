@@ -27,13 +27,13 @@ ko:
 
   yn1: "예"
   yn2: "아니오"
-  yn3: "TRANSLATION MISSING"
+  yn3: "해당없음"
 
   hello_yml: "Korean"
 #Error
   error_top: "TRANSLATION MISSING"
 #Instructions
-  instructions: "TRANSLATION MISSING"
+  instructions: "다음의 설문은 20분 정도의 시간이 소요됩니다. 최대한 성실한 답변을 부탁드립니다."
 #1
   sex: "성별"
   mf1: "남자"

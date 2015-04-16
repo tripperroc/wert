@@ -1583,7 +1583,13 @@
 </div>
 
  <script>
-   $("#num_children").hide();
+   $("#num_children").hide();.
+       if ($("#response_num_children").val() == "0") {
+           $("#num_children").hide();
+       }
+       else {
+           $("#num_children").show();
+       }   
    $("#response_num_children").bind('change', function() {
        if ($("#response_num_children").val() == "0") {
            $("#num_children").hide();
@@ -1596,6 +1602,12 @@
 
  <script>
    $("#other_relatives").hide();
+       if ($("#response_other_relatives").val() == "0") {
+           $("#other_relatives").hide();
+       }
+       else {
+           $("#other_relatives").show();
+       }   
    $("#response_other_relatives").bind('change', function() {
        if ($("#response_other_relatives").val() == "0") {
            $("#other_relatives").hide();
@@ -1608,6 +1620,12 @@
 
  <script>
    $("#close_friends").hide();
+        if ($("#response_close_friends").val() == "0") {
+           $("#close_friends").hide();
+       }
+       else {
+           $("#close_friends").show();
+       }  
    $("#response_close_friends").bind('change', function() {
        if ($("#response_close_friends").val() == "0") {
            $("#close_friends").hide();
@@ -1622,7 +1640,12 @@
 
  <script>
    $("#parents_touch").hide();
-
+   	   if ($("input[name='response[parents]']:checked").val() == "neither" || $("input[name='response[parents]']:checked").val() == "양친 모두 돌아가심" || $("input[name='response[parents]']:checked").val() == "İkisi de vefat etti") {
+           $("#parents_touch").hide();
+       } 
+       else {
+           $("#parents_touch").show();
+       }
    $("input[name='response[parents]']").bind('change', function() {
    	   if ($("input[name='response[parents]']:checked").val() == "neither" || $("input[name='response[parents]']:checked").val() == "양친 모두 돌아가심" || $("input[name='response[parents]']:checked").val() == "İkisi de vefat etti") {
            $("#parents_touch").hide();
@@ -1635,7 +1658,12 @@
 
  <script>
    $("#parents_partner").hide();
-
+   	   if ($("input[name='response[parents_partner]']:checked").val() == "neither" || $("input[name='response[parents_partner]']:checked").val() == "I am not married" || $("input[name='response[parents_partner]']:checked").val() == "두 분 모두 돌아가심" || $("input[name='response[parents_partner]']:checked").val() == "İkisi de vefat etti" || $("input[name='response[parents_partner]']:checked").val() == "미혼이므로 해당사항 없음" || $("input[name='response[parents_partner]']:checked").val() == "Evli değilim") {
+           $("#parents_partner").hide();
+       } 
+       else {
+           $("#parents_partner").show();
+       }
    $("input[name='response[parents_partner]']").bind('change', function() {
    	   if ($("input[name='response[parents_partner]']:checked").val() == "neither" || $("input[name='response[parents_partner]']:checked").val() == "I am not married" || $("input[name='response[parents_partner]']:checked").val() == "두 분 모두 돌아가심" || $("input[name='response[parents_partner]']:checked").val() == "İkisi de vefat etti" || $("input[name='response[parents_partner]']:checked").val() == "미혼이므로 해당사항 없음" || $("input[name='response[parents_partner]']:checked").val() == "Evli değilim") {
            $("#parents_partner").hide();
@@ -1648,7 +1676,12 @@
 
 <script>
    $("#suicide_c").hide();
-
+   	   if ($("input[name='response[suicide_a]']:checked").val() == "I have attempted to kill myself, but did not want to die" || $("input[name='response[suicide_a]']:checked").val() == "I have attempted to kill myself, and really hoped to die" || $("input[name='response[suicide_a]']:checked").val() == "자살을 시도해 본 적이 있다. 하지만 정말로 죽고 싶었던 것은 아니다" || $("input[name='response[suicide_a]']:checked").val() == "자살을 시도해 본 적이 있고, 그 때는 정말 죽고 싶은 마음이었다" || $("input[name='response[suicide_a]']:checked").val() == "Hayatımı sonlandırmak için girişimde bulundum ama sanırım gerçekten ölmek istemiyordum" || $("input[name='response[suicide_a]']:checked").val() == "Hayatımı sonlandırmak için girişimde bulundum ve sanırım gerçekten ölmeyi umdum") {
+           $("#suicide_c").show();
+       } 
+       else {
+           $("#suicide_c").hide();
+       }
    $("input[name='response[suicide_a]']").bind('change', function() {
    	   if ($("input[name='response[suicide_a]']:checked").val() == "I have attempted to kill myself, but did not want to die" || $("input[name='response[suicide_a]']:checked").val() == "I have attempted to kill myself, and really hoped to die" || $("input[name='response[suicide_a]']:checked").val() == "자살을 시도해 본 적이 있다. 하지만 정말로 죽고 싶었던 것은 아니다" || $("input[name='response[suicide_a]']:checked").val() == "자살을 시도해 본 적이 있고, 그 때는 정말 죽고 싶은 마음이었다" || $("input[name='response[suicide_a]']:checked").val() == "Hayatımı sonlandırmak için girişimde bulundum ama sanırım gerçekten ölmek istemiyordum" || $("input[name='response[suicide_a]']:checked").val() == "Hayatımı sonlandırmak için girişimde bulundum ve sanırım gerçekten ölmeyi umdum") {
            $("#suicide_c").show();
@@ -1661,7 +1694,12 @@
 
  <script>
    $("#suicide_d").hide();
-
+   	   if ($("input[name='response[suicide_b]']:checked").val() == "I have attempted to kill myself, but did not want to die" || $("input[name='response[suicide_b]']:checked").val() == "I have attempted to kill myself, and really hoped to die" || $("input[name='response[suicide_b]']:checked").val() == "자살을 시도해 본 적이 있다. 하지만 정말로 죽고 싶었던 것은 아니다" || $("input[name='response[suicide_b]']:checked").val() == "자살을 시도해 본 적이 있고, 그 때는 정말 죽고 싶은 마음이었다" || $("input[name='response[suicide_b]']:checked").val() == "Hayatımı sonlandırmak için girişimde bulundum ama sanırım gerçekten ölmek istemiyordum" || $("input[name='response[suicide_b]']:checked").val() == "Hayatımı sonlandırmak için girişimde bulundum ve sanırım gerçekten ölmeyi umdum") {
+           $("#suicide_d").show();
+       } 
+       else {
+           $("#suicide_d").hide();
+       }
    $("input[name='response[suicide_b]']").bind('change', function() {
    	   if ($("input[name='response[suicide_b]']:checked").val() == "I have attempted to kill myself, but did not want to die" || $("input[name='response[suicide_b]']:checked").val() == "I have attempted to kill myself, and really hoped to die" || $("input[name='response[suicide_b]']:checked").val() == "자살을 시도해 본 적이 있다. 하지만 정말로 죽고 싶었던 것은 아니다" || $("input[name='response[suicide_b]']:checked").val() == "자살을 시도해 본 적이 있고, 그 때는 정말 죽고 싶은 마음이었다" || $("input[name='response[suicide_b]']:checked").val() == "Hayatımı sonlandırmak için girişimde bulundum ama sanırım gerçekten ölmek istemiyordum" || $("input[name='response[suicide_b]']:checked").val() == "Hayatımı sonlandırmak için girişimde bulundum ve sanırım gerçekten ölmeyi umdum") {
            $("#suicide_d").show();
@@ -1674,7 +1712,12 @@
 
  <script>
    $("#religious_dominations_other").hide();
-
+   	   if ($("input[name='response[religious_dominations]']:checked").val() == "Other (please indicate what)" || $("input[name='response[religious_dominations]']:checked").val() == "기타_________________" || $("input[name='response[religious_dominations]']:checked").val() == "Diğer _______") {
+           $("#religious_dominations_other").show();
+       } 
+       else {
+           $("#religious_dominations_other").hide();
+       }
    $("input[name='response[religious_dominations]']").bind('change', function() {
    	   if ($("input[name='response[religious_dominations]']:checked").val() == "Other (please indicate what)" || $("input[name='response[religious_dominations]']:checked").val() == "기타_________________" || $("input[name='response[religious_dominations]']:checked").val() == "Diğer _______") {
            $("#religious_dominations_other").show();
@@ -1688,7 +1731,12 @@
 
  <script>
    $("#demographics_p_other").hide();
-
+   	   if ($("input[name='response[demographics_p]']:checked").val() == "Yes, another Hispanic, Latino or Spanish origin - ie. Argentinean, Colombian, Dominican, Nicaraguan, Spaniard (please enter below)" || $("input[name='response[demographics_p]']:checked").val() == "예, 기타 중남미인입니다(예: 도미니칸 등)") {
+           $("#demographics_p_other").show();
+       } 
+       else {
+           $("#demographics_p_other").hide();
+       }
    $("input[name='response[demographics_p]']").bind('change', function() {
    	   if ($("input[name='response[demographics_p]']:checked").val() == "Yes, another Hispanic, Latino or Spanish origin - ie. Argentinean, Colombian, Dominican, Nicaraguan, Spaniard (please enter below)" || $("input[name='response[demographics_p]']:checked").val() == "예, 기타 중남미인입니다(예: 도미니칸 등)") {
            $("#demographics_p_other").show();
@@ -1704,7 +1752,42 @@
    $("#demographics_r_other2").hide();
    $("#demographics_r_other3").hide();
    $("#demographics_r_other4").hide();
-
+   	   if ($("input[name='response[demographics_r]']:checked").val() == "American Indian or Alaska Native - print name of enrolled or principal tribe below" || $("input[name='response[demographics_r]']:checked").val() == "아메리칸 인디언 또는 알래스카 원주민") {
+           $("#demographics_r_other1").show();
+           $("#demographics_r_other2").hide();
+  		   $("#demographics_r_other3").hide();
+   		   $("#demographics_r_other4").hide();
+       } 
+       else {
+	   	   if ($("input[name='response[demographics_r]']:checked").val() == "Other Asian - ie. Hmong, Laotian, Thai, Pakistani, Cambodian etc. (please enter below)" || $("input[name='response[demographics_r]']:checked").val() == "기타 아시아계열 (예: 타이, 파키스탄 등)") {
+	           $("#demographics_r_other2").show();
+	           $("#demographics_r_other1").hide();
+	  		   $("#demographics_r_other3").hide();
+	   		   $("#demographics_r_other4").hide();
+	       } 
+	       else {
+		   	   if ($("input[name='response[demographics_r]']:checked").val() == "Other Pacific Islander - ie. Fijian, Tongan etc. (please enter below)" || $("input[name='response[demographics_r]']:checked").val() == "기타 남태평양 사람들 (예: 피지인 등)") {
+		           $("#demographics_r_other3").show();
+		           $("#demographics_r_other2").hide();
+		  		   $("#demographics_r_other1").hide();
+		   		   $("#demographics_r_other4").hide();
+		       } 
+		       else {
+			   	   if ($("input[name='response[demographics_r]']:checked").val() == "Some other race (please enter below)" || $("input[name='response[demographics_r]']:checked").val() == "기타(구체적으로 기입하세요:)") {
+			           $("#demographics_r_other4").show();
+			           $("#demographics_r_other2").hide();
+			  		   $("#demographics_r_other3").hide();
+			   		   $("#demographics_r_other1").hide();
+			       } 
+			       else {
+			           $("#demographics_r_other4").hide();
+			           $("#demographics_r_other2").hide();
+			  		   $("#demographics_r_other3").hide();
+			   		   $("#demographics_r_other1").hide();
+			       }
+		       }
+	       }
+       }
    $("input[name='response[demographics_r]']").bind('change', function() {
    	   if ($("input[name='response[demographics_r]']:checked").val() == "American Indian or Alaska Native - print name of enrolled or principal tribe below" || $("input[name='response[demographics_r]']:checked").val() == "아메리칸 인디언 또는 알래스카 원주민") {
            $("#demographics_r_other1").show();
@@ -1752,7 +1835,18 @@
    $("#demographics_p").hide();
    $("#demographics_r").hide();
    $("#demographics_s").hide();
-
+   	   if ($("input[name='response[birth_sex]']:checked").val() == "Erkek" || $("input[name='response[birth_sex]']:checked").val() == "Kadın") 
+   	   {
+           $("#demographics_p").hide();
+           $("#demographics_p_other").hide();
+           $("#demographics_r").hide();
+           $("#demographics_s").show();
+       } 
+       else {
+           $("#demographics_p").show();
+           $("#demographics_r").show();
+           $("#demographics_s").hide();
+       }
    $("input[name='response[birth_sex]']").bind('change', function() {
    	   if ($("input[name='response[birth_sex]']:checked").val() == "Erkek" || $("input[name='response[birth_sex]']:checked").val() == "Kadın") 
    	   {
