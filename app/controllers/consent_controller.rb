@@ -88,8 +88,7 @@ class ConsentController < LanguageController
     @facebook_response = FacebookResponse.find_or_create_by(facebook_user_id: facebook_user.id)
     fr =  params[:facebook_response]
     @facebook_response.eighteen_or_older = fr[:eighteen_or_older]
-    @facebook_response.gender = fr[:gender]
-    @facebook_response.orientation = fr[:orientation]
+    @facebook_response.nationality = fr[:nationality]
 
     logger.debug "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     logger.debug "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
