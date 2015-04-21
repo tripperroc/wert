@@ -31,54 +31,6 @@ a:active { color:blue; }
  $5</b> in Amazon.com credit. We will send you an email with
  instructions on how to use it.
 </p>
-<p><b>We still need your help!</b> We will <b>pay you up to
- $5</b> more for <b>each</b> of up to 3 Facebook friends you recruit
- to take the survey. They must be 18 years of age or older, male, and
- identify as
-<% if @facebook_response.orientation == "Gay" or @facebook_response.orientation == "Bisexual" %>
-<%= "gay or bisexual." %>
-<% else %>
-<%= "heterosexual or straight." %>
-<% end %>
-</p>
-
-
-<p>
-Please send by email (copy and paste) or <a href="#" id="fb-invite">Facebook
-    message</a> this text:
-
- 
-<div id="info_letter_content" class="instructions" style="width: 500px; margin-top: 1em;margin-left:auto;margin-right:auto;text-align:left; padding:15px; border:1px; border-style: dashed; background-color:#eee;color:#000;border-color:#333;font-family:'Times New Roman',Georgia,Serif;color:#000000;font-size:11pt">
-<p>
-  I thought you might be interested in this survey that will help to
- better understand the health concerns of adult 
-<% if @facebook_response.orientation == "Gay" or @facebook_response.orientation == "Bisexual" %>
-<%= "gay or bisexual" %>
-<% else %>
-<%= "heterosexual or straight" %>
-<% end %>
- men. Whoever completes the survey gets $5 in Amazon.com credit, and
- can also invite up to three other 
-<% if @facebook_response.orientation == "Gay" or @facebook_response.orientation == "Bisexual" %>
-<%= "gay or bisexual" %>
-<% else %>
-<%= "heterosexual or straight" %>
-<% end %>
- friends and get an additional $5 for each of the three friends who take the survey. To take the survey, please go to:
-</p>
-<p>
-<a href ="<%= @invitation_url %>"><span style="font-size: 10pt;font-weight:normal;"><%=@invitation_url %></span></a>
-</p>
-<p>
-Thank you!
-
-</div>
-
-
-<div id="questions" class="content">
-<div id="links" style="text-align:right;"> 
-<a id="torecruit" href="#">Back</a> 
-</div>
 
 <p>
 You can find additional information about the survey by going to: 
