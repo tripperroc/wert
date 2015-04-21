@@ -1,17 +1,10 @@
 development:
-  app_id: 10152573197002930
-  secret: "3b0533a84553f78e5c8cd156e89bfec1"
+  app_id: 10152573195482930
+  secret: "744de0699a091678cb8d9b825dca7fb4"
   canvas_page_name: gaymenshealthsurvey
-  callback_url: https://caribou.rit.edu:7027/
+  callback_url: https://cmhost.gccis.rit.edu/
   pretty_errors: true
   set_asset_host_to_callback_url: true
-  tunnel:
-    #public_host_username: cmh
-    public_host_username: pnm5379
-    public_host: caribou.rit.edu
-    public_port: 7027
-    local_port: 3000
-    server_alive_interval: 0
 
 production:
   app_id: 247060388791320

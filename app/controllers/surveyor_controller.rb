@@ -418,7 +418,8 @@ class SurveyorController < ApplicationController
       @demographics_sq = t(:demographics_sq)
 
    if @response.update(params[:response]) 
-     redirect_to :controller => "estimate", :action => "create", :id => params[:id]
+     #redirect_to :controller => "estimate", :action => "create", :id => params[:id]
+     redirect_to :controller => "recruit", action: "index"
    else
      answers
      render :create 
