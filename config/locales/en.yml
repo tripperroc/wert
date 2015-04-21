@@ -736,3 +736,26 @@ en:
   demographics_s17: "TRANSLATION MISSING"
   demographics_s18: "TRANSLATION MISSING"
   demographics_s19: "TRANSLATION MISSING"
+
+
+
+  info_letter1: "Please read the following information and indicate below rather or not you agree to participate."
+  info_letter2: "Do you agree to these terms and conditions?"
+
+  info_letter3: "INFORMATION SHEET"
+  info_letter4: "COPING, STRESS, AND HEALTH"
+  info_letter5: "Principal Investigator: "
+  info_letter6: "Vince Silenzio, MD, MPH (University of Rochester Medical Center, Rochester, NY, USA)"
+  info_letter7: "Co-Investigators: "
+  info_letter8: "Banu Cankaya, PhD (Koc University, Istanbul, Turkey), Sungeun You, Ph.D. (… University), Eric D. Caine, MD (University of Rochester Medical Center, Rochester, NY, USA), Christopher Homan, PhD (Rochester Institute of Technology)"
+  info_letter9: "This form describes a research study that is being conducted by Dr. Vincent Silenzio, from the University of Rochester’s Departments of Psychiatry, Public Health Sciences, and Family Medicine, in collaboration with Eric D Caine from University of Rochester’s Departments of Psychiatry, and Christopher Homan (of the Rochester Institute of Technology’s Computer Science Department), and Drs. Banu Cankaya (of Koc University’s Department of Psychology) and Sungeun You (….)."
+  info_letter10: "The purpose of this study is intended to show that online social networks such as Facebook can be used to assess health. At the end of the survey, you will have the chance to ask friends who you think would be eligible for this study and who would be willing to participate. Up to three of your friends will be able to participate."
+  info_letter11: "If you decide to take part in this study, you will be asked to complete a brief survey that will take about 20 minutes to complete. The survey will ask questions about yourself, in particular, strategies you utilize to cope with stress, your social network, and health. We estimate that approximately XXX people will take part in this study."
+  info_letter12: "Some of the survey questions may be upsetting or make you feel uncomfortable. You can skip any of the questions you do not want to answer. Because this study involves collecting personal, identifiable information about you, there is a potential for invasion of privacy or breach in confidentiality. To minimize this risk, we will not store any directly identifiable information about you with your survey responses. All of the information we collect will be stored in a secure manner and only study team members will have access to it. There are no other expected risks. There are also no expected benefits. The University of Rochester is receiving payment from the National Science Foundation for conducting this research study."
+  info_letter13: "You will receive $XX in online credit at XXXXX for completing the survey. You can also earn more XXXXXX credit when you refer friends who complete the survey. For each of up to a limit of three Facebook friends who completes the survey before the end of the study, you will receive an additional $XX in XXXXX credit, up to a total of $XX. When added to the $X credit you receive for finishing your own survey, you may receive an overall total of between $X and $XX in credit you can use as you please at the XXXXXX. There will be no cost to you to participate in this study."
+  info_letter14: "The University of Rochester makes every effort to keep the information collected from you private. In order to do so, we are using a secure online connection to minimize any risk to your privacy from unauthorized parties (e.g. computer hackers). While we are taking steps to prevent it from occurring, you should be aware that there is a small possibility that responses could be viewed by unauthorized parties because your responses are being communicated over the web and stored on a web server. Sometimes, however, researchers need to share information that may identify you with people that work for the University, regulators or the study sponsor. If this does happen we will take precautions to protect the information you have provided. Results of the research may be presented at meetings or in publications, but your name will not be used."
+  info_letter15: "Your participation in this study is completely voluntary. You are free not to participate or to withdraw at any time, for whatever reason. No matter what decision you make, there will be no penalty or loss of benefits to which you are otherwise entitled."
+  info_letter16: "More Information: For more information or questions about this research you may call Dr. Vince Silenzio at (585) 275-6069. Please contact the University of Rochester Research Subjects Review Board at 265 Crittenden Blvd., CU 420315, Rochester, NY 14642, Telephone (585) 276-0005 or (877) 449-4441 for the following reasons: You wish to talk to someone other than the research staff about your rights as a research subject; To voice concerns about the research;  To provide input concerning the research process; In the event the study staff could not be reached."
+
+  screening1: "Are you between the ages of 18 and 44?"
+  screening2: "Are you a citizen of USA and do currently reside in this country?"

@@ -20,50 +20,26 @@ survey.
 <p></p>
 <div style="margin-right:auto;width: 500px;padding:1em; height: 200px; border:1px; border-style: dashed; background-color:#eee;text-color:#000;border-color:#333;font-color:#000">
     <div id = "age" style="margin-left: 0em;">
-     <%= label_tag 'eighteen_or_older', 'Are you 18 years of age or
-     older?' %>
+     <%= label_tag 'eighteen_or_older', @screening1 %>
      <br />
-      <%= f.radio_button :eighteen_or_older, true, :onclick => "$('#age').hide();$('#gender').show(500);" %> Yes
+      <%= f.radio_button :eighteen_or_older, true, :onclick => "$('#age').hide();$('#country').show(500);" %> <%= @yn1 %>
       <br />
-      <%= f.radio_button :eighteen_or_older, false, :onclick => "$('#age').hide(); $('#ineligible').show(500);" %> No
+      <%= f.radio_button :eighteen_or_older, false, :onclick => "$('#age').hide(); $('#ineligible').show(500);" %> <%= @yn2 %>
       <span style="margin-left: 2em;"></span>
 
      </div>
   <div id = "ineligible" style="display: none;margin-left: 0em; ">
       Sorry. You are ineligible to take this survey.
 </div>
-    <div id="gender" style="display: none; margin-left: 0em;">
-        <%= label_tag 'gender', 'What is your current gender identity?' %>
-        <br />
-        <%= f.radio_button :gender, "Male", :onclick => "$('#gender').hide();$('#sexuality').show(500);" %>
-       <%= label_tag 'gender_male', 'Male' %>
-        <br />
-        <%= f.radio_button :gender, "Female", :onclick => "$('#gender').hide();$('#ineligible').show(500);"%>
-        <%= label_tag 'gender_female', 'Female' %>
-        <br />
-        <%= f.radio_button :gender, "Male-to-Female", :onclick => "$('#gender').hide();$('#ineligible').show(500);"%>
-        <%= label_tag 'gender_mtf', ' Transgender, male-to-female' %>
-        <br />
-        <%= f.radio_button :gender, "Female-to-Male", :onclick => "$('#gender').hide();$('#sexuality').show(500);"%>
-        <%= label_tag 'gender_ftm', ' Transgender, female-to-male' %>
-        <br />
-        <%= f.radio_button :gender, "Other", :onclick => "$('#gender').hide();$('#ineligible').show(500);"%>
-        <%= label_tag 'gender_other', 'Other' %>
-</div>
-    <div id="sexuality" style="display: none; margin-left: 0em;">
-        Which of the categories best describes you?
-        <br />
-       <%= f.radio_button :orientation, "Heterosexual", :onclick => "$('#sexuality').hide();$('#facebook').show(500);" %>
-       <%= label_tag 'heterosexual', 'Heterosexual (straight)' %>
-        <br />
-        <%= f.radio_button :orientation, "Gay", :onclick =>"$('#sexuality').hide();$('#facebook').show(500);"%>
-        <%= label_tag 'gay', 'Gay' %>
-        <br />
-        <%= f.radio_button :orientation, "Bisexual", :onclick => "$('#sexuality').hide();$('#facebook').show(500);"%>
-        <%= label_tag 'bisexual', 'Bisexual' %>
-        <br />
-       <%= f.radio_button :orientation, "Not-sure", :onclick => "$('#sexuality').hide();$('#ineligible').show(500);" %>
-        <%= label_tag 'Other', "Not sure" %>
+
+    <div id="country" style="display: none; margin-left: 0em;">
+     <%= label_tag 'nationality', @screening2 %>
+     <br />
+      <%= f.radio_button :nationality, true, :onclick => "$('#country').hide();$('#facebook').show(500);" %> <%= @yn1 %>
+      <br />
+      <%= f.radio_button :nationality, false, :onclick => "$('#country').hide(); $('#ineligible').show(500);" %> <%= @yn2 %>
+      <span style="margin-left: 2em;"></span>
+
       </p>
     </div>
         <div id = "facebook" style="display: none; margin-left: 0em;">

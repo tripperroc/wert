@@ -4,8 +4,7 @@ class CreateRedssocsSurveyConsents < ActiveRecord::Migration
       t.boolean :eighteen_or_older
       t.boolean :read_and_understand
       t.boolean :dont_meet_all_criteria
-      t.string :orientation
-      t.string :gender
+      t.string :nationality
       t.boolean :facebook
 
       t.timestamps

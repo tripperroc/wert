@@ -9,8 +9,7 @@ class CreateFacebookResponses < ActiveRecord::Migration
       t.string :recruitee_coupon
       t.string :recruiter_coupon
       t.boolean :eighteen_or_older
-      t.string :orientation
-      t.string :gender
+      t.string :nationality
 
       t.integer :facebook_male_friends
 

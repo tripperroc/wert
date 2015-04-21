@@ -19,13 +19,35 @@ class ConsentController < LanguageController
    end
  
   def info_letter
-    @hello_controller = t(:hello_yml)
+    # @hello_controller = t(:hello_yml)
+    @info_letter1 = t(:info_letter1)
+    @info_letter2 = t(:info_letter2)
+    @info_letter3 = t(:info_letter3)
+    @info_letter4 = t(:info_letter4)
+    @info_letter5 = t(:info_letter5)
+    @info_letter6 = t(:info_letter6)
+    @info_letter7 = t(:info_letter7)
+    @info_letter8 = t(:info_letter8)
+    @info_letter9 = t(:info_letter9)
+    @info_letter10 = t(:info_letter10)
+    @info_letter11 = t(:info_letter11)
+    @info_letter12 = t(:info_letter12)
+    @info_letter13 = t(:info_letter13)
+    @info_letter14 = t(:info_letter14)
+    @info_letter15 = t(:info_letter15)
+    @info_letter16 = t(:info_letter16)
+    @yn1 = t(:yn1)
+    @yn2 = t(:yn2)
   end
 
 
   def screening
     @facebook_response = FacebookResponse.new
     @recruitee_coupon = session[:recruitee_coupon]
+    @screening1 = t(:screening1)
+    @screening2 = t(:screening2)
+    @yn1 = t(:yn1)
+    @yn2 = t(:yn2)
   end
 
   def not_eligible
@@ -128,7 +150,7 @@ class ConsentController < LanguageController
   #handle_asynchronously :get_friends
 
   def user_params
-    params.require(:redssocs_survey_consent).permit(:eighteen_or_older, :gender, :orientation)
+    params.require(:redssocs_survey_consent).permit(:eighteen_or_older, :nationality)
   end
 
 end
