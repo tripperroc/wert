@@ -159,7 +159,6 @@ ActiveRecord::Schema.define(version: 20131228025916) do
     t.string   "burden_item4"
     t.string   "burden_item5"
     t.string   "burden_item6"
-    t.string   "burden_item7"
     t.string   "belong_item1"
     t.string   "belong_item2"
     t.string   "belong_item3"
