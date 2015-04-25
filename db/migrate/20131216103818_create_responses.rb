@@ -137,6 +137,7 @@ class CreateResponses < ActiveRecord::Migration
       t.string :rahe_item53
       t.string :rahe_item54
       t.string :rahe_item55
+      t.string :rahe_other
       t.string :cope_b
       t.string :cope_c_item1
       t.string :cope_c_item2

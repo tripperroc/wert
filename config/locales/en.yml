@@ -210,7 +210,7 @@ en:
   belong_item18: "I am not valued by or important to my friends"
 #12
   raheq: "Everyone comes across negative and positive life events, which might be stress inducing. We are asking you to think of LAST YEAR and indicate if you have experienced any of the listed events, within the LAST YEAR. If you have experienced an event, we will ask you how much you were affected by this event, on a scale from 'Not at all affected' to 'Very much affected'."
-  affected1: " I did not experience such an event"
+  affected1: "I did not experience such an event"
   affected2: "Not at all affected"
   affected3: "Not affected"
   affected4: "Neither affected nor not affected"
@@ -316,7 +316,7 @@ en:
   cope_c_item32: "While resolving this problem, I tried to meet everyone ‘s needs who is affected or a part of this problem."
   cope_c_item33: "In order to resolve this problem, no matter how difficult it is, I tried to meet everyone’s requests"
 #14
-  communal_checkq: "Please think of the same event that you faced within the last year, that has caused you the most distress and difficulty. Think of the people that you have consulted with when you were dealing with this problem, and what they have done. "
+  communal_checkq: "Please think of the same event that you faced within the last year, that has caused you the most distress and difficulty. If you did not experience any stressful event in the past year, please think of your previous experience in answering the following questions. Think of the people that you have consulted with when you were dealing with this problem, and what they have done."
 #14a
   father_a: "Have you spoken to your Father about this problem?"
   father_b: "Did he listen to you about your problem?"

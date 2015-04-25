@@ -332,6 +332,15 @@
 </tr>
 </table>
 </div>
+
+<ol type="a" id ="rahe_other">
+<li>
+<div class="question"><%= @rahe_item55 %></div>
+<div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:rahe_other]) %></div>
+<div class="answer"><%= f.text_field :rahe_other, style: "margin-left: 1em; width:250px" %></div>
+</li>
+</ol>
+
 </li>
 
 </br>
@@ -374,7 +383,7 @@
 <div class="question"> <%= @father_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:father_a]) %></div>
 <div class="answer">
-<%= render( :partial => 'ynnaradiobuttons', :object => @yn, :locals=> {:f => f, :name => :father_a, :dependency => "father"}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :father_a, :dependency => "father"}) %>
 </div>
 
 <ol type="i" id ="father" <% if @response.father_a != "Yes"%>style="display: none;"<% end %>>
@@ -435,7 +444,7 @@
 <div class="question"> <%= @mother_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:mother_a]) %></div>
 <div class="answer">
-<%= render( :partial => 'ynnaradiobuttons', :object => @yn, :locals=> {:f => f, :name => :mother_a, :dependency => "mother"}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :mother_a, :dependency => "mother"}) %>
 </div>
 
 <ol type="i" id ="mother" <% if @response.mother_a != "Yes"%>style="display: none;"<% end %>>
@@ -497,7 +506,7 @@
 <div class="question"> <%= @children_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:children_a]) %></div>
 <div class="answer">
-<%= render( :partial => 'ynnaradiobuttons', :object => @yn, :locals=> {:f => f, :name => :children_a, :dependency => "children"}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :children_a, :dependency => "children"}) %>
 </div>
 
 <ol type="i" id ="children" <% if @response.children_a != "Yes"%>style="display: none;"<% end %>>
@@ -558,7 +567,7 @@
 <div class="question"> <%= @sibling_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:sibling_a]) %></div>
 <div class="answer">
-<%= render( :partial => 'ynnaradiobuttons', :object => @yn, :locals=> {:f => f, :name => :sibling_a, :dependency => "sibling"}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :sibling_a, :dependency => "sibling"}) %>
 </div>
 
 <ol type="i" id ="sibling" <% if @response.sibling_a != "Yes"%>style="display: none;"<% end %>>
@@ -620,7 +629,7 @@
 <div class="question"> <%= @exfamily_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:exfamily_a]) %></div>
 <div class="answer">
-<%= render( :partial => 'ynnaradiobuttons', :object => @yn, :locals=> {:f => f, :name => :exfamily_a, :dependency => "exfamily"}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :exfamily_a, :dependency => "exfamily"}) %>
 </div>
 
 <ol type="i" id ="exfamily" <% if @response.exfamily_a != "Yes"%>style="display: none;"<% end %>>
@@ -680,7 +689,7 @@
 <div class="question"> <%= @spouse_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:spouse_a]) %></div>
 <div class="answer">
-<%= render( :partial => 'ynnaradiobuttons', :object => @yn, :locals=> {:f => f, :name => :spouse_a, :dependency => "spouse"}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :spouse_a, :dependency => "spouse"}) %>
 </div>
 
 <ol type="i" id ="spouse" <% if @response.spouse_a != "Yes"%>style="display: none;"<% end %>>
@@ -741,7 +750,7 @@
 <div class="question"> <%= @friends_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:friends_a]) %></div>
 <div class="answer">
-<%= render( :partial => 'ynnaradiobuttons', :object => @yn, :locals=> {:f => f, :name => :friends_a, :dependency => "friends"}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :friends_a, :dependency => "friends"}) %>
 </div>
 
 <ol type="i" id ="friends" <% if @response.friends_a != "Yes"%>style="display: none;"<% end %>>
@@ -803,7 +812,7 @@
 <div class="question"> <%= @net_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:net_a]) %></div>
 <div class="answer">
-<%= render( :partial => 'ynnaradiobuttons', :object => @yn, :locals=> {:f => f, :name => :net_a, :dependency => "net"}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :net_a, :dependency => "net"}) %>
 </div>
 
 <ol type="i" id ="net" <% if @response.net_a != "Yes"%>style="display: none;"<% end %>>
@@ -863,7 +872,7 @@
 <div class="question"> <%= @org_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:org_a]) %></div>
 <div class="answer">
-<%= render( :partial => 'ynnaradiobuttons', :object => @yn, :locals=> {:f => f, :name => :org_a, :dependency => "org"}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :org_a, :dependency => "org"}) %>
 </div>
 
 <ol type="i" id ="org" <% if @response.org_a != "Yes"%>style="display: none;"<% end %>>
@@ -923,7 +932,7 @@
 <div class="question"> <%= @mesp_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:mesp_a]) %></div>
 <div class="answer">
-<%= render( :partial => 'ynnaradiobuttons', :object => @yn, :locals=> {:f => f, :name => :mesp_a, :dependency => "mesp"}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :mesp_a, :dependency => "mesp"}) %>
 </div>
 
 <ol type="i" id ="mesp" <% if @response.mesp_a != "Yes"%>style="display: none;"<% end %>>
@@ -983,7 +992,7 @@
 <div class="question"> <%= @relp_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:relp_a]) %></div>
 <div class="answer">
-<%= render( :partial => 'ynnaradiobuttons', :object => @yn, :locals=> {:f => f, :name => :relp_a, :dependency => "relp"}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :relp_a, :dependency => "relp"}) %>
 </div>
 
 <ol type="i" id ="relp" <% if @response.relp_a != "Yes"%>style="display: none;"<% end %>>
@@ -1043,7 +1052,7 @@
 <div class="question"> <%= @com_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:com_a]) %></div>
 <div class="answer">
-<%= render( :partial => 'ynnaradiobuttons', :object => @yn, :locals=> {:f => f, :name => :com_a, :dependency => "com"}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :com_a, :dependency => "com"}) %>
 </div>
 
 <ol type="i" id ="com" <% if @response.com_a != "Yes"%>style="display: none;"<% end %>>
@@ -1106,7 +1115,7 @@
 <div class="question"> <%= @other_a %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:other_a]) %></div>
 <div class="answer">
-<%= render( :partial => 'ynnaradiobuttons', :object => @yn, :locals=> {:f => f, :name => :other_a, :dependency => "other"}) %>
+<%= render( :partial => 'ynradiobuttons', :object => @yn, :locals=> {:f => f, :name => :other_a, :dependency => "other"}) %>
 </div>
 
 <ol type="i" id ="other" <% if @response.other_a != "Yes"%>style="display: none;"<% end %>>
@@ -1789,6 +1798,29 @@
        } 
        else {
            $("#demographics_p_other").hide();
+       }
+   });
+ </script>
+
+ <script>
+   $("#rahe_other").hide();
+
+   	   if ($("input[name='response[rahe_item55]']:checked").val() == "<%=@affected2%>" || $("input[name='response[rahe_item55]']:checked").val() == "<%=@affected3%>" || $("input[name='response[rahe_item55]']:checked").val() == "<%=@affected4%>" || $("input[name='response[rahe_item55]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item55]']:checked").val() == "<%=@affected6%>") {
+           $("#rahe_other").show();
+       } 
+   	   else if ($("input[name='response[rahe_item55]']:checked").val() == null) {
+           $("#ahe_other").hide();
+       } 
+       else {
+           $("#ahe_other").hide();
+       }
+
+   $("input[name='response[rahe_item55]']").bind('change', function() {
+   	   if ($("input[name='response[rahe_item55]']:checked").val() == "<%=@affected2%>" || $("input[name='response[rahe_item55]']:checked").val() == "<%=@affected3%>" || $("input[name='response[rahe_item55]']:checked").val() == "<%=@affected4%>" || $("input[name='response[rahe_item55]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item55]']:checked").val() == "<%=@affected6%>") {
+           $("#rahe_other").show();
+       } 
+       else {
+           $("#rahe_other").hide();
        }
    });
  </script>

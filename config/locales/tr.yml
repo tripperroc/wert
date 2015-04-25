@@ -31,7 +31,7 @@ tr:
 
   hello_yml: "Turkish"
 #Error
-  error_top: "TRANSLATION MISSING"
+  error_top: "Aşağıda cevaplamadığınız veya eksik bıraktığınız sorular mevcuttur. Lütfen bu sorulara tekrar bakarak cevap veriniz.  Emekleriniz için teşekkürler!"
 #Instructions
   instructions: "Cevaplayacağınız sorular 20 dakikaya yakın sürecektir. Lütfen en dürüst ve sizi en iyi yansıtacak şekilde cevap veriniz."
 #1
@@ -108,7 +108,7 @@ tr:
 #4l
   close_friends_touch: "Bu arkadaşlarınızdan kaçıyla telefon, mesaj ve benzeri yollarla en az 2 haftada bir görüşüyorsunuz?"
 #4m
-  religious: "İnancınızdan ötürü ibadet için düzenli olarak görüştüğünüz kişiler var mı?"
+  religious: "İnancınızdan ötürü ibadet için kendinizi ait hissettiğiniz bir ibadet yeri, grup veya kişiler var mı?"
 
 #4n
   religious_members: "Bu kişiler arasından kaçıyla en az ayda bir telefon, mesaj ve benzeri yollarla görüşüyorsunuz? (Grupça buluşmalarınız dahil)"
