@@ -199,8 +199,8 @@ class SurveyorController < ApplicationController
       @trauma_c = t(:trauma_c)
       @religious_dominations = t(:religious_dominations)
       @religious_aq = t(:religious_aq)
-      @religious_b = t(:religious_b)
-      @religious_c = t(:religious_c)
+      @religious_bq = t(:religious_bq)
+      @religious_cq = t(:religious_cq)
       @how_religiousq = t(:how_religiousq)
       @demographics_a = t(:demographics_a)
       @demographics_b = t(:demographics_b)
@@ -395,8 +395,8 @@ class SurveyorController < ApplicationController
       @trauma_c = t(:trauma_c)
       @religious_dominations = t(:religious_dominations)
       @religious_aq = t(:religious_aq)
-      @religious_b = t(:religious_b)
-      @religious_c = t(:religious_c)
+      @religious_bq = t(:religious_bq)
+      @religious_cq = t(:religious_cq)
       @how_religiousq = t(:how_religiousq)
       @demographics_a = t(:demographics_a)
       @demographics_b = t(:demographics_b)
@@ -857,6 +857,36 @@ class SurveyorController < ApplicationController
               @done3, 
               @done4, 
               @done5]
+
+    @religious_b1 = t(:religious_b1)
+    @religious_b2 = t(:religious_b2) 
+    @religious_b3 = t(:religious_b3) 
+    @religious_b4 = t(:religious_b4) 
+    @religious_b5 = t(:religious_b5) 
+    @religious_b6 = t(:religious_b6) 
+    @religious_b7 = t(:religious_b7)   
+    @religious_b = [@religious_b1,
+                    @religious_b2,
+                    @religious_b3,
+                    @religious_b4,
+                    @religious_b5,
+                    @religious_b6,
+                    @religious_b7]  
+
+    @religious_c1 = t(:religious_c1)
+    @religious_c2 = t(:religious_c2) 
+    @religious_c3 = t(:religious_c3) 
+    @religious_c4 = t(:religious_c4) 
+    @religious_c5 = t(:religious_c5) 
+    @religious_c6 = t(:religious_c6) 
+    @religious_c7 = t(:religious_c7)   
+    @religious_c = [@religious_c1,
+                    @religious_c2,
+                    @religious_c3,
+                    @religious_c4,
+                    @religious_c5,
+                    @religious_c6,
+                    @religious_c7]                       
 
     @cope_c_item1 = t(:cope_c_item1)
     @cope_c_item2 = t(:cope_c_item2)

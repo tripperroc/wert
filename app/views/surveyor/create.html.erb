@@ -1379,15 +1379,19 @@
 </li>
 
 <li>
-<div class="question"> <%= @religious_b %> </div>
+<div class="question"> <%= @religious_bq %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:religious_b]) %></div>
-<div class="answer"><%= f.text_field :religious_b, style: "margin-left: 1em; width:250px" %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @religious_b, :locals=> {:f => f, :name => :religious_b}) %>
+</div>
 </li>
 
 <li>
-<div class="question"> <%= @religious_c %> </div>
+<div class="question"> <%= @religious_cq %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:religious_c]) %></div>
-<div class="answer"><%= f.text_field :religious_c, style: "margin-left: 1em; width:250px" %></div>
+<div class="answer">
+<%= render( :partial => 'radiobuttons', :object => @religious_c, :locals=> {:f => f, :name => :religious_c}) %>
+</div>
 </li>
 
 </ol>
