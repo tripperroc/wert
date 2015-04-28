@@ -276,7 +276,7 @@ en:
 #13a
   cope_b: "So first, please indicate, within the last year, which event has caused you the most distress and difficulty?  Please choose the most distressing event from the events you have indicated in the previous questionnaire. YOU HAVE INDICATED THE FOLLOWING AS THE MOST STRESSFUL.  PLEASE CHOOSE ONE, WE WILL BE ASKING YOU QUESTIONS REGARDING HOW YOU COPED WITH THIS STRESS."
 #13b
-  cope_cq: "While answering these questions, please think of how you generally acted when you were faced with the most distressing problem you have selected in the previous question. When I was faced with this problem…"
+  cope_cq: "While answering these questions, please think of how you generally acted when you were faced with the most distressing problem you have selected in the previous question. If you did not experience any stressful event in the past year, please think of your previous experience in answering the following questions. When I was faced with this problem…"
   done1: " I have never done this"
   done2: "I have rarely done this"
   done3: "I have sometimes done this"
