@@ -354,6 +354,7 @@
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @rahe_cope, :locals=> {:f => f, :name => :cope_b}) %>
 </div>
+<div class="answer"><%= f.text_field :cope_b, style: "margin-left: 1em; width:500px" %></div>
 </li>
 
 <li>
@@ -1955,6 +1956,7 @@ $("#response_cope_b_death_of_spouse").parent().hide();
    	   if ($("input[name='response[rahe_item1]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item1]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_death_of_spouse").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_death_of_spouse").parent().hide();
@@ -1963,26 +1965,14 @@ $("#response_cope_b_death_of_spouse").parent().hide();
 	   	   if ($("input[name='response[rahe_item1]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item1]']:checked").val() == "<%=@affected6%>") 
 	   	   {
 	           $("#response_cope_b_death_of_spouse").parent().show();
-	       }
-// $("<%='#response_cope_b_'<<@rahe_item1%>").parent().hide();
-   // $("input[name='response[rahe_item1]']").bind('change', function() {
-   // 	   if ($("input[name='response[rahe_item1]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item1]']:checked").val() == "<%=@affected6%>") 
-   // 	   {
-   //         $(<%="#response_cope_b_" + @rahe_item1%>).parent().show();
-   //     } 
-   //     else {
-   //         $(<%="#response_cope_b_" + @rahe_item1%>).parent().hide();
-   //     }
-   // });
-	  //  	   if ($("input[name='response[rahe_item1]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item1]']:checked").val() == "<%=@affected6%>") 
-	  //  	   {
-	  //          $(<%="#response_cope_b_" + @rahe_item1%>).parent().show();
-	  //      }	       
+	           $("#response_cope_b").parent().hide();
+	       }     
 $("#response_cope_b_divorce").parent().hide();
    $("input[name='response[rahe_item2]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item2]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item2]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_divorce").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_divorce").parent().hide();
@@ -1991,12 +1981,14 @@ $("#response_cope_b_divorce").parent().hide();
       	   if ($("input[name='response[rahe_item2]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item2]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_divorce").parent().show();
+           $("#response_cope_b").parent().hide();
        }
 $("#response_cope_b_marital_separation_from_mate").parent().hide();
    $("input[name='response[rahe_item3]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item3]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item3]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_marital_separation_from_mate").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_marital_separation_from_mate").parent().hide();
@@ -2005,12 +1997,14 @@ $("#response_cope_b_marital_separation_from_mate").parent().hide();
       	   if ($("input[name='response[rahe_item3]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item3]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_marital_separation_from_mate").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_detention_in_jail_or_other_institution").parent().hide();
    $("input[name='response[rahe_item4]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item4]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item4]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_detention_in_jail_or_other_institution").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_detention_in_jail_or_other_institution").parent().hide();
@@ -2019,12 +2013,14 @@ $("#response_cope_b_detention_in_jail_or_other_institution").parent().hide();
       	   if ($("input[name='response[rahe_item4]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item4]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_detention_in_jail_or_other_institution").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_death_of_a_close_family_member").parent().hide();
    $("input[name='response[rahe_item5]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item5]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item5]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_death_of_a_close_family_member").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_death_of_a_close_family_member").parent().hide();
@@ -2033,12 +2029,14 @@ $("#response_cope_b_death_of_a_close_family_member").parent().hide();
       	   if ($("input[name='response[rahe_item5]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item5]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_death_of_a_close_family_member").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_major_personal_injury_or_illness").parent().hide();
    $("input[name='response[rahe_item6]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item6]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item6]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_personal_injury_or_illness").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_major_personal_injury_or_illness").parent().hide();
@@ -2047,12 +2045,14 @@ $("#response_cope_b_major_personal_injury_or_illness").parent().hide();
       	   if ($("input[name='response[rahe_item6]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item6]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_personal_injury_or_illness").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_marriage").parent().hide();
    $("input[name='response[rahe_item7]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item7]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item7]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_marriage").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_marriage").parent().hide();
@@ -2061,12 +2061,14 @@ $("#response_cope_b_marriage").parent().hide();
       	   if ($("input[name='response[rahe_item7]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item7]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_marriage").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_being_fired_at_work").parent().hide();
    $("input[name='response[rahe_item8]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item8]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item8]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_being_fired_at_work").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_being_fired_at_work").parent().hide();
@@ -2075,12 +2077,14 @@ $("#response_cope_b_being_fired_at_work").parent().hide();
       	   if ($("input[name='response[rahe_item8]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item8]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_being_fired_at_work").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_marital_reconciliation_with_mate").parent().hide();
    $("input[name='response[rahe_item9]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item9]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item9]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_marital_reconciliation_with_mate").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_marital_reconciliation_with_mate").parent().hide();
@@ -2089,12 +2093,14 @@ $("#response_cope_b_marital_reconciliation_with_mate").parent().hide();
       	   if ($("input[name='response[rahe_item9]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item9]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_marital_reconciliation_with_mate").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_retirement_from_work").parent().hide();
    $("input[name='response[rahe_item10]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item10]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item10]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_retirement_from_work").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_retirement_from_work").parent().hide();
@@ -2103,12 +2109,14 @@ $("#response_cope_b_retirement_from_work").parent().hide();
       	   if ($("input[name='response[rahe_item10]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item10]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_retirement_from_work").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_major_change_in_the_health_or_behavior_of_a_family_member").parent().hide();
    $("input[name='response[rahe_item11]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item11]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item11]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_change_in_the_health_or_behavior_of_a_family_member").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_major_change_in_the_health_or_behavior_of_a_family_member").parent().hide();
@@ -2117,12 +2125,14 @@ $("#response_cope_b_major_change_in_the_health_or_behavior_of_a_family_member").
       	   if ($("input[name='response[rahe_item11]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item11]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_change_in_the_health_or_behavior_of_a_family_member").parent().show();
+           $("#response_cope_b").parent().hide();
        }
 $("#response_cope_b_pregnancy").parent().hide();
    $("input[name='response[rahe_item12]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item12]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item12]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_pregnancy").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_pregnancy").parent().hide();
@@ -2131,12 +2141,14 @@ $("#response_cope_b_pregnancy").parent().hide();
       	   if ($("input[name='response[rahe_item12]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item12]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_pregnancy").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_sexual_difficulties").parent().hide();
    $("input[name='response[rahe_item13]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item13]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item13]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_sexual_difficulties").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_sexual_difficulties").parent().hide();
@@ -2145,12 +2157,14 @@ $("#response_cope_b_sexual_difficulties").parent().hide();
       	   if ($("input[name='response[rahe_item13]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item13]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_sexual_difficulties").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_gaining_a_new_family_member_ie_birth_adoption_older_adult_moving_in_etc").parent().hide();
    $("input[name='response[rahe_item14]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item14]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item14]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_gaining_a_new_family_member_ie_birth_adoption_older_adult_moving_in_etc").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_gaining_a_new_family_member_ie_birth_adoption_older_adult_moving_in_etc").parent().hide();
@@ -2159,12 +2173,14 @@ $("#response_cope_b_gaining_a_new_family_member_ie_birth_adoption_older_adult_mo
       	   if ($("input[name='response[rahe_item14]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item14]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_gaining_a_new_family_member_ie_birth_adoption_older_adult_moving_in_etc").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_major_business_readjustment").parent().hide();
    $("input[name='response[rahe_item15]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item15]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item15]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_business_readjustment").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_major_business_readjustment").parent().hide();
@@ -2173,12 +2189,14 @@ $("#response_cope_b_major_business_readjustment").parent().hide();
       	   if ($("input[name='response[rahe_item15]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item15]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_business_readjustment").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_major_change_in_financial_state_ie_a_lot_worse_or_better_off_than_usual").parent().hide();
    $("input[name='response[rahe_item16]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item16]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item16]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_change_in_financial_state_ie_a_lot_worse_or_better_off_than_usual").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_major_change_in_financial_state_ie_a_lot_worse_or_better_off_than_usual").parent().hide();
@@ -2187,12 +2205,14 @@ $("#response_cope_b_major_change_in_financial_state_ie_a_lot_worse_or_better_off
       	   if ($("input[name='response[rahe_item16]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item16]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_change_in_financial_state_ie_a_lot_worse_or_better_off_than_usual").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_death_of_a_close_friend").parent().hide();
    $("input[name='response[rahe_item17]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item17]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item17]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_death_of_a_close_friend").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_death_of_a_close_friend").parent().hide();
@@ -2201,12 +2221,14 @@ $("#response_cope_b_death_of_a_close_friend").parent().hide();
       	   if ($("input[name='response[rahe_item17]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item17]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_death_of_a_close_friend").parent().show();
+           $("#response_cope_b").parent().hide();
        }
 $("#response_cope_b_changing_to_a_different_line_of_work").parent().hide();
    $("input[name='response[rahe_item18]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item18]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item18]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_changing_to_a_different_line_of_work").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_changing_to_a_different_line_of_work").parent().hide();
@@ -2215,12 +2237,14 @@ $("#response_cope_b_changing_to_a_different_line_of_work").parent().hide();
       	   if ($("input[name='response[rahe_item18]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item18]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_changing_to_a_different_line_of_work").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_major_change_in_the_number_of_arguments_wspouse_ie_either_a_lot_more_or_a_lot_less_than_usual_regarding_child_rearing_personal_habits_etc").parent().hide();
    $("input[name='response[rahe_item19]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item19]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item19]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_change_in_the_number_of_arguments_wspouse_ie_either_a_lot_more_or_a_lot_less_than_usual_regarding_child_rearing_personal_habits_etc").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_major_change_in_the_number_of_arguments_wspouse_ie_either_a_lot_more_or_a_lot_less_than_usual_regarding_child_rearing_personal_habits_etc").parent().hide();
@@ -2229,12 +2253,14 @@ $("#response_cope_b_major_change_in_the_number_of_arguments_wspouse_ie_either_a_
       	   if ($("input[name='response[rahe_item19]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item19]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_change_in_the_number_of_arguments_wspouse_ie_either_a_lot_more_or_a_lot_less_than_usual_regarding_child_rearing_personal_habits_etc").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_taking_on_a_mortgage_for_home_business_etc").parent().hide();
    $("input[name='response[rahe_item20]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item20]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item20]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_taking_on_a_mortgage_for_home_business_etc").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_taking_on_a_mortgage_for_home_business_etc").parent().hide();
@@ -2243,12 +2269,14 @@ $("#response_cope_b_taking_on_a_mortgage_for_home_business_etc").parent().hide()
       	   if ($("input[name='response[rahe_item20]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item20]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_taking_on_a_mortgage_for_home_business_etc").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_foreclosure_on_a_mortgage_or_loan").parent().hide();
    $("input[name='response[rahe_item21]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item21]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item21]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_foreclosure_on_a_mortgage_or_loan").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_foreclosure_on_a_mortgage_or_loan").parent().hide();
@@ -2257,12 +2285,14 @@ $("#response_cope_b_foreclosure_on_a_mortgage_or_loan").parent().hide();
       	   if ($("input[name='response[rahe_item21]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item21]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_foreclosure_on_a_mortgage_or_loan").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_major_change_in_responsibilities_at_work_ie_promotion_demotion_etc").parent().hide();
    $("input[name='response[rahe_item22]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item22]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item22]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_change_in_responsibilities_at_work_ie_promotion_demotion_etc").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_major_change_in_responsibilities_at_work_ie_promotion_demotion_etc").parent().hide();
@@ -2271,12 +2301,14 @@ $("#response_cope_b_major_change_in_responsibilities_at_work_ie_promotion_demoti
       	   if ($("input[name='response[rahe_item22]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item22]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_change_in_responsibilities_at_work_ie_promotion_demotion_etc").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_son_or_daughter_leaving_home_marriage_attending_college_joined_mil").parent().hide();
    $("input[name='response[rahe_item23]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item23]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item23]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_son_or_daughter_leaving_home_marriage_attending_college_joined_mil").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_son_or_daughter_leaving_home_marriage_attending_college_joined_mil").parent().hide();
@@ -2285,12 +2317,14 @@ $("#response_cope_b_son_or_daughter_leaving_home_marriage_attending_college_join
       	   if ($("input[name='response[rahe_item23]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item23]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_son_or_daughter_leaving_home_marriage_attending_college_joined_mil").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_in-law_troubles").parent().hide();
    $("input[name='response[rahe_item24]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item24]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item24]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_in-law_troubles").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_in-law_troubles").parent().hide();
@@ -2299,12 +2333,14 @@ $("#response_cope_b_in-law_troubles").parent().hide();
       	   if ($("input[name='response[rahe_item24]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item24]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_in-law_troubles").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_outstanding_personal_achievement").parent().hide();
    $("input[name='response[rahe_item25]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item25]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item25]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_outstanding_personal_achievement").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_outstanding_personal_achievement").parent().hide();
@@ -2313,12 +2349,14 @@ $("#response_cope_b_outstanding_personal_achievement").parent().hide();
       	   if ($("input[name='response[rahe_item25]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item25]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_outstanding_personal_achievement").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_spouse_beginning_or_ceasing_work_outside_the_home").parent().hide();
    $("input[name='response[rahe_item26]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item26]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item26]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_spouse_beginning_or_ceasing_work_outside_the_home").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_spouse_beginning_or_ceasing_work_outside_the_home").parent().hide();
@@ -2327,12 +2365,14 @@ $("#response_cope_b_spouse_beginning_or_ceasing_work_outside_the_home").parent()
       	   if ($("input[name='response[rahe_item26]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item26]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_spouse_beginning_or_ceasing_work_outside_the_home").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_beginning_or_ceasing_formal_schooling").parent().hide();
    $("input[name='response[rahe_item27]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item27]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item27]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_beginning_or_ceasing_formal_schooling").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_beginning_or_ceasing_formal_schooling").parent().hide();
@@ -2341,12 +2381,14 @@ $("#response_cope_b_beginning_or_ceasing_formal_schooling").parent().hide();
       	   if ($("input[name='response[rahe_item27]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item27]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_beginning_or_ceasing_formal_schooling").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_major_change_in_living_condition_new_homeremodeling_deterioration_of_neighborhood_or_home_etc").parent().hide();
    $("input[name='response[rahe_item28]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item28]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item28]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_change_in_living_condition_new_homeremodeling_deterioration_of_neighborhood_or_home_etc").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_major_change_in_living_condition_new_homeremodeling_deterioration_of_neighborhood_or_home_etc").parent().hide();
@@ -2355,12 +2397,14 @@ $("#response_cope_b_major_change_in_living_condition_new_homeremodeling_deterior
       	   if ($("input[name='response[rahe_item28]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item28]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_change_in_living_condition_new_homeremodeling_deterioration_of_neighborhood_or_home_etc").parent().show();
+           $("#response_cope_b").parent().hide();
        }
 $("#response_cope_b_revision_of_personal_habits_dress_manners_associations_quitting_smoking").parent().hide();
    $("input[name='response[rahe_item29]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item29]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item29]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_revision_of_personal_habits_dress_manners_associations_quitting_smoking").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_revision_of_personal_habits_dress_manners_associations_quitting_smoking").parent().hide();
@@ -2369,12 +2413,14 @@ $("#response_cope_b_revision_of_personal_habits_dress_manners_associations_quitt
       	   if ($("input[name='response[rahe_item29]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item29]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_revision_of_personal_habits_dress_manners_associations_quitting_smoking").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_troubles_with_the_boss").parent().hide();
    $("input[name='response[rahe_item30]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item30]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item30]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_troubles_with_the_boss").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_troubles_with_the_boss").parent().hide();
@@ -2383,12 +2429,14 @@ $("#response_cope_b_troubles_with_the_boss").parent().hide();
       	   if ($("input[name='response[rahe_item30]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item30]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_troubles_with_the_boss").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_major_changes_in_working_hours_or_conditions").parent().hide();
    $("input[name='response[rahe_item31]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item31]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item31]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_changes_in_working_hours_or_conditions").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_major_changes_in_working_hours_or_conditions").parent().hide();
@@ -2397,12 +2445,14 @@ $("#response_cope_b_major_changes_in_working_hours_or_conditions").parent().hide
       	   if ($("input[name='response[rahe_item31]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item31]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_changes_in_working_hours_or_conditions").parent().show();
+           $("#response_cope_b").parent().hide();
        }
 $("#response_cope_b_changes_in_residence").parent().hide();
    $("input[name='response[rahe_item32]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item32]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item32]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_changes_in_residence").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_changes_in_residence").parent().hide();
@@ -2411,12 +2461,14 @@ $("#response_cope_b_changes_in_residence").parent().hide();
       	   if ($("input[name='response[rahe_item32]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item32]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_changes_in_residence").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_changing_to_a_new_school").parent().hide();
    $("input[name='response[rahe_item33]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item33]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item33]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_changing_to_a_new_school").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_changing_to_a_new_school").parent().hide();
@@ -2425,12 +2477,14 @@ $("#response_cope_b_changing_to_a_new_school").parent().hide();
       	   if ($("input[name='response[rahe_item33]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item33]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_changing_to_a_new_school").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_major_change_in_usual_type_andor_amount_of_recreation").parent().hide();
    $("input[name='response[rahe_item34]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item34]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item34]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_change_in_usual_type_andor_amount_of_recreation").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_major_change_in_usual_type_andor_amount_of_recreation").parent().hide();
@@ -2439,12 +2493,14 @@ $("#response_cope_b_major_change_in_usual_type_andor_amount_of_recreation").pare
       	   if ($("input[name='response[rahe_item34]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item34]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_change_in_usual_type_andor_amount_of_recreation").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_major_change_in_church_activity_ie_a_lot_more_or_less_than_usual").parent().hide();
    $("input[name='response[rahe_item35]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item35]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item35]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_change_in_church_activity_ie_a_lot_more_or_less_than_usual").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_major_change_in_church_activity_ie_a_lot_more_or_less_than_usual").parent().hide();
@@ -2453,12 +2509,14 @@ $("#response_cope_b_major_change_in_church_activity_ie_a_lot_more_or_less_than_u
       	   if ($("input[name='response[rahe_item35]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item35]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_change_in_church_activity_ie_a_lot_more_or_less_than_usual").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_major_change_in_social_activities_clubs_movies_visiting_etc").parent().hide();
    $("input[name='response[rahe_item36]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item36]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item36]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_change_in_social_activities_clubs_movies_visiting_etc").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_major_change_in_social_activities_clubs_movies_visiting_etc").parent().hide();
@@ -2467,12 +2525,14 @@ $("#response_cope_b_major_change_in_social_activities_clubs_movies_visiting_etc"
       	   if ($("input[name='response[rahe_item36]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item36]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_change_in_social_activities_clubs_movies_visiting_etc").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_taking_on_a_loan_car_tv_freezer_etc").parent().hide();
    $("input[name='response[rahe_item37]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item37]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item37]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_taking_on_a_loan_car_tv_freezer_etc").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_taking_on_a_loan_car_tv_freezer_etc").parent().hide();
@@ -2481,12 +2541,14 @@ $("#response_cope_b_taking_on_a_loan_car_tv_freezer_etc").parent().hide();
       	   if ($("input[name='response[rahe_item37]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item37]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_taking_on_a_loan_car_tv_freezer_etc").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_major_change_in_sleeping_habits_a_lot_more_or_a_lot_less_than_usual").parent().hide();
    $("input[name='response[rahe_item38]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item38]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item38]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_change_in_sleeping_habits_a_lot_more_or_a_lot_less_than_usual").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_major_change_in_sleeping_habits_a_lot_more_or_a_lot_less_than_usual").parent().hide();
@@ -2495,12 +2557,14 @@ $("#response_cope_b_major_change_in_sleeping_habits_a_lot_more_or_a_lot_less_tha
       	   if ($("input[name='response[rahe_item38]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item38]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_change_in_sleeping_habits_a_lot_more_or_a_lot_less_than_usual").parent().show();
+           $("#response_cope_b").parent().hide();
        }
 $("#response_cope_b_major_change_in_number_of_family_get_togethers").parent().hide();
    $("input[name='response[rahe_item39]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item39]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item39]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_change_in_number_of_family_get_togethers").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_major_change_in_number_of_family_get_togethers").parent().hide();
@@ -2509,12 +2573,14 @@ $("#response_cope_b_major_change_in_number_of_family_get_togethers").parent().hi
       	   if ($("input[name='response[rahe_item39]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item39]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_change_in_number_of_family_get_togethers").parent().show();
+           $("#response_cope_b").parent().hide();
        }
 $("#response_cope_b_major_change_in_eating_habits_a_lot_more_or_less_food_intake_or_very_different_meal_hours_or_surroundings").parent().hide();
    $("input[name='response[rahe_item40]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item40]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item40]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_change_in_eating_habits_a_lot_more_or_less_food_intake_or_very_different_meal_hours_or_surroundings").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_major_change_in_eating_habits_a_lot_more_or_less_food_intake_or_very_different_meal_hours_or_surroundings").parent().hide();
@@ -2523,12 +2589,14 @@ $("#response_cope_b_major_change_in_eating_habits_a_lot_more_or_less_food_intake
       	   if ($("input[name='response[rahe_item40]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item40]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_change_in_eating_habits_a_lot_more_or_less_food_intake_or_very_different_meal_hours_or_surroundings").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_vacation").parent().hide();
    $("input[name='response[rahe_item41]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item41]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item41]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_vacation").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_vacation").parent().hide();
@@ -2537,12 +2605,14 @@ $("#response_cope_b_vacation").parent().hide();
       	   if ($("input[name='response[rahe_item41]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item41]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_vacation").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_major_holidays").parent().hide();
    $("input[name='response[rahe_item42]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item42]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item42]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_holidays").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_major_holidays").parent().hide();
@@ -2551,12 +2621,14 @@ $("#response_cope_b_major_holidays").parent().hide();
       	   if ($("input[name='response[rahe_item42]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item42]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_major_holidays").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_minor_violations_of_the_law_traffic_tickets_jaywalking_disturbing_the_peace_etc").parent().hide();
    $("input[name='response[rahe_item43]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item43]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item43]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_minor_violations_of_the_law_traffic_tickets_jaywalking_disturbing_the_peace_etc").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_minor_violations_of_the_law_traffic_tickets_jaywalking_disturbing_the_peace_etc").parent().hide();
@@ -2565,12 +2637,14 @@ $("#response_cope_b_minor_violations_of_the_law_traffic_tickets_jaywalking_distu
       	   if ($("input[name='response[rahe_item43]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item43]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_minor_violations_of_the_law_traffic_tickets_jaywalking_disturbing_the_peace_etc").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_problems_in_school").parent().hide();
    $("input[name='response[rahe_item44]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item44]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item44]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_problems_in_school").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_problems_in_school").parent().hide();
@@ -2579,12 +2653,14 @@ $("#response_cope_b_problems_in_school").parent().hide();
       	   if ($("input[name='response[rahe_item44]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item44]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_problems_in_school").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_not_being_able_to_find_work").parent().hide();
    $("input[name='response[rahe_item45]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item45]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item45]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_not_being_able_to_find_work").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_not_being_able_to_find_work").parent().hide();
@@ -2593,12 +2669,14 @@ $("#response_cope_b_not_being_able_to_find_work").parent().hide();
       	   if ($("input[name='response[rahe_item45]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item45]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_not_being_able_to_find_work").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_problems_in_the_relationship").parent().hide();
    $("input[name='response[rahe_item46]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item46]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item46]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_problems_in_the_relationship").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_problems_in_the_relationship").parent().hide();
@@ -2607,12 +2685,14 @@ $("#response_cope_b_problems_in_the_relationship").parent().hide();
       	   if ($("input[name='response[rahe_item46]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item46]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_problems_in_the_relationship").parent().show();
+           $("#response_cope_b").parent().hide();
        }
 $("#response_cope_b_psychological_distress").parent().hide();
    $("input[name='response[rahe_item47]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item47]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item47]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_psychological_distress").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_psychological_distress").parent().hide();
@@ -2621,12 +2701,14 @@ $("#response_cope_b_psychological_distress").parent().hide();
       	   if ($("input[name='response[rahe_item47]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item47]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_psychological_distress").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_country-wide_political_and_social_problems").parent().hide();
    $("input[name='response[rahe_item48]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item48]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item48]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_country-wide_political_and_social_problems").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_country-wide_political_and_social_problems").parent().hide();
@@ -2635,12 +2717,14 @@ $("#response_cope_b_country-wide_political_and_social_problems").parent().hide()
       	   if ($("input[name='response[rahe_item48]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item48]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_country-wide_political_and_social_problems").parent().show();
+           $("#response_cope_b").parent().hide();
        }
 $("#response_cope_b_a_serious_accident_fire_natural_catastrophe_such_as_earthquakes_etc").parent().hide();
    $("input[name='response[rahe_item49]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item49]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item49]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_a_serious_accident_fire_natural_catastrophe_such_as_earthquakes_etc").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_a_serious_accident_fire_natural_catastrophe_such_as_earthquakes_etc").parent().hide();
@@ -2649,12 +2733,14 @@ $("#response_cope_b_a_serious_accident_fire_natural_catastrophe_such_as_earthqua
       	   if ($("input[name='response[rahe_item49]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item49]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_a_serious_accident_fire_natural_catastrophe_such_as_earthquakes_etc").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_suicidal_attempt_of_a_close_person").parent().hide();
    $("input[name='response[rahe_item50]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item50]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item50]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_suicidal_attempt_of_a_close_person").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_suicidal_attempt_of_a_close_person").parent().hide();
@@ -2663,12 +2749,14 @@ $("#response_cope_b_suicidal_attempt_of_a_close_person").parent().hide();
       	   if ($("input[name='response[rahe_item50]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item50]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_suicidal_attempt_of_a_close_person").parent().show();
+           $("#response_cope_b").parent().hide();
        }
 $("#response_cope_b_suicide_of_a_close_person").parent().hide();
    $("input[name='response[rahe_item51]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item51]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item51]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_suicide_of_a_close_person").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_suicide_of_a_close_person").parent().hide();
@@ -2677,12 +2765,14 @@ $("#response_cope_b_suicide_of_a_close_person").parent().hide();
       	   if ($("input[name='response[rahe_item51]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item51]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_suicide_of_a_close_person").parent().show();
+           $("#response_cope_b").parent().hide();
        }
 $("#response_cope_b_being_exposed_to_physical_abuse").parent().hide();
    $("input[name='response[rahe_item52]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item52]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item52]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_being_exposed_to_physical_abuse").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_being_exposed_to_physical_abuse").parent().hide();
@@ -2691,12 +2781,14 @@ $("#response_cope_b_being_exposed_to_physical_abuse").parent().hide();
       	   if ($("input[name='response[rahe_item52]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item52]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_being_exposed_to_physical_abuse").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_being_exposed_to_psychological_abuse__such_as_insult").parent().hide();
    $("input[name='response[rahe_item53]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item53]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item53]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_being_exposed_to_psychological_abuse__such_as_insult").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_being_exposed_to_psychological_abuse__such_as_insult").parent().hide();
@@ -2705,12 +2797,14 @@ $("#response_cope_b_being_exposed_to_psychological_abuse__such_as_insult").paren
       	   if ($("input[name='response[rahe_item53]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item53]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_being_exposed_to_psychological_abuse__such_as_insult").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_being_exposed_to_sexual_abuse_such_as_molestation_abuse_rape").parent().hide();
    $("input[name='response[rahe_item54]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item54]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item54]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_being_exposed_to_sexual_abuse_such_as_molestation_abuse_rape").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_being_exposed_to_sexual_abuse_such_as_molestation_abuse_rape").parent().hide();
@@ -2719,12 +2813,14 @@ $("#response_cope_b_being_exposed_to_sexual_abuse_such_as_molestation_abuse_rape
       	   if ($("input[name='response[rahe_item54]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item54]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_being_exposed_to_sexual_abuse_such_as_molestation_abuse_rape").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 $("#response_cope_b_other").parent().hide();
    $("input[name='response[rahe_item55]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item55]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item55]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_other").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
        else {
            $("#response_cope_b_other").parent().hide();
@@ -2733,6 +2829,7 @@ $("#response_cope_b_other").parent().hide();
       	   if ($("input[name='response[rahe_item55]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item55]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_other").parent().show();
+           $("#response_cope_b").parent().hide();
        } 
 
 // $("#coping").hide()

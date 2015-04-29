@@ -221,6 +221,8 @@ class SurveyorController < ApplicationController
       @demographics_r = t(:demographics_r)
       @demographics_sq = t(:demographics_sq)
 
+      #@resp_short = "response_cope_b_"
+
       answers
 
   #    redirect_to :controller => "estimate", :action => "index"
@@ -229,6 +231,8 @@ class SurveyorController < ApplicationController
   def update
    params.require(:response).permit! 
    @response = Response.find(params[:id])
+
+      #@resp_short = "response_cope_b_"
 
       @error_top = t(:error_top)
       @instructions = t(:instructions)

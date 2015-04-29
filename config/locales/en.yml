@@ -773,3 +773,14 @@ en:
 
   screening1: "Are you between the ages of 18 and 44?"
   screening2: "Are you a citizen of USA and do currently reside in this country?"
+
+  thank_you_letter: "Thank you! You have earned $ X in Amazon.credit.  We will send you an e-mail with instructions on how to use it. If you would like additional information or if you have questions about the survey, please contact Vincent Silenzio at 585.275.60.69. If you have questions, concerns, or complaints about your rights as a research subject you may contact anonymously if you wish, a Human Subjects Protection Specialist at the University of Rochester, Research Subjects Review Board, Box 315, 601 Elmwood Avenue, Rochester NY14642-8315, Telephone 011(585) 449-4441. You may also call these numbers if you cannot reach the research staff or wish to talk to someone else."
+  survey_take: "Click here to take this survey"
+  screening_preface: "Please answer the following screening questions to determine whether you are eligible. "
+  screening_fail: "Sorry. You are ineligible to take this survey."
+  download_letter: "Download a Copy of this Letter"
+  facebook1: "Do you have a Facebook account? If so, you are eligible to take the survey! Click on the button to get started."
+  facebook2: "I agree to participate"
+  facebook3: "We use a Facebook app in order to make sure we do not get duplicate surveys from you, and to make sure you receive your payment information at the end of the survey. You can delete the Facebook app (called XXXXXXXXX) at any time after the survey is done and you've received your payment."
+  submission: "Update Response"
+  emailing: "Please enter an email address where we may send you Amazon.com credit."

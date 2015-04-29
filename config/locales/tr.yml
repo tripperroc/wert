@@ -773,3 +773,14 @@ tr:
 
   screening1: "18 – 44 yaş aralığında mısınız?"
   screening2: "Türk vatandaşı mısınız ve Türkiye’de mi yaşıyorsunuz?"
+
+  thank_you_letter: "Teşekkürler! xx YTL değerinde Amazon.com kredisi kazandınız. Bu krediyi nasıl kullanabileceğinize dair elektronik postayı size göderiyor olacağız. Ayrıca bilgi ister veya sorularınız olursa, Dr. Banu Çankaya'ya 212-338-0000 (dahili 1894) numaradan ulaşabilirsiniz. Bir katılımcı olarak haklarınız ile ilgili bir sorunuz, endişeniz, veya şikayetiniz var ise araştırma yürütücüsünün bulunduğu Koç Üniversitesi'nin Etik Kurulu'na ulaşabilirsiniz; İnsan Araştırmaları Etik Kurulu, KoçÜniversitesi Rumeli Feneri Yolu Sarıyer İstanbul, 212-338-0000."
+  survey_take: "Burayı tıklayarak envantere başlayabilirsiniz."
+  screening_preface: "Bu çalışmaya katılma koşullarını sağladığınızı belirlemek amacıyla oluşturulmuş aşağıdaki sorulara lütfen cevap veriniz."
+  screening_fail: "Özür dileriz. Bu çalışmaya katılma koşullarını sağlamamaktasınız."
+  download_letter: "Bu Mektubun bir Kopyasını İndiriniz."
+  facebook1: "Facebook hesabınız var mıdır? Var ise, bu çalışmaya katılabilirsiniz. Bu düğmeyi tıklayarak soruları cevaplamaya başlayabilirsiniz."
+  facebook2: "Katılmayı kabul ediyorum."
+  facebook3: "Bu araştırmada aynı kişilerin birden fazla defa bu çalışmaya katılımını engellemek ve katılım sonucu kazandığınız krediye ait bilgiyi size ulaştırabilmemiz için Facebook üzerinden yüklenen bir aplikasyon kullanmaktayız. Bu applikasyonu araştırmaya katıldıktan ve ödemeyi aldıktan sonra silebilirsiniz."
+  submission: "Cevabı yenileyiniz."
+  emailing: "Lütfen bize Amazon.com kredisi yollayabileceğimiz bir elektronik adres veriniz."
