@@ -54,6 +54,7 @@ class ConsentController < LanguageController
     @facebook1 = t(:facebook1)
     @facebook2 = t(:facebook2)
     @facebook3 = t(:facebook3)
+    @emailing = t(:emailing)
   end
 
   def not_eligible
@@ -75,6 +76,18 @@ class ConsentController < LanguageController
   def update
     authenticate_with_fb_graph
     check
+    @facebook_response = FacebookResponse.new
+    @recruitee_coupon = session[:recruitee_coupon]
+    @screening1 = t(:screening1)
+    @screening2 = t(:screening2)
+    @yn1 = t(:yn1)
+    @yn2 = t(:yn2)
+    @screening_preface = t(:screening_preface)
+    @screening_fail = t(:screening_fail)
+    @facebook1 = t(:facebook1)
+    @facebook2 = t(:facebook2)
+    @facebook3 = t(:facebook3)
+    @emailing = t(:emailing)
   end
 
   def foosey

@@ -34,20 +34,6 @@ a:active { color:blue; }
 </p>
 
 
-
- <%= form_for @ending, :url => { :action => 'update', :id  =>@ending.id} do |f| %>
-
-<li>
-<div class="question"><%= @emailing %></div>
-<div class="errors"><%= render(:partial => 'errors', :object => @ending.errors[:email_address]) %></div>
-<div class = "answer"><%= f.text_field :email_address, style: "margin-left: 1em;" %>
-</div>
-</li>
-
- <%= submit_tag "Click Here to Finish" %>
-
-<% end %>
-
 </div>
 <div id="remove" class="content">
 In order to conduct this survey, we needed to add an app to your

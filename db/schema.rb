@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20131228025916) do
     t.string   "recruiter_coupon"
     t.boolean  "eighteen_or_older"
     t.string   "nationality"
+    t.string   "email_address"
     t.integer  "facebook_male_friends"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -91,6 +92,7 @@ ActiveRecord::Schema.define(version: 20131228025916) do
     t.boolean  "dont_meet_all_criteria"
     t.string   "nationality"
     t.boolean  "facebook"
+    t.string   "email_address"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

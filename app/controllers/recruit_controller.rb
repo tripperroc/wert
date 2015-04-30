@@ -55,9 +55,3 @@ end
        end
      end
    end
-
-def update
-   params.require(:ending).permit! 
-   @response = Ending.find(params[:id])
-
-end

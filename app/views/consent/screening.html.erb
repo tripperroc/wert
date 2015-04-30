@@ -17,7 +17,7 @@ survey.
 
 <%= form_for @facebook_response, :url => { :controller => 'consent', :action => 'update' }, :html=>{:id=>"eligible"}  do |f| %>
 <p></p>
-<div style="margin-right:auto;width: 500px;padding:1em; height: 250px; border:1px; border-style: dashed; background-color:#eee;text-color:#000;border-color:#333;font-color:#000">
+<div style="margin-right:auto;width: 500px;padding:1em; height: 320px; border:1px; border-style: dashed; background-color:#eee;text-color:#000;border-color:#333;font-color:#000">
     <div id = "age" style="margin-left: 0em;">
      <%= label_tag 'eighteen_or_older', @screening1 %>
      <br />
@@ -41,8 +41,15 @@ survey.
 
       </p>
     </div>
+
+
         <div id = "facebook" style="display: none; margin-left: 0em;">
     <%= @facebook1 %>
+
+<div class="question"><%= @emailing %></div>
+<div class = "answer"><%= f.text_field :email_address, style: "margin-left: 1em;" %>
+</div>
+
   <p>
        <fb:login-button 
         show-faces="false"

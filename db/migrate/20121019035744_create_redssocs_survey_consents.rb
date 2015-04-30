@@ -6,6 +6,7 @@ class CreateRedssocsSurveyConsents < ActiveRecord::Migration
       t.boolean :dont_meet_all_criteria
       t.string :nationality
       t.boolean :facebook
+      t.string :email_address
 
       t.timestamps
     end
