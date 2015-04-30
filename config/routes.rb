@@ -72,7 +72,7 @@ GMHS::Application.routes.draw do
   #get 'consent/info_letter(/:locale)', :to => 'consent#info_letter'
 
   #match 'consent', :to => 'consent#index', :as => 'consent_index', via: [:get, :post]
-  
+
   #get 'welcome(/:locale)', :to => 'welcome#index'
   #post 'welcome(/:locale)', :to => 'welcome#index'
 

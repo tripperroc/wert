@@ -11,7 +11,7 @@
 
   <div style="width: 100%;">
     <span style="float: right;">
-      <%= link_to "Download a Copy of this Letter", root_url + "info_letter.pdf" %>
+      <%= link_to @download_letter, request.fullpath + "/info_letter.pdf" %>
     </span>
 </div>
  <p>
@@ -26,8 +26,6 @@
 
 </p>
  
-
-  
 
 
 

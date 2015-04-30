@@ -221,6 +221,8 @@ class SurveyorController < ApplicationController
       @demographics_r = t(:demographics_r)
       @demographics_sq = t(:demographics_sq)
 
+      @submission = t(:submission)
+
       #@resp_short = "response_cope_b_"
 
       answers
@@ -420,6 +422,8 @@ class SurveyorController < ApplicationController
       @demographics_p = t(:demographics_p)
       @demographics_r = t(:demographics_r)
       @demographics_sq = t(:demographics_sq)
+
+      @submission = t(:submission)
 
    if @response.update(params[:response]) 
      #redirect_to :controller => "estimate", :action => "create", :id => params[:id]

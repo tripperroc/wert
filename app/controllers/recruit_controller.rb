@@ -15,7 +15,8 @@ class RecruitController < ApplicationController
     #@recruitee_coupon =  session[:recruitee_coupon]
     #@gay_facebook_friends = estimate.facebook_gay_friends
     #ResponderMailer.thank_you_email({:invitation_url => @invitation_url, :email_address => @email}).deliver
-
+    @thank_you_letter = t(:thank_you_letter)
+    @emailing = t(:emailing)
   end
 
   def loginvitation 
@@ -41,5 +42,22 @@ class RecruitController < ApplicationController
     render :json => { "mmail" => params[:email] }
  
   end
+
+end
+
+   def any_errors
+     if @response.errors.any?
+        logger.debug "222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222"
+        logger.debug "222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222"
+
+       @response.errors.full_messages.each do |msg| 
+          logger.debug msg 
+       end
+     end
+   end
+
+def update
+   params.require(:ending).permit! 
+   @response = Ending.find(params[:id])
 
 end

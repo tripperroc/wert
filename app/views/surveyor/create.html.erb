@@ -1591,7 +1591,7 @@
 </li>
 
 </ol>
-<%= f.submit %>
+<%= f.submit @submission %>
 <% end %>
 
 </div>
@@ -1600,15 +1600,18 @@
  <script>
    $("#num_children").hide();
 
-       // if ($("#response_num_children").val() == "0") {
-       //     $("#num_children").hide();
-       // }
-       // else if ($("#response_num_children").val() == null) {
-       //     $("#num_children").hide();
-       // }       
-       // else {
-       //     $("#num_children").show();
-       // }
+       if ($("#response_num_children").val() == "0") {
+           $("#num_children").hide();
+       }
+       else if ($("#response_num_children").val() == null) {
+           $("#num_children").hide();
+       } 
+       else if ($("#response_num_children").val() == 0) {
+           $("#num_children").hide();
+       }               
+       else {
+           $("#num_children").show();
+       }
 
    $("#response_num_children").bind('change', function() {
        if ($("#response_num_children").val() == "0") {
@@ -1623,15 +1626,18 @@
  <script>
    $("#other_relatives").hide();
 
-       // if ($("#response_other_relatives").val() == "0") {
-       //     $("#other_relatives").hide();
-       // }
-       // else if ($("#response_other_relatives").val() == null) {
-       //     $("#other_relatives").hide();
-       // }       
-       // else {
-       //     $("#other_relatives").show();
-       // }
+       if ($("#response_other_relatives").val() == "0") {
+           $("#other_relatives").hide();
+       }
+       else if ($("#response_other_relatives").val() == null) {
+           $("#other_relatives").hide();
+       }   
+       else if ($("#response_other_relatives").val() == 0) {
+           $("#other_relatives").hide();
+       }            
+       else {
+           $("#other_relatives").show();
+       }
  
    $("#response_other_relatives").bind('change', function() {
        if ($("#response_other_relatives").val() == "0") {
@@ -1646,15 +1652,18 @@
  <script>
    $("#close_friends").hide();
 
-       // if ($("#response_close_friends").val() == "0") {
-       //     $("#close_friends").hide();
-       // }
-       // else if ($("#response_close_friends").val() == null) {
-       //     $("#close_friends").hide();
-       // }       
-       // else {
-       //     $("#close_friends").show();
-       // }
+       if ($("#response_close_friends").val() == "0") {
+           $("#close_friends").hide();
+       }
+       else if ($("#response_close_friends").val() == null) {
+           $("#close_friends").hide();
+       } 
+       else if ($("#response_close_friends").val() == 0) {
+           $("#close_friends").hide();
+       }                 
+       else {
+           $("#close_friends").show();
+       }
  
    $("#response_close_friends").bind('change', function() {
        if ($("#response_close_friends").val() == "0") {

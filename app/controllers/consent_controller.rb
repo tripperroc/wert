@@ -16,6 +16,7 @@ class ConsentController < LanguageController
 
    def index
     @hello_controller = t(:hello_yml)
+    @survey_take = t(:survey_take)
    end
  
   def info_letter
@@ -38,8 +39,8 @@ class ConsentController < LanguageController
     @info_letter16 = t(:info_letter16)
     @yn1 = t(:yn1)
     @yn2 = t(:yn2)
+    @download_letter = t(:download_letter)
   end
-
 
   def screening
     @facebook_response = FacebookResponse.new
@@ -48,6 +49,11 @@ class ConsentController < LanguageController
     @screening2 = t(:screening2)
     @yn1 = t(:yn1)
     @yn2 = t(:yn2)
+    @screening_preface = t(:screening_preface)
+    @screening_fail = t(:screening_fail)
+    @facebook1 = t(:facebook1)
+    @facebook2 = t(:facebook2)
+    @facebook3 = t(:facebook3)
   end
 
   def not_eligible
