@@ -1961,34 +1961,50 @@
 
 <script>
 $("#response_cope_b_death_of_spouse").parent().hide();
+$("#response_cope_b_einsevgilinin_lm").parent().hide();
+$("#response_cope_b_death_of_spouse").parent().hide();
    $("input[name='response[rahe_item1]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item1]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item1]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_death_of_spouse").parent().show();
+           $("#response_cope_b_einsevgilinin_lm").parent().show();
+           $("#response_cope_b_death_of_spouse").parent().show();
            $("#response_cope_b").parent().hide();
        } 
        else {
+           $("#response_cope_b_death_of_spouse").parent().hide();
+           $("#response_cope_b_einsevgilinin_lm").parent().hide();
            $("#response_cope_b_death_of_spouse").parent().hide();
        }
    });
 	   	   if ($("input[name='response[rahe_item1]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item1]']:checked").val() == "<%=@affected6%>") 
 	   	   {
 	           $("#response_cope_b_death_of_spouse").parent().show();
+	           $("#response_cope_b_einsevgilinin_lm").parent().show();
+	           $("#response_cope_b_death_of_spouse").parent().show();
 	           $("#response_cope_b").parent().hide();
 	       }     
+$("#response_cope_b_divorce").parent().hide();
+$("#response_cope_b_boanmak").parent().hide();
 $("#response_cope_b_divorce").parent().hide();
    $("input[name='response[rahe_item2]']").bind('change', function() {
    	   if ($("input[name='response[rahe_item2]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item2]']:checked").val() == "<%=@affected6%>") 
    	   {
            $("#response_cope_b_divorce").parent().show();
+           $("#response_cope_b_boanmak").parent().show();
+           $("#response_cope_b_divorce").parent().show();
            $("#response_cope_b").parent().hide();
        } 
        else {
+           $("#response_cope_b_divorce").parent().hide();
+           $("#response_cope_b_boanmak").parent().hide();
            $("#response_cope_b_divorce").parent().hide();
        }
    });
       	   if ($("input[name='response[rahe_item2]']:checked").val() == "<%=@affected5%>" || $("input[name='response[rahe_item2]']:checked").val() == "<%=@affected6%>") 
    	   {
+           $("#response_cope_b_divorce").parent().show();
+           $("#response_cope_b_boanmak").parent().show();
            $("#response_cope_b_divorce").parent().show();
            $("#response_cope_b").parent().hide();
        }
