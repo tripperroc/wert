@@ -1,7 +1,25 @@
 <!DOCTYPE html>
+
+<!--   <%= 
+      if params[:locale] == "en"
+        @header = "Coping with Stress and Health"
+        @footer = "Supported by University of Rochester Medical Center, Rochester, NY, USA. This study is conducted by researchers from the University of Rochester Medical Center, NY, USA, Chungbug National University, Cheongju, Chungbuk, Korea, and Koç University, Istanbul, Turkey."
+      elsif params[:locale] == "tr"
+        @header = "Stres ile Başetme Yöntemleri ve Sağlığımız"
+        @footer = " Bu araştırma Rochester Üniversitesi Medikal Merkezi (Rochester, NY, Amerika) tarafından desteklenmektedir.  Araştırma yürütücüleri Rochester Üniversitesi Medikal Merkezi (Rochester, NY, Amerika), Chungbug National Universitesi (Cheongju, Chungbuk, Kore) ve Koç Universitesi (Istanbul, Turkiye) öğretim üyelerinden oluşmaktadır."
+      elsif params[:locale] == "ko"
+        @header = "TRANSLATION MISSING"
+        @footer = "TRANSLATION MISSING"
+      else 
+        @header = "Something's Wrong"
+        @footer = "Something's Wrong" 
+      end 
+      %> -->
+
 <html>
 <head>
-  <title>Men's Health Survey</title>
+
+  <title><%= @header %></title>
   <meta name="viewport" content="width=660px" initial-scale="1.0">
   <%= stylesheet_link_tag    "application", :media => "all" %>
 
@@ -75,14 +93,9 @@
 <div style="width: 600px; margin-left: auto; margin-right:auto;">
 <%= yield %>
 
-<div style="margin-top: 3em; font-size:10pt;"><hr/> Supported in part by
-  National Science Foundation Award SES-1111016. This survey is
-  conducted by researchers at The University of Rochester, Rochester
-  Institute of Technology, and Drexel University. For more details,
-  see <a style="font-size:10pt;" target="_blank"
-  href="http://www.lgbtdata.com/respondent-driven-sampling-in-social-computing-systems-project-redssocs.html">the
-  project homepage</a>.
+<div style="margin-top: 3em; font-size:10pt;"><hr/> <%= @footer %>
   </div>
   </div>
 </body>
 </html>
+

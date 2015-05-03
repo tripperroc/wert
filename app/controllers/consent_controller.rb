@@ -17,6 +17,9 @@ class ConsentController < LanguageController
    def index
     @hello_controller = t(:hello_yml)
     @survey_take = t(:survey_take)
+    @front_page1 = t(:front_page1)
+    @front_page2 = t(:front_page2)
+    @front_page3 = t(:front_page3)
    end
  
   def info_letter

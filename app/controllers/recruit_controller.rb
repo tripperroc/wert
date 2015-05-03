@@ -16,7 +16,6 @@ class RecruitController < ApplicationController
     #@gay_facebook_friends = estimate.facebook_gay_friends
     #ResponderMailer.thank_you_email({:invitation_url => @invitation_url, :email_address => @email}).deliver
     @thank_you_letter = t(:thank_you_letter)
-    @emailing = t(:emailing)
   end
 
   def loginvitation 

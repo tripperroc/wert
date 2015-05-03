@@ -872,14 +872,16 @@ class SurveyorController < ApplicationController
     @religious_b4 = t(:religious_b4) 
     @religious_b5 = t(:religious_b5) 
     @religious_b6 = t(:religious_b6) 
-    @religious_b7 = t(:religious_b7)   
+    @religious_b7 = t(:religious_b7) 
+    @religious_b8 = t(:religious_b8)   
     @religious_b = [@religious_b1,
                     @religious_b2,
                     @religious_b3,
                     @religious_b4,
                     @religious_b5,
                     @religious_b6,
-                    @religious_b7]  
+                    @religious_b7,
+                    @religious_b8]  
 
     @religious_c1 = t(:religious_c1)
     @religious_c2 = t(:religious_c2) 
@@ -887,14 +889,16 @@ class SurveyorController < ApplicationController
     @religious_c4 = t(:religious_c4) 
     @religious_c5 = t(:religious_c5) 
     @religious_c6 = t(:religious_c6) 
-    @religious_c7 = t(:religious_c7)   
+    @religious_c7 = t(:religious_c7)  
+    @religious_c8 = t(:religious_c8)  
     @religious_c = [@religious_c1,
                     @religious_c2,
                     @religious_c3,
                     @religious_c4,
                     @religious_c5,
                     @religious_c6,
-                    @religious_c7]                       
+                    @religious_c7,
+                    @religious_c8]                       
 
     @cope_c_item1 = t(:cope_c_item1)
     @cope_c_item2 = t(:cope_c_item2)

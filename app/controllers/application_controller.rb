@@ -21,6 +21,8 @@ class ApplicationController < ActionController::Base
 
   include Facebooker2::Rails::Controller
 
+  
+
 # def default_url_options(option = {})
 #   { locale: I18n.locale }.merge options
 # end  

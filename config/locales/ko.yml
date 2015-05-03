@@ -593,6 +593,7 @@ ko:
   religious_b5: "일주일에 한 번"
   religious_b6: "매주 여러번"
   religious_b7: "매일 한 번 이상"
+  religious_b8: "TRANSLATION MISSING"
 #26c
   religious_cq: "지난 달에 얼마나 자주 예배당(교회나 절 등) 밖에서 스스로 기도를 하거나 예배를 드렸습니까?"
   religious_c1: "전혀 또는 거의하지 않음"
@@ -602,6 +603,7 @@ ko:
   religious_c5: "매주 두 번 이상"
   religious_c6: "매일"
   religious_c7: "매일 한 번 이상"
+  religious_c8: "TRANLSATION MISSING"
 #27
   how_religiousq: "얼마나 자주 기도를 드리는지와 상관없이 당신은 당신이 얼마나 종교적이라고 생각하십니까? '전혀 종교적이지 않다'에서 '매우 종교적이다'이다 중에서 자신을 평정해 주십시오."
   how_religious1: "0 - 전혀 종교적이지 않다"
@@ -784,3 +786,9 @@ ko:
   facebook3: "TRANSLATION MISSING"
   submission: "설문을 제출합니다"
   emailing: "TRANSLATION MISSING"
+
+  header: "TRANSLATION MISSING"
+
+  front_page1: "TRANSLATION MISSING"
+  front_page2: "TRANSLATION MISSING"
+  front_page3: "TRANSLATION MISSING"
