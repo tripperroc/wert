@@ -4,15 +4,19 @@
       if params[:locale] == "en"
         @header = "Coping with Stress and Health"
         @footer = "Supported by University of Rochester Medical Center, Rochester, NY, USA. This study is conducted by researchers from the University of Rochester Medical Center, NY, USA, Chungbug National University, Cheongju, Chungbuk, Korea, and Koç University, Istanbul, Turkey."
+        @banner = "banner_en.png"
       elsif params[:locale] == "tr"
         @header = "Stres ile Başetme Yöntemleri ve Sağlığımız"
         @footer = " Bu araştırma Rochester Üniversitesi Medikal Merkezi (Rochester, NY, Amerika) tarafından desteklenmektedir.  Araştırma yürütücüleri Rochester Üniversitesi Medikal Merkezi (Rochester, NY, Amerika), Chungbug National Universitesi (Cheongju, Chungbuk, Kore) ve Koç Universitesi (Istanbul, Turkiye) öğretim üyelerinden oluşmaktadır."
+        @banner = "banner_tr.png"
       elsif params[:locale] == "ko"
         @header = "TRANSLATION MISSING"
         @footer = "TRANSLATION MISSING"
+        @banner = "banner7.png"
       else 
         @header = "Something's Wrong"
-        @footer = "Something's Wrong" 
+        @footer = "Something's Wrong"
+        @banner = "banner7.png" 
       end 
       %> -->
 
@@ -86,7 +90,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div style="background:#48649f none repeat scroll 0%;"><div style="width: 600px; margin-left: auto; margin-right:auto;"><%= image_tag("banner7.png", border: "0",:align=> "middle" ) %></div></div>
+<div style="background:#48649f none repeat scroll 0%;"><div style="width: 600px; margin-left: auto; margin-right:auto;"><%= image_tag(@banner, border: "0",:align=> "middle" ) %></div></div>
 
 <%= render "shared/load_facebook_sdk" %>
 
