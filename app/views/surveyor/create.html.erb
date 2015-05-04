@@ -354,7 +354,7 @@
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @rahe_cope, :locals=> {:f => f, :name => :cope_b}) %>
 </div>
-<div class="answer"><%= f.text_field :cope_b, style: "margin-left: 1em; width:500px" %></div>
+<div class="answer"><%= f.text_field :cope_b_other, style: "margin-left: 1em; width:500px" %></div>
 </li>
 
 <li>
@@ -1942,7 +1942,6 @@
            $("#demographics_r").show();
            $("#demographics_s").hide();
        }
-
    $("input[name='response[birth_sex]']").bind('change', function() {
    	   if ($("input[name='response[birth_sex]']:checked").val() == "Erkek" || $("input[name='response[birth_sex]']:checked").val() == "Kadın") 
    	   {
@@ -1957,6 +1956,7 @@
            $("#demographics_s").hide();
        }
    });
+
  </script>
 
 <script>
