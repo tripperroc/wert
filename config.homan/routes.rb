@@ -83,7 +83,7 @@ GMHS::Application.routes.draw do
   #   resources :info_letter, :index
   # end
 
-  #match 'consent/info_letter/(:/id(/:locale))/info_letter.pdf', :to => 'consent#info_letter_pdf', :as => 'consent_info_letter_pdf', via: [:get, :post]
+  match 'consent/info_letter/(:/id(/:locale))/info_letter.pdf', :to => 'consent#info_letter_pdf', :as => 'consent_info_letter_pdf', via: [:get, :post]
 
   #get 'consent(/:locale)', :to => 'consent#index'
   #post 'consent(/:locale)', :to => 'consent#index'

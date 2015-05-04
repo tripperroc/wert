@@ -352,7 +352,7 @@
 <div class="question"> <%= @cope_b %> </div>
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:cope_b]) %></div>
 <div class="answer">
-<%= render( :partial => 'radiobuttons', :object => @rahe_cope, :locals=> {:f => f, :name => :cope_b}) %>
+<%= render( :partial => 'symbolradiobuttons', :object => @rahe, :locals=> {:f => f, :name => :cope_b}) %>
 </div>
 <div class="answer"><%= f.text_field :cope_b_other, style: "margin-left: 1em; width:500px" %></div>
 </li>

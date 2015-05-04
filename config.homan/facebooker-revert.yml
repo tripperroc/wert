@@ -1,15 +1,14 @@
 development:
-  app_id: 10152573197002930
-  secret: "3b0533a84553f78e5c8cd156e89bfec1"
+  app_id: 179445217929
+  secret: "3f881df113dc48cd63b49de1fa1ca39a"
   canvas_page_name: gaymenshealthsurvey
-  callback_url: https://caribou.rit.edu:7027/
+  callback_url: https://caribou.rit.edu:7007/
   pretty_errors: true
   set_asset_host_to_callback_url: true
   tunnel:
     public_host_username: cmh
-    #public_host_username: pnm5379
     public_host: caribou.rit.edu
-    public_port: 7027
+    public_port: 7007
     local_port: 3000
     server_alive_interval: 0
 
@@ -17,11 +16,11 @@ production:
   app_id: 247060388791320
   secret: "bdc9ee8d3e02ed7e112c376fd8c76aea"
   canvas_page_name: gaymenshealthsurvey
-  callback_url: https://caribou.rit.edu:7027/
+  callback_url: https://caribou.rit.edu:7007/
   pretty_errors: true
   set_asset_host_to_callback_url: true
   tunnel:
-    public_host_username: pnm5379
+    public_host_username: cmh
     public_host: caribou.rit.edu
     public_port: 7007
     local_port: 3000

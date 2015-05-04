@@ -111,6 +111,7 @@ class ConsentController < LanguageController
     fr =  params[:facebook_response]
     @facebook_response.eighteen_or_older = fr[:eighteen_or_older]
     @facebook_response.nationality = fr[:nationality]
+    @facebook_response.email_address = fr[:email_address]
 
     logger.debug "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     logger.debug "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"

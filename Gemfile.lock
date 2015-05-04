@@ -402,6 +402,9 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    whiny_validation (0.1.1)
+      activerecord
+      activesupport
 
 PLATFORMS
   ruby
@@ -422,3 +425,4 @@ DEPENDENCIES
   sqlite3
   turbolinks
   uglifier (>= 1.3.0)
+  whiny_validation
