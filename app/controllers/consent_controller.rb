@@ -43,6 +43,7 @@ class ConsentController < LanguageController
     @yn1 = t(:yn1)
     @yn2 = t(:yn2)
     @download_letter = t(:download_letter)
+    @letter = t(:letter)
   end
 
   def screening
