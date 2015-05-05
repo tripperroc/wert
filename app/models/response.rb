@@ -132,7 +132,7 @@ class Response < ActiveRecord::Base
   validates :rahe_item53, presence: true, on: :update
   validates :rahe_item54, presence: true, on: :update
   validates :rahe_item55, presence: true, on: :update
-  validates :rahe_other, presence: true, if: "rahe_item55 = 'Not at all affected' || rahe_item55 = 'Not affected' || rahe_item55 = 'Neither affected nor not affected' || rahe_item55 = 'Affected' || rahe_item55 = 'Very much affected' || rahe_item55 = '전혀 영향받지 않음' || rahe_item55 = '영향받지 않음' || rahe_item55 = '보통' || rahe_item55 = '영향받음' || rahe_item55 = '매우 많이 영향을 받음' || rahe_item55 = 'Hiç etkilenmedim' || rahe_item55 = 'Etkilenmedim' || rahe_item55 = 'Ne etkilendim ne etkilenmedim' || rahe_item55 = 'Etkilendim' || rahe_item55 = 'Çok etkilendim'", on: :update
+  #validates :rahe_other, presence: true, if: "rahe_item55 = 'Not at all affected' || rahe_item55 = 'Not affected' || rahe_item55 = 'Neither affected nor not affected' || rahe_item55 = 'Affected' || rahe_item55 = 'Very much affected' || rahe_item55 = '전혀 영향받지 않음' || rahe_item55 = '영향받지 않음' || rahe_item55 = '보통' || rahe_item55 = '영향받음' || rahe_item55 = '매우 많이 영향을 받음' || rahe_item55 = 'Hiç etkilenmedim' || rahe_item55 = 'Etkilenmedim' || rahe_item55 = 'Ne etkilendim ne etkilenmedim' || rahe_item55 = 'Etkilendim' || rahe_item55 = 'Çok etkilendim'", on: :update
   validates :cope_b, presence: true, on: :update
   validates :cope_c_item1, presence: true, on: :update
   validates :cope_c_item2, presence: true, on: :update

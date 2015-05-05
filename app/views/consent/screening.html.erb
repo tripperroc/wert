@@ -34,7 +34,7 @@ survey.
     <div id="country" style="display: none; margin-left: 0em;">
      <%= label_tag 'nationality', @screening2 %>
      <br />
-      <%= f.radio_button :nationality, true, :onclick => "$('#country').hide();$('#facebook').show(500);" %> <%= @yn1 %>
+      <%= f.radio_button :nationality, params[:locale], :onclick => "$('#country').hide();$('#facebook').show(500);" %> <%= @yn1 %>
       <br />
       <%= f.radio_button :nationality, false, :onclick => "$('#country').hide(); $('#ineligible').show(500);" %> <%= @yn2 %>
       <span style="margin-left: 2em;"></span>
