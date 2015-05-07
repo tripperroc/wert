@@ -46,14 +46,17 @@ survey.
         <div id = "facebook" style="display: none; margin-left: 0em;">
     <%= @facebook1 %>
 
+
 <div class="question"><%= @emailing %></div>
 <div class = "answer"><%= f.text_field :email_address, style: "margin-left: 1em;" %>
 </div>
 
+<div id='not_email'> Not a valid email address </div>
+
   <p>
        <fb:login-button 
         show-faces="false"
-        scope="user_relationships,user_relationship_details,friends_relationships,friends_relationship_details"
+        scope="user_relationships,user_relationship_details"
         onlogin="$('#eligible').submit()">
         <%= @facebook2 %>
       </fb:login-button>
@@ -68,3 +71,9 @@ survey.
   <% end %>
   
 </div>
+
+
+<script>
+$("#not_email").hide();
+</script>
+

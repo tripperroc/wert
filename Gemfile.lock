@@ -92,7 +92,7 @@ GEM
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     polyglot (0.3.5)
-    rack (1.5.2)
+    rack (1.5.3)
     rack-oauth2 (1.1.1)
       activesupport (>= 2.3)
       attr_required (>= 0.0.5)
