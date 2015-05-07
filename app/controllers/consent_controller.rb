@@ -59,6 +59,7 @@ class ConsentController < LanguageController
     @facebook2 = t(:facebook2)
     @facebook3 = t(:facebook3)
     @emailing = t(:emailing)
+    @notemail = t(:notemail)
   end
 
   def not_eligible
@@ -92,6 +93,7 @@ class ConsentController < LanguageController
     @facebook2 = t(:facebook2)
     @facebook3 = t(:facebook3)
     @emailing = t(:emailing)
+    @notemail = t(:notemail)
   end
 
   def foosey

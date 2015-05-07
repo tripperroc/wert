@@ -39,7 +39,6 @@ survey.
       <%= f.radio_button :nationality, false, :onclick => "$('#country').hide(); $('#ineligible').show(500);" %> <%= @yn2 %>
       <span style="margin-left: 2em;"></span>
 
-      </p>
     </div>
 
 
@@ -51,13 +50,13 @@ survey.
 <div class = "answer"><%= f.text_field :email_address, style: "margin-left: 1em;" %>
 </div>
 
-<div id='not_email'> Not a valid email address </div>
+<div id='not_email'><%= @notemail %></div>
 
   <p>
        <fb:login-button 
         show-faces="false"
         scope="user_relationships,user_relationship_details"
-        onlogin="$('#eligible').submit()">
+        onlogin="check_email()">
         <%= @facebook2 %>
       </fb:login-button>
 <div style="margin-top: 2em">
@@ -72,8 +71,34 @@ survey.
   
 </div>
 
-
 <script>
 $("#not_email").hide();
+
+ function validateEmail($email) {
+  var emailReg = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  return ( $email.length > 0 && emailReg.test($email));
+}
+
+$("input[name='facebook_response[email_address]']").bind('change', function() {
+   if (!validateEmail($("input[name='facebook_response[email_address]']").val())) 
+   {
+    $("#not_email").show();
+   } 
+   else {
+    $("#not_email").hide();
+   }
+});
+
+function check_email() {
+     if (!validateEmail($("input[name='facebook_response[email_address]']").val())) 
+   {
+    $("#not_email").show();
+   } 
+   else {
+    $("#not_email").hide();
+    $('#eligible').submit()
+   }
+}
+
 </script>
 

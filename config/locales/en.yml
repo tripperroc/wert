@@ -794,3 +794,5 @@ en:
   front_page3: " If you are a US citizen, between the ages of 18 and 44, and have an active Facebook account, you may be eligible to take the survey. "
 
   letter: "/info_letter_en.pdf"
+
+  notemail: "Invalid Email Address"
