@@ -24,6 +24,7 @@
 #  blank: "Yo, its blank"
 
 ko:
+
   errors:
     format: "%{attribute}%{message}"
     messages:
