@@ -796,3 +796,5 @@ en:
   letter: "/info_letter_en.pdf"
 
   notemail: "Invalid Email Address"
+  notblank: "Answer can't be blank"
+  notnumber: "Answer is not a number"

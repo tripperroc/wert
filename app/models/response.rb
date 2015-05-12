@@ -320,7 +320,7 @@ validate :checkboxes, on: :update
       logger.debug x
     end
     if !x
-      errors.add(name, "can't be blank.")
+      errors.add(name, "@notblank")
       boxes.each do |val, field|
         errors.add(field, "")
       end

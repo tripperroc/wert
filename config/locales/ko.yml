@@ -27,8 +27,8 @@ ko:
   errors:
     format: "%{attribute}%{message}"
     messages:
-      blank: 에 내용을 입력해 주세요
-      not_a_number: 에 숫자를 입력해 주세요
+      blank: 이 문항은 필수응답 문항입니다.
+      not_a_number: 숫자는 이 문항의 답변이 될 수 없습니다.
 
   yn1: "예"
   yn2: "아니오"
@@ -781,16 +781,16 @@ ko:
   screening1: "귀하의 나이는 (만)19-44세 사이입니까?"
   screening2: "귀하는 대한민국 국적자이면서 현재 한국에 거주하고 있습니까?"
 
-  thank_you_letter: "TRANSLATION MISSING"
+  thank_you_letter: "감사합니다! 귀하는 1만원 상당의 온라인 상품권을 받게 되실겁니다. 이메일을 통해 상품권 사용에 대한 안내를 해드리겠습니다. 본 연구에 대해 질문이 있으시면 충북대학교 유성은 교수(Tel. 043-261-3612)에게 연락주시기 바랍니다. 본 연구진행의 윤리적 측면이나 연구대상자로서의 권리에 질문이 있으시면 충북대학교 생명윤리심의위원회(Tel 043-261-3905)로 문의하시기 바랍니다"
   survey_take: "설문을 시작하려면 여기를 클릭하세요."
   screening_preface: "연구참여가 가능한지를 확인하기 위한 다음의 질문에 답해주십시오."
   screening_fail: "죄송합니다. 귀하는 본 설문에 참여하실 수 없습니다."
   download_letter: "본 동의서 사본을 다운받으십시오."
   facebook1: "페이스북 계정을 가지고 계십니까? 만일 그렇다면, 귀하는 본 설문에 참여하실 수 있습니다. 여기를 클릭하시면 설문이 시작됩니다."
   facebook2: "연구참여에 동의합니다."
-  facebook3: "TRANSLATION MISSING"
+  facebook3: "본 연구에서는 중복응답을 피하기 위해 페이스북 앱을 사용합니다. 설문이 종료되면 설문에 대한 답례로 드리는 온라인 상품권에 대한 안내를 받게 됩니다. 온라인 상품권을 수령하신 후에는 페이스북 앱을 삭제하셔도 됩니다."
   submission: "설문을 제출합니다"
-  emailing: "TRANSLATION MISSING"
+  emailing: "온라인 상품권을 받을 이메일 주소를 적어주십시오."
 
   header: "스트레스에 대한 대처와 건강"
 
@@ -800,4 +800,6 @@ ko:
 
   letter: "/info_letter_ko.pdf"
 
-  notemail: "TRANSLATION MISSING"
+  notemail: "존재하지 않거나 유효하지 않은 이메일 주소입니다."
+  notblank: "이 문항은 필수응답 문항입니다."
+  notnumber: "숫자는 이 문항의 답변이 될 수 없습니다."
