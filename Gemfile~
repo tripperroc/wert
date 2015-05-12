@@ -50,7 +50,6 @@ gem 'byebug'
 gem 'facebooker2'
 gem 'fb_graph'
 
-gem 'dynamic_form'
 
 gem 'i18n', github: 'svenfuchs/i18n'
 

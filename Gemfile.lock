@@ -50,6 +50,7 @@ GEM
     delayed_job_active_record (4.0.3)
       activerecord (>= 3.0, < 5.0)
       delayed_job (>= 3.0, < 4.1)
+    dynamic_form (1.1.4)
     erubis (2.7.0)
     execjs (2.5.2)
     facebooker2 (0.0.17)
@@ -160,6 +161,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   daemons
   delayed_job_active_record
+  dynamic_form
   facebooker2
   fb_graph
   i18n!

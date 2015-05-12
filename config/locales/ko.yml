@@ -24,6 +24,11 @@
 #  blank: "Yo, its blank"
 
 ko:
+  errors:
+    format: "%{attribute}%{message}"
+    messages:
+      blank: 에 내용을 입력해 주세요
+      not_a_number: 에 숫자를 입력해 주세요
 
   yn1: "예"
   yn2: "아니오"

@@ -223,6 +223,8 @@ class SurveyorController < ApplicationController
 
       @submission = t(:submission)
 
+      
+
       #@resp_short = "response_cope_b_"
 
       answers

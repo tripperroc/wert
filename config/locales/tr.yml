@@ -25,6 +25,13 @@
 
 tr:
 
+  errors:
+      format: "%{attribute} %{message}"
+      messages:
+        blank: doldurulmalı
+        not_a_number: geçerli bir sayı değil
+
+
   yn1: "Evet"
   yn2: "Hayır"
   yn3: "Geçerli değil"
