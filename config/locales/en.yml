@@ -25,6 +25,12 @@
 
 en:
 
+  errors:
+    format: "%{attribute}%{message}"
+    messages:
+      blank: Answer can't be blank
+      not_a_number: Answer is not a number
+
   yn1: "Yes"
   yn2: "No"
   yn3: "Not Applicable"

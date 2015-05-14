@@ -26,10 +26,10 @@
 tr:
 
   errors:
-      format: "%{attribute} %{message}"
-      messages:
-        blank: Cevap boş kalamaz
-        not_a_number: Cevap bir numara değildir
+    format: "%{attribute}%{message}"
+    messages:
+      blank: Cevap boş kalamaz
+      not_a_number: Cevap bir numara değildir
 
 
   yn1: "Evet"

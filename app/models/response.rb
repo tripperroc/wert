@@ -320,9 +320,23 @@ validate :checkboxes, on: :update
       logger.debug x
     end
     if !x
-      errors.add(name, "@notblank")
-      boxes.each do |val, field|
-        errors.add(field, "")
+      if birth_sex == 'Male' || birth_sex =='Female'
+        errors.add(name, "Answer can't be blank")
+        boxes.each do |val, field|
+          errors.add(field, "")
+        end
+      end
+      if birth_sex == 'Erkek' || birth_sex =='Kadın'
+        errors.add(name, "Cevap boş kalamaz")
+        boxes.each do |val, field|
+          errors.add(field, "")
+        end
+      end
+      if birth_sex == '남자' || birth_sex =='여자'
+        errors.add(name, "이 문항은 필수응답 문항입니다.")
+        boxes.each do |val, field|
+          errors.add(field, "")
+        end
       end
     end
   end
