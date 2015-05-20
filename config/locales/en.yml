@@ -37,7 +37,7 @@ en:
 
   hello_yml: "English"
 #Error
-  error_top: "There are some missing or incorrect answers below. <b>Look for entries with this background color</b>. Please fix them and submit again. Thanks!"
+  error_top: "There are some missing or incorrect answers below. Look for entries with this background color. Please fix them and submit again. Thanks!"
 #Instructions
   instructions: "The following questions might take about 20 minutes to complete. Please respond as thruthfully and honestly as you can."
 #1
