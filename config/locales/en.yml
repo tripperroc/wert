@@ -140,6 +140,7 @@ en:
 #4w
   group_name: "Consider those groups in which you talk to a fellow group member at least once every 2 weeks.  Please provide the following information for each such group:  the name or type of group and the total number of members in that group that you talk to at least once every 2 weeks."
   group_member: "Number of member with whom you interact at least once every other week"
+  groups: "Group Names:"
 #5
   happyq: "Taking all things together, would you say you are"
   happy1: "Very Happy"
@@ -796,7 +797,7 @@ en:
   header: "Coping with Stress and Health"
 
   front_page1: "Make an important contribution to our understanding of what affects our health in the midst of stressful life circumstances."
-  front_page2: "And earn $XXX."
+  front_page2: "And earn $10."
   front_page3: " If you are a US citizen, between the ages of 18 and 44, and have an active Facebook account, you may be eligible to take the survey. "
 
   letter: "/info_letter_en.pdf"

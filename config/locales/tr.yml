@@ -142,6 +142,8 @@ tr:
 #4w
   group_name: "En az 2 haftada bir diğer grup üyeleriyle konuştuğunuz bu grubu/grupları düşünün. Lütfen bu grubun/grupların isimlerini ya da türlerini ve en az 2 haftada bir konuştuğunuz grup üyelerinin sayılarını yazın."
   group_member: "En az 2 haftada bir görüştüğünüz üye sayısı"
+  groups: "Grup adı:"
+
 #5
   happyq: "Herşeyi göz önünde bulundurursanız, ne kadar mutlusunuz"
   happy1: "Çok mutlu"
@@ -197,7 +199,7 @@ tr:
   burden_item5: "Hayatımdaki insanların benden kurtulmayı dilediklerini düşünürüm"
   burden_item6: "Hayatımdaki insanlar için işleri daha kötü hale getirdiğimi düşünürüm"
 #11
-  belongq: "Aşağıdaki ifadelere ne kadar katıldığınızı söylemenizi isteyeceğim. Size okuyacağım ifadelere 1 hiç katılmıyorum, 3 ne katılıyorum ne katılmıyorum ve 5 tamamen katılıyorum anlamına gelecek şekilde 1 ile 5  arasında bir puan verebilirsiniz"
+  belongq: "Aşağıdaki ifadelere ne kadar katıldığınızı işaretlemenizi isteyeceğiz. Okuyacağınız ifadelere 1 hiç katılmıyorum, 3 ne katılıyorum ne katılmıyorum ve 5 tamamen katılıyorum anlamına gelecek şekilde 1 ile 5  arasında bir puan verebilirsiniz"
   belong_item1: "Kendimi gerçekten ait hissedebileceğim bir yerin olup olmadığından emin değilim"
   belong_item2: "Kendimi arkadaş çevreme gerçekten ait hissedip hissetmediğime emin değilim"
   belong_item3: "Çoğu ortamda uyumsuz biriyimdir"
@@ -348,7 +350,7 @@ tr:
   children_d: "Bu olayı kendileri çözmeye çalıştılar mı? (Çoğunlukla kendi kaynaklarını kullanarak veya sizin kaynaklarınızı harekete geçirerek)"
   children_e: "Bu olayı çözmenin sorumluluğunu sizinle paylaştılar mı?"
   children_f: "Bu sıkıntı yaratan olayı önemsediler mi?"
-  children_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mü?"
+  children_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mi?"
 #14d	
   sibling_a: "Kardeşlerinizle bu sıkıntı hakkında konuştunuz mu?"
   sibling_b: "Sizi bu sıkıntı yaratan olay ile ilgili dinlediler mi?"
@@ -356,7 +358,7 @@ tr:
   sibling_d: "Bu olayı kendileri çözmeye çalıştılar mı? (Çoğunlukla kendi kaynaklarını kullanarak veya sizin kaynaklarınızı harekete geçirerek)"
   sibling_e: "Bu olayı çözmenin sorumluluğunu sizinle paylaştılar mı?"
   sibling_f: "Bu sıkıntı yaratan olayı önemsediler mi?"
-  sibling_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mü?"
+  sibling_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mi?"
 #14e  
   exfamily_a: "Akrabalarınız (anne, baba, kardeşler, çocuk, eş dışında)ile bu sıkıntınıza dair konuştunuz mu?"
   exfamily_b: "Sizi bu sıkıntı yaratan olay ile ilgili dinlediler mi?"
@@ -364,7 +366,7 @@ tr:
   exfamily_d: "Bu olayı kendileri çözmeye çalıştılar mı? (Çoğunlukla kendi kaynaklarını kullanarak veya sizin kaynaklarınızı harekete geçirerek)"
   exfamily_e: "Bu olayı çözmenin sorumluluğunu sizinle paylaştılar mı?"
   exfamily_f: "Bu sıkıntı yaratan olayı önemsediler mi?"
-  exfamily_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mü?"
+  exfamily_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mi?"
 
 #   cousins_a: "Kuzenlerinizle bu sıkıntı hakkında konuştunuz mu?"
 #   cousins_b: "Sizi bu sıkıntı yaratan olay ile ilgili dinlediler mi?"
@@ -388,7 +390,7 @@ tr:
   spouse_d: "Bu olayı kendisi çözmeye çalıştı mı? (Çoğunlukla kendi kaynaklarını kullanarak veya sizin kaynaklarınızı harekete geçirerek)"
   spouse_e: "Bu olayı çözmenin sorumluluğunu sizinle paylaştı mı?"
   spouse_f: "Bu sıkıntı yaratan olayı önemsedi mi?"
-  spouse_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündü mü?"
+  spouse_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündü mi?"
 #14h	
   friends_a: "Arkadaşlarınızla veya komşularınızla bu sıkıntı hakkında konuştunuz mu?"
   friends_b: "Sizi bu sıkıntı yaratan olay ile ilgili dinlediler mi?"
@@ -396,7 +398,7 @@ tr:
   friends_d: "Bu olayı kendileri çözmeye çalıştılar mı? (Çoğunlukla kendi kaynaklarını kullanarak veya sizin kaynaklarınızı harekete geçirerek)"
   friends_e: "Bu olayı çözmenin sorumluluğunu sizinle paylaştılar mı?"
   friends_f: "Bu sıkıntı yaratan olayı önemsediler mi?"
-  friends_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mü?"
+  friends_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mi?"
 
   net_a: "İnternetten görüştüğünüz sanal arkadaşlarınız ile bu sorununuza dair konuştunuz mu?"
   net_b: "Sizi bu sıkıntı yaratan olay ile ilgili dinlediler mi?"
@@ -404,7 +406,7 @@ tr:
   net_d: "Bu olayı kendileri çözmeye çalıştılar mı? (Çoğunlukla kendi kaynaklarını kullanarak veya sizin kaynaklarınızı harekete geçirerek)"
   net_e: "Bu olayı çözmenin sorumluluğunu sizinle paylaştılar mı?"
   net_f: "Bu sıkıntı yaratan olayı önemsediler mi?"
-  net_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mü?"
+  net_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mi?"
 
   org_a: "Üyesi olduğunuz sivil toplum kuruluşları; dernekler, spor kulübü, siyasi parti, sivil toplum örgütleri, mezunlar derneği, futbol kulüpleri gibi gruplar ile bu sorununuza dair konuştunuz mu?"
   org_b: "Sizi bu sıkıntı yaratan olay ile ilgili dinlediler mi?"
@@ -412,7 +414,7 @@ tr:
   org_d: "Bu olayı kendileri çözmeye çalıştılar mı? (Çoğunlukla kendi kaynaklarını kullanarak veya sizin kaynaklarınızı harekete geçirerek)"
   org_e: "Bu olayı çözmenin sorumluluğunu sizinle paylaştılar mı?"
   org_f: "Bu sıkıntı yaratan olayı önemsediler mi?"
-  org_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mü?"
+  org_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mi?"
 
   mesp_a: "Bir uzman veya profesyonel kişi (psikolog, psikiyatrist, sosyal hizmetler görevlisi, hemşire vb.) ile bu sorununuza dair konuştunuz mu?"
   mesp_b: "Sizi bu sıkıntı yaratan olay ile ilgili dinledi mi?"
@@ -420,7 +422,7 @@ tr:
   mesp_d: "Bu olayı kendisi çözmeye çalıştılar mı? (Çoğunlukla kendi kaynaklarını kullanarak veya sizin kaynaklarınızı harekete geçirerek)"
   mesp_e: "Bu olayı çözmenin sorumluluğunu sizinle paylaştı mı?"
   mesp_f: "Bu sıkıntı yaratan olayı önemsedi mi?"
-  mesp_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündü mü?"
+  mesp_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündü mi?"
 
   relp_a: "Dini veya ruhani bir kişi veya lider ile bu sorununuza dair konuştunuz mu?"
   relp_b: "Sizi bu sıkıntı yaratan olay ile ilgili dinledi mi?"
@@ -428,7 +430,7 @@ tr:
   relp_d: "Bu olayı kendisi çözmeye çalıştılar mı? (Çoğunlukla kendi kaynaklarını kullanarak veya sizin kaynaklarınızı harekete geçirerek)"
   relp_e: "Bu olayı çözmenin sorumluluğunu sizinle paylaştı mı?"
   relp_f: "Bu sıkıntı yaratan olayı önemsedi mi?"
-  relp_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündü mü?"
+  relp_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündü mi?"
 
   com_a: "Halka hizmet etmekle yükümlü kamu kurumları (mesela belediye, işkur, il tarım müdürlüğü, sosyal hizmetler kurumu, il milli eğitim, polis gibi) ile bu sorununuza dair konuştunuz mu?"
   com_b: "Sizi bu sıkıntı yaratan olay ile ilgili dinlediler mi?"
@@ -436,7 +438,7 @@ tr:
   com_d: "Bu olayı kendileri çözmeye çalıştılar mı? (Çoğunlukla kendi kaynaklarını kullanarak veya sizin kaynaklarınızı harekete geçirerek)"
   com_e: "Bu olayı çözmenin sorumluluğunu sizinle paylaştılar mı?"
   com_f: "Bu sıkıntı yaratan olayı önemsediler mi?"
-  com_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mü?"
+  com_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mi?"
 
 #14i	
   other_a: "Başkalarıyla bu sıkıntı hakkında konuştunuz mu?"
@@ -446,7 +448,7 @@ tr:
   other_d: "Bu olayı kendileri çözmeye çalıştılar mı? (Çoğunlukla kendi kaynaklarını kullanarak veya sizin kaynaklarınızı harekete geçirerek)"
   other_e: "Bu olayı çözmenin sorumluluğunu sizinle paylaştılar mı?"
   other_f: "Bu sıkıntı yaratan olayı önemsediler mi?"
-  other_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mü?"
+  other_g: "Bu sıkıntı yaratan olayı çözmenin genel olarak sizin sorumluluğunuz olduğunu düşündüler mi?"
 #14j
   cope_problemsq: "Bu sıkıntılı durumla başederken yaptıklarınız ve danıştığınız insanlar ve yaptıkları GENELDE bu tür konularla başa çıkarken kullandığınız yöntemlerden ne kadar farklıydı?"
   different1: "Çok farklıydı (normalde stresle hiç böyle baş etmem)"
@@ -483,7 +485,7 @@ tr:
   self_construal_item17: "Ailemle aramdaki bağ, kendimi güven ve huzur içinde hissetmemi sağlıyor."
   self_construal_item18: "Ailemle iç içeyim."
 #16
-  ind col: "Aşağıdaki cümlelere genel olarak ne derece katılıp katılmadığınızı belirtiniz. 1 hiç katılmıyorum, 3 ne katılıyorum ne katılmıyorum ve 5 tamamen katılıyorum anlamına gelecek şekilde 1 ile 5  arasında bir puan verebilirsiniz"
+  ind_col: "Aşağıdaki cümlelere genel olarak ne derece katılıp katılmadığınızı belirtiniz. 1 hiç katılmıyorum, 3 ne katılıyorum ne katılmıyorum ve 5 tamamen katılıyorum anlamına gelecek şekilde 1 ile 5  arasında bir puan verebilirsiniz"
   individualism_item1: "Özgün bir birey olmak benim için önemlidir"
   individualism_item2: "Başkalarından bağımsız bireysel kimliğim benim için çok önemlidir"
   individualism_item3: "Bir karar vermeden önce yakın arkadaşlara danışıp onların fikirlerini almak önemlidir"
@@ -681,7 +683,7 @@ tr:
   occupation7: "Ormancılık ve balıkçılık meslekleri"
   occupation8: "El sanatları ve benzer meslekler"
   occupation9: "Fabrika, tesis ve makina operatörleri ile montajcılar (tekstil, giyim, ayakkabı, gıda vb.)"
-  occupation10: "Basit meslekler (İnşaat, maden, ulaşım, üretim işçisi)"
+  occupation10: "Meslekler (İnşaat, maden, ulaşım, üretim işçisi)"
   occupation11: "Hizmetli"
   occupation12: "Silahlı kuvvetlerle ilgili meslekler"
   occupation13: "Diğer"

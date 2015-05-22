@@ -224,6 +224,7 @@ class SurveyorController < ApplicationController
       @submission = t(:submission)
 
       @notblank = t(:notblank)
+      @groups = t(:groups)
 
       #@resp_short = "response_cope_b_"
 
@@ -428,6 +429,7 @@ class SurveyorController < ApplicationController
       @submission = t(:submission)
 
       @notblank = t(:notblank)
+      @groups = t(:groups)
 
    if @response.update(params[:response]) 
      #redirect_to :controller => "estimate", :action => "create", :id => params[:id]
