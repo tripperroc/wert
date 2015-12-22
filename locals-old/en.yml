@@ -25,12 +25,6 @@
 
 en:
 
-  errors:
-    format: "%{attribute}%{message}"
-    messages:
-      blank: Answer can't be blank
-      not_a_number: Answer is not a number
-
   yn1: "Yes"
   yn2: "No"
   yn3: "Not Applicable"
@@ -48,7 +42,8 @@ en:
   age: "Age"
 #3
   bigFive_instruction: "Please rate to what degree you agree or disagree to the following statements. You can rate these statements on a scale from 1 “I completely disagree”, 3 “I neither agree nor disagree”, to 5 “I completely agree”."
-  bigFive_introverted: "I am an introverted person"
+  #bigFive_introverted: "I am an introverted person"
+  bigFive_introverted: "BLAHBLAHBLAH"
   bigFive_trust: "Generally, I easily trust people"
   bigFive_lazy: "I have a tendency to be lazy"
   bigFive_cope: "I am easy going, I can cope well with stress"
@@ -150,7 +145,7 @@ en:
   instructions1: "Below are five statements that you may agree or disagree with. Using the 1 - 5 scale below, indicate your agreement with each item by placing the appropriate number on the line preceding that item. Please be open and honest in your responding."
   life_satisfaction_ideal: "In most ways my life is close to my ideal"
   life_satisfaction_conditions: "The conditions of my life are excellent"
-  life_satisfaction_satisfied: "I am satisfied with my life"
+  life_satisfaction_satisfied: "I am satisfied with my life."
   life_satisfaction_things: "So far I have gotten the important things I want in life"
   life_satisfaction_change: "If I could live my life over, I would change almost nothing"
   aggreement_strong1: "Strongly disagree"
@@ -171,21 +166,21 @@ en:
   rating6: "6"
   rating7: "Very happy 7"
 #8
-  communal1q: "While answering the following questions, please think about how people you are close to (your family, friends, loved ones) generally act when you are faced with a problem. Please rate the statements below based on how much you aree and disagree with them"
-  communal1_item1: "When I share a problem with people who are in my immediate circle (my family, friends, loved ones) they think of this problem as our problem, not only my problem"
-  communal1_item2: "When I am faced with a problem, people who are in my immediate circle (my family, friends and loved ones) solve this problem for me (resorting mainly to their own resources  or mobilizing my resources themselves)"
-  communal1_item3: "When I am faced with a problem, people who are in my immediate circle (my family, friends and loved ones) share the responsibility to solve this problem with me"
-  communal1_item4: "When dealing with my problem, unless the requests and needs of people who are in my immediate circle (family, friends, loved ones) are met, that problem would not be considered resolved"
-  communal1_item5: "When I am dealing with a problem, no one really cares about it"
-  communal1_item6: "When I am faced with a problem, people who are in my immediate circle think that I am the responsible one in resolving this problem"
+  communal1q: "While answering the following questions, please think about how people you are close to (your family, friends, loved ones) generally act when you are faced with a problem. Please rate the statements below based on how much you aree and disagree with them."
+  communal1_item1: "When I share a problem with people who are in my immediate circle (my family, friends, loved ones) they think of this problem as our problem, not only my problem.,"
+  communal1_item2: "When I am faced with a problem, people who are in my immediate circle (my family, friends and loved ones) solve this problem for me (resorting mainly to their own resources  or mobilizing my resources themselves) ,"
+  communal1_item3: "When I am faced with a problem, people who are in my immediate circle (my family, friends and loved ones) share the responsibility to solve this problem with me. ,"
+  communal1_item4: "When dealing with my problem, unless the requests and needs of people who are in my immediate circle (family, friends, loved ones) are met, that problem would not be considered resolved. ,"
+  communal1_item5: "When I am dealing with a problem, no one really cares about it."
+  communal1_item6: "When I am faced with a problem, people who are in my immediate circle think that I am the responsible one in resolving this problem.  "
 #9
-  communal2q: "Now we will ask you what you would do when  people in your immediate circle  (family, friends, loved ones) were to face a problem. Please rate the statements below based on how much you aree and disagree with them"
+  communal2q: "Now we will ask you what you would do when  people in your immediate circle  (family, friends, loved ones) were to face a problem. Please rate the statements below based on how much you aree and disagree with them."
   communal2_item1: "When people in my immediate circle come to me with a problem I think of it as my problem"
-  communal2_item2: "When people in my immediate circle come to me with a problem I solve it for them (resorting mainly to my own resources  or mobilizing their resources myself)"
-  communal2_item3: "When people in my immediate circle come to me with a problem we share the responsibility and solve it together"
-  communal2_item4: "When dealing with the problem of anyone in my immediate circle, unless the requests and needs of all people concerned are met, that problem would not be considered resolved"
-  communal2_item5: "When people in my immediate circle have a problem I won’t care about it a lot"
-  communal2_item6: "When people in my immediate circle have a problem I think that it is mainly their own responsibility to solve them"
+  communal2_item2: "When people in my immediate circle come to me with a problem I solve it for them (resorting mainly to my own resources  or mobilizing their resources myself) ,"
+  communal2_item3: "When people in my immediate circle come to me with a problem we share the responsibility and solve it together."
+  communal2_item4: "When dealing with the problem of anyone in my immediate circle, unless the requests and needs of all people concerned are met, that problem would not be considered resolved."
+  communal2_item5: "When people in my immediate circle have a problem I won’t care about it a lot."
+  communal2_item6: "When people in my immediate circle have a problem I think that it is mainly their own responsibility to solve them."
 #10
   burdenq: "The following questions ask you to think about yourself and other people.  Please respond to each question by using your own beliefs and experiences, NOT what you think is true in general, or what might be true for other people."
   burden_item1: "The people in my life would be better off if I were gone."
@@ -216,7 +211,7 @@ en:
   belong_item18: "I am not valued by or important to my friends"
 #12
   raheq: "Everyone comes across negative and positive life events, which might be stress inducing. We are asking you to think of LAST YEAR and indicate if you have experienced any of the listed events, within the LAST YEAR. If you have experienced an event, we will ask you how much you were affected by this event, on a scale from 'Not at all affected' to 'Very much affected'."
-  affected1: "I did not experience such an event"
+  affected1: " I did not experience such an event"
   affected2: "Not at all affected"
   affected3: "Not affected"
   affected4: "Neither affected nor not affected"
@@ -282,7 +277,7 @@ en:
 #13a
   cope_b: "So first, please indicate, within the last year, which event has caused you the most distress and difficulty?  Please choose the most distressing event from the events you have indicated in the previous questionnaire. YOU HAVE INDICATED THE FOLLOWING AS THE MOST STRESSFUL.  PLEASE CHOOSE ONE, WE WILL BE ASKING YOU QUESTIONS REGARDING HOW YOU COPED WITH THIS STRESS."
 #13b
-  cope_cq: "While answering these questions, please think of how you generally acted when you were faced with the most distressing problem you have selected in the previous question. If you did not experience any stressful event in the past year, please think of your previous experience in answering the following questions. When I was faced with this problem…"
+  cope_cq: "While answering these questions, please think of how you generally acted when you were faced with the most distressing problem you have selected in the previous question. When I was faced with this problem…"
   done1: " I have never done this"
   done2: "I have rarely done this"
   done3: "I have sometimes done this"
@@ -319,10 +314,10 @@ en:
   cope_c_item29: "I was not alone while dealing with this problem."
   cope_c_item30: "Even if it meant that I had to make sacrifices, I tried to support other people who I have been facing the problem with."
   cope_c_item31: "While deciding what to do with my problem, I took other people’s feelings into consideration."
-  cope_c_item32: "While resolving this problem, I tried to meet everyone‘s needs who is affected or a part of this problem."
+  cope_c_item32: "While resolving this problem, I tried to meet everyone ‘s needs who is affected or a part of this problem."
   cope_c_item33: "In order to resolve this problem, no matter how difficult it is, I tried to meet everyone’s requests"
 #14
-  communal_checkq: "Please think of the same event that you faced within the last year, that has caused you the most distress and difficulty. If you did not experience any stressful event in the past year, please think of your previous experience in answering the following questions. Think of the people that you have consulted with when you were dealing with this problem, and what they have done."
+  communal_checkq: "Please think of the same event that you faced within the last year, that has caused you the most distress and difficulty. Think of the people that you have consulted with when you were dealing with this problem, and what they have done. "
 #14a
   father_a: "Have you spoken to your Father about this problem?"
   father_b: "Did he listen to you about your problem?"
@@ -492,17 +487,17 @@ en:
   individualism_item8: "To me, pleasure is spending time with others."
   individualism_item9: "I am a unique individual."
   individualism_item10: "If a co-worker gets a prize I would feel proud."
-  individualism_item11: "I often do ‘my own thing'."
+  individualism_item11: "I often do ‘my own thing”."
   individualism_item12: "If a relative were in financial difficulty, I would help within my means."
   individualism_item13: "I enjoy being unique and different from others in many ways."
-  individualism_item14: "The well-being of my co-workers is important to me."
+  individualism_item14: "The well-being of my co-workers of my co-workers is important to me."
   individualism_item15: "I like sharing little things with my neighbors."
   individualism_item16: "What happens to me is my own doing."
   individualism_item17: "One should live one’s life independently of others."
   individualism_item18: "My happiness depends very much on the happiness of those around me."
   individualism_item19: "I prefer to be direct and forthright when I talk with people."
 #17
-  depressionq: "Below is a list of the ways you might have felt or behaved. Please tell me how often you have felt this way during the past week."
+  depressionq: "Below is a list of the ways you might have felt or behaved. Please tell me how often you have felt this way during the past week.  (Show the cards)"
   how_often1: "Rarely or none of the time (less than 1 day)"
   how_often2: "Some or a little of the time (1-2 days)"
   how_often3: "Occasionally or a moderate amount of time (3-4 days)"
@@ -590,25 +585,9 @@ en:
   religious_a_item2: "My religious beliefs are what really lie behind my whole approach to life"
   religious_a_item3: "I try hard to carry my religion over into all other dealings in life"
 #26b	
-  religious_bq: "How often did you pray or practiced your religion in a sanctuary (mosque/djemevi/church/synagogue)?"
-  religious_b1: "Rarely or never"
-  religious_b2: "Once every other month"
-  religious_b3: "Once a month"
-  religious_b4: "A few times a month"
-  religious_b5: "Once a week"
-  religious_b6: "More than once a week"
-  religious_b7: "Once a day"
-  religious_b8: "Several times a day"
+  religious_b: "How often did you pray or practiced your religion in a sanctuary (mosque/djemevi/church/synagogue)?"
 #26c	
-  religious_cq: "How often did you pray or practiced your religion by yourself outside of a sanctuary within the last month ?"
-  religious_c1: "Rarely or never"
-  religious_c2: "Once every other month"
-  religious_c3: "Once a month"
-  religious_c4: "A few times a month"
-  religious_c5: "Once a week"
-  religious_c6: "More than once a week"
-  religious_c7: "Once a day"
-  religious_c8: "Several times a day"
+  religious_c: "How often did you pray or practiced your religion by yourself outside of a sanctuary within the last month ?"
 #27
   how_religiousq: "Regardless of how often you pray, to what extend you think you are religious? From 'not religious at all' to 'very religious', how many points would you give yourself ?"
   how_religious1: "0 - Not religious at all"
@@ -770,39 +749,14 @@ en:
   info_letter6: "Vince Silenzio, MD, MPH (University of Rochester Medical Center, Rochester, NY, USA)"
   info_letter7: "Co-Investigators: "
   info_letter8: "Banu Cankaya, PhD (Koc University, Istanbul, Turkey), Sungeun You, Ph.D. (… University), Eric D. Caine, MD (University of Rochester Medical Center, Rochester, NY, USA), Christopher Homan, PhD (Rochester Institute of Technology)"
-  info_letter9: "This form describes a research study that is being conducted by Dr. Vincent Silenzio, from the University of Rochester’s Departments of Psychiatry, Public Health Sciences, and Family Medicine, in collaboration with Eric D Caine from University of Rochester’s Departments of Psychiatry, and Christopher Homan (of the Rochester Institute of Technology’s Computer Science Department), and Drs. Banu Cankaya (of Koc University’s Department of Psychology) and Sungeun You (….)."
+  info_letter9: "This form describes a research study that is being conducted by Dr. Vincent Silenzio, from the University of Rochester’s Departments of Psychiatry, Public Health Sciences, and Family Medicine, in collaboration with Eric D Caine from University of Rochester’s Departments of Psychiatry, and Christopher Homan (of the Rochester Institute of Technology’s Computer Science Department), and Drs. Banu Cankaya (of Koc University’s Department of Psychology, Istanbul, Turkey) and Sungeun You (Chungbug National University, Cheongju, Chungbuk, Korea)."
   info_letter10: "The purpose of this study is intended to show that online social networks such as Facebook can be used to assess health. At the end of the survey, you will have the chance to ask friends who you think would be eligible for this study and who would be willing to participate. Up to three of your friends will be able to participate."
-  info_letter11: "If you decide to take part in this study, you will be asked to complete a brief survey that will take about 20 minutes to complete. The survey will ask questions about yourself, in particular, strategies you utilize to cope with stress, your social network, and health. We estimate that approximately 500 people will take part in this study."
+  info_letter11: "If you decide to take part in this study, you will be asked to complete a brief survey that will take about 20 minutes to complete. The survey will ask questions about yourself, in particular, strategies you utilize to cope with stress, your social network, and health. We estimate that approximately XXX people will take part in this study."
   info_letter12: "Some of the survey questions may be upsetting or make you feel uncomfortable. You can skip any of the questions you do not want to answer. Because this study involves collecting personal, identifiable information about you, there is a potential for invasion of privacy or breach in confidentiality. To minimize this risk, we will not store any directly identifiable information about you with your survey responses. All of the information we collect will be stored in a secure manner and only study team members will have access to it. There are no other expected risks. There are also no expected benefits. The University of Rochester is receiving payment from the National Science Foundation for conducting this research study."
-  info_letter13: "You will receive $10 in online credit at XXXXX for completing the survey.  There will be no cost to you to participate in this study."
+  info_letter13: "You will receive $XX in online credit at XXXXX for completing the survey. You can also earn more XXXXXX credit when you refer friends who complete the survey. For each of up to a limit of three Facebook friends who completes the survey before the end of the study, you will receive an additional $XX in XXXXX credit, up to a total of $XX. When added to the $X credit you receive for finishing your own survey, you may receive an overall total of between $X and $XX in credit you can use as you please at the XXXXXX. There will be no cost to you to participate in this study."
   info_letter14: "The University of Rochester makes every effort to keep the information collected from you private. In order to do so, we are using a secure online connection to minimize any risk to your privacy from unauthorized parties (e.g. computer hackers). While we are taking steps to prevent it from occurring, you should be aware that there is a small possibility that responses could be viewed by unauthorized parties because your responses are being communicated over the web and stored on a web server. Sometimes, however, researchers need to share information that may identify you with people that work for the University, regulators or the study sponsor. If this does happen we will take precautions to protect the information you have provided. Results of the research may be presented at meetings or in publications, but your name will not be used."
   info_letter15: "Your participation in this study is completely voluntary. You are free not to participate or to withdraw at any time, for whatever reason. No matter what decision you make, there will be no penalty or loss of benefits to which you are otherwise entitled."
   info_letter16: "More Information: For more information or questions about this research you may call Dr. Vince Silenzio at (585) 275-6069. Please contact the University of Rochester Research Subjects Review Board at 265 Crittenden Blvd., CU 420315, Rochester, NY 14642, Telephone (585) 276-0005 or (877) 449-4441 for the following reasons: You wish to talk to someone other than the research staff about your rights as a research subject; To voice concerns about the research;  To provide input concerning the research process; In the event the study staff could not be reached."
 
   screening1: "Are you between the ages of 18 and 44?"
   screening2: "Are you a citizen of USA and do currently reside in this country?"
-
-  thank_you_letter: "Thank you! You have earned $10 in XXXX credit.  We will send you an e-mail with instructions on how to use it. If you would like additional information or if you have questions about the survey, please contact Vincent Silenzio at 585.275.60.69. If you have questions, concerns, or complaints about your rights as a research subject you may contact anonymously if you wish, a Human Subjects Protection Specialist at the University of Rochester, Research Subjects Review Board, Box 315, 601 Elmwood Avenue, Rochester NY14642-8315, Telephone 011(585) 449-4441. You may also call these numbers if you cannot reach the research staff or wish to talk to someone else."
-  survey_take: "Click here to take this survey"
-  screening_preface: "Please answer the following screening questions to determine whether you are eligible. "
-  screening_fail: "Sorry. You are ineligible to take this survey."
-  download_letter: "Download a Copy of this Letter"
-  facebook1: "Do you have a Facebook account? If so, you are eligible to take the survey! Click on the button to get started."
-  facebook2: "I agree to participate"
-  facebook3: "We use a Facebook app in order to make sure we do not get duplicate surveys from you, and to make sure you receive your payment information at the end of the survey. You can remove the Facebook app (called ReDSSoCS) at any time after the survey is done and you've received your payment."
-  submission: "Update Response"
-  emailing: "Please enter an email address where we may send you Amazon.com credit."
-
-  header: "Coping with Stress and Health"
-
-  front_page1: "Make an important contribution to our understanding of what affects our health in the midst of stressful life circumstances."
-  front_page2: "And earn $10."
-  front_page3: " If you are a US citizen, between the ages of 18 and 44, and have an active Facebook account, you may be eligible to take the survey. "
-
-  letter: "/info_letter_en.pdf"
-
-  notemail: "Invalid Email Address"
-  notblank: "Answer can't be blank"
-  notnumber: "Answer is not a number"
-  groups: "Group names"
-  groups_delete: "Check to delete"

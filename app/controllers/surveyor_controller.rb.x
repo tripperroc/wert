@@ -22,7 +22,223 @@ class SurveyorController < ApplicationController
   end
 
   def get_locs
-      @t = t
+  def create
+      
+      ### Initialize a response set after first getting the facebook id of the user.
+      
+
+      @response = Response.find_or_create_by(facebook_response_id: params[:id])
+      
+      logger.debug "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+      logger.debug "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+      logger.debug params
+      logger.debug "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+      logger.debug "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+
+      @error_top = t(:error_top)
+      @instructions = t(:instructions)
+
+      @sex = t(:sex)
+      @age = t(:age)
+      @yn1 = t(:yn1)
+      @yn2 = t(:yn2)
+      @yn3 = t(:yn3)  
+      @yn = [@yn1, @yn2]
+      @bigFive_instruction = t(:bigFive_instruction)
+      @cohen_instruction = t(:cohen_instruction)
+      @martialq = t(:martialq)
+      @num_siblings = t(:num_siblings)
+      @num_children = t(:num_children)
+      @num_children_intouch = t(:num_children_intouch)
+      @parentsq = t(:parentsq)
+      @parents_touchq = t(:parents_touchq)
+      @parents_partnerq = t(:parents_partnerq)
+      @parents_partner_touchq = t(:parents_partner_touchq)
+      @other_relatives = t(:other_relatives)
+      @other_relatives_touch = t(:other_relatives_touch)
+      @close_friends = t(:close_friends)
+      @close_friends_touch = t(:close_friends_touch)
+      @religious = t(:religious)
+      @religious_members = t(:religious_members)
+      @classes = t(:classes)
+      @talk_students_teachers = t(:talk_students_teachers)
+      @employedq = t(:employedq)
+      @talk_work = t(:talk_work)
+      @visit_neighbors = t(:visit_neighbors)
+      @volunteer = t(:volunteer)
+      @num_volunteer = t(:num_volunteer)
+      @social_group = t(:social_group)
+      @group_name = t(:group_name)
+      @group_member = t(:group_member)
+      @happyq = t(:happyq)
+      @instructions1 = t(:instructions1)
+      @communal1q = t(:communal1q)
+      @communal2q = t(:communal2q)
+      @burdenq = t(:burdenq)
+      @belongq = t(:belongq)
+      @raheq = t(:raheq)
+      @instructions2 = t(:instructions2)
+      @cope_b = t(:cope_b)
+      @cope_cq = t(:cope_cq)
+      @communal_checkq = t(:communal_checkq)
+      @father_a = t(:father_a)
+      @father_b = t(:father_b)
+      @father_c = t(:father_c)
+      @father_d = t(:father_d)
+      @father_e = t(:father_e)
+      @father_f = t(:father_f)
+      @father_g = t(:father_g)
+      @mother_a = t(:mother_a)
+      @mother_b = t(:mother_b)
+      @mother_c = t(:mother_c)
+      @mother_d = t(:mother_d)
+      @mother_e = t(:mother_e)
+      @mother_f = t(:mother_f)
+      @mother_g = t(:mother_g)
+      @children_a = t(:children_a)
+      @children_b = t(:children_b)
+      @children_c = t(:children_c)
+      @children_d = t(:children_d)
+      @children_e = t(:children_e)
+      @children_f = t(:children_f)
+      @children_g = t(:children_g)
+      @sibling_a = t(:sibling_a)
+      @sibling_b = t(:sibling_b)
+      @sibling_c = t(:sibling_c)
+      @sibling_d = t(:sibling_d)
+      @sibling_e = t(:sibling_e)
+      @sibling_f = t(:sibling_f)
+      @sibling_g = t(:sibling_g)
+      @exfamily_a = t(:exfamily_a)
+      @exfamily_b = t(:exfamily_b)
+      @exfamily_c = t(:exfamily_c)
+      @exfamily_d = t(:exfamily_d)
+      @exfamily_e = t(:exfamily_e)
+      @exfamily_f = t(:exfamily_f)
+      @exfamily_g = t(:exfamily_g)
+      # @uncle_a = t(:uncle_a)
+      # @uncle_b = t(:uncle_b)
+      # @uncle_c = t(:uncle_c)
+      # @uncle_d = t(:uncle_d)
+      # @uncle_e = t(:uncle_e)
+      # @uncle_f = t(:uncle_f)
+      # @uncle_g = t(:uncle_g)
+      @spouse_a = t(:spouse_a)
+      @spouse_b = t(:spouse_b)
+      @spouse_c = t(:spouse_c)
+      @spouse_d = t(:spouse_d)
+      @spouse_e = t(:spouse_e)
+      @spouse_f = t(:spouse_f)
+      @spouse_g = t(:spouse_g)
+      @friends_a = t(:friends_a)
+      @friends_b = t(:friends_b)
+      @friends_c = t(:friends_c)
+      @friends_d = t(:friends_d)
+      @friends_e = t(:friends_e)
+      @friends_f = t(:friends_f)
+      @friends_g = t(:friends_g)
+
+      @net_a = t(:net_a)
+      @net_b = t(:net_b)
+      @net_c = t(:net_c)
+      @net_d = t(:net_d)
+      @net_e = t(:net_e)
+      @net_f = t(:net_f)
+      @net_g = t(:net_g)
+      @org_a = t(:org_a)
+      @org_b = t(:org_b)
+      @org_c = t(:org_c)
+      @org_d = t(:org_d)
+      @org_e = t(:org_e)
+      @org_f = t(:org_f)
+      @org_g = t(:org_g)
+      @mesp_a = t(:mesp_a)
+      @mesp_b = t(:mesp_b)
+      @mesp_c = t(:mesp_c)
+      @mesp_d = t(:mesp_d)
+      @mesp_e = t(:mesp_e)
+      @mesp_f = t(:mesp_f)
+      @mesp_g = t(:mesp_g)
+      @relp_a = t(:relp_a)
+      @relp_b = t(:relp_b)
+      @relp_c = t(:relp_c)
+      @relp_d = t(:relp_d)
+      @relp_e = t(:relp_e)
+      @relp_f = t(:relp_f)
+      @relp_g = t(:relp_g)
+      @com_a = t(:com_a)
+      @com_b = t(:com_b)
+      @com_c = t(:com_c)
+      @com_d = t(:com_d)
+      @com_e = t(:com_e)
+      @com_f = t(:com_f)
+      @com_g = t(:com_g)
+
+      @other_who = t(:other_who)
+      @other_a = t(:other_a)
+      @other_b = t(:other_b)
+      @other_c = t(:other_c)
+      @other_d = t(:other_d)
+      @other_e = t(:other_e)
+      @other_f = t(:other_f)
+      @other_g = t(:other_g)
+      @cope_problemsq = t(:cope_problemsq)
+      @familyq = t(:familyq)
+      @self_construalq = t(:self_construalq)
+      @ind_col = t(:ind_col)
+      @depressionq = t(:depressionq)
+      @instructions3 = t(:instructions3)
+      @suicide_aq = t(:suicide_aq)
+      @suicide_bq = t(:suicide_bq)
+      @suicide_c = t(:suicide_c)
+      @suicide_d = t(:suicide_d)
+      @function_a = t(:function_a)
+      @function_b = t(:function_b)
+      @function_c = t(:function_c)
+      @trauma_a = t(:trauma_a)
+      @trauma_b = t(:trauma_b)
+      @trauma_c = t(:trauma_c)
+      @religious_dominations = t(:religious_dominations)
+      @religious_aq = t(:religious_aq)
+      @religious_bq = t(:religious_bq)
+      @religious_cq = t(:religious_cq)
+      @how_religiousq = t(:how_religiousq)
+      @demographics_a = t(:demographics_a)
+      @demographics_b = t(:demographics_b)
+      @demographics_cq = t(:demographics_cq)
+      @demographics_dq = t(:demographics_dq)
+      @demographics_e = t(:demographics_e)
+      @demographics_f = t(:demographics_f)
+      @demographics_g = t(:demographics_g)
+      @live_withq = t(:live_withq)
+      @demographics_i = t(:demographics_i)
+      @demographics_j = t(:demographics_j)
+      @demographics_k = t(:demographics_k)
+      @demographics_l = t(:demographics_l)
+      @demographics_m = t(:demographics_m)
+      @demographics_n = t(:demographics_n)
+      @demographics_o = t(:demographics_o)
+      @demographics_p = t(:demographics_p)
+      @demographics_r = t(:demographics_r)
+      @demographics_sq = t(:demographics_sq)
+
+      @submission = t(:submission)
+
+      @notblank = t(:notblank)
+
+      #@resp_short = "response_cope_b_"
+
+      answers
+
+  #    redirect_to :controller => "estimate", :action => "index"
+  end
+
+  def update
+   params.require(:response).permit! 
+   @response = Response.find(params[:id])
+
+      #@resp_short = "response_cope_b_"
+
       @error_top = t(:error_top)
       @instructions = t(:instructions)
 
@@ -213,33 +429,7 @@ class SurveyorController < ApplicationController
       @submission = t(:submission)
 
       @notblank = t(:notblank)
-      @groups = t(:groups)
-  end
-  def create
-      
-      ### Initialize a response set after first getting the facebook id of the user.
-      
 
-      @response = Response.find_or_create_by(facebook_response_id: params[:id])
-      
-      logger.debug "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-      logger.debug "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-      logger.debug params
-      logger.debug "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-      logger.debug "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-
-      get_locs
-      answers
-
-  #    redirect_to :controller => "estimate", :action => "index"
-  end
-
-  def update
-   params.require(:response).permit! 
-   @response = Response.find(params[:id])
-
-      #@resp_short = "response_cope_b_"
-   get_locs
    if @response.update(params[:response]) 
      #redirect_to :controller => "estimate", :action => "create", :id => params[:id]
      redirect_to :controller => "recruit", action: "index"
@@ -941,6 +1131,7 @@ class SurveyorController < ApplicationController
     @suicide_a7 = t(:suicide_a7)
     @suicide_a=[ @suicide_a1, 
                  @suicide_a2, 
+                 @suicide_a3, 
                  @suicide_a4, 
                  @suicide_a5, 
                  @suicide_a6, 
@@ -955,6 +1146,7 @@ class SurveyorController < ApplicationController
     @suicide_b7 = t(:suicide_b7)
     @suicide_b=[ @suicide_b1, 
                  @suicide_b2, 
+                 @suicide_b3, 
                  @suicide_b4, 
                  @suicide_b5, 
                  @suicide_b6, 

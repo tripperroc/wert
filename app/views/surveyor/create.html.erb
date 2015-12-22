@@ -1,16 +1,16 @@
 <div style="margin-top: 2em;"><% if @response.errors.any? %>
 <div id ="error_top" class="field_with_errors"
-     style="width:400px;margin-left:auto;margin-right:auto;margin-top:2em;margin-bottom:2em;">
-  <%= @error_top %>
+style="width:400px;margin-left:auto;margin-right:auto;margin-top:2em;margin-bottom:2em;">
+<%= @error_top %>
 </div>
 <% end %> 
 
 <div style="margin-left: -100px; margin-right: auto; width:700px;">
 
 <div class="instructions"> <%= @instructions %> </div>
- <%= form_for @response, :url => { :action => 'update', :id  =>@response.id} do |f| %>
+<%= form_for @response, :url => { :action => 'update', :id  =>@response.id} do |f| %>
 
- <ol>
+<ol>
 
 <li>
 <div class="question"> <%= @sex %>  </div>
@@ -49,7 +49,7 @@
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:martial]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @martial, :locals=> {:f => f, :name => :martial}) %>
- </div>
+</div>
 </li>
 
 <li>
@@ -77,7 +77,7 @@
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:parents]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @parents, :locals=> {:f => f, :name => :parents}) %>
- </div>
+</div>
 </li>
 
 <ol type="i" id ="parents_touch">
@@ -86,7 +86,7 @@
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:parents_touch]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @parents_touch, :locals=> {:f => f, :name => :parents_touch}) %>
- </div>
+</div>
 </li>
 </ol>
 
@@ -95,7 +95,7 @@
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:parents_partner]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @parents_partner, :locals=> {:f => f, :name => :parents_partner}) %>
- </div>
+</div>
 </li>
 
 <ol type="i" id ="parents_partner">
@@ -104,7 +104,7 @@
 <div class="errors"><%= render(:partial => 'errors', :object => @response.errors[:parents_partner_touch]) %></div>
 <div class="answer">
 <%= render( :partial => 'radiobuttons', :object => @parents_partner_touch, :locals=> {:f => f, :name => :parents_partner_touch}) %>
- </div>
+</div>
 </li>
 </ol>
 
@@ -220,16 +220,22 @@
 <ol type="i" id ="social_group" <% if @response.social_group != "Yes"%> style="display: none;"<% end %>>
 <li>
 <div class="question"> <%= @group_name %> </div>
- 
-<div class="answer">Group Names: </br> &nbsp <%= f.text_field :groupa1, style: "margin-left: 1em;" %>
+
+<div class="answer">
+<table id="group_table">
+<tr><th><%= @groups %></th><th><%= @group_member %></th><th><%=t :groups_delete %></th></tr>
+</table>
+<input id="group_add" type="button" value="add row">
+
+<%= f.hidden_field :groupa1, style: "margin-left: 1em;" %>
 &nbsp
-<%= f.text_field :groupa2, style: "margin-left: 1.5em;" %>
+<%= f.hidden_field :groupa2, style: "margin-left: 1.5em;" %>
 </div>
 
-<div class="answer"> <%= @group_member %> </br> &nbsp 
-<%= f.number_field :groupb1, :min => 0, style: "margin-left: 1em;" %> </br>
+<div class="answer">  </br> &nbsp 
+<%= f.hidden_field :groupb1, :min => 0, style: "margin-left: 1em;" %> </br>
 &nbsp
-<%= f.number_field :groupb2, :min => 0, style: "margin-left: 1em;" %>
+<%= f.hidden_field :groupb2, :min => 0, style: "margin-left: 1em;" %>
 </div>
 
 </li>
@@ -1591,13 +1597,13 @@
 </li>
 
 </ol>
-<%= f.submit @submission %>
+<input name="commit" id="submit_button" type="button" value="<%= @submission %>">
 <% end %>
 
 </div>
 </div>
 
- <script>
+<script>
    $("#num_children").hide();
 
        if ($("#response_num_children").val() == "0") {
@@ -4164,4 +4170,73 @@ $("#response_cope_b_rahe_item55").parent().hide();
 //        } 
 
 
+</script>
+<script>
+
+function add_group_record (group_str, group_num) {
+	//alert ($("#response_groupa1").val());
+	var col1 = document.createElement("td");
+    var inp1 = document.createElement("input");
+    inp1.type = "text";
+    inp1.className = "group_names"
+    inp1.value = group_str;
+    var col2 = document.createElement("td");
+    var inp2 = document.createElement("input");
+    inp2.type = "number"
+    inp2.className = "group_nums"
+    inp2.value = group_num;
+
+    var col3 = document.createElement("td");
+    var inp3 = document.createElement("input");
+    inp3.type = "checkbox";
+    inp3.className = "text_boxes"; 
+    col1.appendChild(inp1);
+    col2.appendChild(inp2);
+    col3.appendChild(inp3);
+    var row = document.createElement("tr");
+    row.appendChild(col1);
+    row.appendChild(col2);
+    row.appendChild(col3);
+    $('#group_table').append(row);
+    $(inp3).bind({'click': function(event) {
+	event.currentTarget.parentNode.parentNode.remove();
+	}});
+}
+
+$("#group_add").bind({
+  click: function(event) { 
+	add_group_record("");
+	//alert ($(".group_names").val());
+    } 
+  });
+
+if ($("#response_groupa1").val() != "") {
+	var group_names = $.parseJSON($("#response_groupa1").val());
+	var group_nums = $.parseJSON($("#response_groupa2").val());
+	//var group_names = [];
+	//var group_nums = [];
+
+	for (var i = 0; i < group_names.length; i++) {
+    		add_group_record(group_names[i], group_nums[i]);
+	}
+}
+add_group_record("");
+$("#submit_button").bind({
+	click: function(event) { 
+		var gns = $(".group_names");
+		var gms = $(".group_nums");
+		var names = [];
+ 		var nums = [];
+		for (var i = 0; i < gns.length; i++) {
+			if (gns[i].value != "") {
+				names.push(gns[i].value);
+				nums.push(gms[i].value);
+			}
+		}
+		name = JSON.stringify(names);
+		num = JSON.stringify(nums);
+		$("#response_groupa1").val(name);
+		$("#response_groupa2").val(num);
+		$("#edit_response_1").submit();
+        }});
 </script>
